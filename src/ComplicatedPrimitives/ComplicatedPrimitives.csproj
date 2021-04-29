@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>SoterDevelopment.ComplicatedPrimitives</PackageId>
+    <Authors>Bartłomiej Soter (soter.development@gmail.com)</Authors>
+    <Company>SoterDevelopment</Company>
+    <Description>Library containing complex structures that can be treaten like primitives.</Description>
+    <Copyright>Copyright © SoterDevelopment 2021</Copyright>
+    <PackageProjectUrl>https://github.com/jabarij/ComplicatedPrimitives</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jabarij/ComplicatedPrimitives.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>range</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Common\Internals\DotNetExtensions\HashCode.cs" Link="DotNetExtensions\HashCode.cs" />
+    <Compile Include="..\Common\Internals\DotNetExtensions\HashCodeExtensions.cs" Link="DotNetExtensions\HashCodeExtensions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DotNetExtensions\" />
+  </ItemGroup>
+
+</Project>
