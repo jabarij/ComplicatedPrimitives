@@ -46,34 +46,34 @@ namespace ComplicatedPrimitives
         {
             if (string.IsNullOrEmpty(str))
             {
-                range = default;
+                range = default(Range<T>);
                 return false;
             }
 
             if (str.Length < 3)
             {
-                range = default;
+                range = default(Range<T>);
                 return false;
             }
 
             if (!TryParseLimit(str[0], out var leftLimit)
                 || leftLimit.side != LimitSide.Left)
             {
-                range = default;
+                range = default(Range<T>);
                 return false;
             }
 
             if (!TryParseLimit(str[str.Length - 1], out var rightLimit)
                 || rightLimit.side != LimitSide.Right)
             {
-                range = default;
+                range = default(Range<T>);
                 return false;
             }
 
             int separatorIndex = str.IndexOf(Separator, 1);
             if (separatorIndex == -1)
             {
-                range = default;
+                range = default(Range<T>);
                 return false;
             }
 
@@ -82,13 +82,13 @@ namespace ComplicatedPrimitives
                 .Split(new[] { Separator }, 2);
             if (!_parseValue.TryParse(values[0], out var leftValue))
             {
-                range = default;
+                range = default(Range<T>);
                 return false;
             }
 
             if (!_parseValue.TryParse(values[1], out var rightValue))
             {
-                range = default;
+                range = default(Range<T>);
                 return false;
             }
 
@@ -115,7 +115,7 @@ namespace ComplicatedPrimitives
                     result = (LimitType.Open, LimitSide.Right);
                     return true;
                 default:
-                    result = default;
+                    result = default((LimitType, LimitSide));
                     return false;
             }
         }
