@@ -3,7 +3,7 @@ using System;
 
 namespace ComplicatedPrimitives
 {
-    public struct DirectedLimit<T> : IEquatable<DirectedLimit<T>>
+    public struct DirectedLimit<T> : IEquatable<DirectedLimit<T>>, IComparable<DirectedLimit<T>>
         where T : IComparable<T>
     {
         public static readonly DirectedLimit<T> Undefined = new DirectedLimit<T>();
@@ -248,9 +248,10 @@ namespace ComplicatedPrimitives
             if (compareSide != 0)
                 return compareSide;
 
-            int compareType = LimitValue.Type.CompareTo(other.LimitValue.Type);
-            if (compareType != 0)
-                return compareType;
+            if (LimitValue.Type != other.LimitValue.Type)
+                return Side == LimitSide.Left
+                    ? (LimitValue.Type == LimitType.Closed ? -1 : 1)
+                    : (LimitValue.Type == LimitType.Open ? -1 : 1);
 
             return 0;
         }

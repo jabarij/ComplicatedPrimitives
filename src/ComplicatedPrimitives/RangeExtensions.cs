@@ -35,5 +35,57 @@ namespace ComplicatedPrimitives
                     }
                     return acc;
                 });
+        public static IEnumerable<Range<T>> Merge<T>(this IEnumerable<Range<T>> source) where T : IComparable<T>
+        {
+            var sortedLimits = new SortedSet<DirectedLimit<T>>(new DirectedLimitComparer<T>());
+            foreach (var range in source)
+            {
+                sortedLimits.Add(range.Left);
+                sortedLimits.Add(range.Right);
+            }
+
+            DirectedLimit<T>? leftLimit = null;
+            DirectedLimit<T>? rightLimit = null;
+            var limitsEnumerator = sortedLimits.GetEnumerator();
+            bool wait = false;
+            while (wait || limitsEnumerator.MoveNext())
+            {
+                wait = false;
+                var limit = limitsEnumerator.Current;
+                if (!leftLimit.HasValue)
+                {
+                    if (limit.Side == LimitSide.Left)
+                        leftLimit = limit;
+                }
+                else if (!rightLimit.HasValue)
+                {
+                    if (limit.Side == LimitSide.Right)
+                        rightLimit = limit;
+                }
+                else if (limit.Side == LimitSide.Left)
+                {
+                    if (limit.Value.CompareTo(rightLimit.Value.Value) == 0
+                        && limit.Type != rightLimit.Value.Type)
+                    {
+                        rightLimit = null;
+                        continue;
+                    }
+                    else
+                    {
+                        yield return new Range<T>(leftLimit.Value, rightLimit.Value);
+                        leftLimit = null;
+                        rightLimit = null;
+                        wait = true;
+                    }
+                }
+                else
+                {
+                    rightLimit = limit;
+                }
+            }
+
+            if (leftLimit.HasValue && rightLimit.HasValue)
+                yield return new Range<T>(leftLimit.Value, rightLimit.Value);
+        }
     }
 }
