@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ComplicatedPrimitives</name>
+    </assembly>
+    <members>
+        <member name="T:ComplicatedPrimitives.LimitType">
+            <summary>
+            Enum indicating whether limit is open or closed.
+            </summary>
+        </member>
+        <member name="F:ComplicatedPrimitives.LimitType.Open">
+            <summary>
+            Indicates that limit is open which means it does not include the limit value.
+            </summary>
+        </member>
+        <member name="F:ComplicatedPrimitives.LimitType.Closed">
+            <summary>
+            Indicates that limit is closed which means it includes the limit value.
+            </summary>
+        </member>
+        <member name="T:ComplicatedPrimitives.LimitValue`1">
+            <summary>
+            Structure representing limit value and type.
+            </summary>
+            <typeparam name="T">Type of value.</typeparam>
+        </member>
+        <member name="F:ComplicatedPrimitives.LimitValue`1.Infinity">
+            <summary>
+            Infinite limit value.
+            </summary>
+        </member>
+        <member name="M:ComplicatedPrimitives.LimitValue`1.#ctor(`0,ComplicatedPrimitives.LimitType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ComplicatedPrimitives.LimitValue`1"/> structure to a specified <paramref name="value"/> and <paramref name="type"/>.
+            </summary>
+            <param name="value">Limit value.</param>
+            <param name="type">Limit type.</param>
+        </member>
+        <member name="P:ComplicatedPrimitives.LimitValue`1.Value">
+            <summary>
+            Gets the limit value.
+            </summary>
+        </member>
+        <member name="P:ComplicatedPrimitives.LimitValue`1.Type">
+            <summary>
+            Gets the limit type.
+            </summary>
+        </member>
+        <member name="P:ComplicatedPrimitives.LimitValue`1.IsInfinite">
+            <summary>
+            Indicates whether this instance represents an infinite limit.
+            </summary>
+        </member>
+        <member name="M:ComplicatedPrimitives.LimitValue`1.Translate(System.Func{`0,`0})">
+            <summary>
+            Translates (moves) limit value with the given <paramref name="translation"/>.
+            </summary>
+            <param name="translation">Function translating limit's value.</param>
+            <returns>New instance of <see cref="T:ComplicatedPrimitives.LimitValue`1"/> with the same <see cref="P:ComplicatedPrimitives.LimitValue`1.Type"/>, but with <see cref="P:ComplicatedPrimitives.LimitValue`1.Value"/> translated using the given <paramref name="translation"/>.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.LimitValue`1.AsOpen">
+            <summary>
+            Converts this instance to <see cref="F:ComplicatedPrimitives.LimitType.Open"/>.
+            </summary>
+            <returns>New instance of <see cref="T:ComplicatedPrimitives.LimitValue`1"/> with the same <see cref="P:ComplicatedPrimitives.LimitValue`1.Value"/>, but with <see cref="P:ComplicatedPrimitives.LimitValue`1.Type"/> equal to <see cref="F:ComplicatedPrimitives.LimitType.Open"/>.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.LimitValue`1.AsClosed">
+            <summary>
+            Converts this instance to <see cref="F:ComplicatedPrimitives.LimitType.Closed"/>.
+            </summary>
+            <returns>New instance of <see cref="T:ComplicatedPrimitives.LimitValue`1"/> with the same <see cref="P:ComplicatedPrimitives.LimitValue`1.Value"/>, but with <see cref="P:ComplicatedPrimitives.LimitValue`1.Type"/> equal to <see cref="F:ComplicatedPrimitives.LimitType.Closed"/>.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.LimitValue`1.RightContains(`0)">
+            <summary>
+            Gets the value indicating whether the <paramref name="value"/>
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ComplicatedPrimitives.Range`1">
+            <summary>
+            Readonly structure representing range of comparable values.
+            </summary>
+            <typeparam name="T">Type of range value (domain).</typeparam>
+        </member>
+        <member name="F:ComplicatedPrimitives.Range`1.Empty">
+            <summary>
+            Represents empty range (often described using symbol ∅).
+            </summary>
+        </member>
+        <member name="F:ComplicatedPrimitives.Range`1.Infinite">
+            <summary>
+            Represents infinite range (often described using symbol (∞;∞)).
+            </summary>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.#ctor(ComplicatedPrimitives.DirectedLimit{`0},ComplicatedPrimitives.DirectedLimit{`0})">
+            <summary>
+            Creates new range with given limits.
+            </summary>
+            <param name="left">Left limit of range.</param>
+            <param name="right">Right limit of range.</param>
+            <exception cref="T:System.ArgumentException">Thrown when:
+            <list type="bullet">
+            <item><description><paramref name="left"/> limit is of right side;</description></item>
+            <item><description><paramref name="right"/> limit is of left side;</description></item>
+            <item><description><paramref name="left"/> and <paramref name="right"/> limits don't intersect;</description></item>
+            </list>
+            </exception>
+            <seealso cref="M:ComplicatedPrimitives.DirectedLimit`1.Intersects(ComplicatedPrimitives.DirectedLimit{`0})">Intersecting directed limits.</seealso>
+            <seealso cref="P:ComplicatedPrimitives.DirectedLimit`1.Side">Directed limit's side.</seealso>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.#ctor(ComplicatedPrimitives.LimitValue{`0},ComplicatedPrimitives.LimitValue{`0})">
+            <summary>
+            Creates new range with given limits.
+            </summary>
+            <param name="left">Left limit of range.</param>
+            <param name="right">Right limit of range.</param>
+            <exception cref="T:System.ArgumentException">Thrown when:
+            <list type="bullet">
+            <item><description><paramref name="left"/> and <paramref name="right"/> limits don't intersect;</description></item>
+            </list>
+            </exception>
+            <seealso cref="M:ComplicatedPrimitives.DirectedLimit`1.Intersects(ComplicatedPrimitives.DirectedLimit{`0})">Intersecting directed limits.</seealso>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.#ctor(`0,`0,ComplicatedPrimitives.LimitType,ComplicatedPrimitives.LimitType)">
+            <summary>
+            Creates new range with given limits.
+            </summary>
+            <param name="left">Value of left limit of range.</param>
+            <param name="right">Value of right limit of range.</param>
+            <param name="leftLimit">Type of left limit of range.</param>
+            <param name="rightLimit">Type of right limit of range.</param>
+            <exception cref="T:System.ArgumentException">Thrown when:
+            <list type="bullet">
+            <item><description><paramref name="left"/> and <paramref name="right"/> limits don't intersect;</description></item>
+            </list>
+            </exception>
+            <seealso cref="M:ComplicatedPrimitives.DirectedLimit`1.Intersects(ComplicatedPrimitives.DirectedLimit{`0})">Intersecting directed limits.</seealso>
+        </member>
+        <member name="P:ComplicatedPrimitives.Range`1.Left">
+            <summary>
+            Gets the left limit of this range.
+            </summary>
+        </member>
+        <member name="P:ComplicatedPrimitives.Range`1.Right">
+            <summary>
+            Gets the right limit of this range.
+            </summary>
+        </member>
+        <member name="P:ComplicatedPrimitives.Range`1.LeftValue">
+            <summary>
+            Gets the value of left limit of this range.
+            </summary>
+        </member>
+        <member name="P:ComplicatedPrimitives.Range`1.RightValue">
+            <summary>
+            Gets the value of right limit of this range.
+            </summary>
+        </member>
+        <member name="P:ComplicatedPrimitives.Range`1.IsEmpty">
+            <summary>
+            Gets the value indicating whether this instance is an empty range (∅).
+            </summary>
+        </member>
+        <member name="P:ComplicatedPrimitives.Range`1.IsInfiniteLeft">
+            <summary>
+            Gets the value indicating whether left limit is infinite.
+            </summary>
+        </member>
+        <member name="P:ComplicatedPrimitives.Range`1.IsInfiniteRight">
+            <summary>
+            Gets the value indicating whether right limit is infinite.
+            </summary>
+        </member>
+        <member name="P:ComplicatedPrimitives.Range`1.IsInfinite">
+            <summary>
+            Gets the value indicating whether this range is of infinite limits.
+            </summary>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.Contains(`0)">
+            <summary>
+            Checks if this range contains given <paramref name="value"/> (mathematical equivalent of expression: <paramref name="value"/> ∊ <c>this</c>).
+            </summary>
+            <param name="value">Value to check inclusion relation of.</param>
+            <returns><see langword="true"/> if the <paramref name="value"/> belongs to this range; otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.Intersects(ComplicatedPrimitives.Range{`0})">
+            <summary>
+            Checks if this range intersects (has common elements) with given <paramref name="other"/> range (mathematical equivalent of expression: <c>this</c> ∩ <paramref name="other"/> ≠ ∅).
+            </summary>
+            <param name="other">Other range to check intersection relation with.</param>
+            <returns><see langword="true"/> if the <paramref name="other"/> has common elements to this range; otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.IsSubsetOf(ComplicatedPrimitives.Range{`0})">
+            <summary>
+            Checks whether <c>this</c> range is a subset of the <paramref name="other"/> range (<c>this</c> ⊆ <paramref name="other"/>).
+            </summary>
+            <param name="other">Range to check inclusion relation with.</param>
+            <returns>
+            <see langword="true"/> if this range is a subset of the <paramref name="other"/> range; otherwise <see langword="false"/>.
+            </returns>
+            <remarks>
+            This function checks the weak inclusion relation which means that a range is in a given relation with equal range. To check strict version of this relation (excluding equal ranges), use <see cref="M:ComplicatedPrimitives.Range`1.IsProperSubsetOf(ComplicatedPrimitives.Range{`0})"/>.
+            <list type="bullet">
+              <listheader>
+            	<description>Following conditions apply to this function:</description>
+              </listheader>
+              <item>
+            	<description>(A = B) → (A ⊆ B ⋀ B ⊆ A);</description>
+              </item>
+              <item>
+            	<description>∅ ⊆ A for every range A (especially: ∅ ⊆ ∅);</description>
+              </item>
+              <item>
+            	<description>(∞;∞) ⊈ A for any finite range A;</description>
+              </item>
+              <item>
+            	<description>(∞;∞) ⊆ (∞;∞);</description>
+              </item>
+            </list>
+            </remarks>
+        </member>
+    </members>
+</doc>

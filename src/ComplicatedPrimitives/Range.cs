@@ -4,13 +4,38 @@ using System.Collections.Generic;
 
 namespace ComplicatedPrimitives
 {
+    /// <summary>
+    /// Readonly structure representing range of comparable values.
+    /// </summary>
+    /// <typeparam name="T">Type of range value (domain).</typeparam>
     public struct Range<T> : IRange<Range<T>, T>, IEquatable<Range<T>> where T : IComparable<T>
     {
+        /// <summary>
+        /// Represents empty range (often described using symbol ∅).
+        /// </summary>
         public static readonly Range<T> Empty = new Range<T>();
+
+        /// <summary>
+        /// Represents infinite range (often described using symbol (∞;∞)).
+        /// </summary>
         public static readonly Range<T> Infinite = new Range<T>(LimitValue<T>.Infinity, LimitValue<T>.Infinity);
 
         private readonly bool _isNotEmpty;
 
+        /// <summary>
+        /// Creates new range with given limits.
+        /// </summary>
+        /// <param name="left">Left limit of range.</param>
+        /// <param name="right">Right limit of range.</param>
+        /// <exception cref="ArgumentException">Thrown when:
+        /// <list type="bullet">
+        /// <item><description><paramref name="left"/> limit is of right side;</description></item>
+        /// <item><description><paramref name="right"/> limit is of left side;</description></item>
+        /// <item><description><paramref name="left"/> and <paramref name="right"/> limits don't intersect;</description></item>
+        /// </list>
+        /// </exception>
+        /// <seealso cref="DirectedLimit{T}.Intersects(DirectedLimit{T})">Intersecting directed limits.</seealso>
+        /// <seealso cref="DirectedLimit{T}.Side">Directed limit's side.</seealso>
         public Range(DirectedLimit<T> left, DirectedLimit<T> right)
         {
             if (left.Side == LimitSide.Right)
@@ -24,29 +49,81 @@ namespace ComplicatedPrimitives
             Right = right;
             _isNotEmpty = true;
         }
+
+        /// <summary>
+        /// Creates new range with given limits.
+        /// </summary>
+        /// <param name="left">Left limit of range.</param>
+        /// <param name="right">Right limit of range.</param>
+        /// <exception cref="ArgumentException">Thrown when:
+        /// <list type="bullet">
+        /// <item><description><paramref name="left"/> and <paramref name="right"/> limits don't intersect;</description></item>
+        /// </list>
+        /// </exception>
+        /// <seealso cref="DirectedLimit{T}.Intersects(DirectedLimit{T})">Intersecting directed limits.</seealso>
         public Range(LimitValue<T> left, LimitValue<T> right)
             : this(left: new DirectedLimit<T>(left, LimitSide.Left), right: new DirectedLimit<T>(right, LimitSide.Right)) { }
+
+        /// <summary>
+        /// Creates new range with given limits.
+        /// </summary>
+        /// <param name="left">Value of left limit of range.</param>
+        /// <param name="right">Value of right limit of range.</param>
+        /// <param name="leftLimit">Type of left limit of range.</param>
+        /// <param name="rightLimit">Type of right limit of range.</param>
+        /// <exception cref="ArgumentException">Thrown when:
+        /// <list type="bullet">
+        /// <item><description><paramref name="left"/> and <paramref name="right"/> limits don't intersect;</description></item>
+        /// </list>
+        /// </exception>
+        /// <seealso cref="DirectedLimit{T}.Intersects(DirectedLimit{T})">Intersecting directed limits.</seealso>
         public Range(T left, T right, LimitType leftLimit = default(LimitType), LimitType rightLimit = default(LimitType))
             : this(left: new LimitValue<T>(left, leftLimit), right: new LimitValue<T>(right, rightLimit)) { }
 
+        /// <summary>
+        /// Gets the left limit of this range.
+        /// </summary>
         public DirectedLimit<T> Left { get; }
+
+        /// <summary>
+        /// Gets the right limit of this range.
+        /// </summary>
         public DirectedLimit<T> Right { get; }
 
+        /// <summary>
+        /// Gets the value of left limit of this range.
+        /// </summary>
         public T LeftValue => Left.Value;
+
+        /// <summary>
+        /// Gets the value of right limit of this range.
+        /// </summary>
         public T RightValue => Right.Value;
 
+        /// <summary>
+        /// Gets the value indicating whether this instance is an empty range (∅).
+        /// </summary>
         public bool IsEmpty =>
             !_isNotEmpty;
 
-        public bool IsLimitedLeft =>
-            !Left.LimitValue.IsInfinity;
+        /// <summary>
+        /// Gets the value indicating whether left limit is infinite.
+        /// </summary>
+        public bool IsInfiniteLeft =>
+            Left.LimitValue.IsInfinite;
 
-        public bool IsLimitedRight =>
-            !Right.LimitValue.IsInfinity;
+        /// <summary>
+        /// Gets the value indicating whether right limit is infinite.
+        /// </summary>
+        public bool IsInfiniteRight =>
+            Right.LimitValue.IsInfinite;
 
+        /// <summary>
+        /// Gets the value indicating whether this range is of infinite limits.
+        /// </summary>
         public bool IsInfinite =>
-            !IsLimitedLeft
-            && !IsLimitedRight;
+            IsInfiniteLeft
+            && IsInfiniteRight;
 
         public Range<TResult> Map<TResult>(Func<T, TResult> mapper)
             where TResult : IComparable<TResult> =>
@@ -56,16 +133,53 @@ namespace ComplicatedPrimitives
                 left: Left.Map(mapper),
                 right: Right.Map(mapper));
 
+        /// <summary>
+        /// Checks if this range contains given <paramref name="value"/> (mathematical equivalent of expression: <paramref name="value"/> ∊ <c>this</c>).
+        /// </summary>
+        /// <param name="value">Value to check inclusion relation of.</param>
+        /// <returns><see langword="true"/> if the <paramref name="value"/> belongs to this range; otherwise <see langword="false"/>.</returns>
         public bool Contains(T value) =>
             Left.Contains(value)
             && Right.Contains(value);
 
+        /// <summary>
+        /// Checks if this range intersects (has common elements) with given <paramref name="other"/> range (mathematical equivalent of expression: <c>this</c> ∩ <paramref name="other"/> ≠ ∅).
+        /// </summary>
+        /// <param name="other">Other range to check intersection relation with.</param>
+        /// <returns><see langword="true"/> if the <paramref name="other"/> has common elements to this range; otherwise <see langword="false"/>.</returns>
         public bool Intersects(Range<T> other) =>
             !IsEmpty
             && !other.IsEmpty
             && Comparable.Subset(Left, other.Left)
             .Intersects(Comparable.Subset(Right, other.Right));
 
+        /// <summary>
+        /// Checks whether <c>this</c> range is a subset of the <paramref name="other"/> range (<c>this</c> ⊆ <paramref name="other"/>).
+        /// </summary>
+        /// <param name="other">Range to check inclusion relation with.</param>
+        /// <returns>
+        /// <see langword="true"/> if this range is a subset of the <paramref name="other"/> range; otherwise <see langword="false"/>.
+        /// </returns>
+        /// <remarks>
+        /// This function checks the weak inclusion relation which means that a range is in a given relation with equal range. To check strict version of this relation (excluding equal ranges), use <see cref="IsProperSubsetOf(Range{T})"/>.
+        /// <list type="bullet">
+        ///   <listheader>
+        /// 	<description>Following conditions apply to this function:</description>
+        ///   </listheader>
+        ///   <item>
+        /// 	<description>(A = B) → (A ⊆ B ⋀ B ⊆ A);</description>
+        ///   </item>
+        ///   <item>
+        /// 	<description>∅ ⊆ A for every range A (especially: ∅ ⊆ ∅);</description>
+        ///   </item>
+        ///   <item>
+        /// 	<description>(∞;∞) ⊈ A for any finite range A;</description>
+        ///   </item>
+        ///   <item>
+        /// 	<description>(∞;∞) ⊆ (∞;∞);</description>
+        ///   </item>
+        /// </list>
+        /// </remarks>
         public bool IsSubsetOf(Range<T> other)
         {
             if (Equals(other))
@@ -191,9 +305,9 @@ namespace ComplicatedPrimitives
                 return new RangeUnion<Range<T>, T>(true, Infinite);
             if (IsInfinite)
                 return RangeUnion<Range<T>, T>.Empty;
-            if (!IsLimitedLeft)
+            if (IsInfiniteLeft)
                 return new RangeUnion<Range<T>, T>(true, new Range<T>(Right.GetComplement(), DirectedLimit<T>.RightInfinity));
-            if (!IsLimitedRight)
+            if (IsInfiniteRight)
                 return new RangeUnion<Range<T>, T>(true, new Range<T>(DirectedLimit<T>.LeftInfinity, Left.GetComplement()));
 
             return new RangeUnion<Range<T>, T>(true,
@@ -258,13 +372,13 @@ namespace ComplicatedPrimitives
             if (IsInfinite)
                 return "(∞;∞)";
             string leftStr =
-                Left.LimitValue.IsInfinity
+                Left.LimitValue.IsInfinite
                 ? "(∞"
                 : string.Format("{0}{1}",
                     Left.Type.Match(open: () => '(', closed: () => '['),
                     Left.Value);
             string rightStr =
-                Right.LimitValue.IsInfinity
+                Right.LimitValue.IsInfinite
                 ? "∞)"
                 : string.Format("{0}{1}",
                     Right.Value,

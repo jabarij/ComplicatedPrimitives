@@ -56,8 +56,8 @@ namespace ComplicatedPrimitives.Tests
                 var sut = new Range<double>(left, right);
 
                 // assert
-                sut.IsLimitedLeft.Should().BeFalse();
-                sut.IsLimitedRight.Should().BeTrue();
+                sut.IsInfiniteLeft.Should().BeTrue();
+                sut.IsInfiniteRight.Should().BeFalse();
             }
 
             [Fact]
@@ -71,8 +71,8 @@ namespace ComplicatedPrimitives.Tests
                 var sut = new Range<double>(left, right);
 
                 // assert
-                sut.IsLimitedRight.Should().BeFalse();
-                sut.IsLimitedLeft.Should().BeTrue();
+                sut.IsInfiniteRight.Should().BeTrue();
+                sut.IsInfiniteLeft.Should().BeFalse();
             }
         }
     }

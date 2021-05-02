@@ -51,9 +51,9 @@ namespace ComplicatedPrimitives
         {
             if (IsUndefined || other.IsUndefined)
                 return false;
-            if (LimitValue.IsInfinity ^ other.LimitValue.IsInfinity)
+            if (LimitValue.IsInfinite ^ other.LimitValue.IsInfinite)
                 return false;
-            if (LimitValue.IsInfinity && other.LimitValue.IsInfinity)
+            if (LimitValue.IsInfinite && other.LimitValue.IsInfinite)
                 return false;
 
             return Equals(Value, other.Value)
@@ -68,9 +68,9 @@ namespace ComplicatedPrimitives
             switch (Side)
             {
                 case LimitSide.Left:
-                    return LimitValue.IsInfinity || LimitValue.RightContains(value);
+                    return LimitValue.RightContains(value);
                 case LimitSide.Right:
-                    return LimitValue.IsInfinity || LimitValue.LeftContains(value);
+                    return LimitValue.LeftContains(value);
                 case 0:
                     throw new InvalidOperationException("Cannot check value belonging for undefined limit.");
                 default:
@@ -84,7 +84,7 @@ namespace ComplicatedPrimitives
                 return false;
             if (Side == other.Side)
                 return true;
-            if (LimitValue.IsInfinity || other.LimitValue.IsInfinity)
+            if (LimitValue.IsInfinite || other.LimitValue.IsInfinite)
                 return true;
 
             int valueComparison = Value.CompareTo(other.Value);
@@ -107,7 +107,7 @@ namespace ComplicatedPrimitives
             if (IsUndefined || other.IsUndefined)
                 return false;
 
-            if (other.LimitValue.IsInfinity && !LimitValue.IsInfinity)
+            if (other.LimitValue.IsInfinite && !LimitValue.IsInfinite)
                 return true;
 
             if (Side != other.Side)
@@ -133,7 +133,7 @@ namespace ComplicatedPrimitives
             if (IsUndefined || other.IsUndefined)
                 return false;
 
-            if (other.LimitValue.IsInfinity)
+            if (other.LimitValue.IsInfinite)
                 return true;
 
             if (Side != other.Side)
@@ -161,7 +161,7 @@ namespace ComplicatedPrimitives
             if (IsUndefined || other.IsUndefined)
                 return false;
 
-            if (LimitValue.IsInfinity && !other.LimitValue.IsInfinity)
+            if (LimitValue.IsInfinite && !other.LimitValue.IsInfinite)
                 return true;
 
             if (Side != other.Side)
@@ -187,7 +187,7 @@ namespace ComplicatedPrimitives
             if (IsUndefined || other.IsUndefined)
                 return false;
 
-            if (LimitValue.IsInfinity)
+            if (LimitValue.IsInfinite)
                 return true;
 
             if (Side != other.Side)

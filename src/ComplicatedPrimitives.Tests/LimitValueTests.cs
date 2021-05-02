@@ -4,8 +4,6 @@ namespace ComplicatedPrimitives.Tests
 {
     public partial class LimitValueTests : TestsBase
     {
-        public LimitValueTests(TestFixture testFixture) : base(testFixture)
-        {
-        }
+        public LimitValueTests(TestFixture testFixture) : base(testFixture) { }
     }
 }
