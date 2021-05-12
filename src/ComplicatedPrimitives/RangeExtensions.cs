@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DotNetExtensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -35,14 +36,13 @@ namespace ComplicatedPrimitives
                     }
                     return acc;
                 });
+
         public static IEnumerable<Range<T>> Merge<T>(this IEnumerable<Range<T>> source) where T : IComparable<T>
         {
-            var sortedLimits = new SortedSet<DirectedLimit<T>>(new DirectedLimitComparer<T>());
-            foreach (var range in source)
-            {
-                sortedLimits.Add(range.Left);
-                sortedLimits.Add(range.Right);
-            }
+            var sortedLimits = source.SelectMany(e => new[] { e.Left, e.Right }).ToArray();
+            QuickSort
+                .ForComparer<DirectedLimit<T>>(_compareDirectedLimitByValue)
+                .Sort(sortedLimits, usePassedArray: true);
 
             DirectedLimit<T>? leftLimit = null;
             DirectedLimit<T>? rightLimit = null;
@@ -51,7 +51,7 @@ namespace ComplicatedPrimitives
             while (wait || limitsEnumerator.MoveNext())
             {
                 wait = false;
-                var limit = limitsEnumerator.Current;
+                var limit = (DirectedLimit<T>)limitsEnumerator.Current;
                 if (!leftLimit.HasValue)
                 {
                     if (limit.Side == LimitSide.Left)
@@ -62,30 +62,40 @@ namespace ComplicatedPrimitives
                     if (limit.Side == LimitSide.Right)
                         rightLimit = limit;
                 }
-                else if (limit.Side == LimitSide.Left)
-                {
-                    if (limit.Value.CompareTo(rightLimit.Value.Value) == 0
-                        && limit.Type != rightLimit.Value.Type)
-                    {
-                        rightLimit = null;
-                        continue;
-                    }
-                    else
-                    {
-                        yield return new Range<T>(leftLimit.Value, rightLimit.Value);
-                        leftLimit = null;
-                        rightLimit = null;
-                        wait = true;
-                    }
-                }
                 else
                 {
-                    rightLimit = limit;
+                    switch (limit.Side)
+                    {
+                        case LimitSide.Left:
+                            if (limit.Value.CompareTo(rightLimit.Value.Value) != 0
+                                || (limit.Type == LimitType.Open
+                                    && rightLimit.Value.Type == LimitType.Open))
+                            {
+                                yield return new Range<T>(leftLimit.Value, rightLimit.Value);
+                                leftLimit = null;
+                                rightLimit = null;
+                                wait = true;
+                            }
+                            else
+                            {
+                                rightLimit = null;
+                                continue;
+                            }
+                            break;
+                        case LimitSide.Right:
+                            rightLimit = limit;
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
 
             if (leftLimit.HasValue && rightLimit.HasValue)
                 yield return new Range<T>(leftLimit.Value, rightLimit.Value);
         }
+
+        private static int _compareDirectedLimitByValue<T>(DirectedLimit<T> left, DirectedLimit<T> right) where T : IComparable<T> =>
+            left.LimitValue.Value.CompareTo(right.LimitValue.Value);
     }
 }
