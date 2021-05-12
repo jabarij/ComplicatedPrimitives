@@ -17,6 +17,7 @@
   <ItemGroup>
     <Compile Include="..\Common\Internals\DotNetExtensions\HashCode.cs" Link="DotNetExtensions\HashCode.cs" />
     <Compile Include="..\Common\Internals\DotNetExtensions\HashCodeExtensions.cs" Link="DotNetExtensions\HashCodeExtensions.cs" />
+    <Compile Include="..\Common\Internals\DotNetExtensions\QuickSort.cs" Link="DotNetExtensions\QuickSort.cs" />
   </ItemGroup>
 
   <ItemGroup>

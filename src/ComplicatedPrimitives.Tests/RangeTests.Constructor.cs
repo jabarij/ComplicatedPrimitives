@@ -16,8 +16,8 @@ namespace ComplicatedPrimitives.Tests
             public void LeftLimitGreaterThanRightLimit_ShouldThrow()
             {
                 // arrange
-                var left = Fixture.Create<DirectedLimit<int>>();
-                var right = Fixture.CreateLowerThan(left);
+                var left = Fixture.Create<DirectedLimit<int>>().With(side: LimitSide.Left);
+                var right = Fixture.CreateLowerThan(left).With(side: LimitSide.Right);
                 Action create = () => new Range<int>(left, right);
 
                 // act
@@ -31,18 +31,48 @@ namespace ComplicatedPrimitives.Tests
             {
                 // arrange
                 int left = Fixture.Create<int>();
-                int to = Fixture.CreateGreaterThan(left);
+                int right = Fixture.CreateGreaterThan(left);
                 var leftLimit = Fixture.Create<LimitType>();
-                var toLimit = Fixture.Create<LimitType>();
+                var rightLimit = Fixture.Create<LimitType>();
 
                 // act
-                var sut = new Range<int>(left, to, leftLimit, toLimit);
+                var sut = new Range<int>(left, right, leftLimit, rightLimit);
 
                 // assert
                 sut.Left.Value.Should().Be(left);
-                sut.Right.Value.Should().Be(to);
+                sut.Right.Value.Should().Be(right);
                 sut.Left.Type.Should().Be(leftLimit);
-                sut.Right.Type.Should().Be(toLimit);
+                sut.Right.Type.Should().Be(rightLimit);
+            }
+
+            [Fact]
+            public void LeftInfiniteLimit_ShouldCreateLeftInfiniteRange()
+            {
+                // arrange
+                var left = DirectedLimit<double>.LeftInfinity;
+                var right = Fixture.Create<DirectedLimit<double>>().With(side: LimitSide.Right);
+
+                // act
+                var sut = new Range<double>(left, right);
+
+                // assert
+                sut.IsLimitedLeft.Should().BeFalse();
+                sut.IsLimitedRight.Should().BeTrue();
+            }
+
+            [Fact]
+            public void RightInfiniteLimit_ShouldCreateRightInfiniteRange()
+            {
+                // arrange
+                var left = Fixture.Create<DirectedLimit<double>>().With(side: LimitSide.Left);
+                var right = DirectedLimit<double>.RightInfinity;
+
+                // act
+                var sut = new Range<double>(left, right);
+
+                // assert
+                sut.IsLimitedRight.Should().BeFalse();
+                sut.IsLimitedLeft.Should().BeTrue();
             }
         }
     }
