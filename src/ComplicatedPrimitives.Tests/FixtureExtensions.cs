@@ -38,5 +38,10 @@ namespace ComplicatedPrimitives.Tests
         {
             fixture.CustomizeAsOpenGeneric(typeof(Range<>), typeof(RangeFactory<>));
         }
+
+        public static void CustomizeCaseInsensitiveString(this IFixture fixture)
+        {
+            fixture.Customize<CaseInsensitiveString>(e => e.FromFactory(() => new CaseInsensitiveString(fixture.Create<string>())));
+        }
     }
 }
