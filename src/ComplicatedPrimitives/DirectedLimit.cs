@@ -25,6 +25,14 @@ namespace ComplicatedPrimitives
         public T Value => LimitValue.Value;
         public LimitType Type => LimitValue.Type;
 
+        public DirectedLimit<TResult> Map<TResult>(Func<T, TResult> mapper)
+            where TResult : IComparable<TResult> =>
+            IsUndefined
+            ? DirectedLimit<TResult>.Undefined
+            : new DirectedLimit<TResult>(
+                limitValue: LimitValue.Map(mapper),
+                side: Side);
+
         public DirectedLimit<T> Translate(Func<T, T> translation) =>
             IsUndefined
             ? Undefined
