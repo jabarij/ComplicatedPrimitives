@@ -48,6 +48,14 @@ namespace ComplicatedPrimitives
             !IsLimitedLeft
             && !IsLimitedRight;
 
+        public Range<TResult> Map<TResult>(Func<T, TResult> mapper)
+            where TResult : IComparable<TResult> =>
+            IsEmpty
+            ? Range<TResult>.Empty
+            : new Range<TResult>(
+                left: Left.Map(mapper),
+                right: Right.Map(mapper));
+
         public bool Contains(T value) =>
             Left.Contains(value)
             && Right.Contains(value);
