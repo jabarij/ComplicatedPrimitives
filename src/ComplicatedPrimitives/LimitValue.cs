@@ -21,6 +21,12 @@ namespace ComplicatedPrimitives
         public LimitType Type { get; }
         public bool IsInfinity => !_isFinite;
 
+        public LimitValue<TResult> Map<TResult>(Func<T, TResult> mapper)
+            where TResult : IComparable<TResult> =>
+            _isFinite
+            ? new LimitValue<TResult>(mapper(Value), Type)
+            : LimitValue<TResult>.Infinity;
+
         public LimitValue<T> Translate(Func<T, T> translation) =>
             IsInfinity
             ? Infinity
