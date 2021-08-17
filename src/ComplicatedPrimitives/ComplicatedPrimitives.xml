@@ -21,62 +21,172 @@
         </member>
         <member name="T:ComplicatedPrimitives.LimitValue`1">
             <summary>
-            Structure representing limit value and type.
+            Structure representing limit point of type <typeparamref name="T"/>.
             </summary>
-            <typeparam name="T">Type of value.</typeparam>
+            <typeparam name="T">Type of limit point's value.</typeparam>
         </member>
         <member name="F:ComplicatedPrimitives.LimitValue`1.Infinity">
             <summary>
-            Infinite limit value.
+            Infinite limit point.
             </summary>
         </member>
         <member name="M:ComplicatedPrimitives.LimitValue`1.#ctor(`0,ComplicatedPrimitives.LimitType)">
             <summary>
-            Initializes a new instance of the <see cref="T:ComplicatedPrimitives.LimitValue`1"/> structure to a specified <paramref name="value"/> and <paramref name="type"/>.
+            Creates a new <see cref="P:ComplicatedPrimitives.LimitValue`1.IsFinite">finite</see> instance of the <see cref="T:ComplicatedPrimitives.LimitValue`1"/> structure with a specified <paramref name="value"/> and <paramref name="type"/>.
             </summary>
-            <param name="value">Limit value.</param>
-            <param name="type">Limit type.</param>
+            <param name="value">Limit point's value.</param>
+            <param name="type">Limit point's type.</param>
         </member>
         <member name="P:ComplicatedPrimitives.LimitValue`1.Value">
             <summary>
-            Gets the limit value.
+            Gets the value of this <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see>.
             </summary>
+            <remarks>
+            For <see cref="P:ComplicatedPrimitives.LimitValue`1.IsInfinite">infinite</see> instances of <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see>, the value is always considered to be default of <typeparamref name="T"/>.
+            </remarks>
         </member>
         <member name="P:ComplicatedPrimitives.LimitValue`1.Type">
             <summary>
-            Gets the limit type.
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> is either <see cref="F:ComplicatedPrimitives.LimitType.Open">open</see> or <see cref="F:ComplicatedPrimitives.LimitType.Closed">closed</see>,
+            which means - in other words - whether this <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> covers it's <see cref="P:ComplicatedPrimitives.LimitValue`1.Value">value</see> or considers it unreachable.
+            </summary>
+            <remarks>
+            For <see cref="P:ComplicatedPrimitives.LimitValue`1.IsInfinite">infinite</see> instances of <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see>, the type is always considered to be <see cref="F:ComplicatedPrimitives.LimitType.Open">open</see>.
+            </remarks>
+        </member>
+        <member name="P:ComplicatedPrimitives.LimitValue`1.IsFinite">
+            <summary>
+            Indicates whether this instance represents a finite <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> with certain <see cref="P:ComplicatedPrimitives.LimitValue`1.Value">value</see>.
             </summary>
         </member>
         <member name="P:ComplicatedPrimitives.LimitValue`1.IsInfinite">
             <summary>
-            Indicates whether this instance represents an infinite limit.
+            Indicates whether this instance represents an infinite <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see>.
             </summary>
+        </member>
+        <member name="M:ComplicatedPrimitives.LimitValue`1.Map``1(System.Func{`0,``0})">
+            <summary>
+            Maps this instance to <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> of <typeparamref name="TResult"/> using given <paramref name="mapper"/>.
+            </summary>
+            <typeparam name="TResult">Target type to map <see cref="P:ComplicatedPrimitives.LimitValue`1.Value">value</see> to.</typeparam>
+            <param name="mapper">Function that maps value of type <typeparamref name="T"/> to type <typeparamref name="TResult"/>.</param>
+            <returns>
+            When this instance <see cref="P:ComplicatedPrimitives.LimitValue`1.IsFinite">is finite</see>, new <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> of <typeparamref name="TResult"/>
+            with then same <see cref="P:ComplicatedPrimitives.LimitValue`1.Type">type</see>, but with <see cref="P:ComplicatedPrimitives.LimitValue`1.Value">value</see> being mapped using given <paramref name="mapper"/>;
+            otherwise, <see cref="F:ComplicatedPrimitives.LimitValue`1.Infinity">infinite limit point</see> of <typeparamref name="TResult"/>.
+            </returns>
         </member>
         <member name="M:ComplicatedPrimitives.LimitValue`1.Translate(System.Func{`0,`0})">
             <summary>
-            Translates (moves) limit value with the given <paramref name="translation"/>.
+            Translates (moves) this <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> using given <paramref name="translation"/>.
             </summary>
-            <param name="translation">Function translating limit's value.</param>
-            <returns>New instance of <see cref="T:ComplicatedPrimitives.LimitValue`1"/> with the same <see cref="P:ComplicatedPrimitives.LimitValue`1.Type"/>, but with <see cref="P:ComplicatedPrimitives.LimitValue`1.Value"/> translated using the given <paramref name="translation"/>.</returns>
+            <param name="translation">Function that translates limit point's value.</param>
+            <returns>
+            When this instance <see cref="P:ComplicatedPrimitives.LimitValue`1.IsFinite">is finite</see>, new <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> with then same <see cref="P:ComplicatedPrimitives.LimitValue`1.Type">type</see>,
+            but with <see cref="P:ComplicatedPrimitives.LimitValue`1.Value">value</see> being translated using given <paramref name="translation"/>;
+            otherwise, <see cref="F:ComplicatedPrimitives.LimitValue`1.Infinity">infinity</see>.
+            </returns>
         </member>
         <member name="M:ComplicatedPrimitives.LimitValue`1.AsOpen">
             <summary>
-            Converts this instance to <see cref="F:ComplicatedPrimitives.LimitType.Open"/>.
+            Converts this <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> to <see cref="F:ComplicatedPrimitives.LimitType.Open">open</see>.
             </summary>
-            <returns>New instance of <see cref="T:ComplicatedPrimitives.LimitValue`1"/> with the same <see cref="P:ComplicatedPrimitives.LimitValue`1.Value"/>, but with <see cref="P:ComplicatedPrimitives.LimitValue`1.Type"/> equal to <see cref="F:ComplicatedPrimitives.LimitType.Open"/>.</returns>
+            <returns>
+            When this instance <see cref="P:ComplicatedPrimitives.LimitValue`1.IsFinite">is finite</see>, new <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> with the same <see cref="P:ComplicatedPrimitives.LimitValue`1.Value">value</see>,
+            but with <see cref="P:ComplicatedPrimitives.LimitValue`1.Type">type</see> equal to <seealso cref="F:ComplicatedPrimitives.LimitType.Open">open</seealso>;
+            otherwise, <see cref="F:ComplicatedPrimitives.LimitValue`1.Infinity">infinity</see>.
+            </returns>
         </member>
         <member name="M:ComplicatedPrimitives.LimitValue`1.AsClosed">
             <summary>
-            Converts this instance to <see cref="F:ComplicatedPrimitives.LimitType.Closed"/>.
+            Converts this <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> to <see cref="F:ComplicatedPrimitives.LimitType.Closed">closed</see>.
             </summary>
-            <returns>New instance of <see cref="T:ComplicatedPrimitives.LimitValue`1"/> with the same <see cref="P:ComplicatedPrimitives.LimitValue`1.Value"/>, but with <see cref="P:ComplicatedPrimitives.LimitValue`1.Type"/> equal to <see cref="F:ComplicatedPrimitives.LimitType.Closed"/>.</returns>
+            <returns>
+            When this instance <see cref="P:ComplicatedPrimitives.LimitValue`1.IsFinite">is finite</see>, new <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> with the same <see cref="P:ComplicatedPrimitives.LimitValue`1.Value">value</see>,
+            but with <see cref="P:ComplicatedPrimitives.LimitValue`1.Type">type</see> equal to <seealso cref="F:ComplicatedPrimitives.LimitType.Closed">open</seealso>;
+            otherwise, <see cref="F:ComplicatedPrimitives.LimitValue`1.Infinity">infinity</see>.
+            </returns>
         </member>
         <member name="M:ComplicatedPrimitives.LimitValue`1.RightContains(`0)">
             <summary>
-            Gets the value indicating whether the <paramref name="value"/>
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> contains the <paramref name="value"/> on it's right side
+            or in other words whether <paramref name="value"/> is part of the set limited by this <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> from the left side.
             </summary>
-            <param name="value"></param>
-            <returns></returns>
+            <param name="value">Value to compare with this instance.</param>
+            <returns>
+            <see langword="true"/> when:
+            <list type="bullet">
+            <item><description><paramref name="value"/> is greater than this <see cref="P:ComplicatedPrimitives.LimitValue`1.Value">value</see> for this <see cref="P:ComplicatedPrimitives.LimitValue`1.Type">type</see> being <seealso cref="F:ComplicatedPrimitives.LimitType.Open">open</seealso>;</description></item>
+            <item><description><paramref name="value"/> is greater than or equal to this <see cref="P:ComplicatedPrimitives.LimitValue`1.Value">value</see> for this <see cref="P:ComplicatedPrimitives.LimitValue`1.Type">type</see> being <seealso cref="F:ComplicatedPrimitives.LimitType.Closed">closed</seealso>;</description></item>
+            <item><description>this instance <see cref="P:ComplicatedPrimitives.LimitValue`1.IsInfinite">is infinite</see>;</description></item>
+            </list>
+            otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.LimitValue`1.LeftContains(`0)">
+            <summary>
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> contains the <paramref name="value"/> on it's left side
+            or in other words whether <paramref name="value"/> is part of the set limited by this <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> from the right side.
+            </summary>
+            <param name="value">Value to compare with this instance.</param>
+            <returns>
+            <see langword="true"/> when:
+            <list type="bullet">
+            <item><description><paramref name="value"/> is lower than this <see cref="P:ComplicatedPrimitives.LimitValue`1.Value">value</see> for this <see cref="P:ComplicatedPrimitives.LimitValue`1.Type">type</see> being <seealso cref="F:ComplicatedPrimitives.LimitType.Open">open</seealso>;</description></item>
+            <item><description><paramref name="value"/> is lower than or equal to this <see cref="P:ComplicatedPrimitives.LimitValue`1.Value">value</see> for this <see cref="P:ComplicatedPrimitives.LimitValue`1.Type">type</see> being <seealso cref="F:ComplicatedPrimitives.LimitType.Closed">closed</seealso>;</description></item>
+            <item><description>this instance <see cref="P:ComplicatedPrimitives.LimitValue`1.IsInfinite">is infinite</see>;</description></item>
+            </list>
+            otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.LimitValue`1.ToString">
+            <summary>
+            Converts this <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> to its equivalent string representation.
+            </summary>
+            <returns>The string representation of this <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> consisting of:
+            <list type="bullet">
+            <item><description>signs representing <see cref="P:ComplicatedPrimitives.LimitValue`1.Type">type</see> (<c>&gt;</c>, <c>≥</c>, <c>≤</c>, <c>&lt;</c>);</description></item>
+            <item><description>string representation of <see cref="P:ComplicatedPrimitives.LimitValue`1.Value">value</see> when this instance <see cref="P:ComplicatedPrimitives.LimitValue`1.IsFinite">is finite</see> or the <see cref="F:ComplicatedPrimitives.LimitValue`1.Infinity">infinity</see> symbol '∞' if it's not.</description></item>
+            </list>
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.LimitValue`1.Equals(ComplicatedPrimitives.LimitValue{`0})">
+            <summary>
+            Checks whether this instance of <see cref="T:ComplicatedPrimitives.LimitValue`1"/> is equal to the <paramref name="other"/> one.
+            </summary>
+            <param name="other">Object to check equality with this instance.</param>
+            <returns>
+            <see langword="true"/> if this instance is equal to the <paramref name="other"/> one which means:
+            <list type="bullet">
+            <item><description>both instances <see cref="P:ComplicatedPrimitives.LimitValue`1.IsInfinite">are infinite</see>;</description></item>
+            <item><description>both instances <see cref="P:ComplicatedPrimitives.LimitValue`1.IsFinite">are finite</see> and their <see cref="P:ComplicatedPrimitives.LimitValue`1.Value">values</see> and <see cref="P:ComplicatedPrimitives.LimitValue`1.Type">types</see> are equal;</description></item>
+            </list>
+            otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.LimitValue`1.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ComplicatedPrimitives.LimitValue`1.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:ComplicatedPrimitives.LimitValue`1.op_Equality(ComplicatedPrimitives.LimitValue{`0},ComplicatedPrimitives.LimitValue{`0})">
+            <summary>
+            Determines whether two specified <see cref="T:ComplicatedPrimitives.LimitValue`1">limit points</see> have the same value.
+            </summary>
+            <param name="left">The first <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> to compare.</param>
+            <param name="right">The second <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> to compare.</param>
+            <returns><see langword="true"/> if the value of <paramref name="left"/> is the same as the value of <paramref name="right"/>;
+            otherwise, <see langword="false"/>.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.LimitValue`1.op_Inequality(ComplicatedPrimitives.LimitValue{`0},ComplicatedPrimitives.LimitValue{`0})">
+            <summary>
+            Determines whether two specified <see cref="T:ComplicatedPrimitives.LimitValue`1">limit points</see> have different values.
+            </summary>
+            <param name="left">The first <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> to compare.</param>
+            <param name="right">The second <see cref="T:ComplicatedPrimitives.LimitValue`1">limit point</see> to compare.</param>
+            <returns><see langword="true"/> if the value of <paramref name="left"/> is different from the value of <paramref name="right"/>;
+            otherwise, <see langword="false"/>.</returns>
         </member>
         <member name="T:ComplicatedPrimitives.Range`1">
             <summary>
@@ -158,6 +268,11 @@
             Gets the value of right limit of this range.
             </summary>
         </member>
+        <member name="P:ComplicatedPrimitives.Range`1.IsNotEmpty">
+            <summary>
+            Gets the value indicating whether this instance is not an empty range (∅).
+            </summary>
+        </member>
         <member name="P:ComplicatedPrimitives.Range`1.IsEmpty">
             <summary>
             Gets the value indicating whether this instance is an empty range (∅).
@@ -177,6 +292,14 @@
             <summary>
             Gets the value indicating whether this range is of infinite limits.
             </summary>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.Map``1(System.Func{`0,``0})">
+            <summary>
+            Functor mapping range's value with special states preservation.
+            </summary>
+            <typeparam name="TResult">Target type to map value to.</typeparam>
+            <param name="mapper">Value mapping function.</param>
+            <returns><see cref="T:ComplicatedPrimitives.Range`1"/> with <see cref="P:ComplicatedPrimitives.Range`1.Left"/> and <see cref="P:ComplicatedPrimitives.Range`1.Right"/> limits mapped using <paramref name="mapper"/> function when this instance <see cref="P:ComplicatedPrimitives.Range`1.IsNotEmpty"/>; otherwise <see cref="F:ComplicatedPrimitives.Range`1.Empty"/>.</returns>
         </member>
         <member name="M:ComplicatedPrimitives.Range`1.Contains(`0)">
             <summary>

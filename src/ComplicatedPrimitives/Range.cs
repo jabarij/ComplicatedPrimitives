@@ -101,10 +101,14 @@ namespace ComplicatedPrimitives
         public T RightValue => Right.Value;
 
         /// <summary>
+        /// Gets the value indicating whether this instance is not an empty range (∅).
+        /// </summary>
+        public bool IsNotEmpty => _isNotEmpty;
+
+        /// <summary>
         /// Gets the value indicating whether this instance is an empty range (∅).
         /// </summary>
-        public bool IsEmpty =>
-            !_isNotEmpty;
+        public bool IsEmpty => !_isNotEmpty;
 
         /// <summary>
         /// Gets the value indicating whether left limit is infinite.
@@ -125,13 +129,19 @@ namespace ComplicatedPrimitives
             IsInfiniteLeft
             && IsInfiniteRight;
 
+        /// <summary>
+        /// Functor mapping range's value with special states preservation.
+        /// </summary>
+        /// <typeparam name="TResult">Target type to map value to.</typeparam>
+        /// <param name="mapper">Value mapping function.</param>
+        /// <returns><see cref="Range{TResult}"/> with <see cref="Left"/> and <see cref="Right"/> limits mapped using <paramref name="mapper"/> function when this instance <see cref="IsNotEmpty"/>; otherwise <see cref="Range{TResult}.Empty"/>.</returns>
         public Range<TResult> Map<TResult>(Func<T, TResult> mapper)
             where TResult : IComparable<TResult> =>
-            IsEmpty
-            ? Range<TResult>.Empty
-            : new Range<TResult>(
+            IsNotEmpty
+            ? new Range<TResult>(
                 left: Left.Map(mapper),
-                right: Right.Map(mapper));
+                right: Right.Map(mapper))
+            : Range<TResult>.Empty;
 
         /// <summary>
         /// Checks if this range contains given <paramref name="value"/> (mathematical equivalent of expression: <paramref name="value"/> ∊ <c>this</c>).
