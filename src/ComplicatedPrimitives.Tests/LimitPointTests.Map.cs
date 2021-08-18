@@ -6,9 +6,9 @@ using AutoFixture;
 
 namespace ComplicatedPrimitives.Tests
 {
-    partial class LimitValueTests
+    partial class LimitPointTests
     {
-        public class Map : LimitValueTests
+        public class Map : LimitPointTests
         {
             public Map(TestFixture testFixture) : base(testFixture) { }
 
@@ -16,25 +16,25 @@ namespace ComplicatedPrimitives.Tests
             public void Infinity_ShouldReturnInfinity()
             {
                 // arrange
-                var sut = LimitValue<int>.Infinity;
-                var expected = LimitValue<double>.Infinity;
+                var sut = LimitPoint<int>.Infinity;
+                var expected = LimitPoint<double>.Infinity;
 
                 // act
-                LimitValue<double> result = sut.Map(e => (double)e);
+                LimitPoint<double> result = sut.Map(e => (double)e);
 
                 // assert
                 result.Should().Be(expected);
             }
 
             [Theory]
-            [InlineData(LimitType.Open)]
-            [InlineData(LimitType.Closed)]
-            public void ShouldMapValue(LimitType type)
+            [InlineData(LimitPointType.Open)]
+            [InlineData(LimitPointType.Closed)]
+            public void ShouldMapValue(LimitPointType type)
             {
                 // arrange
                 var expectedValue = Fixture.Create<TimeSpan>();
-                var sut = new LimitValue<long>(expectedValue.Ticks, type);
-                var expected = new LimitValue<TimeSpan>(expectedValue, type);
+                var sut = new LimitPoint<long>(expectedValue.Ticks, type);
+                var expected = new LimitPoint<TimeSpan>(expectedValue, type);
 
 
                 // act

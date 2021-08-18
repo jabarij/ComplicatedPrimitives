@@ -6,7 +6,7 @@ namespace ComplicatedPrimitives.Tests
     {
         public RangeTests(TestFixture testFixture) : base(testFixture)
         {
-            Fixture.CustomizeLimitValue();
+            Fixture.CustomizeLimitPoint();
             Fixture.CustomizeDirectedLimit();
             Fixture.CustomizeRange();
         }

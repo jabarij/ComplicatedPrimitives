@@ -18,7 +18,7 @@ namespace ComplicatedPrimitives
         /// <summary>
         /// Represents infinite range (often described using symbol (∞;∞)).
         /// </summary>
-        public static readonly Range<T> Infinite = new Range<T>(LimitValue<T>.Infinity, LimitValue<T>.Infinity);
+        public static readonly Range<T> Infinite = new Range<T>(LimitPoint<T>.Infinity, LimitPoint<T>.Infinity);
 
         private readonly bool _isNotEmpty;
 
@@ -61,7 +61,7 @@ namespace ComplicatedPrimitives
         /// </list>
         /// </exception>
         /// <seealso cref="DirectedLimit{T}.Intersects(DirectedLimit{T})">Intersecting directed limits.</seealso>
-        public Range(LimitValue<T> left, LimitValue<T> right)
+        public Range(LimitPoint<T> left, LimitPoint<T> right)
             : this(left: new DirectedLimit<T>(left, LimitSide.Left), right: new DirectedLimit<T>(right, LimitSide.Right)) { }
 
         /// <summary>
@@ -77,8 +77,8 @@ namespace ComplicatedPrimitives
         /// </list>
         /// </exception>
         /// <seealso cref="DirectedLimit{T}.Intersects(DirectedLimit{T})">Intersecting directed limits.</seealso>
-        public Range(T left, T right, LimitType leftLimit = default(LimitType), LimitType rightLimit = default(LimitType))
-            : this(left: new LimitValue<T>(left, leftLimit), right: new LimitValue<T>(right, rightLimit)) { }
+        public Range(T left, T right, LimitPointType leftLimit = default(LimitPointType), LimitPointType rightLimit = default(LimitPointType))
+            : this(left: new LimitPoint<T>(left, leftLimit), right: new LimitPoint<T>(right, rightLimit)) { }
 
         /// <summary>
         /// Gets the left limit of this range.
@@ -114,13 +114,13 @@ namespace ComplicatedPrimitives
         /// Gets the value indicating whether left limit is infinite.
         /// </summary>
         public bool IsInfiniteLeft =>
-            Left.LimitValue.IsInfinite;
+            Left.Point.IsInfinite;
 
         /// <summary>
         /// Gets the value indicating whether right limit is infinite.
         /// </summary>
         public bool IsInfiniteRight =>
-            Right.LimitValue.IsInfinite;
+            Right.Point.IsInfinite;
 
         /// <summary>
         /// Gets the value indicating whether this range is of infinite limits.
@@ -382,13 +382,13 @@ namespace ComplicatedPrimitives
             if (IsInfinite)
                 return "(∞;∞)";
             string leftStr =
-                Left.LimitValue.IsInfinite
+                Left.Point.IsInfinite
                 ? "(∞"
                 : string.Format("{0}{1}",
                     Left.Type.Match(open: () => '(', closed: () => '['),
                     Left.Value);
             string rightStr =
-                Right.LimitValue.IsInfinite
+                Right.Point.IsInfinite
                 ? "∞)"
                 : string.Format("{0}{1}",
                     Right.Value,

@@ -53,7 +53,7 @@ namespace ComplicatedPrimitives.Tests
             [InlineData(1, 3, 0, 3, true, "{1} is superset of {0} sharing right limit value")]
             [InlineData(0, 2, 0, 2, true, "ranges are equal")]
             [InlineData(0, 2, 3, 5, false, "ranges are disjoint")]
-            public void SupersetSharingLeftLimitValue_ShouldReturnTrue(double left, double right, double otherLeft, double otherRight, bool expected, string because)
+            public void ShouldReturnExpectedResult(double left, double right, double otherLeft, double otherRight, bool expected, string because)
             {
                 // arrange
                 var sut = new Range<double>(left, right);
@@ -72,8 +72,8 @@ namespace ComplicatedPrimitives.Tests
             {
                 // arrange
                 var maximumRange = new Range<double>(
-                    left: new LimitValue<double>(double.MinValue, LimitType.Closed),
-                    right: new LimitValue<double>(double.MaxValue, LimitType.Closed));
+                    left: new LimitPoint<double>(double.MinValue, LimitPointType.Closed),
+                    right: new LimitPoint<double>(double.MaxValue, LimitPointType.Closed));
 
                 // act
                 bool result = Range<double>.Infinite.IsSubsetOf(maximumRange);

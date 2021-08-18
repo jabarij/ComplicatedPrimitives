@@ -55,11 +55,11 @@ namespace ComplicatedPrimitives.Tests
             }
 
             [Theory]
-            [InlineData(LimitSide.Left, LimitType.Open)]
-            [InlineData(LimitSide.Left, LimitType.Closed)]
-            [InlineData(LimitSide.Right, LimitType.Open)]
-            [InlineData(LimitSide.Right, LimitType.Closed)]
-            public void ShouldMapValue(LimitSide side, LimitType type)
+            [InlineData(LimitSide.Left, LimitPointType.Open)]
+            [InlineData(LimitSide.Left, LimitPointType.Closed)]
+            [InlineData(LimitSide.Right, LimitPointType.Open)]
+            [InlineData(LimitSide.Right, LimitPointType.Closed)]
+            public void ShouldMapValue(LimitSide side, LimitPointType type)
             {
                 // arrange
                 var expectedValue = Fixture.Create<TimeSpan>();

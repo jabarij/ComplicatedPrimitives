@@ -29,13 +29,13 @@ namespace ComplicatedPrimitives.Tests
             }
 
             [Theory]
-            [InlineData(LimitType.Open, 1, 1, LimitType.Open, false)]
-            [InlineData(LimitType.Open, 1, 1, LimitType.Closed, false)]
-            [InlineData(LimitType.Closed, 1, 1, LimitType.Open, false)]
-            [InlineData(LimitType.Closed, 1, 1, LimitType.Closed, true)]
-            [InlineData(LimitType.Open, 1, 2, LimitType.Open, true)]
-            [InlineData(LimitType.Open, 2, 1, LimitType.Open, false)]
-            public void ShouldReturnExpectedResult(LimitType leftType, int leftValue, int rightValue, LimitType rightType, bool expected)
+            [InlineData(LimitPointType.Open, 1, 1, LimitPointType.Open, false)]
+            [InlineData(LimitPointType.Open, 1, 1, LimitPointType.Closed, false)]
+            [InlineData(LimitPointType.Closed, 1, 1, LimitPointType.Open, false)]
+            [InlineData(LimitPointType.Closed, 1, 1, LimitPointType.Closed, true)]
+            [InlineData(LimitPointType.Open, 1, 2, LimitPointType.Open, true)]
+            [InlineData(LimitPointType.Open, 2, 1, LimitPointType.Open, false)]
+            public void ShouldReturnExpectedResult(LimitPointType leftType, int leftValue, int rightValue, LimitPointType rightType, bool expected)
             {
                 // arrange
                 var left = Create<int>(value: leftValue, type: leftType, side: LimitSide.Left);
@@ -50,12 +50,12 @@ namespace ComplicatedPrimitives.Tests
 
             private DirectedLimit<T> Create<T>(
                 T? value = null,
-                LimitType? type = null,
+                LimitPointType? type = null,
                 LimitSide? side = null)
                 where T : struct, IComparable<T> =>
                 new DirectedLimit<T>(
                     value: value ?? Fixture.Create<T>(),
-                    type: type ?? Fixture.Create<LimitType>(),
+                    type: type ?? Fixture.Create<LimitPointType>(),
                     side: side ?? Fixture.Create<LimitSide>());
         }
     }

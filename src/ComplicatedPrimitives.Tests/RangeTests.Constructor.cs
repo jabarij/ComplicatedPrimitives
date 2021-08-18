@@ -32,8 +32,8 @@ namespace ComplicatedPrimitives.Tests
                 // arrange
                 int left = Fixture.Create<int>();
                 int right = Fixture.CreateGreaterThan(left);
-                var leftLimit = Fixture.Create<LimitType>();
-                var rightLimit = Fixture.Create<LimitType>();
+                var leftLimit = Fixture.Create<LimitPointType>();
+                var rightLimit = Fixture.Create<LimitPointType>();
 
                 // act
                 var sut = new Range<int>(left, right, leftLimit, rightLimit);

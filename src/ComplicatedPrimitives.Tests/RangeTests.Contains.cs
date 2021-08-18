@@ -11,12 +11,12 @@ namespace ComplicatedPrimitives.Tests
             public Contains(TestFixture testFixture) : base(testFixture) { }
 
             [Theory]
-            [InlineData(LimitType.Open, false)]
-            [InlineData(LimitType.Closed, true)]
-            public void LeftLimitValue_ShouldReturnExpectedResult(LimitType leftLimit, bool expectedResult)
+            [InlineData(LimitPointType.Open, false)]
+            [InlineData(LimitPointType.Closed, true)]
+            public void LeftLimitPoint_ShouldReturnExpectedResult(LimitPointType leftPointType, bool expectedResult)
             {
                 // arrange
-                var sut = Fixture.CreateRange<decimal>(leftType: leftLimit);
+                var sut = Fixture.CreateRange<decimal>(leftType: leftPointType);
 
                 // act
                 bool result = sut.Contains(sut.Left.Value);
@@ -26,18 +26,18 @@ namespace ComplicatedPrimitives.Tests
             }
 
             [Theory]
-            [InlineData(LimitType.Open, false)]
-            [InlineData(LimitType.Closed, true)]
-            public void RightLimitValue_ShouldReturnExpectedResult(LimitType rightLimit, bool expected)
+            [InlineData(LimitPointType.Open, false)]
+            [InlineData(LimitPointType.Closed, true)]
+            public void RightLimitPoint_ShouldReturnExpectedResult(LimitPointType rightPointType, bool expected)
             {
                 // arrange
-                var sut = Fixture.CreateRange<decimal>(rightType: rightLimit);
+                var sut = Fixture.CreateRange<decimal>(rightType: rightPointType);
 
                 // act
                 bool result = sut.Contains(sut.Right.Value);
 
                 // assert
-                result.Should().Be(expected, because: "{0} is the right limit value of {1} and {2} part of {3} limit", sut.Right.Value, sut, expected ? "is" : "is not", rightLimit.Match(open: "open", closed: "closed"));
+                result.Should().Be(expected, because: "{0} is the right limit value of {1} and {2} part of {3} limit", sut.Right.Value, sut, expected ? "is" : "is not", rightPointType.Match(open: "open", closed: "closed"));
             }
 
             [Fact]

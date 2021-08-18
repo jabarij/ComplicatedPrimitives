@@ -39,11 +39,11 @@ namespace ComplicatedPrimitives.Tests
             {
                 // arrange
                 var sut = new Range<double>(
-                    left: LimitValue<double>.Infinity,
-                    right: Fixture.Create<LimitValue<double>>());
+                    left: LimitPoint<double>.Infinity,
+                    right: Fixture.Create<LimitPoint<double>>());
                 var expected = new Range<double>(
-                    left: sut.Right.LimitValue.FlipLimitType(),
-                    right: LimitValue<double>.Infinity);
+                    left: sut.Right.Point.FlipLimitType(),
+                    right: LimitPoint<double>.Infinity);
 
                 // act
                 var result = sut.GetAbsoluteComplement();
@@ -58,11 +58,11 @@ namespace ComplicatedPrimitives.Tests
             {
                 // arrange
                 var sut = new Range<double>(
-                    left: Fixture.Create<LimitValue<double>>(),
-                    right: LimitValue<double>.Infinity);
+                    left: Fixture.Create<LimitPoint<double>>(),
+                    right: LimitPoint<double>.Infinity);
                 var expected = new Range<double>(
-                    left: LimitValue<double>.Infinity,
-                    right: sut.Left.LimitValue.FlipLimitType());
+                    left: LimitPoint<double>.Infinity,
+                    right: sut.Left.Point.FlipLimitType());
 
                 // act
                 var result = sut.GetAbsoluteComplement();
@@ -78,11 +78,11 @@ namespace ComplicatedPrimitives.Tests
                 // arrange
                 var sut = Fixture.Create<Range<double>>();
                 var expectedLeft = new Range<double>(
-                    left: LimitValue<double>.Infinity,
-                    right: sut.Left.LimitValue.FlipLimitType());
+                    left: LimitPoint<double>.Infinity,
+                    right: sut.Left.Point.FlipLimitType());
                 var expectedRight = new Range<double>(
-                    left: sut.Right.LimitValue.FlipLimitType(),
-                    right: LimitValue<double>.Infinity);
+                    left: sut.Right.Point.FlipLimitType(),
+                    right: LimitPoint<double>.Infinity);
 
                 // act
                 var result = sut.GetAbsoluteComplement();

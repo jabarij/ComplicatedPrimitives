@@ -27,8 +27,8 @@ namespace ComplicatedPrimitives.Tests
             {
                 // arrange
                 var maximumRange = new Range<int>(
-                    left: new LimitValue<int>(int.MinValue, LimitType.Closed),
-                    right: new LimitValue<int>(int.MaxValue, LimitType.Closed));
+                    left: new LimitPoint<int>(int.MinValue, LimitPointType.Closed),
+                    right: new LimitPoint<int>(int.MaxValue, LimitPointType.Closed));
 
                 // act
                 bool result = Range<int>.Infinite.Equals(maximumRange);

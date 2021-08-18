@@ -49,11 +49,11 @@ namespace ComplicatedPrimitives.Tests
             }
 
             [Theory]
-            [InlineData(LimitType.Open, LimitType.Open, false)]
-            [InlineData(LimitType.Open, LimitType.Closed, true)]
-            [InlineData(LimitType.Closed, LimitType.Open, false)]
-            [InlineData(LimitType.Closed, LimitType.Closed, false)]
-            public void TypeDependent_ShouldReturnExpectedResult(LimitType subsetType, LimitType supersetType, bool expected)
+            [InlineData(LimitPointType.Open, LimitPointType.Open, false)]
+            [InlineData(LimitPointType.Open, LimitPointType.Closed, true)]
+            [InlineData(LimitPointType.Closed, LimitPointType.Open, false)]
+            [InlineData(LimitPointType.Closed, LimitPointType.Closed, false)]
+            public void TypeDependent_ShouldReturnExpectedResult(LimitPointType subsetType, LimitPointType supersetType, bool expected)
             {
                 // arrange
                 var subset = Create<int>(type: subsetType);
@@ -68,12 +68,12 @@ namespace ComplicatedPrimitives.Tests
 
             private DirectedLimit<T> Create<T>(
                 T? value = null,
-                LimitType? type = null,
+                LimitPointType? type = null,
                 LimitSide? side = null)
                 where T : struct, IComparable<T> =>
                 new DirectedLimit<T>(
                     value: value ?? Fixture.Create<T>(),
-                    type: type ?? Fixture.Create<LimitType>(),
+                    type: type ?? Fixture.Create<LimitPointType>(),
                     side: side ?? Fixture.Create<LimitSide>());
         }
     }

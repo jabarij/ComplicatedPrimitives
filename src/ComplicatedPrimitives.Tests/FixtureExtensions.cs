@@ -7,15 +7,15 @@ namespace ComplicatedPrimitives.Tests
 {
     public static class FixtureExtensions
     {
-        public static Range<T> CreateRange<T>(this IFixture fixture, LimitType? leftType = null, LimitType? rightType = null)
+        public static Range<T> CreateRange<T>(this IFixture fixture, LimitPointType? leftType = null, LimitPointType? rightType = null)
             where T : IComparable<T>
         {
             var limits = fixture.CreateMany<T>(2).OrderBy(e => e).ToList();
             return new Range<T>(
                 left: limits[0],
                 right: limits[1],
-                leftLimit: leftType ?? fixture.Create<LimitType>(),
-                rightLimit: rightType ?? fixture.Create<LimitType>());
+                leftLimit: leftType ?? fixture.Create<LimitPointType>(),
+                rightLimit: rightType ?? fixture.Create<LimitPointType>());
         }
 
         public static DirectedLimit<int> CreateGreaterThan(this IFixture fixture, DirectedLimit<int> min) =>
@@ -24,9 +24,9 @@ namespace ComplicatedPrimitives.Tests
         public static DirectedLimit<int> CreateLowerThan(this IFixture fixture, DirectedLimit<int> max) =>
             max.Translate(e => e - fixture.CreateBetween(0, int.MaxValue - e));
 
-        public static void CustomizeLimitValue(this IFixture fixture)
+        public static void CustomizeLimitPoint(this IFixture fixture)
         {
-            fixture.CustomizeAsOpenGeneric(typeof(LimitValue<>), typeof(LimitValueFactory<>));
+            fixture.CustomizeAsOpenGeneric(typeof(LimitPoint<>), typeof(LimitPointFactory<>));
         }
 
         public static void CustomizeDirectedLimit(this IFixture fixture)

@@ -7,58 +7,58 @@ namespace ComplicatedPrimitives
         where T : IComparable<T>
     {
         public static readonly DirectedLimit<T> Undefined = new DirectedLimit<T>();
-        public static readonly DirectedLimit<T> LeftInfinity = new DirectedLimit<T>(LimitValue<T>.Infinity, LimitSide.Left);
-        public static readonly DirectedLimit<T> RightInfinity = new DirectedLimit<T>(LimitValue<T>.Infinity, LimitSide.Right);
+        public static readonly DirectedLimit<T> LeftInfinity = new DirectedLimit<T>(LimitPoint<T>.Infinity, LimitSide.Left);
+        public static readonly DirectedLimit<T> RightInfinity = new DirectedLimit<T>(LimitPoint<T>.Infinity, LimitSide.Right);
 
-        public DirectedLimit(LimitValue<T> limitValue, LimitSide side)
+        public DirectedLimit(LimitPoint<T> point, LimitSide side)
         {
-            LimitValue = limitValue;
+            Point = point;
             Side = side;
         }
-        public DirectedLimit(T value, LimitType type, LimitSide side)
-            : this(new LimitValue<T>(value, type), side) { }
+        public DirectedLimit(T value, LimitPointType type, LimitSide side)
+            : this(new LimitPoint<T>(value, type), side) { }
 
-        public LimitValue<T> LimitValue { get; }
+        public LimitPoint<T> Point { get; }
         public LimitSide Side { get; }
 
         public bool IsUndefined => Side == 0;
-        public T Value => LimitValue.Value;
-        public LimitType Type => LimitValue.Type;
+        public T Value => Point.Value;
+        public LimitPointType Type => Point.Type;
 
         public DirectedLimit<TResult> Map<TResult>(Func<T, TResult> mapper)
             where TResult : IComparable<TResult> =>
             IsUndefined
             ? DirectedLimit<TResult>.Undefined
             : new DirectedLimit<TResult>(
-                limitValue: LimitValue.Map(mapper),
+                point: Point.Map(mapper),
                 side: Side);
 
         public DirectedLimit<T> Translate(Func<T, T> translation) =>
             IsUndefined
             ? Undefined
             : new DirectedLimit<T>(
-                limitValue: LimitValue.Translate(translation),
+                point: Point.Translate(translation),
                 side: Side);
 
         public DirectedLimit<T> GetComplement() =>
             IsUndefined
             ? Undefined
             : new DirectedLimit<T>(
-                limitValue: new LimitValue<T>(LimitValue.Value, LimitValue.Type.Flip()),
+                point: new LimitPoint<T>(Point.Value, Point.Type.Flip()),
                 side: Side.Flip());
 
         public bool IsComplementOf(DirectedLimit<T> other)
         {
             if (IsUndefined || other.IsUndefined)
                 return false;
-            if (LimitValue.IsInfinite ^ other.LimitValue.IsInfinite)
+            if (Point.IsInfinite ^ other.Point.IsInfinite)
                 return false;
-            if (LimitValue.IsInfinite && other.LimitValue.IsInfinite)
+            if (Point.IsInfinite && other.Point.IsInfinite)
                 return false;
 
             return Equals(Value, other.Value)
-                && (Type == LimitType.Closed && other.Type == LimitType.Open
-                    || Type == LimitType.Open && other.Type == LimitType.Closed)
+                && (Type == LimitPointType.Closed && other.Type == LimitPointType.Open
+                    || Type == LimitPointType.Open && other.Type == LimitPointType.Closed)
                 && (Side == LimitSide.Left && other.Side == LimitSide.Right
                     || Side == LimitSide.Right && other.Side == LimitSide.Left);
         }
@@ -68,9 +68,9 @@ namespace ComplicatedPrimitives
             switch (Side)
             {
                 case LimitSide.Left:
-                    return LimitValue.RightContains(value);
+                    return Point.RightContains(value);
                 case LimitSide.Right:
-                    return LimitValue.LeftContains(value);
+                    return Point.LeftContains(value);
                 case 0:
                     throw new InvalidOperationException("Cannot check value belonging for undefined limit.");
                 default:
@@ -84,12 +84,12 @@ namespace ComplicatedPrimitives
                 return false;
             if (Side == other.Side)
                 return true;
-            if (LimitValue.IsInfinite || other.LimitValue.IsInfinite)
+            if (Point.IsInfinite || other.Point.IsInfinite)
                 return true;
 
             int valueComparison = Value.CompareTo(other.Value);
             if (valueComparison == 0)
-                return Type == LimitType.Closed && other.Type == LimitType.Closed;
+                return Type == LimitPointType.Closed && other.Type == LimitPointType.Closed;
 
             switch (Side)
             {
@@ -107,7 +107,7 @@ namespace ComplicatedPrimitives
             if (IsUndefined || other.IsUndefined)
                 return false;
 
-            if (other.LimitValue.IsInfinite && !LimitValue.IsInfinite)
+            if (other.Point.IsInfinite && !Point.IsInfinite)
                 return true;
 
             if (Side != other.Side)
@@ -115,7 +115,7 @@ namespace ComplicatedPrimitives
 
             int valueComparison = Value.CompareTo(other.Value);
             if (valueComparison == 0)
-                return Type == LimitType.Open && other.Type == LimitType.Closed;
+                return Type == LimitPointType.Open && other.Type == LimitPointType.Closed;
 
             switch (Side)
             {
@@ -133,7 +133,7 @@ namespace ComplicatedPrimitives
             if (IsUndefined || other.IsUndefined)
                 return false;
 
-            if (other.LimitValue.IsInfinite)
+            if (other.Point.IsInfinite)
                 return true;
 
             if (Side != other.Side)
@@ -143,7 +143,7 @@ namespace ComplicatedPrimitives
             if (valueComparison == 0)
                 return
                     Type == other.Type
-                    || Type == LimitType.Open && other.Type == LimitType.Closed;
+                    || Type == LimitPointType.Open && other.Type == LimitPointType.Closed;
 
             switch (Side)
             {
@@ -161,7 +161,7 @@ namespace ComplicatedPrimitives
             if (IsUndefined || other.IsUndefined)
                 return false;
 
-            if (LimitValue.IsInfinite && !other.LimitValue.IsInfinite)
+            if (Point.IsInfinite && !other.Point.IsInfinite)
                 return true;
 
             if (Side != other.Side)
@@ -169,7 +169,7 @@ namespace ComplicatedPrimitives
 
             int valueComparison = Value.CompareTo(other.Value);
             if (valueComparison == 0)
-                return Type == LimitType.Closed && other.Type == LimitType.Open;
+                return Type == LimitPointType.Closed && other.Type == LimitPointType.Open;
 
             switch (Side)
             {
@@ -187,7 +187,7 @@ namespace ComplicatedPrimitives
             if (IsUndefined || other.IsUndefined)
                 return false;
 
-            if (LimitValue.IsInfinite)
+            if (Point.IsInfinite)
                 return true;
 
             if (Side != other.Side)
@@ -197,7 +197,7 @@ namespace ComplicatedPrimitives
             if (valueComparison == 0)
                 return
                     Type == other.Type
-                    || Type == LimitType.Closed && other.Type == LimitType.Open;
+                    || Type == LimitPointType.Closed && other.Type == LimitPointType.Open;
 
             switch (Side)
             {
@@ -214,8 +214,8 @@ namespace ComplicatedPrimitives
 
         public override string ToString()
         {
-            T value = LimitValue.Value;
-            var type = LimitValue.Type;
+            T value = Point.Value;
+            var type = Point.Type;
             return Side.Match(
                 left: () => string.Concat(value, type.Match(open: () => '<', closed: () => '≤')),
                 right: () => string.Concat(type.Match(open: () => '<', closed: () => '≤'), value),
@@ -224,14 +224,14 @@ namespace ComplicatedPrimitives
 
         public bool Equals(DirectedLimit<T> other) =>
             IsUndefined && other.IsUndefined
-            || LimitValue == other.LimitValue
+            || Point == other.Point
                 && Side == other.Side;
         public override bool Equals(object obj) =>
             obj is DirectedLimit<T> other
             && Equals(other);
         public override int GetHashCode() =>
             new HashCode()
-            .Append(LimitValue, Side)
+            .Append(Point, Side)
             .CurrentHash;
 
         public int CompareTo(DirectedLimit<T> other)
@@ -248,7 +248,7 @@ namespace ComplicatedPrimitives
 
         private int CompareInternal(DirectedLimit<T> other)
         {
-            int compareValue = LimitValue.Value.CompareTo(other.LimitValue.Value);
+            int compareValue = Point.Value.CompareTo(other.Point.Value);
             if (compareValue != 0)
                 return compareValue;
 
@@ -256,10 +256,10 @@ namespace ComplicatedPrimitives
             if (compareSide != 0)
                 return compareSide;
 
-            if (LimitValue.Type != other.LimitValue.Type)
+            if (Point.Type != other.Point.Type)
                 return Side == LimitSide.Left
-                    ? (LimitValue.Type == LimitType.Closed ? -1 : 1)
-                    : (LimitValue.Type == LimitType.Open ? -1 : 1);
+                    ? (Point.Type == LimitPointType.Closed ? -1 : 1)
+                    : (Point.Type == LimitPointType.Open ? -1 : 1);
 
             return 0;
         }

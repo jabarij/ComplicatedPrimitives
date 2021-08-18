@@ -38,8 +38,8 @@ namespace ComplicatedPrimitives
             var leftValue = _parseValue.Parse(values[0]);
             var rightValue = _parseValue.Parse(values[1]);
             return new Range<T>(
-                left: new LimitValue<T>(leftValue, type: leftLimit.type),
-                right: new LimitValue<T>(rightValue, type: rightLimit.type));
+                left: new LimitPoint<T>(leftValue, type: leftLimit.type),
+                right: new LimitPoint<T>(rightValue, type: rightLimit.type));
         }
 
         public bool TryParse(string str, out Range<T> range)
@@ -93,29 +93,29 @@ namespace ComplicatedPrimitives
             }
 
             range = new Range<T>(
-                left: new LimitValue<T>(leftValue, type: leftLimit.type),
-                right: new LimitValue<T>(rightValue, type: rightLimit.type));
+                left: new LimitPoint<T>(leftValue, type: leftLimit.type),
+                right: new LimitPoint<T>(rightValue, type: rightLimit.type));
             return true;
         }
 
-        private static bool TryParseLimit(char limitChar, out (LimitType type, LimitSide side) result)
+        private static bool TryParseLimit(char limitChar, out (LimitPointType type, LimitSide side) result)
         {
             switch (limitChar)
             {
                 case '(':
-                    result = (LimitType.Open, LimitSide.Left);
+                    result = (LimitPointType.Open, LimitSide.Left);
                     return true;
                 case '[':
-                    result = (LimitType.Closed, LimitSide.Left);
+                    result = (LimitPointType.Closed, LimitSide.Left);
                     return true;
                 case ']':
-                    result = (LimitType.Closed, LimitSide.Right);
+                    result = (LimitPointType.Closed, LimitSide.Right);
                     return true;
                 case ')':
-                    result = (LimitType.Open, LimitSide.Right);
+                    result = (LimitPointType.Open, LimitSide.Right);
                     return true;
                 default:
-                    result = default((LimitType, LimitSide));
+                    result = default((LimitPointType, LimitSide));
                     return false;
             }
         }

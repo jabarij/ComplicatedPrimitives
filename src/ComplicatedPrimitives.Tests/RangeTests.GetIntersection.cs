@@ -30,14 +30,14 @@ namespace ComplicatedPrimitives.Tests
                 // arrange
                 // [
                 var sut = new Range<decimal>(
-                    left: new LimitValue<decimal>(1m, LimitType.Open),
-                    right: new LimitValue<decimal>(3m, LimitType.Closed));
+                    left: new LimitPoint<decimal>(1m, LimitPointType.Open),
+                    right: new LimitPoint<decimal>(3m, LimitPointType.Closed));
                 var other = new Range<decimal>(
-                    left: new LimitValue<decimal>(2m, LimitType.Open),
-                    right: new LimitValue<decimal>(4m, LimitType.Closed));
+                    left: new LimitPoint<decimal>(2m, LimitPointType.Open),
+                    right: new LimitPoint<decimal>(4m, LimitPointType.Closed));
                 var expected = new Range<decimal>(
-                    left: new LimitValue<decimal>(2m, LimitType.Open),
-                    right: new LimitValue<decimal>(3m, LimitType.Closed));
+                    left: new LimitPoint<decimal>(2m, LimitPointType.Open),
+                    right: new LimitPoint<decimal>(3m, LimitPointType.Closed));
 
                 // act
                 var result = sut.GetIntersection(other);

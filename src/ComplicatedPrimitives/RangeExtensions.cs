@@ -68,8 +68,8 @@ namespace ComplicatedPrimitives
                     {
                         case LimitSide.Left:
                             if (limit.Value.CompareTo(rightLimit.Value.Value) != 0
-                                || (limit.Type == LimitType.Open
-                                    && rightLimit.Value.Type == LimitType.Open))
+                                || (limit.Type == LimitPointType.Open
+                                    && rightLimit.Value.Type == LimitPointType.Open))
                             {
                                 yield return new Range<T>(leftLimit.Value, rightLimit.Value);
                                 leftLimit = null;
@@ -96,6 +96,6 @@ namespace ComplicatedPrimitives
         }
 
         private static int _compareDirectedLimitByValue<T>(DirectedLimit<T> left, DirectedLimit<T> right) where T : IComparable<T> =>
-            left.LimitValue.Value.CompareTo(right.LimitValue.Value);
+            left.Point.Value.CompareTo(right.Point.Value);
     }
 }

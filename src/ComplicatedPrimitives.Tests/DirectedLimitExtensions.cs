@@ -7,16 +7,16 @@ namespace ComplicatedPrimitives.Tests
         public static DirectedLimit<T> With<T>(
             this DirectedLimit<T> directedLimit,
             T? value = null,
-            LimitType? type = null,
+            LimitPointType? type = null,
             LimitSide? side = null)
             where T : struct, IComparable<T> =>
             new DirectedLimit<T>(
-                limitValue: new LimitValue<T>(
+                point: new LimitPoint<T>(
                     value: value ?? directedLimit.Value,
                     type: type ?? directedLimit.Type),
                 side: side ?? directedLimit.Side);
 
         public static DirectedLimit<T> FlipLimitType<T>(this DirectedLimit<T> limit) where T : IComparable<T> =>
-            new DirectedLimit<T>(limit.LimitValue.FlipLimitType(), limit.Side);
+            new DirectedLimit<T>(limit.Point.FlipLimitType(), limit.Side);
     }
 }
