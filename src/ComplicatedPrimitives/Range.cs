@@ -160,8 +160,8 @@ namespace ComplicatedPrimitives
         public bool Intersects(Range<T> other) =>
             !IsEmpty
             && !other.IsEmpty
-            && Comparable.Subset(Left, other.Left)
-            .Intersects(Comparable.Subset(Right, other.Right));
+            && DirectedLimit.Subset(Left, other.Left)
+            .Intersects(DirectedLimit.Subset(Right, other.Right));
 
         /// <summary>
         /// Checks whether <c>this</c> range is a subset of the <paramref name="other"/> range (<c>this</c> ⊆ <paramref name="other"/>).
@@ -267,8 +267,8 @@ namespace ComplicatedPrimitives
             if (other.IsInfinite)
                 return this;
 
-            var left = Comparable.Subset(Left, other.Left);
-            var right = Comparable.Subset(Right, other.Right);
+            var left = DirectedLimit.Subset(Left, other.Left);
+            var right = DirectedLimit.Subset(Right, other.Right);
             return
                 left.Intersects(right)
                 ? new Range<T>(left, right)
@@ -277,8 +277,8 @@ namespace ComplicatedPrimitives
 
         public bool TryIntersect(Range<T> other, out Range<T> intersection)
         {
-            var left = Comparable.Subset(Left, other.Left);
-            var right = Comparable.Subset(Right, other.Right);
+            var left = DirectedLimit.Subset(Left, other.Left);
+            var right = DirectedLimit.Subset(Right, other.Right);
             bool intersects = left.Intersects(right);
             intersection =
                 intersects
@@ -296,13 +296,13 @@ namespace ComplicatedPrimitives
             if (other.IsEmpty)
                 return new RangeUnion<Range<T>, T>(true, this);
 
-            var leftSubset = Comparable.Subset(Left, other.Left);
-            var rightSubset = Comparable.Subset(Right, other.Right);
+            var leftSubset = DirectedLimit.Subset(Left, other.Left);
+            var rightSubset = DirectedLimit.Subset(Right, other.Right);
             if (leftSubset.IsComplementOf(rightSubset)
                 || leftSubset.Intersects(rightSubset))
             {
-                var left = Comparable.Superset(Left, other.Left);
-                var right = Comparable.Superset(Right, other.Right);
+                var left = DirectedLimit.Superset(Left, other.Left);
+                var right = DirectedLimit.Superset(Right, other.Right);
                 return new RangeUnion<Range<T>, T>(true, new Range<T>(left, right));
             }
             else
