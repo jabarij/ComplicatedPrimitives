@@ -6,12 +6,37 @@ namespace ComplicatedPrimitives
     /// <summary>
     /// Structure representing limit point of type <typeparamref name="T"/>.
     /// </summary>
-    /// <typeparam name="T">Type of limit point's value.</typeparam>
+    /// <typeparam name="T">Type of limit point's value (limit's domain).</typeparam>
     public struct LimitPoint<T> : IEquatable<LimitPoint<T>>
         where T : IComparable<T>
     {
         /// <summary>
-        /// Infinite limit point.
+        /// Represents the left <see cref="LimitPointType.Open">open</see> <see cref="Type">type</see> of <see cref="IsFinite">finite</see> <see cref="LimitPoint{T}">limit point</see>.
+        /// </summary>
+        public const char LeftOpenSign = '>';
+
+        /// <summary>
+        /// Represents the left <see cref="LimitPointType.Closed">closed</see> <see cref="Type">type</see> of <see cref="IsFinite">finite</see> <see cref="LimitPoint{T}">limit point</see>.
+        /// </summary>
+        public const char LeftClosedSign = '≥';
+
+        /// <summary>
+        /// Represents the right <see cref="LimitPointType.Open">open</see> <see cref="Type">type</see> of <see cref="IsFinite">finite</see> <see cref="LimitPoint{T}">limit point</see>.
+        /// </summary>
+        public const char RightOpenSign = '<';
+
+        /// <summary>
+        /// Represents the right <see cref="LimitPointType.Closed">closed</see> <see cref="Type">type</see> of <see cref="IsFinite">finite</see> <see cref="LimitPoint{T}">limit point</see>.
+        /// </summary>
+        public const char RightClosedSign = '≤';
+
+        /// <summary>
+        /// Represents the string equivalent of <see cref="IsInfinite">infinite</see> <see cref="LimitPoint{T}">limit point</see>.
+        /// </summary>
+        public const string InfinityString = "∞";
+
+        /// <summary>
+        /// Represents an infinite limit point. This field is read-only.
         /// </summary>
         public static readonly LimitPoint<T> Infinity = new LimitPoint<T>();
 
@@ -23,9 +48,13 @@ namespace ComplicatedPrimitives
         /// </summary>
         /// <param name="value">Limit point's value.</param>
         /// <param name="type">Limit point's type.</param>
+        /// <exception cref="ArgumentException"><paramref name="type"/> is not a defined value of <see cref="LimitPointType"/> enum</exception>
         public LimitPoint(T value, LimitPointType type = default(LimitPointType))
         {
             Value = value;
+
+            if (type != LimitPointType.Open && type != LimitPointType.Closed)
+                Throw.ArgumentIsUndefinedEnum(type, nameof(type));
             _type = type;
             _isFinite = true;
         }
@@ -81,7 +110,7 @@ namespace ComplicatedPrimitives
         /// </summary>
         /// <param name="translation">Function that translates limit point's value.</param>
         /// <returns>
-        /// When this instance <see cref="IsFinite">is finite</see>, new <see cref="LimitPoint{TResult}">limit point</see> with then same <see cref="Type">type</see>,
+        /// When this instance <see cref="IsFinite">is finite</see>, new <see cref="LimitPoint{TResult}">limit point</see> with the same <see cref="Type">type</see>,
         /// but with <see cref="Value">value</see> being translated using given <paramref name="translation"/>;
         /// otherwise, <see cref="Infinity">infinity</see>.
         /// </returns>
@@ -181,22 +210,24 @@ namespace ComplicatedPrimitives
         #region Boiler-plate code
 
         /// <summary>
-        /// Converts this <see cref="LimitPoint{T}">limit point</see> to its equivalent string representation.
+        /// Converts this <see cref="DirectedLimit{T}">directed limit</see> to its equivalent string representation following format: <c>{leftTypeSign}{value}{rightTypeSign}</c>.
         /// </summary>
-        /// <returns>The string representation of this <see cref="LimitPoint{T}">limit point</see> consisting of:
+        /// <returns>When this instance <see cref="IsFinite">is finite</see>, the string representation of this directed limit consisting of:
         /// <list type="bullet">
-        /// <item><description>signs representing <see cref="Type">type</see> (<c>&gt;</c>, <c>≥</c>, <c>≤</c>, <c>&lt;</c>);</description></item>
-        /// <item><description>string representation of <see cref="Value">value</see> when this instance <see cref="IsFinite">is finite</see> or the <see cref="Infinity">infinity</see> symbol '∞' if it's not.</description></item>
+        /// <item><description>signs representing <see cref="Type">type</see> (<see cref="LeftClosedSign"><c>≥</c></see>, <see cref="RightOpenSign"><c>&gt;</c></see>,
+        /// <see cref="RightClosedSign"><c>≤</c></see>, <see cref="LeftOpenSign"><c>&lt;</c></see>);</description></item>
+        /// <item><description>string representation of <see cref="Value">value</see>.</description></item>
         /// </list>
+        /// When this instance <see cref="IsInfinite">is infinite</see>, the <see cref="InfinityString"/> is returned.
         /// </returns>
         public override string ToString() =>
             IsInfinite
-            ? "∞"
+            ? InfinityString
             : string.Format(
                 "{0}{1}{2}",
-                Type.Match(open: () => '>', closed: () => '≥'),
+                Type.Match(open: () => LeftOpenSign, closed: () => LeftClosedSign),
                 Value,
-                Type.Match(open: () => '<', closed: () => '≤'));
+                Type.Match(open: () => RightOpenSign, closed: () => RightClosedSign));
 
         /// <summary>
         /// Checks whether this instance of <see cref="LimitPoint{T}"/> is equal to the <paramref name="other"/> one.
@@ -232,8 +263,8 @@ namespace ComplicatedPrimitives
         /// <summary>
         /// Determines whether two specified <see cref="LimitPoint{T}">limit points</see> have the same value.
         /// </summary>
-        /// <param name="left">The first <see cref="LimitPoint{T}">limit point</see> to compare.</param>
-        /// <param name="right">The second <see cref="LimitPoint{T}">limit point</see> to compare.</param>
+        /// <param name="left">The first limit point to compare.</param>
+        /// <param name="right">The second limit point to compare.</param>
         /// <returns><see langword="true"/> if the value of <paramref name="left"/> is the same as the value of <paramref name="right"/>;
         /// otherwise, <see langword="false"/>.</returns>
         public static bool operator ==(LimitPoint<T> left, LimitPoint<T> right) =>
@@ -242,8 +273,8 @@ namespace ComplicatedPrimitives
         /// <summary>
         /// Determines whether two specified <see cref="LimitPoint{T}">limit points</see> have different values.
         /// </summary>
-        /// <param name="left">The first <see cref="LimitPoint{T}">limit point</see> to compare.</param>
-        /// <param name="right">The second <see cref="LimitPoint{T}">limit point</see> to compare.</param>
+        /// <param name="left">The first limit point to compare.</param>
+        /// <param name="right">The second limit point to compare.</param>
         /// <returns><see langword="true"/> if the value of <paramref name="left"/> is different from the value of <paramref name="right"/>;
         /// otherwise, <see langword="false"/>.</returns>
         public static bool operator !=(LimitPoint<T> left, LimitPoint<T> right) =>

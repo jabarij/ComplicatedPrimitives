@@ -291,15 +291,693 @@
             </list>
             </returns>
         </member>
+        <member name="T:ComplicatedPrimitives.DefaultValueParser">
+            <summary>
+            Class wrapping default .NET parsing functions to provide them as <see cref="T:ComplicatedPrimitives.IParser`1"/> implementations.
+            </summary>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Byte}#Parse(System.String)">
+            <summary>
+            Converts the specified string representation of a number to its <see cref="T:System.Byte"/> equivalent using <see cref="M:System.Byte.Parse(System.String)"/> method.
+            </summary>
+            <param name="str">A string that contains a number to convert.</param>
+            <returns>
+            A byte value that is equivalent to the number contained in <paramref name="str"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.Byte.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.byte.parse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Byte}#TryParse(System.String,System.Byte@)">
+            <summary>
+            Tries to convert the string representation of a number to its <see cref="T:System.Byte"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            </summary>
+            <param name="str">A string that contains a number to convert.</param>
+            <param name="result">
+            When this method returns, contains the <see cref="T:System.Byte"/> value equivalent to the number contained in <paramref name="str"/> if the conversion succeeded,
+            or zero if the conversion failed.
+            </param>
+            <returns>
+            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.Byte.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.byte.tryparse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int16}#Parse(System.String)">
+            <summary>
+            Converts the specified string representation of a number to its <see cref="T:System.Int16"/> equivalent using <see cref="M:System.Int16.Parse(System.String)"/> method.
+            </summary>
+            <param name="str">A string that contains a number to convert.</param>
+            <returns>
+            A byte value that is equivalent to the number contained in <paramref name="str"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.Int16.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.int16.parse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int16}#TryParse(System.String,System.Int16@)">
+            <summary>
+            Tries to convert the string representation of a number to its <see cref="T:System.Int16"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            </summary>
+            <param name="str">A string that contains a number to convert.</param>
+            <param name="result">
+            When this method returns, contains the <see cref="T:System.Int16"/> value equivalent to the number contained in <paramref name="str"/> if the conversion succeeded,
+            or zero if the conversion failed.
+            </param>
+            <returns>
+            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.Int16.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.int16.tryparse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt16}#Parse(System.String)">
+            <summary>
+            Converts the specified string representation of a number to its <see cref="T:System.UInt16"/> equivalent using <see cref="M:System.UInt16.Parse(System.String)"/> method.
+            </summary>
+            <param name="str">A string that contains a number to convert.</param>
+            <returns>
+            A byte value that is equivalent to the number contained in <paramref name="str"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.UInt16.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.uint16.parse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt16}#TryParse(System.String,System.UInt16@)">
+            <summary>
+            Tries to convert the string representation of a number to its <see cref="T:System.UInt16"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            </summary>
+            <param name="str">A string that contains a number to convert.</param>
+            <param name="result">
+            When this method returns, contains the <see cref="T:System.UInt16"/> value equivalent to the number contained in <paramref name="str"/> if the conversion succeeded,
+            or zero if the conversion failed.
+            </param>
+            <returns>
+            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.UInt16.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.uint16.tryparse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int32}#Parse(System.String)">
+            <summary>
+            Converts the specified string representation of a number to its <see cref="T:System.Int32"/> equivalent using <see cref="M:System.Int32.Parse(System.String)"/> method.
+            </summary>
+            <param name="str">A string that contains a number to convert.</param>
+            <returns>
+            A byte value that is equivalent to the number contained in <paramref name="str"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.Int32.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32.parse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int32}#TryParse(System.String,System.Int32@)">
+            <summary>
+            Tries to convert the string representation of a number to its <see cref="T:System.Int32"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            </summary>
+            <param name="str">A string that contains a number to convert.</param>
+            <param name="result">
+            When this method returns, contains the <see cref="T:System.Int32"/> value equivalent to the number contained in <paramref name="str"/> if the conversion succeeded,
+            or zero if the conversion failed.
+            </param>
+            <returns>
+            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.Int32.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32.tryparse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt32}#Parse(System.String)">
+            <summary>
+            Converts the specified string representation of a number to its <see cref="T:System.UInt32"/> equivalent using <see cref="M:System.UInt32.Parse(System.String)"/> method.
+            </summary>
+            <param name="str">A string that contains a number to convert.</param>
+            <returns>
+            A byte value that is equivalent to the number contained in <paramref name="str"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.UInt32.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.uint32.parse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt32}#TryParse(System.String,System.UInt32@)">
+            <summary>
+            Tries to convert the string representation of a number to its <see cref="T:System.UInt32"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            </summary>
+            <param name="str">A string that contains a number to convert.</param>
+            <param name="result">
+            When this method returns, contains the <see cref="T:System.UInt32"/> value equivalent to the number contained in <paramref name="str"/> if the conversion succeeded,
+            or zero if the conversion failed.
+            </param>
+            <returns>
+            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.UInt32.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.uint32.tryparse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int64}#Parse(System.String)">
+            <summary>
+            Converts the specified string representation of a number to its <see cref="T:System.Int64"/> equivalent using <see cref="M:System.Int64.Parse(System.String)"/> method.
+            </summary>
+            <param name="str">A string that contains a number to convert.</param>
+            <returns>
+            A byte value that is equivalent to the number contained in <paramref name="str"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.Int64.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64.parse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int64}#TryParse(System.String,System.Int64@)">
+            <summary>
+            Tries to convert the string representation of a number to its <see cref="T:System.Int64"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            </summary>
+            <param name="str">A string that contains a number to convert.</param>
+            <param name="result">
+            When this method returns, contains the <see cref="T:System.Int64"/> value equivalent to the number contained in <paramref name="str"/> if the conversion succeeded,
+            or zero if the conversion failed.
+            </param>
+            <returns>
+            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.Int64.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64.tryparse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt64}#Parse(System.String)">
+            <summary>
+            Converts the specified string representation of a number to its <see cref="T:System.UInt64"/> equivalent using <see cref="M:System.UInt64.Parse(System.String)"/> method.
+            </summary>
+            <param name="str">A string that contains a number to convert.</param>
+            <returns>
+            A byte value that is equivalent to the number contained in <paramref name="str"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.UInt64.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.uint64.parse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt64}#TryParse(System.String,System.UInt64@)">
+            <summary>
+            Tries to convert the string representation of a number to its <see cref="T:System.UInt64"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            </summary>
+            <param name="str">A string that contains a number to convert.</param>
+            <param name="result">
+            When this method returns, contains the <see cref="T:System.UInt64"/> value equivalent to the number contained in <paramref name="str"/> if the conversion succeeded,
+            or zero if the conversion failed.
+            </param>
+            <returns>
+            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.UInt64.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.uint64.tryparse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Single}#Parse(System.String)">
+            <summary>
+            Converts the specified string representation of a number to its <see cref="T:System.Single"/> equivalent using <see cref="M:System.Single.Parse(System.String)"/> method.
+            </summary>
+            <param name="str">A string that contains a number to convert.</param>
+            <returns>
+            A byte value that is equivalent to the number contained in <paramref name="str"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.Single.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.single.parse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Single}#TryParse(System.String,System.Single@)">
+            <summary>
+            Tries to convert the string representation of a number to its <see cref="T:System.Single"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            </summary>
+            <param name="str">A string that contains a number to convert.</param>
+            <param name="result">
+            When this method returns, contains the <see cref="T:System.Single"/> value equivalent to the number contained in <paramref name="str"/> if the conversion succeeded,
+            or zero if the conversion failed.
+            </param>
+            <returns>
+            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.Single.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.single.tryparse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Double}#Parse(System.String)">
+            <summary>
+            Converts the specified string representation of a number to its <see cref="T:System.Double"/> equivalent using <see cref="M:System.Double.Parse(System.String)"/> method.
+            </summary>
+            <param name="str">A string that contains a number to convert.</param>
+            <returns>
+            A byte value that is equivalent to the number contained in <paramref name="str"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.Double.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.double.parse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Double}#TryParse(System.String,System.Double@)">
+            <summary>
+            Tries to convert the string representation of a number to its <see cref="T:System.Double"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            </summary>
+            <param name="str">A string that contains a number to convert.</param>
+            <param name="result">
+            When this method returns, contains the <see cref="T:System.Double"/> value equivalent to the number contained in <paramref name="str"/> if the conversion succeeded,
+            or zero if the conversion failed.
+            </param>
+            <returns>
+            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.Double.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.double.tryparse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Decimal}#Parse(System.String)">
+            <summary>
+            Converts the specified string representation of a number to its <see cref="T:System.Decimal"/> equivalent using <see cref="M:System.Decimal.Parse(System.String)"/> method.
+            </summary>
+            <param name="str">A string that contains a number to convert.</param>
+            <returns>
+            A byte value that is equivalent to the number contained in <paramref name="str"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.Decimal.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.decimal.parse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Decimal}#TryParse(System.String,System.Decimal@)">
+            <summary>
+            Tries to convert the string representation of a number to its <see cref="T:System.Decimal"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            </summary>
+            <param name="str">A string that contains a number to convert.</param>
+            <param name="result">
+            When this method returns, contains the <see cref="T:System.Decimal"/> value equivalent to the number contained in <paramref name="str"/> if the conversion succeeded,
+            or zero if the conversion failed.
+            </param>
+            <returns>
+            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.Decimal.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.decimal.tryparse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTime}#Parse(System.String)">
+            <summary>
+            Converts the specified string representation of a date and time to its <see cref="T:System.DateTime"/> equivalent using <see cref="M:System.DateTime.Parse(System.String)"/> method.
+            </summary>
+            <param name="str">A string that contains a date and time to convert.</param>
+            <returns>
+            An object that is equivalent to the date and time that is contained in <paramref name="str"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.DateTime.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.parse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTime}#TryParse(System.String,System.DateTime@)">
+            <summary>
+            Tries to convert the string representation of a date and time to its <see cref="T:System.DateTime"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            </summary>
+            <param name="str">A string that contains a date and time to convert.</param>
+            <param name="result">
+            When the method returns, contains the <see cref="T:System.DateTime"/> equivalent to the date and time of <paramref name="str"/>, if the conversion succeeded, or <see cref="F:System.DateTime.MinValue"/>, if the conversion failed.
+            </param>
+            <returns>
+            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.DateTime.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.tryparse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTimeOffset}#Parse(System.String)">
+            <summary>
+            Converts the specified string representation of a date and time to its <see cref="T:System.DateTimeOffset"/> equivalent using <see cref="M:System.DateTimeOffset.Parse(System.String)"/> method.
+            </summary>
+            <param name="str">A string that contains a date and time to convert.</param>
+            <returns>
+            An object that is equivalent to the date and time that is contained in <paramref name="str"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.DateTimeOffset.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.parse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTimeOffset}#TryParse(System.String,System.DateTimeOffset@)">
+            <summary>
+            Tries to convert the string representation of a date and time to its <see cref="T:System.DateTimeOffset"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            </summary>
+            <param name="str">A string that contains a date and time to convert.</param>
+            <param name="result">
+            When the method returns, contains the <see cref="T:System.DateTimeOffset"/> equivalent to the date and time of <paramref name="str"/>, if the conversion succeeded, or <see cref="F:System.DateTimeOffset.MinValue"/>, if the conversion failed.
+            </param>
+            <returns>
+            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.DateTimeOffset.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.tryparse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#TimeSpan}#Parse(System.String)">
+            <summary>
+            Converts the specified string representation of a time interval to its <see cref="T:System.TimeSpan"/> equivalent using <see cref="M:System.TimeSpan.Parse(System.String)"/> method.
+            </summary>
+            <param name="str">A string that contains a time interval to convert.</param>
+            <returns>
+            A time interval that corresponds to <paramref name="str"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.TimeSpan.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.timespan.parse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#TimeSpan}#TryParse(System.String,System.TimeSpan@)">
+            <summary>
+            Tries to convert the string representation of a time interval to its <see cref="T:System.TimeSpan"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            </summary>
+            <param name="str">A string that contains a time interval to convert.</param>
+            <param name="result">
+            When this method returns, contains an object that represents the time interval specified by <paramref name="str"/>, or <see cref="F:System.TimeSpan.Zero"/> if the conversion failed.
+            </param>
+            <returns>
+            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            </returns>
+            <remarks>
+            For more defails, see underlying method <seealso cref="M:System.TimeSpan.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.timespan.tryparse">docs</seealso>.
+            </remarks>
+        </member>
+        <member name="T:ComplicatedPrimitives.DirectedLimit`1">
+            <summary>
+            Structure representing directed limit of type <typeparamref name="T"/>.
+            In other words, it is limit point of type <typeparamref name="T"/> that is approachable from either left or right side.
+            </summary>
+            <typeparam name="T">Type of limit point's value.</typeparam>
+        </member>
+        <member name="F:ComplicatedPrimitives.DirectedLimit`1.OpenSign">
+            <summary>
+            Represents the <see cref="F:ComplicatedPrimitives.LimitPointType.Open">open</see> <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Type">type</see> of <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsDefined">defined</see> <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see>.
+            </summary>
+        </member>
+        <member name="F:ComplicatedPrimitives.DirectedLimit`1.ClosedSign">
+            <summary>
+            Represents the <see cref="F:ComplicatedPrimitives.LimitPointType.Closed">closed</see> <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Type">type</see> of <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsDefined">defined</see> <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see>.
+            </summary>
+        </member>
+        <member name="F:ComplicatedPrimitives.DirectedLimit`1.UndefinedString">
+            <summary>
+            Represents the string equivalent of <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">undefined</see> <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see>.
+            </summary>
+        </member>
+        <member name="F:ComplicatedPrimitives.DirectedLimit`1.Undefined">
+            <summary>
+            Represents an undefined directed limit. This field is read-only.
+            </summary>
+        </member>
+        <member name="F:ComplicatedPrimitives.DirectedLimit`1.LeftInfinity">
+            <summary>
+            Represents a left (negative in some contexts) infinity. This field is read-only.
+            </summary>
+        </member>
+        <member name="F:ComplicatedPrimitives.DirectedLimit`1.RightInfinity">
+            <summary>
+            Represents a right (positive in some contexts) infinity. This field is read-only.
+            </summary>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.#ctor(ComplicatedPrimitives.LimitPoint{`0},ComplicatedPrimitives.LimitSide)">
+            <summary>
+            Creates a new instance of the <see cref="T:ComplicatedPrimitives.DirectedLimit`1"/> structure with a specified <paramref name="point"/> and <paramref name="side"/>.
+            </summary>
+            <param name="point">Extreme point of the created limit.</param>
+            <param name="side">Side of the created limit.</param>
+            <exception cref="T:System.ArgumentException"><paramref name="side"/> is not a defined value of <see cref="T:ComplicatedPrimitives.LimitSide"/> enum</exception>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.#ctor(`0,ComplicatedPrimitives.LimitPointType,ComplicatedPrimitives.LimitSide)">
+            <summary>
+            Creates a new instance of the <see cref="T:ComplicatedPrimitives.DirectedLimit`1"/> structure with a specified <paramref name="value"/>, <paramref name="type"/> and <paramref name="side"/>.
+            </summary>
+            <param name="value">Extreme point's value of the created limit.</param>
+            <param name="type">Extreme point's type of the created limit.</param>
+            <param name="side">Side (direction) of the created limit.</param>
+            <exception cref="T:System.ArgumentException"><paramref name="side"/> is not a defined value of <see cref="T:ComplicatedPrimitives.LimitSide"/> enum</exception>
+        </member>
+        <member name="P:ComplicatedPrimitives.DirectedLimit`1.Point">
+            <summary>
+            Gets the extreme point of this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see>.
+            </summary>
+        </member>
+        <member name="P:ComplicatedPrimitives.DirectedLimit`1.Side">
+            <summary>
+            Gets the side of this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see>.
+            </summary>
+        </member>
+        <member name="P:ComplicatedPrimitives.DirectedLimit`1.IsDefined">
+            <summary>
+            Indicates whether this instance represents an undefined <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> with a certain <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Side">side</see>.
+            </summary>
+        </member>
+        <member name="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">
+            <summary>
+            Indicates whether this instance represents an undefined <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> without valid <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Side">side</see>.
+            </summary>
+        </member>
+        <member name="P:ComplicatedPrimitives.DirectedLimit`1.Value">
+            <summary>
+            Gets the value of <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Point">extreme point</see> of this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see>.
+            </summary>
+            <remarks>
+            For more defails, see <seealso cref="P:ComplicatedPrimitives.LimitPoint`1.Value"/> docs.
+            </remarks>
+        </member>
+        <member name="P:ComplicatedPrimitives.DirectedLimit`1.Type">
+            <summary>
+            Gets the type of <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Point">extreme point</see> of this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see>.
+            </summary>
+            <remarks>
+            For more defails, see <seealso cref="P:ComplicatedPrimitives.LimitPoint`1.Type"/> docs.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.Map``1(System.Func{`0,``0})">
+            <summary>
+            Maps this instance to <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> of <typeparamref name="TResult"/> using given <paramref name="mapper"/>.
+            </summary>
+            <typeparam name="TResult">Target type to map <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Point">extrem point</see> to.</typeparam>
+            <param name="mapper">Function that maps extrem point of type <typeparamref name="T"/> to type <typeparamref name="TResult"/>.</param>
+            <returns>
+            When this instance <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsDefined">is defined</see>, new <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> of <typeparamref name="TResult"/>
+            with then same <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Side">side</see>, but with <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Point">extreme point</see> being mapped using given <paramref name="mapper"/>;
+            otherwise, <see cref="F:ComplicatedPrimitives.DirectedLimit`1.Undefined">undefined directed limit</see> of <typeparamref name="TResult"/>.
+            </returns>
+            <remarks>
+            For more defails about mapping <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Point">extreme point</see>, see <seealso cref="M:ComplicatedPrimitives.LimitPoint`1.Map``1(System.Func{`0,``0})"/> docs.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.Translate(System.Func{`0,`0})">
+            <summary>
+            Translates (moves) this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> using given <paramref name="translation"/>.
+            </summary>
+            <param name="translation">Function that translates directed limit's point.</param>
+            <returns>
+            When this instance <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsDefined">is defined</see>, new <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> with the same <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Side">side</see>,
+            but with <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Point">point</see> being translated using given <paramref name="translation"/>;
+            otherwise, <see cref="F:ComplicatedPrimitives.DirectedLimit`1.Undefined">undefined</see>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.GetComplement">
+            <summary>
+            Gets <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> being complement of this instance.
+            </summary>
+            <returns>
+            When this instance <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsDefined">is defined</see>, new <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> with the same <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Value">value</see>,
+            but with flipped <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Type">type</see> and <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Side">side</see>;
+            otherwise, <see cref="F:ComplicatedPrimitives.DirectedLimit`1.Undefined">undefined</see>.
+            </returns>
+            <remarks>
+            <para>For more defails about flipping <see cref="T:ComplicatedPrimitives.LimitPointType"/>, see <seealso cref="M:ComplicatedPrimitives.LimitPointTypeExtensions.Flip(ComplicatedPrimitives.LimitPointType)">this</seealso>.</para>
+            <para>For more defails about flipping <see cref="T:ComplicatedPrimitives.LimitSide"/>, see <seealso cref="M:ComplicatedPrimitives.LimitSideExtensions.Flip(ComplicatedPrimitives.LimitSide)">this</seealso>.</para>
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.Complements(ComplicatedPrimitives.DirectedLimit{`0})">
+            <summary>
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> is exact complement of the <paramref name="other"/>.
+            In other words, this function checks complementary relation between two directed limits. This relation is reversible.
+            </summary>
+            <param name="other">Directed limit to test complementary relation with.</param>
+            <returns>
+            <see langword="true"/> if this instance is complement of the <paramref name="other"/>; otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.Contains(`0)">
+            <summary>
+            Gets the value indicating whether <paramref name="value"/> belongs to set defined by this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see>.
+            </summary>
+            <param name="value">Value of type <typeparamref name="T"/> to compare with this instance.</param>
+            <returns>
+            <see langword="true"/> if <paramref name="value"/> belongs to set defined by this directed limit;
+            otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.Intersects(ComplicatedPrimitives.DirectedLimit{`0})">
+            <summary>
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> and <paramref name="other"/> have non-empty intersection.
+            In other words, this function checks if there exists any non-empty set of <typeparamref name="T"/> that belongs to both this and <paramref name="other"/> directed limit.
+            </summary>
+            <param name="other">Directed limit to test intersecting relation with.</param>
+            <returns>
+            <see langword="true"/> if <paramref name="other"/> has non-empty intersection with this directed limit.
+            otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.IsProperSubsetOf(ComplicatedPrimitives.DirectedLimit{`0})">
+            <summary>
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> is proper subset of the <paramref name="other"/> one.
+            In other words, this function checks if this directed limit <see cref="M:ComplicatedPrimitives.DirectedLimit`1.IsSubsetOf(ComplicatedPrimitives.DirectedLimit{`0})">is subset</see> of the <paramref name="other"/>
+            directed limit but <see cref="M:ComplicatedPrimitives.DirectedLimit`1.Equals(ComplicatedPrimitives.DirectedLimit{`0})">is not equal</see> to it.
+            </summary>
+            <param name="other">Directed limit to test subset relation with.</param>
+            <returns>
+            <see langword="true"/> if this instance is proper subset of the <paramref name="other"/> one;
+            otherwise, <see langword="false"/>.
+            If either this or the <paramref name="other"/> directed limit <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">is undefined</see>, the result is <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.IsSubsetOf(ComplicatedPrimitives.DirectedLimit{`0})">
+            <summary>
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> is subset of the <paramref name="other"/> one.
+            In other words, this function checks if <paramref name="other"/> directed limit contains every <typeparamref name="T"/> from set defined by this directed limit.
+            </summary>
+            <param name="other">Directed limit to test subset relation with.</param>
+            <returns>
+            <see langword="true"/> if this instance is subset of the <paramref name="other"/> one;
+            otherwise, <see langword="false"/>.
+            If either this or the <paramref name="other"/> directed limit <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">is undefined</see>, the result is <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.IsProperSupersetOf(ComplicatedPrimitives.DirectedLimit{`0})">
+            <summary>
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> is proper superset of the <paramref name="other"/> one.
+            In other words, this function checks if this directed limit <see cref="M:ComplicatedPrimitives.DirectedLimit`1.IsSupersetOf(ComplicatedPrimitives.DirectedLimit{`0})">is superset</see> of the <paramref name="other"/>
+            directed limit but <see cref="M:ComplicatedPrimitives.DirectedLimit`1.Equals(ComplicatedPrimitives.DirectedLimit{`0})">is not equal</see> to it.
+            </summary>
+            <param name="other">Directed limit to test superset relation with.</param>
+            <returns>
+            <see langword="true"/> if this instance is proper superset of the <paramref name="other"/> one;
+            otherwise, <see langword="false"/>.
+            If either this or the <paramref name="other"/> directed limit <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">is undefined</see>, the result is <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.IsSupersetOf(ComplicatedPrimitives.DirectedLimit{`0})">
+            <summary>
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> is superset of the <paramref name="other"/> one.
+            In other words, this function checks if this directed limit contains every <typeparamref name="T"/> from set defined by <paramref name="other"/> directed limit.
+            </summary>
+            <param name="other">Directed limit to test superset relation with.</param>
+            <returns>
+            <see langword="true"/> if this instance is superset of the <paramref name="other"/> one;
+            otherwise, <see langword="false"/>.
+            If either this or the <paramref name="other"/> directed limit <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">is undefined</see>, the result is <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.ToString">
+            <summary>
+            Converts this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> to its equivalent string representation following format:
+            <list type="bullet">
+            <item><description><c>{value}{typeSign}</c>, when <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Side">side</see> is <see cref="F:ComplicatedPrimitives.LimitSide.Left">left</see>;</description></item>
+            <item><description><c>{typeSign}{value}</c>, when <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Side">side</see> is <see cref="F:ComplicatedPrimitives.LimitSide.Right">right</see>;</description></item>
+            </list>
+            </summary>
+            <returns>When this instance <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsDefined">is defined</see>, the string representation of this directed limit consisting of:
+            <list type="bullet">
+            <item><description>signs representing <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Type">type</see> (<see cref="F:ComplicatedPrimitives.DirectedLimit`1.ClosedSign"><c>≤</c></see>, <see cref="F:ComplicatedPrimitives.DirectedLimit`1.OpenSign"><c>&lt;</c></see>);</description></item>
+            <item><description>string representation of <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Value">value</see>.</description></item>
+            </list>
+            When this instance <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">is undefined</see>, the <see cref="F:ComplicatedPrimitives.DirectedLimit`1.UndefinedString"/> is returned.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.Equals(ComplicatedPrimitives.DirectedLimit{`0})">
+            <summary>
+            Checks whether this instance of <see cref="T:ComplicatedPrimitives.DirectedLimit`1"/> is equal to the <paramref name="other"/> one.
+            </summary>
+            <param name="other">Object to check equality with this instance.</param>
+            <returns>
+            <see langword="true"/> if this instance is equal to the <paramref name="other"/> one which means:
+            <list type="bullet">
+            <item><description>both instances <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">are undefined</see>;</description></item>
+            <item><description>both instances <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsDefined">are defined</see> and their <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Point">points</see> and <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Side">sides</see> are equal;</description></item>
+            </list>
+            otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.CompareTo(ComplicatedPrimitives.DirectedLimit{`0})">
+            <summary>
+            Compares this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> to the <paramref name="other"/> one and returns an integer number that indicates
+            whether this directed limit precedes, follows or occurs in the same position in the sort order as the other object
+            </summary>
+            <param name="other">Object to check compare this instance to.</param>
+            <returns>
+            Integer number as below:
+            <list type="bullet">
+            <item><term>less than zero</term><description>this instance precedes <paramref name="other"/> in the sort order;</description></item>
+            <item><term>zero</term><description>this instance occurs in the same position in the sort order as <paramref name="other"/>;</description></item>
+            <item><term>greater than zero</term><description>this instance follows <paramref name="other"/> in the sort order;</description></item>
+            </list>
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.op_Equality(ComplicatedPrimitives.DirectedLimit{`0},ComplicatedPrimitives.DirectedLimit{`0})">
+            <summary>
+            Determines whether two specified <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> have the same value.
+            </summary>
+            <param name="left">The first directed limit to compare.</param>
+            <param name="right">The second directed limit to compare.</param>
+            <returns><see langword="true"/> if the value of <paramref name="left"/> is the same as the value of <paramref name="right"/>;
+            otherwise, <see langword="false"/>.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.op_Inequality(ComplicatedPrimitives.DirectedLimit{`0},ComplicatedPrimitives.DirectedLimit{`0})">
+            <summary>
+            Determines whether two specified <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> have different values.
+            </summary>
+            <param name="left">The first directed limit to compare.</param>
+            <param name="right">The second directed limit to compare.</param>
+            <returns><see langword="true"/> if the value of <paramref name="left"/> is different from the value of <paramref name="right"/>;
+            otherwise, <see langword="false"/>.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.op_OnesComplement(ComplicatedPrimitives.DirectedLimit{`0})">
+            <summary>
+            Produces a complementary <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> of the given <paramref name="operand"/>.
+            </summary>
+            <param name="operand">Directed limit to produce complement of.</param>
+            <returns>The result of <see cref="M:ComplicatedPrimitives.DirectedLimit`1.GetComplement"/> method called on <paramref name="operand"/>.</returns>
+        </member>
         <member name="T:ComplicatedPrimitives.LimitPoint`1">
             <summary>
             Structure representing limit point of type <typeparamref name="T"/>.
             </summary>
             <typeparam name="T">Type of limit point's value.</typeparam>
         </member>
+        <member name="F:ComplicatedPrimitives.LimitPoint`1.LeftOpenSign">
+            <summary>
+            Represents the left <see cref="F:ComplicatedPrimitives.LimitPointType.Open">open</see> <see cref="P:ComplicatedPrimitives.LimitPoint`1.Type">type</see> of <see cref="P:ComplicatedPrimitives.LimitPoint`1.IsFinite">finite</see> <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see>.
+            </summary>
+        </member>
+        <member name="F:ComplicatedPrimitives.LimitPoint`1.LeftClosedSign">
+            <summary>
+            Represents the left <see cref="F:ComplicatedPrimitives.LimitPointType.Closed">closed</see> <see cref="P:ComplicatedPrimitives.LimitPoint`1.Type">type</see> of <see cref="P:ComplicatedPrimitives.LimitPoint`1.IsFinite">finite</see> <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see>.
+            </summary>
+        </member>
+        <member name="F:ComplicatedPrimitives.LimitPoint`1.RightOpenSign">
+            <summary>
+            Represents the right <see cref="F:ComplicatedPrimitives.LimitPointType.Open">open</see> <see cref="P:ComplicatedPrimitives.LimitPoint`1.Type">type</see> of <see cref="P:ComplicatedPrimitives.LimitPoint`1.IsFinite">finite</see> <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see>.
+            </summary>
+        </member>
+        <member name="F:ComplicatedPrimitives.LimitPoint`1.RightClosedSign">
+            <summary>
+            Represents the right <see cref="F:ComplicatedPrimitives.LimitPointType.Closed">closed</see> <see cref="P:ComplicatedPrimitives.LimitPoint`1.Type">type</see> of <see cref="P:ComplicatedPrimitives.LimitPoint`1.IsFinite">finite</see> <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see>.
+            </summary>
+        </member>
+        <member name="F:ComplicatedPrimitives.LimitPoint`1.InfinityString">
+            <summary>
+            Represents the string equivalent of <see cref="P:ComplicatedPrimitives.LimitPoint`1.IsInfinite">infinite</see> <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see>.
+            </summary>
+        </member>
         <member name="F:ComplicatedPrimitives.LimitPoint`1.Infinity">
             <summary>
-            Infinite limit point.
+            Represents an infinite limit point. This field is read-only.
             </summary>
         </member>
         <member name="M:ComplicatedPrimitives.LimitPoint`1.#ctor(`0,ComplicatedPrimitives.LimitPointType)">
@@ -308,6 +986,7 @@
             </summary>
             <param name="value">Limit point's value.</param>
             <param name="type">Limit point's type.</param>
+            <exception cref="T:System.ArgumentException"><paramref name="type"/> is not a defined value of <see cref="T:ComplicatedPrimitives.LimitPointType"/> enum</exception>
         </member>
         <member name="P:ComplicatedPrimitives.LimitPoint`1.Value">
             <summary>
@@ -354,7 +1033,7 @@
             </summary>
             <param name="translation">Function that translates limit point's value.</param>
             <returns>
-            When this instance <see cref="P:ComplicatedPrimitives.LimitPoint`1.IsFinite">is finite</see>, new <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see> with then same <see cref="P:ComplicatedPrimitives.LimitPoint`1.Type">type</see>,
+            When this instance <see cref="P:ComplicatedPrimitives.LimitPoint`1.IsFinite">is finite</see>, new <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see> with the same <see cref="P:ComplicatedPrimitives.LimitPoint`1.Type">type</see>,
             but with <see cref="P:ComplicatedPrimitives.LimitPoint`1.Value">value</see> being translated using given <paramref name="translation"/>;
             otherwise, <see cref="F:ComplicatedPrimitives.LimitPoint`1.Infinity">infinity</see>.
             </returns>
@@ -413,13 +1092,15 @@
         </member>
         <member name="M:ComplicatedPrimitives.LimitPoint`1.ToString">
             <summary>
-            Converts this <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see> to its equivalent string representation.
+            Converts this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> to its equivalent string representation following format: <c>{leftTypeSign}{value}{rightTypeSign}</c>.
             </summary>
-            <returns>The string representation of this <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see> consisting of:
+            <returns>When this instance <see cref="P:ComplicatedPrimitives.LimitPoint`1.IsFinite">is finite</see>, the string representation of this directed limit consisting of:
             <list type="bullet">
-            <item><description>signs representing <see cref="P:ComplicatedPrimitives.LimitPoint`1.Type">type</see> (<c>&gt;</c>, <c>≥</c>, <c>≤</c>, <c>&lt;</c>);</description></item>
-            <item><description>string representation of <see cref="P:ComplicatedPrimitives.LimitPoint`1.Value">value</see> when this instance <see cref="P:ComplicatedPrimitives.LimitPoint`1.IsFinite">is finite</see> or the <see cref="F:ComplicatedPrimitives.LimitPoint`1.Infinity">infinity</see> symbol '∞' if it's not.</description></item>
+            <item><description>signs representing <see cref="P:ComplicatedPrimitives.LimitPoint`1.Type">type</see> (<see cref="F:ComplicatedPrimitives.LimitPoint`1.LeftClosedSign"><c>≥</c></see>, <see cref="F:ComplicatedPrimitives.LimitPoint`1.RightOpenSign"><c>&gt;</c></see>,
+            <see cref="F:ComplicatedPrimitives.LimitPoint`1.RightClosedSign"><c>≤</c></see>, <see cref="F:ComplicatedPrimitives.LimitPoint`1.LeftOpenSign"><c>&lt;</c></see>);</description></item>
+            <item><description>string representation of <see cref="P:ComplicatedPrimitives.LimitPoint`1.Value">value</see>.</description></item>
             </list>
+            When this instance <see cref="P:ComplicatedPrimitives.LimitPoint`1.IsInfinite">is infinite</see>, the <see cref="F:ComplicatedPrimitives.LimitPoint`1.InfinityString"/> is returned.
             </returns>
         </member>
         <member name="M:ComplicatedPrimitives.LimitPoint`1.Equals(ComplicatedPrimitives.LimitPoint{`0})">
@@ -446,8 +1127,8 @@
             <summary>
             Determines whether two specified <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit points</see> have the same value.
             </summary>
-            <param name="left">The first <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see> to compare.</param>
-            <param name="right">The second <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see> to compare.</param>
+            <param name="left">The first limit point to compare.</param>
+            <param name="right">The second limit point to compare.</param>
             <returns><see langword="true"/> if the value of <paramref name="left"/> is the same as the value of <paramref name="right"/>;
             otherwise, <see langword="false"/>.</returns>
         </member>
@@ -455,8 +1136,8 @@
             <summary>
             Determines whether two specified <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit points</see> have different values.
             </summary>
-            <param name="left">The first <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see> to compare.</param>
-            <param name="right">The second <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see> to compare.</param>
+            <param name="left">The first limit point to compare.</param>
+            <param name="right">The second limit point to compare.</param>
             <returns><see langword="true"/> if the value of <paramref name="left"/> is different from the value of <paramref name="right"/>;
             otherwise, <see langword="false"/>.</returns>
         </member>

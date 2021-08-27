@@ -298,7 +298,7 @@ namespace ComplicatedPrimitives
 
             var leftSubset = DirectedLimit.Subset(Left, other.Left);
             var rightSubset = DirectedLimit.Subset(Right, other.Right);
-            if (leftSubset.IsComplementOf(rightSubset)
+            if (leftSubset.Complements(rightSubset)
                 || leftSubset.Intersects(rightSubset))
             {
                 var left = DirectedLimit.Superset(Left, other.Left);

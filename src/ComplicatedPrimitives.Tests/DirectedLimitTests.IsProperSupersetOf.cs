@@ -30,40 +30,40 @@ namespace ComplicatedPrimitives.Tests
 
             [Theory]
             [InlineData(1, 1, LimitSide.Left, false)]
-            [InlineData(1, 2, LimitSide.Left, false)]
-            [InlineData(2, 1, LimitSide.Left, true)]
+            [InlineData(2, 1, LimitSide.Left, false)]
+            [InlineData(1, 2, LimitSide.Left, true)]
             [InlineData(1, 1, LimitSide.Right, false)]
-            [InlineData(1, 2, LimitSide.Right, true)]
-            [InlineData(2, 1, LimitSide.Right, false)]
-            public void ValueDependent_ShouldReturnExpectedResult(int subsetValue, int supersetValue, LimitSide side, bool expected)
+            [InlineData(2, 1, LimitSide.Right, true)]
+            [InlineData(1, 2, LimitSide.Right, false)]
+            public void PointValueChanging_CeterisParibus_ShouldReturnExpectedResult(int sutValue, int otherValue, LimitSide side, bool expected)
             {
                 // arrange
-                var subset = Create<int>(value: subsetValue, side: side);
-                var superset = subset.With(value: supersetValue);
+                var sut = Create<int>(value: sutValue, side: side);
+                var other = sut.With(value: otherValue);
 
                 // act
-                bool result = superset.IsProperSupersetOf(subset);
+                bool result = sut.IsProperSupersetOf(other);
 
                 // assert
-                result.Should().Be(expected, because: "{0} {2} a proper superset of {1}", superset, subset, expected ? "is" : "is not");
+                result.Should().Be(expected, because: "{0} {2} a proper superset of {1}", sut, other, expected ? "is" : "is not");
             }
 
             [Theory]
             [InlineData(LimitPointType.Open, LimitPointType.Open, false)]
-            [InlineData(LimitPointType.Open, LimitPointType.Closed, true)]
-            [InlineData(LimitPointType.Closed, LimitPointType.Open, false)]
+            [InlineData(LimitPointType.Closed, LimitPointType.Open, true)]
+            [InlineData(LimitPointType.Open, LimitPointType.Closed, false)]
             [InlineData(LimitPointType.Closed, LimitPointType.Closed, false)]
-            public void TypeDependent_ShouldReturnExpectedResult(LimitPointType subsetType, LimitPointType supersetType, bool expected)
+            public void PointTypeChanging_CeterisParibus_ShouldReturnExpectedResult(LimitPointType sutType, LimitPointType otherType, bool expected)
             {
                 // arrange
-                var subset = Create<int>(type: subsetType);
-                var superset = subset.With(type: supersetType);
+                var sut = Create<int>(type: sutType);
+                var other = sut.With(type: otherType);
 
                 // act
-                bool result = superset.IsProperSupersetOf(subset);
+                bool result = sut.IsProperSupersetOf(other);
 
                 // assert
-                result.Should().Be(expected, because: "{0} {2} a proper superset of {1}", superset, subset, expected ? "is" : "is not");
+                result.Should().Be(expected, because: "{0} {2} a proper superset of {1}", sut, other, expected ? "is" : "is not");
             }
 
             private DirectedLimit<T> Create<T>(

@@ -1,16 +1,16 @@
 ﻿namespace ComplicatedPrimitives
 {
     /// <summary>
-    /// Enum indicating whether limit is open or closed.
+    /// Enum indicating whether the <see cref="LimitPoint{T}">limit point</see> is either open or closed.
     /// </summary>
     public enum LimitPointType
     {
         /// <summary>
-        /// Indicates that limit is open which means it does not include its value.
+        /// Indicates that <see cref="LimitPoint{T}">limit point</see> is open which means it does not include its value.
         /// </summary>
         Open,
         /// <summary>
-        /// Indicates that limit is closed which means it includes its value.
+        /// Indicates that <see cref="LimitPoint{T}">limit point</see> is closed which means it includes its value.
         /// </summary>
         Closed
     }
