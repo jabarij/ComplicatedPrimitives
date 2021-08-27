@@ -1,8 +1,6 @@
 using ComplicatedPrimitives.TestAbstractions;
-using System;
-using Xunit;
-using AutoFixture;
 using FluentAssertions;
+using Xunit;
 
 namespace ComplicatedPrimitives.Tests
 {
@@ -65,16 +63,6 @@ namespace ComplicatedPrimitives.Tests
                 // assert
                 result.Should().Be(expected, because: "{0} {2} a subset of {1}", sut, other, expected ? "is" : "is not");
             }
-
-            private DirectedLimit<T> Create<T>(
-                T? value = null,
-                LimitPointType? type = null,
-                LimitSide? side = null)
-                where T : struct, IComparable<T> =>
-                new DirectedLimit<T>(
-                    value: value ?? Fixture.Create<T>(),
-                    type: type ?? Fixture.Create<LimitPointType>(),
-                    side: side ?? Fixture.Create<LimitSide>());
         }
     }
 }

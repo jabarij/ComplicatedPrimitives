@@ -33,7 +33,7 @@ namespace ComplicatedPrimitives
         byte IParser<byte>.Parse(string str) => byte.Parse(str);
 
         /// <summary>
-        /// Tries to convert the string representation of a number to its <see cref="byte"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+        /// Tries to convert the string representation of a number to its <see cref="byte"/> equivalent, and returns a value indicating whether the conversion succeeded.
         /// </summary>
         /// <param name="str">A string that contains a number to convert.</param>
         /// <param name="result">
@@ -61,7 +61,7 @@ namespace ComplicatedPrimitives
         short IParser<short>.Parse(string str) => short.Parse(str);
 
         /// <summary>
-        /// Tries to convert the string representation of a number to its <see cref="short"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+        /// Tries to convert the string representation of a number to its <see cref="short"/> equivalent, and returns a value indicating whether the conversion succeeded.
         /// </summary>
         /// <param name="str">A string that contains a number to convert.</param>
         /// <param name="result">
@@ -89,7 +89,7 @@ namespace ComplicatedPrimitives
         ushort IParser<ushort>.Parse(string str) => ushort.Parse(str);
 
         /// <summary>
-        /// Tries to convert the string representation of a number to its <see cref="ushort"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+        /// Tries to convert the string representation of a number to its <see cref="ushort"/> equivalent, and returns a value indicating whether the conversion succeeded.
         /// </summary>
         /// <param name="str">A string that contains a number to convert.</param>
         /// <param name="result">
@@ -117,7 +117,7 @@ namespace ComplicatedPrimitives
         int IParser<int>.Parse(string str) => int.Parse(str);
 
         /// <summary>
-        /// Tries to convert the string representation of a number to its <see cref="int"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+        /// Tries to convert the string representation of a number to its <see cref="int"/> equivalent, and returns a value indicating whether the conversion succeeded.
         /// </summary>
         /// <param name="str">A string that contains a number to convert.</param>
         /// <param name="result">
@@ -145,7 +145,7 @@ namespace ComplicatedPrimitives
         uint IParser<uint>.Parse(string str) => uint.Parse(str);
 
         /// <summary>
-        /// Tries to convert the string representation of a number to its <see cref="uint"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+        /// Tries to convert the string representation of a number to its <see cref="uint"/> equivalent, and returns a value indicating whether the conversion succeeded.
         /// </summary>
         /// <param name="str">A string that contains a number to convert.</param>
         /// <param name="result">
@@ -173,7 +173,7 @@ namespace ComplicatedPrimitives
         long IParser<long>.Parse(string str) => long.Parse(str);
 
         /// <summary>
-        /// Tries to convert the string representation of a number to its <see cref="long"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+        /// Tries to convert the string representation of a number to its <see cref="long"/> equivalent, and returns a value indicating whether the conversion succeeded.
         /// </summary>
         /// <param name="str">A string that contains a number to convert.</param>
         /// <param name="result">
@@ -201,7 +201,7 @@ namespace ComplicatedPrimitives
         ulong IParser<ulong>.Parse(string str) => ulong.Parse(str);
 
         /// <summary>
-        /// Tries to convert the string representation of a number to its <see cref="ulong"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+        /// Tries to convert the string representation of a number to its <see cref="ulong"/> equivalent, and returns a value indicating whether the conversion succeeded.
         /// </summary>
         /// <param name="str">A string that contains a number to convert.</param>
         /// <param name="result">
@@ -229,7 +229,7 @@ namespace ComplicatedPrimitives
         float IParser<float>.Parse(string str) => float.Parse(str);
 
         /// <summary>
-        /// Tries to convert the string representation of a number to its <see cref="float"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+        /// Tries to convert the string representation of a number to its <see cref="float"/> equivalent, and returns a value indicating whether the conversion succeeded.
         /// </summary>
         /// <param name="str">A string that contains a number to convert.</param>
         /// <param name="result">
@@ -257,7 +257,7 @@ namespace ComplicatedPrimitives
         double IParser<double>.Parse(string str) => double.Parse(str);
 
         /// <summary>
-        /// Tries to convert the string representation of a number to its <see cref="double"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+        /// Tries to convert the string representation of a number to its <see cref="double"/> equivalent, and returns a value indicating whether the conversion succeeded.
         /// </summary>
         /// <param name="str">A string that contains a number to convert.</param>
         /// <param name="result">
@@ -285,7 +285,7 @@ namespace ComplicatedPrimitives
         decimal IParser<decimal>.Parse(string str) => decimal.Parse(str);
 
         /// <summary>
-        /// Tries to convert the string representation of a number to its <see cref="decimal"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+        /// Tries to convert the string representation of a number to its <see cref="decimal"/> equivalent, and returns a value indicating whether the conversion succeeded.
         /// </summary>
         /// <param name="str">A string that contains a number to convert.</param>
         /// <param name="result">
@@ -313,7 +313,7 @@ namespace ComplicatedPrimitives
         DateTime IParser<DateTime>.Parse(string str) => DateTime.Parse(str);
 
         /// <summary>
-        /// Tries to convert the string representation of a date and time to its <see cref="DateTime"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+        /// Tries to convert the string representation of a date and time to its <see cref="DateTime"/> equivalent, and returns a value indicating whether the conversion succeeded.
         /// </summary>
         /// <param name="str">A string that contains a date and time to convert.</param>
         /// <param name="result">
@@ -340,7 +340,7 @@ namespace ComplicatedPrimitives
         DateTimeOffset IParser<DateTimeOffset>.Parse(string str) => DateTimeOffset.Parse(str);
 
         /// <summary>
-        /// Tries to convert the string representation of a date and time to its <see cref="DateTimeOffset"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+        /// Tries to convert the string representation of a date and time to its <see cref="DateTimeOffset"/> equivalent, and returns a value indicating whether the conversion succeeded.
         /// </summary>
         /// <param name="str">A string that contains a date and time to convert.</param>
         /// <param name="result">
@@ -367,7 +367,7 @@ namespace ComplicatedPrimitives
         TimeSpan IParser<TimeSpan>.Parse(string str) => TimeSpan.Parse(str);
 
         /// <summary>
-        /// Tries to convert the string representation of a time interval to its <see cref="TimeSpan"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+        /// Tries to convert the string representation of a time interval to its <see cref="TimeSpan"/> equivalent, and returns a value indicating whether the conversion succeeded.
         /// </summary>
         /// <param name="str">A string that contains a time interval to convert.</param>
         /// <param name="result">

@@ -54,7 +54,7 @@ namespace ComplicatedPrimitives
             Value = value;
 
             if (type != LimitPointType.Open && type != LimitPointType.Closed)
-                Throw.ArgumentIsUndefinedEnum(type, nameof(type));
+                throw Error.ArgumentIsUndefinedEnum(type, nameof(type));
             _type = type;
             _isFinite = true;
         }

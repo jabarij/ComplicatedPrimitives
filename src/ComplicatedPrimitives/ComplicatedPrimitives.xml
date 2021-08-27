@@ -310,7 +310,7 @@
         </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Byte}#TryParse(System.String,System.Byte@)">
             <summary>
-            Tries to convert the string representation of a number to its <see cref="T:System.Byte"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            Tries to convert the string representation of a number to its <see cref="T:System.Byte"/> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <param name="result">
@@ -338,7 +338,7 @@
         </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int16}#TryParse(System.String,System.Int16@)">
             <summary>
-            Tries to convert the string representation of a number to its <see cref="T:System.Int16"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            Tries to convert the string representation of a number to its <see cref="T:System.Int16"/> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <param name="result">
@@ -366,7 +366,7 @@
         </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt16}#TryParse(System.String,System.UInt16@)">
             <summary>
-            Tries to convert the string representation of a number to its <see cref="T:System.UInt16"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            Tries to convert the string representation of a number to its <see cref="T:System.UInt16"/> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <param name="result">
@@ -394,7 +394,7 @@
         </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int32}#TryParse(System.String,System.Int32@)">
             <summary>
-            Tries to convert the string representation of a number to its <see cref="T:System.Int32"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            Tries to convert the string representation of a number to its <see cref="T:System.Int32"/> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <param name="result">
@@ -422,7 +422,7 @@
         </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt32}#TryParse(System.String,System.UInt32@)">
             <summary>
-            Tries to convert the string representation of a number to its <see cref="T:System.UInt32"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            Tries to convert the string representation of a number to its <see cref="T:System.UInt32"/> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <param name="result">
@@ -450,7 +450,7 @@
         </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int64}#TryParse(System.String,System.Int64@)">
             <summary>
-            Tries to convert the string representation of a number to its <see cref="T:System.Int64"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            Tries to convert the string representation of a number to its <see cref="T:System.Int64"/> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <param name="result">
@@ -478,7 +478,7 @@
         </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt64}#TryParse(System.String,System.UInt64@)">
             <summary>
-            Tries to convert the string representation of a number to its <see cref="T:System.UInt64"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            Tries to convert the string representation of a number to its <see cref="T:System.UInt64"/> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <param name="result">
@@ -506,7 +506,7 @@
         </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Single}#TryParse(System.String,System.Single@)">
             <summary>
-            Tries to convert the string representation of a number to its <see cref="T:System.Single"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            Tries to convert the string representation of a number to its <see cref="T:System.Single"/> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <param name="result">
@@ -534,7 +534,7 @@
         </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Double}#TryParse(System.String,System.Double@)">
             <summary>
-            Tries to convert the string representation of a number to its <see cref="T:System.Double"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            Tries to convert the string representation of a number to its <see cref="T:System.Double"/> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <param name="result">
@@ -562,7 +562,7 @@
         </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Decimal}#TryParse(System.String,System.Decimal@)">
             <summary>
-            Tries to convert the string representation of a number to its <see cref="T:System.Decimal"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            Tries to convert the string representation of a number to its <see cref="T:System.Decimal"/> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <param name="result">
@@ -590,7 +590,7 @@
         </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTime}#TryParse(System.String,System.DateTime@)">
             <summary>
-            Tries to convert the string representation of a date and time to its <see cref="T:System.DateTime"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            Tries to convert the string representation of a date and time to its <see cref="T:System.DateTime"/> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a date and time to convert.</param>
             <param name="result">
@@ -617,7 +617,7 @@
         </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTimeOffset}#TryParse(System.String,System.DateTimeOffset@)">
             <summary>
-            Tries to convert the string representation of a date and time to its <see cref="T:System.DateTimeOffset"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            Tries to convert the string representation of a date and time to its <see cref="T:System.DateTimeOffset"/> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a date and time to convert.</param>
             <param name="result">
@@ -644,7 +644,7 @@
         </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#TimeSpan}#TryParse(System.String,System.TimeSpan@)">
             <summary>
-            Tries to convert the string representation of a time interval to its <see cref="T:System.TimeSpan"/> equivalent, and returns a value that indicates whether the conversion succeeded.
+            Tries to convert the string representation of a time interval to its <see cref="T:System.TimeSpan"/> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a time interval to convert.</param>
             <param name="result">
@@ -662,7 +662,7 @@
             Structure representing directed limit of type <typeparamref name="T"/>.
             In other words, it is limit point of type <typeparamref name="T"/> that is approachable from either left or right side.
             </summary>
-            <typeparam name="T">Type of limit point's value.</typeparam>
+            <typeparam name="T">Type of limit point's value (limit's domain).</typeparam>
         </member>
         <member name="F:ComplicatedPrimitives.DirectedLimit`1.OpenSign">
             <summary>
@@ -944,11 +944,110 @@
             <param name="operand">Directed limit to produce complement of.</param>
             <returns>The result of <see cref="M:ComplicatedPrimitives.DirectedLimit`1.GetComplement"/> method called on <paramref name="operand"/>.</returns>
         </member>
+        <member name="T:ComplicatedPrimitives.DirectedLimit">
+            <summary>
+            Provides operations for performing 'limit algebra' on <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limits</see>.
+            </summary>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit.ProperSubset``1(ComplicatedPrimitives.DirectedLimit{``0},ComplicatedPrimitives.DirectedLimit{``0})">
+            <summary>
+            Chooses the <see cref="M:ComplicatedPrimitives.DirectedLimit`1.IsProperSubsetOf(ComplicatedPrimitives.DirectedLimit{`0})">proper subset</see> of the two <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limits</see>.
+            </summary>
+            <typeparam name="T">Type of limit point's value (limit's domain).</typeparam>
+            <param name="limit1">Directed limit to check 'proper subset' relation against the <paramref name="limit2"/>.</param>
+            <param name="limit2">Directed limit to check 'proper subset' relation against the <paramref name="limit1"/>.</param>
+            <returns>
+            <list type="bullet">
+            <item><term><paramref name="limit1"/></term><description>when <paramref name="limit1"/> is a proper subset of <paramref name="limit2"/>;</description></item>
+            <item><term><paramref name="limit2"/></term><description>when <paramref name="limit2"/> is a proper subset of <paramref name="limit1"/>;</description></item>
+            </list>
+            </returns>
+            <exception cref="T:System.InvalidOperationException">neither of given limits is a proper subset of the other one</exception>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit.ProperSuperset``1(ComplicatedPrimitives.DirectedLimit{``0},ComplicatedPrimitives.DirectedLimit{``0})">
+            <summary>
+            Chooses the <see cref="M:ComplicatedPrimitives.DirectedLimit`1.IsProperSupersetOf(ComplicatedPrimitives.DirectedLimit{`0})">proper superset</see> of the two <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limits</see>.
+            </summary>
+            <typeparam name="T">Type of limit point's value (limit's domain).</typeparam>
+            <param name="limit1">Directed limit to check 'proper superset' relation against the <paramref name="limit2"/>.</param>
+            <param name="limit2">Directed limit to check 'proper superset' relation against the <paramref name="limit1"/>.</param>
+            <returns>
+            <list type="bullet">
+            <item><term><paramref name="limit1"/></term><description>when <paramref name="limit1"/> is a proper superset of <paramref name="limit2"/>;</description></item>
+            <item><term><paramref name="limit2"/></term><description>when <paramref name="limit2"/> is a proper superset of <paramref name="limit1"/>;</description></item>
+            </list>
+            </returns>
+            <exception cref="T:System.InvalidOperationException">neither of given limits is a proper superset of the other one</exception>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit.Subset``1(ComplicatedPrimitives.DirectedLimit{``0},ComplicatedPrimitives.DirectedLimit{``0})">
+            <summary>
+            Chooses the <see cref="M:ComplicatedPrimitives.DirectedLimit`1.IsSubsetOf(ComplicatedPrimitives.DirectedLimit{`0})">subset</see> of the two <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limits</see>.
+            </summary>
+            <typeparam name="T">Type of limit point's value (limit's domain).</typeparam>
+            <param name="limit1">Directed limit to check 'subset' relation against the <paramref name="limit2"/>.</param>
+            <param name="limit2">Directed limit to check 'subset' relation against the <paramref name="limit1"/>.</param>
+            <returns>
+            <list type="bullet">
+            <item><term><paramref name="limit1"/></term><description>when <paramref name="limit1"/> is a subset of <paramref name="limit2"/>;</description></item>
+            <item><term><paramref name="limit2"/></term><description>when <paramref name="limit2"/> is a subset of <paramref name="limit1"/>;</description></item>
+            </list>
+            </returns>
+            <exception cref="T:System.InvalidOperationException">neither of given limits is a subset of the other one</exception>
+        </member>
+        <member name="M:ComplicatedPrimitives.DirectedLimit.Superset``1(ComplicatedPrimitives.DirectedLimit{``0},ComplicatedPrimitives.DirectedLimit{``0})">
+            <summary>
+            Chooses the <see cref="M:ComplicatedPrimitives.DirectedLimit`1.IsSupersetOf(ComplicatedPrimitives.DirectedLimit{`0})">superset</see> of the two <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limits</see>.
+            </summary>
+            <typeparam name="T">Type of limit point's value (limit's domain).</typeparam>
+            <param name="limit1">Directed limit to check 'superset' relation against the <paramref name="limit2"/>.</param>
+            <param name="limit2">Directed limit to check 'superset' relation against the <paramref name="limit1"/>.</param>
+            <returns>
+            <list type="bullet">
+            <item><term><paramref name="limit1"/></term><description>when <paramref name="limit1"/> is a superset of <paramref name="limit2"/>;</description></item>
+            <item><term><paramref name="limit2"/></term><description>when <paramref name="limit2"/> is a superset of <paramref name="limit1"/>;</description></item>
+            </list>
+            </returns>
+            <exception cref="T:System.InvalidOperationException">neither of given limits is a superset of the other one</exception>
+        </member>
+        <member name="T:ComplicatedPrimitives.IParser`1">
+            <summary>
+            Defines a generalized parsing methods that a value type or class implements to restore an instance of <typeparamref name="T"/> from its string equivalent.
+            </summary>
+            <typeparam name="T">The type of object to parse from string.</typeparam>
+        </member>
+        <member name="M:ComplicatedPrimitives.IParser`1.Parse(System.String)">
+            <summary>
+            Converts the specified <paramref name="str"/> to the instance of <typeparamref name="T"/>.
+            </summary>
+            <param name="str">A string that contains an object to convert.</param>
+            <returns>
+            An instance of <typeparamref name="T"/> that is equivalent to the value contained in <paramref name="str"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.IParser`1.TryParse(System.String,`0@)">
+            <summary>
+            Tries to convert the specified <paramref name="str"/> to the instance of <typeparamref name="T"/>, and returns a value indicating whether the conversion succeeded.
+            </summary>
+            <param name="str">A string that contains an object to convert.</param>
+            <param name="result">
+            When this method returns, contains the instance of <typeparamref name="T"/> equivalent to the value contained in <paramref name="str"/> if the conversion succeeded,
+            or <c>default(<typeparamref name="T"/>)</c> if the conversion failed.
+            </param>
+            <returns>
+            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="T:ComplicatedPrimitives.IRangeParser`1">
+            <summary>
+            Defines a generalized parsing methods that a value type or class implements to restore an instance of <see cref="T:ComplicatedPrimitives.Range`1"/> from its string equivalent.
+            </summary>
+            <typeparam name="T">Type of range value (domain).</typeparam>
+        </member>
         <member name="T:ComplicatedPrimitives.LimitPoint`1">
             <summary>
             Structure representing limit point of type <typeparamref name="T"/>.
             </summary>
-            <typeparam name="T">Type of limit point's value.</typeparam>
+            <typeparam name="T">Type of limit point's value (limit's domain).</typeparam>
         </member>
         <member name="F:ComplicatedPrimitives.LimitPoint`1.LeftOpenSign">
             <summary>
@@ -1143,17 +1242,17 @@
         </member>
         <member name="T:ComplicatedPrimitives.LimitPointType">
             <summary>
-            Enum indicating whether limit is open or closed.
+            Enum indicating whether the <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see> is either open or closed.
             </summary>
         </member>
         <member name="F:ComplicatedPrimitives.LimitPointType.Open">
             <summary>
-            Indicates that limit is open which means it does not include its value.
+            Indicates that <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see> is open which means it does not include its value.
             </summary>
         </member>
         <member name="F:ComplicatedPrimitives.LimitPointType.Closed">
             <summary>
-            Indicates that limit is closed which means it includes its value.
+            Indicates that <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see> is closed which means it includes its value.
             </summary>
         </member>
         <member name="T:ComplicatedPrimitives.LimitPointTypeExtensions">
@@ -1203,6 +1302,127 @@
             <item><description><paramref name="closed"/> value when <paramref name="type"/> was <see cref="F:ComplicatedPrimitives.LimitPointType.Closed">closed</see>.</description></item>
             </list>
             </returns>
+        </member>
+        <member name="T:ComplicatedPrimitives.LimitSide">
+            <summary>
+            Enum indicating whether <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> lays on either left or right side of its domain.
+            </summary>
+        </member>
+        <member name="F:ComplicatedPrimitives.LimitSide.Left">
+            <summary>
+            Indicates that <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> lays on the left side of its domain conventional axis.
+            In other words, this option indicates that values of the limit's domain approach the limit point from the right.
+            </summary>
+        </member>
+        <member name="F:ComplicatedPrimitives.LimitSide.Undefined">
+            <summary>
+            Represents undefined limit side.
+            </summary>
+        </member>
+        <member name="F:ComplicatedPrimitives.LimitSide.Right">
+            <summary>
+            Indicates that <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> lays on the right side of its domain conventional axis.
+            In other words, this option indicates that values of the limit's domain approach the limit point from the left.
+            </summary>
+        </member>
+        <member name="T:ComplicatedPrimitives.LimitSideExtensions">
+            <summary>
+            Provides extension methods for <see cref="T:ComplicatedPrimitives.LimitSide"/> enum.
+            </summary>
+        </member>
+        <member name="M:ComplicatedPrimitives.LimitSideExtensions.Flip(ComplicatedPrimitives.LimitSide)">
+            <summary>
+            Flips (inverses) the given <paramref name="side"/>.
+            </summary>
+            <param name="side">Value to flip.</param>
+            <returns>
+            <list type="bullet">
+            <item><term><see cref="F:ComplicatedPrimitives.LimitSide.Left"/></term><description>when <paramref name="side"/> is <see cref="F:ComplicatedPrimitives.LimitSide.Right"/>;</description></item>
+            <item><term><see cref="F:ComplicatedPrimitives.LimitSide.Right"/></term><description>when <paramref name="side"/> is <see cref="F:ComplicatedPrimitives.LimitSide.Left"/>.</description></item>
+            </list>
+            </returns>
+            <exception cref="T:System.InvalidOperationException"><paramref name="side"/> is of undefined -or- unknown value</exception>
+        </member>
+        <member name="M:ComplicatedPrimitives.LimitSideExtensions.Match``1(ComplicatedPrimitives.LimitSide,System.Func{``0},System.Func{``0},System.Func{``0},System.Func{``0})">
+            <summary>
+            Provides an equivalent of 'match expression' for functional-like operating on <see cref="T:ComplicatedPrimitives.LimitSide"/> in C#.
+            </summary>
+            <typeparam name="TResult">Type of matching result.</typeparam>
+            <param name="side">Value to match.</param>
+            <param name="left">Function to perform when <paramref name="side"/> is <see cref="F:ComplicatedPrimitives.LimitSide.Left"/>.</param>
+            <param name="right">Function to perform when <paramref name="side"/> is <see cref="F:ComplicatedPrimitives.LimitSide.Right"/>.</param>
+            <param name="undefined">Optional function to perform when <paramref name="side"/> is <see cref="F:ComplicatedPrimitives.LimitSide.Undefined">undefined</see>.</param>
+            <param name="unknown">Optional function to perform when <paramref name="side"/> is of unknown value.</param>
+            <returns>
+            <list type="bullet">
+            <item><term>result of <c><paramref name="left"/>()</c></term><description>when <paramref name="side"/> is <see cref="F:ComplicatedPrimitives.LimitSide.Left">left</see>.</description></item>
+            <item><term>result of <c><paramref name="right"/>()</c></term><description>when <paramref name="side"/> is <see cref="F:ComplicatedPrimitives.LimitSide.Right">right</see>.</description></item>
+            <item>
+            <term>result of <c><paramref name="undefined"/>()</c></term>
+            <description>
+            when <paramref name="side"/> is <see cref="F:ComplicatedPrimitives.LimitSide.Undefined">undefined</see>. If <paramref name="undefined"/> function was not specified, the <c>default</c> of <typeparamref name="TResult"/> is returned.
+            </description>
+            </item>
+            <item>
+            <term>result of <c><paramref name="unknown"/>()</c></term>
+            <description>
+            when <paramref name="side"/> is of unknown value. If <paramref name="unknown"/> function was not specified, the <c>default</c> of <typeparamref name="TResult"/> is returned.
+            </description>
+            </item>
+            </list>
+            
+            </returns>
+        </member>
+        <member name="T:ComplicatedPrimitives.ParsingException">
+            <summary>
+            The exception that is thrown when the <see cref="M:ComplicatedPrimitives.IParser`1.Parse(System.String)"/> failed because of incorrect format.
+            </summary>
+        </member>
+        <member name="F:ComplicatedPrimitives.ParsingException.DefaultMessage">
+            <summary>
+            Default message for this exception.
+            </summary>
+        </member>
+        <member name="M:ComplicatedPrimitives.ParsingException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ComplicatedPrimitives.ParsingException"/> class with a specified incorrect <paramref name="format"/>,
+            error <paramref name="message"/> and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="format">Incorrect format value that caused this exception.</param>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="inner">
+            The exception that is the cause of the current exception. If the innerException parameter is not a null reference
+            (Nothing in Visual Basic), the current exception is raised in a catch block that handles the inner exception.
+            </param>
+        </member>
+        <member name="M:ComplicatedPrimitives.ParsingException.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ComplicatedPrimitives.ParsingException"/> class with a specified incorrect <paramref name="format"/>
+            and error <paramref name="message"/>.
+            </summary>
+            <param name="format">Incorrect format value that caused this exception.</param>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:ComplicatedPrimitives.ParsingException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ComplicatedPrimitives.ParsingException"/> class with a specified incorrect <paramref name="format"/>.
+            </summary>
+            <param name="format">Incorrect format value that caused this exception.</param>
+        </member>
+        <member name="M:ComplicatedPrimitives.ParsingException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ComplicatedPrimitives.ParsingException"/> class with serialized data.
+            </summary>
+            <param name="info">The object that holds the serialized object data.</param>
+            <param name="context">The contextual information about the source or destination.</param>
+        </member>
+        <member name="P:ComplicatedPrimitives.ParsingException.Format">
+            <summary>
+            Gets the incorrect format value that caused this exception.
+            </summary>
+        </member>
+        <member name="M:ComplicatedPrimitives.ParsingException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <inheritdoc/>
         </member>
         <member name="T:ComplicatedPrimitives.Range`1">
             <summary>
@@ -1359,6 +1579,12 @@
               </item>
             </list>
             </remarks>
+        </member>
+        <member name="T:ComplicatedPrimitives.RangeParser`1">
+            <summary>
+            Provides default implementation of <see cref="T:ComplicatedPrimitives.IRangeParser`1"/> that is compatible with default <see cref="M:ComplicatedPrimitives.Range`1.ToString"/>.
+            </summary>
+            <typeparam name="T"></typeparam>
         </member>
     </members>
 </doc>

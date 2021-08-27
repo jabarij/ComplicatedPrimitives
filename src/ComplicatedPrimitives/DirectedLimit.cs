@@ -54,7 +54,7 @@ namespace ComplicatedPrimitives
             Point = point;
 
             if (side != LimitSide.Left && side != LimitSide.Right)
-                Throw.ArgumentIsUndefinedEnum(side, nameof(side));
+                throw Error.ArgumentIsUndefinedEnum(side, nameof(side));
             Side = side;
             _isDefined = true;
         }

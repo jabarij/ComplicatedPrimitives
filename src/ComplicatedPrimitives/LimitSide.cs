@@ -11,6 +11,10 @@
         /// </summary>
         Left = -1,
         /// <summary>
+        /// Represents undefined limit side.
+        /// </summary>
+        Undefined = 0,
+        /// <summary>
         /// Indicates that <see cref="DirectedLimit{T}">directed limit</see> lays on the right side of its domain conventional axis.
         /// In other words, this option indicates that values of the limit's domain approach the limit point from the left.
         /// </summary>

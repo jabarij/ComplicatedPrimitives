@@ -31,6 +31,7 @@ namespace ComplicatedPrimitives.Tests
 
         public static void CustomizeDirectedLimit(this IFixture fixture)
         {
+            fixture.Customize<LimitSide>(e => e.FromFactory(() => fixture.CreateEnum(excluded: LimitSide.Undefined)));
             fixture.CustomizeAsOpenGeneric(typeof(DirectedLimit<>), typeof(DirectedLimitFactory<>));
         }
 

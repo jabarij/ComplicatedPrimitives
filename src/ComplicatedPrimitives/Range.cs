@@ -10,6 +10,16 @@ namespace ComplicatedPrimitives
     /// <typeparam name="T">Type of range value (domain).</typeparam>
     public struct Range<T> : IRange<Range<T>, T>, IEquatable<Range<T>> where T : IComparable<T>
     {
+        public const string EmptyRangeString = "Ø";
+        public const string LeftOpenLimitTypeString = "(";
+        public const string LeftClosedLimitTypeString = "[";
+        public const string RightOpenLimitTypeString = ")";
+        public const string RightClosedLimitTypeString = "]";
+        public const string ValueSeparatorString = ";";
+        public const string LeftInfiniteValueString = LeftOpenLimitTypeString + LimitPoint<T>.InfinityString;
+        public const string RightInfiniteValueString = LimitPoint<T>.InfinityString + RightOpenLimitTypeString;
+        public const string InfiniteRangeString = LeftInfiniteValueString + ValueSeparatorString + RightInfiniteValueString;
+
         /// <summary>
         /// Represents empty range (often described using symbol ∅).
         /// </summary>
@@ -378,22 +388,23 @@ namespace ComplicatedPrimitives
         public override string ToString()
         {
             if (IsEmpty)
-                return "Ø";
+                return EmptyRangeString;
             if (IsInfinite)
-                return "(∞;∞)";
+                return InfiniteRangeString;
+
             string leftStr =
                 Left.Point.IsInfinite
-                ? "(∞"
-                : string.Format("{0}{1}",
-                    Left.Type.Match(open: () => '(', closed: () => '['),
+                ? LeftInfiniteValueString
+                : string.Concat(
+                    Left.Type.Match(open: () => LeftOpenLimitTypeString, closed: () => LeftClosedLimitTypeString),
                     Left.Value);
             string rightStr =
                 Right.Point.IsInfinite
-                ? "∞)"
-                : string.Format("{0}{1}",
+                ? RightInfiniteValueString
+                : string.Concat(
                     Right.Value,
-                    Right.Type.Match(open: () => ')', closed: () => ']'));
-            return string.Concat(leftStr, ';', rightStr);
+                    Right.Type.Match(open: () => RightOpenLimitTypeString, closed: () => RightClosedLimitTypeString));
+            return string.Concat(leftStr, ValueSeparatorString, rightStr);
         }
 
         public bool Equals(Range<T> other) =>

@@ -1,3 +1,4 @@
+using AutoFixture;
 using ComplicatedPrimitives.TestAbstractions;
 using FluentAssertions;
 using Xunit;
@@ -28,6 +29,21 @@ namespace ComplicatedPrimitives.Tests
                 result.Left.Value.Should().Be(leftValue);
                 result.Right.Value.Should().Be(rightValue);
                 result.Right.Type.Should().Be(rightPointType);
+            }
+
+            [Fact]
+            public void IsCompatibleWithRangeToString()
+            {
+                // arrange
+                var sut = new RangeParser<double>(new DefaultValueParser());
+                var expected = Fixture.Create<Range<double>>();
+                string input = expected.ToString();
+
+                // act
+                var result = sut.Parse(input);
+
+                // assert
+                result.Should().Be(expected);
             }
         }
     }
