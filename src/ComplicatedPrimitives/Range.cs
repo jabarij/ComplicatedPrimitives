@@ -1,6 +1,5 @@
 ﻿using DotNetExtensions;
 using System;
-using System.Collections.Generic;
 
 namespace ComplicatedPrimitives
 {
@@ -8,18 +7,8 @@ namespace ComplicatedPrimitives
     /// Readonly structure representing range of comparable values.
     /// </summary>
     /// <typeparam name="T">Type of range value (domain).</typeparam>
-    public struct Range<T> : IRange<Range<T>, T>, IEquatable<Range<T>> where T : IComparable<T>
+    public struct Range<T> : IEquatable<Range<T>> where T : IComparable<T>
     {
-        public const string EmptyRangeString = "Ø";
-        public const string LeftOpenLimitTypeString = "(";
-        public const string LeftClosedLimitTypeString = "[";
-        public const string RightOpenLimitTypeString = ")";
-        public const string RightClosedLimitTypeString = "]";
-        public const string ValueSeparatorString = ";";
-        public const string LeftInfiniteValueString = LeftOpenLimitTypeString + LimitPoint<T>.InfinityString;
-        public const string RightInfiniteValueString = LimitPoint<T>.InfinityString + RightOpenLimitTypeString;
-        public const string InfiniteRangeString = LeftInfiniteValueString + ValueSeparatorString + RightInfiniteValueString;
-
         /// <summary>
         /// Represents empty range (often described using symbol ∅).
         /// </summary>
@@ -44,7 +33,7 @@ namespace ComplicatedPrimitives
         /// <item><description><paramref name="left"/> and <paramref name="right"/> limits don't intersect;</description></item>
         /// </list>
         /// </exception>
-        /// <seealso cref="DirectedLimit{T}.Intersects(DirectedLimit{T})">Intersecting directed limits.</seealso>
+        /// <seealso cref="DirectedLimit{T}.IntersectsWith(DirectedLimit{T})">Intersecting directed limits.</seealso>
         /// <seealso cref="DirectedLimit{T}.Side">Directed limit's side.</seealso>
         public Range(DirectedLimit<T> left, DirectedLimit<T> right)
         {
@@ -52,7 +41,7 @@ namespace ComplicatedPrimitives
                 throw new ArgumentException("Must be left or undefined limit.", nameof(left));
             if (right.Side == LimitSide.Left)
                 throw new ArgumentException("Must be right or undefined limit.", nameof(right));
-            if (!left.Intersects(right))
+            if (!left.IntersectsWith(right))
                 throw new ArgumentException("The left and right limits must have intersection.", nameof(left));
 
             Left = left;
@@ -70,7 +59,7 @@ namespace ComplicatedPrimitives
         /// <item><description><paramref name="left"/> and <paramref name="right"/> limits don't intersect;</description></item>
         /// </list>
         /// </exception>
-        /// <seealso cref="DirectedLimit{T}.Intersects(DirectedLimit{T})">Intersecting directed limits.</seealso>
+        /// <seealso cref="DirectedLimit{T}.IntersectsWith(DirectedLimit{T})">Intersecting directed limits.</seealso>
         public Range(LimitPoint<T> left, LimitPoint<T> right)
             : this(left: new DirectedLimit<T>(left, LimitSide.Left), right: new DirectedLimit<T>(right, LimitSide.Right)) { }
 
@@ -86,7 +75,7 @@ namespace ComplicatedPrimitives
         /// <item><description><paramref name="left"/> and <paramref name="right"/> limits don't intersect;</description></item>
         /// </list>
         /// </exception>
-        /// <seealso cref="DirectedLimit{T}.Intersects(DirectedLimit{T})">Intersecting directed limits.</seealso>
+        /// <seealso cref="DirectedLimit{T}.IntersectsWith(DirectedLimit{T})">Intersecting directed limits.</seealso>
         public Range(T left, T right, LimitPointType leftLimit = default(LimitPointType), LimitPointType rightLimit = default(LimitPointType))
             : this(left: new LimitPoint<T>(left, leftLimit), right: new LimitPoint<T>(right, rightLimit)) { }
 
@@ -116,7 +105,7 @@ namespace ComplicatedPrimitives
         public bool IsNotEmpty => _isNotEmpty;
 
         /// <summary>
-        /// Gets the value indicating whether this instance is an empty range (∅).
+        /// Gets the value indicating whether this instance is an <see cref="Empty">empty</see> range (∅).
         /// </summary>
         public bool IsEmpty => !_isNotEmpty;
 
@@ -140,6 +129,13 @@ namespace ComplicatedPrimitives
             && IsInfiniteRight;
 
         /// <summary>
+        /// Gets the value indicating whether this range is of finite limits.
+        /// </summary>
+        public bool IsFinite =>
+            !IsInfiniteLeft
+            && !IsInfiniteRight;
+
+        /// <summary>
         /// Functor mapping range's value with special states preservation.
         /// </summary>
         /// <typeparam name="TResult">Target type to map value to.</typeparam>
@@ -153,53 +149,19 @@ namespace ComplicatedPrimitives
                 right: Right.Map(mapper))
             : Range<TResult>.Empty;
 
-        /// <summary>
-        /// Checks if this range contains given <paramref name="value"/> (mathematical equivalent of expression: <paramref name="value"/> ∊ <c>this</c>).
-        /// </summary>
-        /// <param name="value">Value to check inclusion relation of.</param>
-        /// <returns><see langword="true"/> if the <paramref name="value"/> belongs to this range; otherwise <see langword="false"/>.</returns>
+        /// <inheritdoc/>
         public bool Contains(T value) =>
             Left.Contains(value)
             && Right.Contains(value);
 
-        /// <summary>
-        /// Checks if this range intersects (has common elements) with given <paramref name="other"/> range (mathematical equivalent of expression: <c>this</c> ∩ <paramref name="other"/> ≠ ∅).
-        /// </summary>
-        /// <param name="other">Other range to check intersection relation with.</param>
-        /// <returns><see langword="true"/> if the <paramref name="other"/> has common elements to this range; otherwise <see langword="false"/>.</returns>
+        /// <inheritdoc/>
         public bool Intersects(Range<T> other) =>
             !IsEmpty
             && !other.IsEmpty
             && DirectedLimit.Subset(Left, other.Left)
-            .Intersects(DirectedLimit.Subset(Right, other.Right));
+            .IntersectsWith(DirectedLimit.Subset(Right, other.Right));
 
-        /// <summary>
-        /// Checks whether <c>this</c> range is a subset of the <paramref name="other"/> range (<c>this</c> ⊆ <paramref name="other"/>).
-        /// </summary>
-        /// <param name="other">Range to check inclusion relation with.</param>
-        /// <returns>
-        /// <see langword="true"/> if this range is a subset of the <paramref name="other"/> range; otherwise <see langword="false"/>.
-        /// </returns>
-        /// <remarks>
-        /// This function checks the weak inclusion relation which means that a range is in a given relation with equal range. To check strict version of this relation (excluding equal ranges), use <see cref="IsProperSubsetOf(Range{T})"/>.
-        /// <list type="bullet">
-        ///   <listheader>
-        /// 	<description>Following conditions apply to this function:</description>
-        ///   </listheader>
-        ///   <item>
-        /// 	<description>(A = B) → (A ⊆ B ⋀ B ⊆ A);</description>
-        ///   </item>
-        ///   <item>
-        /// 	<description>∅ ⊆ A for every range A (especially: ∅ ⊆ ∅);</description>
-        ///   </item>
-        ///   <item>
-        /// 	<description>(∞;∞) ⊈ A for any finite range A;</description>
-        ///   </item>
-        ///   <item>
-        /// 	<description>(∞;∞) ⊆ (∞;∞);</description>
-        ///   </item>
-        /// </list>
-        /// </remarks>
+        /// <inheritdoc/>
         public bool IsSubsetOf(Range<T> other)
         {
             if (Equals(other))
@@ -217,6 +179,7 @@ namespace ComplicatedPrimitives
                 && Right.IsSubsetOf(other.Right);
         }
 
+        /// <inheritdoc/>
         public bool IsProperSubsetOf(Range<T> other)
         {
             if (Equals(other))
@@ -234,6 +197,7 @@ namespace ComplicatedPrimitives
                 && Right.IsSubsetOf(other.Right);
         }
 
+        /// <inheritdoc/>
         public bool IsSupersetOf(Range<T> other)
         {
             if (Equals(other))
@@ -251,6 +215,7 @@ namespace ComplicatedPrimitives
                 && Right.IsSupersetOf(other.Right);
         }
 
+        /// <inheritdoc/>
         public bool IsProperSupersetOf(Range<T> other)
         {
             if (Equals(other))
@@ -268,7 +233,12 @@ namespace ComplicatedPrimitives
                 && Right.IsSupersetOf(other.Right);
         }
 
-        public Range<T> GetIntersection(Range<T> other)
+        /// <summary>
+        /// Gets intersection (common part) of this <see cref="Range{T}">range</see> and the <paramref name="other"/> range.
+        /// </summary>
+        /// <param name="other">Range to find intersection with.</param>
+        /// <returns>Range being intersection of this instance and the <paramref name="other"/>; if ranges have no intersection, <see cref="Empty">empty</see> range is returned.</returns>
+        public Range<T> IntersectWith(Range<T> other)
         {
             if (IsEmpty || other.IsEmpty)
                 return Empty;
@@ -280,73 +250,97 @@ namespace ComplicatedPrimitives
             var left = DirectedLimit.Subset(Left, other.Left);
             var right = DirectedLimit.Subset(Right, other.Right);
             return
-                left.Intersects(right)
+                left.IntersectsWith(right)
                 ? new Range<T>(left, right)
                 : Empty;
         }
 
-        public bool TryIntersect(Range<T> other, out Range<T> intersection)
+        /// <summary>
+        /// Tries to get intersection (common part) of this <see cref="Range{T}">range</see> and the <paramref name="other">other range</paramref>.
+        /// </summary>
+        /// <param name="other">Range to find intersection with.</param>
+        /// <param name="result">
+        /// When this method returns, contains the range being intersection of this instance and the <paramref name="other"/> if non-empty intersection exists,
+        /// or <see cref="Empty">empty range</see> if it doesn't.
+        /// </param>
+        /// <returns>
+        /// <see langword="true"/> if non-empty intersection exists; otherwise, <see langword="false"/>.
+        /// </returns>
+        public bool TryIntersectWith(Range<T> other, out Range<T> result)
         {
             var left = DirectedLimit.Subset(Left, other.Left);
             var right = DirectedLimit.Subset(Right, other.Right);
-            bool intersects = left.Intersects(right);
-            intersection =
+            bool intersects = left.IntersectsWith(right);
+            result =
                 intersects
                 ? new Range<T>(left, right)
                 : Empty;
             return intersects;
         }
 
-        public RangeUnion<Range<T>, T> GetUnion(Range<T> other)
+        /// <summary>
+        /// Gets union (sum) of this <see cref="Range{T}">range</see> and the <paramref name="other">other range</paramref>.
+        /// </summary>
+        /// <param name="other">Range to unite with.</param>
+        /// <returns>Range union of this instance and the <paramref name="other"/>.</returns>
+        public RangeUnion<T> UnionWith(Range<T> other)
         {
             if (IsEmpty && other.IsEmpty)
-                return new RangeUnion<Range<T>, T>(true, Empty);
+                return new RangeUnion<T>(true, Empty);
             if (IsEmpty)
-                return new RangeUnion<Range<T>, T>(true, other);
+                return new RangeUnion<T>(true, other);
             if (other.IsEmpty)
-                return new RangeUnion<Range<T>, T>(true, this);
+                return new RangeUnion<T>(true, this);
 
             var leftSubset = DirectedLimit.Subset(Left, other.Left);
             var rightSubset = DirectedLimit.Subset(Right, other.Right);
             if (leftSubset.Complements(rightSubset)
-                || leftSubset.Intersects(rightSubset))
+                || leftSubset.IntersectsWith(rightSubset))
             {
                 var left = DirectedLimit.Superset(Left, other.Left);
                 var right = DirectedLimit.Superset(Right, other.Right);
-                return new RangeUnion<Range<T>, T>(true, new Range<T>(left, right));
+                return new RangeUnion<T>(true, new Range<T>(left, right));
             }
             else
-                return new RangeUnion<Range<T>, T>(true, this, other);
+                return new RangeUnion<T>(true, this, other);
         }
 
-        public RangeUnion<Range<T>, T> GetAbsoluteComplement()
+        /// <summary>
+        /// Gets absolute complement of this <see cref="Range{T}">range</see> (complement in <see cref="Infinite">infinite</see> range).
+        /// </summary>
+        /// <returns>Range union representing absolute complement of this instance.</returns>
+        public RangeUnion<T> GetAbsoluteComplement()
         {
             if (IsEmpty)
-                return new RangeUnion<Range<T>, T>(true, Infinite);
+                return new RangeUnion<T>(true, Infinite);
             if (IsInfinite)
-                return RangeUnion<Range<T>, T>.Empty;
+                return RangeUnion<T>.Empty;
             if (IsInfiniteLeft)
-                return new RangeUnion<Range<T>, T>(true, new Range<T>(Right.GetComplement(), DirectedLimit<T>.RightInfinity));
+                return new RangeUnion<T>(true, new Range<T>(Right.GetComplement(), DirectedLimit<T>.RightInfinity));
             if (IsInfiniteRight)
-                return new RangeUnion<Range<T>, T>(true, new Range<T>(DirectedLimit<T>.LeftInfinity, Left.GetComplement()));
+                return new RangeUnion<T>(true, new Range<T>(DirectedLimit<T>.LeftInfinity, Left.GetComplement()));
 
-            return new RangeUnion<Range<T>, T>(true,
+            return new RangeUnion<T>(true,
                 new Range<T>(DirectedLimit<T>.LeftInfinity, Left.GetComplement()),
                 new Range<T>(Right.GetComplement(), DirectedLimit<T>.RightInfinity));
         }
 
-        public RangeUnion<Range<T>, T> GetComplementIn(Range<T> other)
+        /// <summary>
+        /// Gets complement of this <see cref="Range{T}">range</see> in the <paramref name="other"/> range.
+        /// </summary>
+        /// <returns>Range union representing complement of this instance in the <paramref name="other"/> range.</returns>
+        public RangeUnion<T> GetComplementIn(Range<T> other)
         {
             if (other.IsEmpty)
-                return RangeUnion<Range<T>, T>.Empty;
+                return RangeUnion<T>.Empty;
             if (IsEmpty)
                 return other.IsEmpty
-                    ? RangeUnion<Range<T>, T>.Empty
-                    : new RangeUnion<Range<T>, T>(true, other);
+                    ? RangeUnion<T>.Empty
+                    : new RangeUnion<T>(true, other);
             if (Equals(other))
-                return RangeUnion<Range<T>, T>.Empty;
+                return RangeUnion<T>.Empty;
             if (!Intersects(other))
-                return new RangeUnion<Range<T>, T>(true, other);
+                return new RangeUnion<T>(true, other);
 
             var leftComplement = Empty;
             if (Left.IsSubsetOf(other.Left))
@@ -361,78 +355,144 @@ namespace ComplicatedPrimitives
                     right: other.Right);
 
             if (!leftComplement.IsEmpty && !rightComplement.IsEmpty)
-                return new RangeUnion<Range<T>, T>(true, leftComplement, rightComplement);
+                return new RangeUnion<T>(true, leftComplement, rightComplement);
             else if (!leftComplement.IsEmpty)
-                return new RangeUnion<Range<T>, T>(true, leftComplement);
+                return new RangeUnion<T>(true, leftComplement);
             else
-                return new RangeUnion<Range<T>, T>(true, rightComplement);
+                return new RangeUnion<T>(true, rightComplement);
 
         }
 
+        /// <summary>
+        /// Translates (moves) limits of this range by a given <paramref name="translation"/>, preserving their <see cref="DirectedLimit{T}.Side">sides</see> abd <see cref="LimitPoint{T}.Type">types</see>.
+        /// </summary>
+        /// <param name="translation">Function that translates range's limit value.</param>
+        /// <returns>Range with both limits translated using given <paramref name="translation"/>.</returns>
+        /// <remarks>
+        /// This transformation preserves limits' sides which means that it can potentially cause errors if translated values violate any rules applied
+        /// when creating instance of <see cref="Range{T}"/>. E.g. the following code:
+        /// <code>var range = new Range&lt;int&gt;(0, 10);</code>
+        /// <code>var result = range.Translate(e => e * -1);</code>
+        /// will throw exception, because left limit value, after translation will be greater than the right limit value.
+        /// </remarks>
         public Range<T> Translate(Func<T, T> translation) =>
             new Range<T>(
                 left: Left.Translate(translation),
                 right: Right.Translate(translation));
 
-        IEnumerable<Range<T>> IRange<Range<T>, T>.GetUnion(Range<T> other) =>
-            GetUnion(other);
-
-        IEnumerable<Range<T>> IRange<Range<T>, T>.GetAbsoluteComplement() =>
-            GetAbsoluteComplement();
-
-        IEnumerable<Range<T>> IRange<Range<T>, T>.GetComplementIn(Range<T> other) =>
-            GetComplementIn(other);
-
         #region Boiler-plate code
 
+        /// <summary>
+        /// Converts this <see cref="Range{T}">range</see> to its equivalent string representation following format:
+        /// <code>{ left-limit-type }{ left-limit-value }{ separator }{ right-limit-type }{ right-limit-value }</code>
+        /// </summary>
+        /// <returns>String representation of this range consisting of:
+        /// <list type="bullet">
+        /// <item><term>left-limit-type</term><description>sign representing left limit type: '<c>(</c>' for open, '<c>[</c>' for closed,</description></item>
+        /// <item><term>left-limit-value</term><description>string representation of <see cref="LeftValue">left value</see> or infinity sign '∞', if this instance is <see cref="IsInfiniteLeft">left infinite</see>,</description></item>
+        /// <item><term>separator</term><description>string representation of separator '<c>;</c>',</description></item>
+        /// <item><term>right-limit-value</term><description>string representation of <see cref="RightValue">right value</see> or infinity sign '∞', if this instance is <see cref="IsInfiniteRight">right infinite</see>,</description></item>
+        /// <item><term>right-limit-type</term><description>sign representing right limit type: '<c>)</c>' for open, '<c>]</c>' for closed.</description></item>
+        /// </list>
+        /// </returns>
         public override string ToString()
         {
             if (IsEmpty)
-                return EmptyRangeString;
+                return Constants.EmptySetString;
             if (IsInfinite)
-                return InfiniteRangeString;
+                return Constants.InfiniteRangeString;
 
             string leftStr =
                 Left.Point.IsInfinite
-                ? LeftInfiniteValueString
+                ? Constants.LeftInfiniteValueString
                 : string.Concat(
-                    Left.Type.Match(open: () => LeftOpenLimitTypeString, closed: () => LeftClosedLimitTypeString),
+                    Left.Type.Match(open: () => Constants.LeftOpenLimitTypeString, closed: () => Constants.LeftClosedLimitTypeString),
                     Left.Value);
             string rightStr =
                 Right.Point.IsInfinite
-                ? RightInfiniteValueString
+                ? Constants.RightInfiniteValueString
                 : string.Concat(
                     Right.Value,
-                    Right.Type.Match(open: () => RightOpenLimitTypeString, closed: () => RightClosedLimitTypeString));
-            return string.Concat(leftStr, ValueSeparatorString, rightStr);
+                    Right.Type.Match(open: () => Constants.RightOpenLimitTypeString, closed: () => Constants.RightClosedLimitTypeString));
+            return string.Concat(leftStr, Constants.ValueSeparatorString, rightStr);
         }
 
+        /// <summary>
+        /// Checks whether this instance of <see cref="Range{T}">range</see> is equal to the <paramref name="other"/> range.
+        /// </summary>
+        /// <param name="other">Range to check equality with this instance.</param>
+        /// <returns>
+        /// <see langword="true"/> if this instance is equal to the <paramref name="other"/> range which means:
+        /// <list type="bullet">
+        /// <item><description>both instances <see cref="IsEmpty">are empty</see>;</description></item>
+        /// <item><description>both instances <see cref="IsInfinite">are infinite</see>;</description></item>
+        /// <item><description>both instances <see cref="IsFinite">are finite</see> and their <see cref="Left">left</see> and <see cref="Right">right</see> limits are equal;</description></item>
+        /// </list>
+        /// otherwise, <see langword="false"/>.
+        /// </returns>
         public bool Equals(Range<T> other) =>
             IsEmpty == other.IsEmpty
             && IsInfinite == other.IsInfinite
             && Left == other.Left
             && Right == other.Right;
+
+        /// <inheritdoc/>
         public override bool Equals(object obj) =>
             obj is Range<T> other
             && Equals(other);
+
+        /// <inheritdoc/>
         public override int GetHashCode() =>
             new HashCode()
             .Append(Left, Right)
             .CurrentHash;
 
+        /// <summary>
+        /// Determines whether two specified <see cref="Range{T}">ranges</see> have the same value.
+        /// </summary>
+        /// <param name="left">The first range to compare.</param>
+        /// <param name="right">The second range to compare.</param>
+        /// <returns><see langword="true"/> if the value of <paramref name="left"/> is the same as the value of <paramref name="right"/>;
+        /// otherwise, <see langword="false"/>.</returns>
         public static bool operator ==(Range<T> left, Range<T> right) =>
             left.Equals(right);
+
+        /// <summary>
+        /// Determines whether two specified <see cref="Range{T}">ranges</see> have different values.
+        /// </summary>
+        /// <param name="left">The first range to compare.</param>
+        /// <param name="right">The second range to compare.</param>
+        /// <returns><see langword="true"/> if the value of <paramref name="left"/> is different from the value of <paramref name="right"/>;
+        /// otherwise, <see langword="false"/>.</returns>
         public static bool operator !=(Range<T> left, Range<T> right) =>
             !left.Equals(right);
 
-        public static RangeUnion<Range<T>, T> operator +(Range<T> left, Range<T> right) =>
-            left.GetUnion(right);
+        /// <summary>
+        /// Gets union (sum) of <paramref name="left"/> and <paramref name="right"/> <see cref="Range{T}">range</see>>.
+        /// </summary>
+        /// <param name="left">First range to unite.</param>
+        /// <param name="right">Second range to unite.</param>
+        /// <returns>Range union of <paramref name="left"/> and <paramref name="right"/>.</returns>
+        public static RangeUnion<T> operator +(Range<T> left, Range<T> right) =>
+            left.UnionWith(right);
 
-        public static RangeUnion<Range<T>, T> operator -(Range<T> left, Range<T> right) =>
+        /// <summary>
+        /// Gets complement of <paramref name="left"/> <see cref="Range{T}">range</see> in the <paramref name="right"/> range.
+        /// </summary>
+        /// <param name="left">Range to get complement of.</param>
+        /// <param name="right">Range to get complement in.</param>
+        /// <returns>Range union representing complement of <paramref name="left"/> in <paramref name="right"/>.</returns>
+        public static RangeUnion<T> operator -(Range<T> left, Range<T> right) =>
             right.GetComplementIn(left);
 
+        /// <summary>
+        /// Gets intersection (common part) of <paramref name="left"/> and <paramref name="right"/> <see cref="Range{T}">range</see>.
+        /// </summary>
+        /// <param name="left">First range to unite.</param>
+        /// <param name="right">Second range to unite.</param>
+        /// <returns>Range being intersection of <paramref name="left"/> and the <paramref name="right"/>; if ranges have no intersection, <see cref="Empty">empty</see> range is returned.</returns>
         public static Range<T> operator *(Range<T> left, Range<T> right) =>
-            left.GetIntersection(right);
+            left.IntersectWith(right);
 
         #endregion
     }

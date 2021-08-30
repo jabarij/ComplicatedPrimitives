@@ -4,6 +4,208 @@
         <name>ComplicatedPrimitives</name>
     </assembly>
     <members>
+        <member name="T:ComplicatedPrimitives.CaseInsensitiveString">
+            <summary>
+            Wraps System.String implicitly ignoring character case whenever it matters in case of normal string.
+            </summary>
+        </member>
+        <member name="F:ComplicatedPrimitives.CaseInsensitiveString.Empty">
+            <summary>
+            Represents the empty case insensitive string.
+            </summary>
+        </member>
+        <member name="M:ComplicatedPrimitives.CaseInsensitiveString.#ctor(System.String)">
+            <summary>
+            Creates a new instance of <see cref="T:ComplicatedPrimitives.CaseInsensitiveString"/> wrapping a specified <paramref name="str"/>.
+            </summary>
+            <param name="str">String value to wrap as case insensitive string.</param>
+        </member>
+        <member name="M:ComplicatedPrimitives.CaseInsensitiveString.ToString">
+            <summary>
+            Returns underlying string value of this instance; no actual conversion is performed.
+            </summary>
+            <returns>Exact original string value specified when creating this instance of <see cref="T:ComplicatedPrimitives.CaseInsensitiveString"/>.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.CaseInsensitiveString.Equals(ComplicatedPrimitives.CaseInsensitiveString,ComplicatedPrimitives.CaseInsensitiveStringComparison)">
+            <summary>
+            Determines whether this instance of <see cref="T:ComplicatedPrimitives.CaseInsensitiveString"/> and the <paramref name="other"/> one have the same value ignoring case differences between characters.
+            A parameter specifies the culture and sort rules used in the comparison.
+            </summary>
+            <param name="other">Case insensitive string to compare to this instance.</param>
+            <param name="comparisonType">Value specifying how the case insensitive strings will be compared.</param>
+            <returns>
+            <see langword="true"/> if <paramref name="other"/> is case insensitive equivalent of this instance;
+            otherwise <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.CaseInsensitiveString.Equals(ComplicatedPrimitives.CaseInsensitiveString)">
+            <summary>
+            Determines whether this instance of <see cref="T:ComplicatedPrimitives.CaseInsensitiveString"/> and the <paramref name="other"/> one have the same value ignoring case differences between characters.
+            A parameter specifies the culture and sort rules used in the comparison.
+            </summary>
+            <param name="other">Case insensitive string to compare to this instance.</param>
+            <returns>
+            <see langword="true"/> if <paramref name="other"/> is case insensitive equivalent of this instance;
+            otherwise <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.CaseInsensitiveString.Equals(System.String)">
+            <summary>
+            Determines whether this instance of <see cref="T:ComplicatedPrimitives.CaseInsensitiveString"/> and the <paramref name="other"/> string value have the same value ignoring case differences between characters.
+            A parameter specifies the culture and sort rules used in the comparison.
+            </summary>
+            <param name="other">String to compare to this instance.</param>
+            <returns>
+            <see langword="true"/> if <paramref name="other"/> is case insensitive equivalent of this instance;
+            otherwise <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.CaseInsensitiveString.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ComplicatedPrimitives.CaseInsensitiveString.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:ComplicatedPrimitives.CaseInsensitiveString.op_Equality(ComplicatedPrimitives.CaseInsensitiveString,ComplicatedPrimitives.CaseInsensitiveString)">
+            <summary>
+            Determines whether two specified <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive strings</see> have the same value.
+            </summary>
+            <param name="left">The first case insensitive strings to compare.</param>
+            <param name="right">The second case insensitive strings to compare.</param>
+            <returns>
+            <see langword="true"/> if the value of <paramref name="left"/> is the same as the value of <paramref name="right"/>;
+            otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.CaseInsensitiveString.op_Inequality(ComplicatedPrimitives.CaseInsensitiveString,ComplicatedPrimitives.CaseInsensitiveString)">
+            <summary>
+            Determines whether two specified <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive strings</see> have different values.
+            </summary>
+            <param name="left">The first case insensitive string to compare.</param>
+            <param name="right">The second case insensitive string to compare.</param>
+            <returns><see langword="true"/> if the value of <paramref name="left"/> is different from the value of <paramref name="right"/>;
+            otherwise, <see langword="false"/>.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.CaseInsensitiveString.op_Implicit(ComplicatedPrimitives.CaseInsensitiveString)~System.String">
+            <summary>
+            Implicitly casts <paramref name="value"/> to string by returning its underlying string value; no actual conversion is performed.
+            </summary>
+            <param name="value">Case insensitive string value to cast.</param>
+        </member>
+        <member name="M:ComplicatedPrimitives.CaseInsensitiveString.op_Implicit(System.Nullable{ComplicatedPrimitives.CaseInsensitiveString})~System.String">
+            <summary>
+            Implicitly casts <paramref name="value"/> to string by returning its underlying string value or null; no actual conversion is performed.
+            </summary>
+            <param name="value">Case insensitive string value to cast.</param>
+        </member>
+        <member name="M:ComplicatedPrimitives.CaseInsensitiveString.op_Implicit(System.String)~ComplicatedPrimitives.CaseInsensitiveString">
+            <summary>
+            Implicitly casts <paramref name="value"/> to case insensitive string by passing the argument value to the new instance of <see cref="T:ComplicatedPrimitives.CaseInsensitiveString"/>.
+            </summary>
+            <param name="value">String value to cast.</param>
+        </member>
+        <member name="M:ComplicatedPrimitives.CaseInsensitiveString.Equals(System.Nullable{ComplicatedPrimitives.CaseInsensitiveString},System.Nullable{ComplicatedPrimitives.CaseInsensitiveString},ComplicatedPrimitives.CaseInsensitiveStringComparison)">
+            <summary>
+            Determines whether two specified <see cref="T:ComplicatedPrimitives.CaseInsensitiveString"/> objects have the same value ignoring case differences between characters..
+            A parameter specifies the culture and sort rules used in the comparison.
+            </summary>
+            <param name="a">The first case insensitive string to compare, or null.</param>
+            <param name="b">The second case insensitive string to compare, or null.</param>
+            <param name="comparisonType">Value specifying how the case insensitive strings will be compared.</param>
+            <returns>
+            <see langword="true"/> if both <paramref name="a"/> and <paramref name="b"/> are null or case insensitive equivalents;
+            otherwise <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.CaseInsensitiveString.IsNullOrEmpty(ComplicatedPrimitives.CaseInsensitiveString)">
+            <summary>
+            Determines whether given <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive</see> <paramref name="value"/> represents a null or empty string.
+            </summary>
+            <param name="value">Value to check.</param>
+            <returns>
+            <see langword="true"/> if underlying string of <paramref name="value"/> is either null or empty;
+            otherwise <see langword="true"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.CaseInsensitiveString.IsNullOrWhiteSpace(ComplicatedPrimitives.CaseInsensitiveString)">
+            <summary>
+            Determines whether given <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive</see> <paramref name="value"/> represents a null, empty or consisted of white-spaces only string.
+            </summary>
+            <param name="value">Value to check.</param>
+            <returns>
+            <see langword="true"/> if underlying string of <paramref name="value"/> is either null or empty or consists of white-spaces only;
+            otherwise <see langword="true"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.CaseInsensitiveString.IsNullOrEmpty(System.Nullable{ComplicatedPrimitives.CaseInsensitiveString})">
+            <summary>
+            Determines whether given nullable <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive</see> <paramref name="value"/> represents a null or empty string.
+            </summary>
+            <param name="value">Value to check.</param>
+            <returns>
+            <see langword="true"/> if <paramref name="value"/> is null itself or its underlying string is either null or empty;
+            otherwise <see langword="true"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.CaseInsensitiveString.IsNullOrWhiteSpace(System.Nullable{ComplicatedPrimitives.CaseInsensitiveString})">
+            <summary>
+            Determines whether given nullable <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive</see> <paramref name="value"/> represents a null, empty or consisted of white-spaces only string.
+            </summary>
+            <param name="value">Value to check.</param>
+            <returns>
+            <see langword="true"/> if <paramref name="value"/> is null itself or its underlying string is either null or empty or consists of white-spaces only;
+            otherwise <see langword="true"/>.
+            </returns>
+        </member>
+        <member name="T:ComplicatedPrimitives.CaseInsensitiveStringComparison">
+            <summary>
+            Enumeration specifying the culture and sort rules to be used by certain overloads of the <see cref="M:ComplicatedPrimitives.CaseInsensitiveString.Equals(System.Object)"/>.
+            </summary>
+        </member>
+        <member name="F:ComplicatedPrimitives.CaseInsensitiveStringComparison.CurrentCulture">
+            <summary>
+            Compare <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive strings</see> using culture-sensitive sort rules and the current culture.
+            </summary>
+        </member>
+        <member name="F:ComplicatedPrimitives.CaseInsensitiveStringComparison.InvariantCulture">
+            <summary>
+            Compare <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive strings</see> using culture-sensitive sort rules and the invariant culture.
+            </summary>
+        </member>
+        <member name="F:ComplicatedPrimitives.CaseInsensitiveStringComparison.Ordinal">
+            <summary>
+            Compare <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive strings</see> using ordinal (binary) sort rules.
+            </summary>
+        </member>
+        <member name="T:ComplicatedPrimitives.CaseInsensitiveStringComparisonExtensions">
+            <summary>
+            Provides extension methods for <see cref="T:ComplicatedPrimitives.CaseInsensitiveStringComparison"/>.
+            </summary>
+        </member>
+        <member name="M:ComplicatedPrimitives.CaseInsensitiveStringComparisonExtensions.ToStringComparison(ComplicatedPrimitives.CaseInsensitiveStringComparison)">
+            <summary>
+            Converts <see cref="T:ComplicatedPrimitives.CaseInsensitiveStringComparison"/> <paramref name="value"/> to its equivalent <see cref="T:System.StringComparison"/> value.
+            </summary>
+            <param name="value">Value to convert.</param>
+            <returns>
+            Proper value of type <see cref="T:System.StringComparison"/> being logical equivalent of the given <paramref name="value"/>
+            if valid (known) <see cref="T:ComplicatedPrimitives.CaseInsensitiveStringComparison"/> value was passe;
+            otherwise throws exception.
+            </returns>
+            <exception cref="T:System.InvalidOperationException"><paramref name="value"/> is not a defined value of <see cref="T:ComplicatedPrimitives.CaseInsensitiveStringComparison"/></exception>
+        </member>
+        <member name="M:ComplicatedPrimitives.CaseInsensitiveStringComparisonExtensions.ToCaseInsensitiveStringComparison(System.StringComparison)">
+            <summary>
+            Converts (casts down) <see cref="T:System.StringComparison"/> <paramref name="value"/> to its equivalent <see cref="T:ComplicatedPrimitives.CaseInsensitiveStringComparison"/> value.
+            </summary>
+            <param name="value">Value to convert.</param>
+            <returns>
+            Proper value of type <see cref="T:ComplicatedPrimitives.CaseInsensitiveStringComparison"/> being logical equivalent of the given <paramref name="value"/>
+            if valid (known) <see cref="T:System.StringComparison"/> value was passe;
+            otherwise throws exception.
+            </returns>
+            <exception cref="T:System.InvalidOperationException"><paramref name="value"/> is not a defined value of <see cref="T:System.StringComparison"/></exception>
+        </member>
         <member name="T:ComplicatedPrimitives.Comparable">
             <summary>
             Provides a set of static (Shared in Visual Basic) methods for operating on objects that implement <see cref="T:System.IComparable`1"/> or provides any other way of comparison.
@@ -807,7 +1009,7 @@
             otherwise, <see langword="false"/>.
             </returns>
         </member>
-        <member name="M:ComplicatedPrimitives.DirectedLimit`1.Intersects(ComplicatedPrimitives.DirectedLimit{`0})">
+        <member name="M:ComplicatedPrimitives.DirectedLimit`1.IntersectsWith(ComplicatedPrimitives.DirectedLimit{`0})">
             <summary>
             Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> and <paramref name="other"/> have non-empty intersection.
             In other words, this function checks if there exists any non-empty set of <typeparamref name="T"/> that belongs to both this and <paramref name="other"/> directed limit.
@@ -1009,6 +1211,121 @@
             </returns>
             <exception cref="T:System.InvalidOperationException">neither of given limits is a superset of the other one</exception>
         </member>
+        <member name="T:ComplicatedPrimitives.IComparativeSet`2">
+            <summary>
+            Exposes interface providing mathematical set relations and operations.
+            </summary>
+            <typeparam name="TSet">Type of set to handle.</typeparam>
+            <typeparam name="T">Type of set's element.</typeparam>
+        </member>
+        <member name="M:ComplicatedPrimitives.IComparativeSet`2.Contains(`1)">
+            <summary>
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.IComparativeSet`2">set</see> contains given <paramref name="value"/>.
+            This function is equivalent of mathematical expression:
+            <code>x ∊ A</code>
+            where:
+            <list type="bullet">
+            <item><term>A</term><description>this instance of <see cref="T:ComplicatedPrimitives.IComparativeSet`2"/>,</description></item>
+            <item><term>x</term><description><paramref name="value"/>.</description></item>
+            </list>
+            </summary>
+            <param name="value">Value to check inclusion relation of.</param>
+            <returns><see langword="true"/> if the <paramref name="value"/> belongs to this set; otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.IComparativeSet`2.IntersectsWith(`0)">
+            <summary>
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.IComparativeSet`2">set</see> intersects (has common elements) with the <paramref name="other"/> set.
+            This function is equivalent of mathematical expression:
+            <code>A ∩ B ≠ ∅</code>
+            where:
+            <list type="bullet">
+            <item><term>A</term><description>this instance of <see cref="T:ComplicatedPrimitives.IComparativeSet`2"/>,</description></item>
+            <item><term>B</term><description><paramref name="other"/>.</description></item>
+            </list>
+            </summary>
+            <param name="other">Other set to check intersection relation with.</param>
+            <returns><see langword="true"/> if the <paramref name="other"/> has common elements with this set; otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.IComparativeSet`2.IsSubsetOf(`0)">
+            <summary>
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.IComparativeSet`2">set</see> is a subset of the <paramref name="other"/> set.
+            This function is equivalent of mathematical expression:
+            <code>A ⊆ B</code>
+            where:
+            <list type="bullet">
+            <item><term>A</term><description>this instance of <see cref="!:IRange&lt;TSet, T&gt;"/>,</description></item>
+            <item><term>B</term><description><paramref name="other"/>.</description></item>
+            </list>
+            </summary>
+            <param name="other">Set to check inclusion relation with.</param>
+            <returns>
+            <see langword="true"/> if this set is a subset of the <paramref name="other"/> one; otherwise <see langword="false"/>.
+            </returns>
+            <remarks>
+            This function checks the weak inclusion relation which means that a set is in a given relation with itself (or equal set).
+            To check strict version of this relation (excluding equal sets), use <see cref="M:ComplicatedPrimitives.IComparativeSet`2.IsProperSubsetOf(`0)"/>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.IComparativeSet`2.IsProperSubsetOf(`0)">
+            <summary>
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.IComparativeSet`2">set</see> is a proper subset of the <paramref name="other"/> set.
+            This function is equivalent of mathematical expression:
+            <code>A ⊂ B</code>
+            where:
+            <list type="bullet">
+            <item><term>A</term><description>this instance of <see cref="T:ComplicatedPrimitives.IComparativeSet`2"/>,</description></item>
+            <item><term>B</term><description><paramref name="other"/>.</description></item>
+            </list>
+            </summary>
+            <param name="other">Set to check strict inclusion relation with.</param>
+            <returns>
+            <see langword="true"/> if this set is a proper subset of the <paramref name="other"/> one; otherwise <see langword="false"/>.
+            </returns>
+            <remarks>
+            This function checks the strict inclusion relation which means that a set is not in a given relation with itself (or equal set).
+            To check weak version of this relation (excluding equal sets), use <see cref="M:ComplicatedPrimitives.IComparativeSet`2.IsSubsetOf(`0)"/>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.IComparativeSet`2.IsSupersetOf(`0)">
+            <summary>
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.IComparativeSet`2">set</see> is a superset of the <paramref name="other"/> set.
+            This function is equivalent of mathematical expression:
+            <code>A ⊇ B</code>
+            where:
+            <list type="bullet">
+            <item><term>A</term><description>this instance of <see cref="!:IRange&lt;TSet, T&gt;"/>,</description></item>
+            <item><term>B</term><description><paramref name="other"/>.</description></item>
+            </list>
+            </summary>
+            <param name="other">Set to check inclusion relation with.</param>
+            <returns>
+            <see langword="true"/> if this set is a superset of the <paramref name="other"/> one; otherwise <see langword="false"/>.
+            </returns>
+            <remarks>
+            This function checks the weak inclusion relation which means that a set is in a given relation with itself (or equal set).
+            To check strict version of this relation (excluding equal sets), use <see cref="M:ComplicatedPrimitives.IComparativeSet`2.IsProperSupersetOf(`0)"/>.
+            </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.IComparativeSet`2.IsProperSupersetOf(`0)">
+            <summary>
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.IComparativeSet`2">set</see> is a proper superset of the <paramref name="other"/> set.
+            This function is equivalent of mathematical expression:
+            <code>A ⊃ B</code>
+            where:
+            <list type="bullet">
+            <item><term>A</term><description>this instance of <see cref="T:ComplicatedPrimitives.IComparativeSet`2"/>,</description></item>
+            <item><term>B</term><description><paramref name="other"/>.</description></item>
+            </list>
+            </summary>
+            <param name="other">Set to check strict inclusion relation with.</param>
+            <returns>
+            <see langword="true"/> if this set is a proper superset of the <paramref name="other"/> one; otherwise <see langword="false"/>.
+            </returns>
+            <remarks>
+            This function checks the strict inclusion relation which means that a set is not in a given relation with itself (or equal set).
+            To check weak version of this relation (excluding equal sets), use <see cref="M:ComplicatedPrimitives.IComparativeSet`2.IsSupersetOf(`0)"/>.
+            </remarks>
+        </member>
         <member name="T:ComplicatedPrimitives.IParser`1">
             <summary>
             Defines a generalized parsing methods that a value type or class implements to restore an instance of <typeparamref name="T"/> from its string equivalent.
@@ -1048,31 +1365,6 @@
             Structure representing limit point of type <typeparamref name="T"/>.
             </summary>
             <typeparam name="T">Type of limit point's value (limit's domain).</typeparam>
-        </member>
-        <member name="F:ComplicatedPrimitives.LimitPoint`1.LeftOpenSign">
-            <summary>
-            Represents the left <see cref="F:ComplicatedPrimitives.LimitPointType.Open">open</see> <see cref="P:ComplicatedPrimitives.LimitPoint`1.Type">type</see> of <see cref="P:ComplicatedPrimitives.LimitPoint`1.IsFinite">finite</see> <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see>.
-            </summary>
-        </member>
-        <member name="F:ComplicatedPrimitives.LimitPoint`1.LeftClosedSign">
-            <summary>
-            Represents the left <see cref="F:ComplicatedPrimitives.LimitPointType.Closed">closed</see> <see cref="P:ComplicatedPrimitives.LimitPoint`1.Type">type</see> of <see cref="P:ComplicatedPrimitives.LimitPoint`1.IsFinite">finite</see> <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see>.
-            </summary>
-        </member>
-        <member name="F:ComplicatedPrimitives.LimitPoint`1.RightOpenSign">
-            <summary>
-            Represents the right <see cref="F:ComplicatedPrimitives.LimitPointType.Open">open</see> <see cref="P:ComplicatedPrimitives.LimitPoint`1.Type">type</see> of <see cref="P:ComplicatedPrimitives.LimitPoint`1.IsFinite">finite</see> <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see>.
-            </summary>
-        </member>
-        <member name="F:ComplicatedPrimitives.LimitPoint`1.RightClosedSign">
-            <summary>
-            Represents the right <see cref="F:ComplicatedPrimitives.LimitPointType.Closed">closed</see> <see cref="P:ComplicatedPrimitives.LimitPoint`1.Type">type</see> of <see cref="P:ComplicatedPrimitives.LimitPoint`1.IsFinite">finite</see> <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see>.
-            </summary>
-        </member>
-        <member name="F:ComplicatedPrimitives.LimitPoint`1.InfinityString">
-            <summary>
-            Represents the string equivalent of <see cref="P:ComplicatedPrimitives.LimitPoint`1.IsInfinite">infinite</see> <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see>.
-            </summary>
         </member>
         <member name="F:ComplicatedPrimitives.LimitPoint`1.Infinity">
             <summary>
@@ -1191,15 +1483,20 @@
         </member>
         <member name="M:ComplicatedPrimitives.LimitPoint`1.ToString">
             <summary>
-            Converts this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> to its equivalent string representation following format: <c>{leftTypeSign}{value}{rightTypeSign}</c>.
+            Converts this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> to its equivalent string representation following format:
+            <code>{ left-type }{ value }{ right-type }</code>
             </summary>
             <returns>When this instance <see cref="P:ComplicatedPrimitives.LimitPoint`1.IsFinite">is finite</see>, the string representation of this directed limit consisting of:
             <list type="bullet">
-            <item><description>signs representing <see cref="P:ComplicatedPrimitives.LimitPoint`1.Type">type</see> (<see cref="F:ComplicatedPrimitives.LimitPoint`1.LeftClosedSign"><c>≥</c></see>, <see cref="F:ComplicatedPrimitives.LimitPoint`1.RightOpenSign"><c>&gt;</c></see>,
-            <see cref="F:ComplicatedPrimitives.LimitPoint`1.RightClosedSign"><c>≤</c></see>, <see cref="F:ComplicatedPrimitives.LimitPoint`1.LeftOpenSign"><c>&lt;</c></see>);</description></item>
+            <item>
+            <term>left-type</term>
+            <description>
+            sign representing <see cref="P:ComplicatedPrimitives.LimitPoint`1.Type">type</see>: '<c>≥</c>' for <see cref="F:ComplicatedPrimitives.LimitPointType.Closed">closed</see>, '<c>&gt;</c>' for <see cref="F:ComplicatedPrimitives.LimitPointType.Open">open</see>,
+            </description>
+            </item>
             <item><description>string representation of <see cref="P:ComplicatedPrimitives.LimitPoint`1.Value">value</see>.</description></item>
             </list>
-            When this instance <see cref="P:ComplicatedPrimitives.LimitPoint`1.IsInfinite">is infinite</see>, the <see cref="F:ComplicatedPrimitives.LimitPoint`1.InfinityString"/> is returned.
+            When this instance <see cref="P:ComplicatedPrimitives.LimitPoint`1.IsInfinite">is infinite</see>, the infinity sign '∞' is returned.
             </returns>
         </member>
         <member name="M:ComplicatedPrimitives.LimitPoint`1.Equals(ComplicatedPrimitives.LimitPoint{`0})">
@@ -1242,7 +1539,7 @@
         </member>
         <member name="T:ComplicatedPrimitives.LimitPointType">
             <summary>
-            Enum indicating whether the <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see> is either open or closed.
+            Enumeration indicating whether the <see cref="T:ComplicatedPrimitives.LimitPoint`1">limit point</see> is either open or closed.
             </summary>
         </member>
         <member name="F:ComplicatedPrimitives.LimitPointType.Open">
@@ -1305,7 +1602,7 @@
         </member>
         <member name="T:ComplicatedPrimitives.LimitSide">
             <summary>
-            Enum indicating whether <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> lays on either left or right side of its domain.
+            Enumeration indicating whether <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> lays on either left or right side of its domain.
             </summary>
         </member>
         <member name="F:ComplicatedPrimitives.LimitSide.Left">
@@ -1453,7 +1750,7 @@
             <item><description><paramref name="left"/> and <paramref name="right"/> limits don't intersect;</description></item>
             </list>
             </exception>
-            <seealso cref="M:ComplicatedPrimitives.DirectedLimit`1.Intersects(ComplicatedPrimitives.DirectedLimit{`0})">Intersecting directed limits.</seealso>
+            <seealso cref="M:ComplicatedPrimitives.DirectedLimit`1.IntersectsWith(ComplicatedPrimitives.DirectedLimit{`0})">Intersecting directed limits.</seealso>
             <seealso cref="P:ComplicatedPrimitives.DirectedLimit`1.Side">Directed limit's side.</seealso>
         </member>
         <member name="M:ComplicatedPrimitives.Range`1.#ctor(ComplicatedPrimitives.LimitPoint{`0},ComplicatedPrimitives.LimitPoint{`0})">
@@ -1467,7 +1764,7 @@
             <item><description><paramref name="left"/> and <paramref name="right"/> limits don't intersect;</description></item>
             </list>
             </exception>
-            <seealso cref="M:ComplicatedPrimitives.DirectedLimit`1.Intersects(ComplicatedPrimitives.DirectedLimit{`0})">Intersecting directed limits.</seealso>
+            <seealso cref="M:ComplicatedPrimitives.DirectedLimit`1.IntersectsWith(ComplicatedPrimitives.DirectedLimit{`0})">Intersecting directed limits.</seealso>
         </member>
         <member name="M:ComplicatedPrimitives.Range`1.#ctor(`0,`0,ComplicatedPrimitives.LimitPointType,ComplicatedPrimitives.LimitPointType)">
             <summary>
@@ -1482,7 +1779,7 @@
             <item><description><paramref name="left"/> and <paramref name="right"/> limits don't intersect;</description></item>
             </list>
             </exception>
-            <seealso cref="M:ComplicatedPrimitives.DirectedLimit`1.Intersects(ComplicatedPrimitives.DirectedLimit{`0})">Intersecting directed limits.</seealso>
+            <seealso cref="M:ComplicatedPrimitives.DirectedLimit`1.IntersectsWith(ComplicatedPrimitives.DirectedLimit{`0})">Intersecting directed limits.</seealso>
         </member>
         <member name="P:ComplicatedPrimitives.Range`1.Left">
             <summary>
@@ -1511,7 +1808,7 @@
         </member>
         <member name="P:ComplicatedPrimitives.Range`1.IsEmpty">
             <summary>
-            Gets the value indicating whether this instance is an empty range (∅).
+            Gets the value indicating whether this instance is an <see cref="F:ComplicatedPrimitives.Range`1.Empty">empty</see> range (∅).
             </summary>
         </member>
         <member name="P:ComplicatedPrimitives.Range`1.IsInfiniteLeft">
@@ -1529,6 +1826,11 @@
             Gets the value indicating whether this range is of infinite limits.
             </summary>
         </member>
+        <member name="P:ComplicatedPrimitives.Range`1.IsFinite">
+            <summary>
+            Gets the value indicating whether this range is of finite limits.
+            </summary>
+        </member>
         <member name="M:ComplicatedPrimitives.Range`1.Map``1(System.Func{`0,``0})">
             <summary>
             Functor mapping range's value with special states preservation.
@@ -1538,53 +1840,325 @@
             <returns><see cref="T:ComplicatedPrimitives.Range`1"/> with <see cref="P:ComplicatedPrimitives.Range`1.Left"/> and <see cref="P:ComplicatedPrimitives.Range`1.Right"/> limits mapped using <paramref name="mapper"/> function when this instance <see cref="P:ComplicatedPrimitives.Range`1.IsNotEmpty"/>; otherwise <see cref="F:ComplicatedPrimitives.Range`1.Empty"/>.</returns>
         </member>
         <member name="M:ComplicatedPrimitives.Range`1.Contains(`0)">
-            <summary>
-            Checks if this range contains given <paramref name="value"/> (mathematical equivalent of expression: <paramref name="value"/> ∊ <c>this</c>).
-            </summary>
-            <param name="value">Value to check inclusion relation of.</param>
-            <returns><see langword="true"/> if the <paramref name="value"/> belongs to this range; otherwise <see langword="false"/>.</returns>
+            <inheritdoc/>
         </member>
         <member name="M:ComplicatedPrimitives.Range`1.Intersects(ComplicatedPrimitives.Range{`0})">
-            <summary>
-            Checks if this range intersects (has common elements) with given <paramref name="other"/> range (mathematical equivalent of expression: <c>this</c> ∩ <paramref name="other"/> ≠ ∅).
-            </summary>
-            <param name="other">Other range to check intersection relation with.</param>
-            <returns><see langword="true"/> if the <paramref name="other"/> has common elements to this range; otherwise <see langword="false"/>.</returns>
+            <inheritdoc/>
         </member>
         <member name="M:ComplicatedPrimitives.Range`1.IsSubsetOf(ComplicatedPrimitives.Range{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.IsProperSubsetOf(ComplicatedPrimitives.Range{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.IsSupersetOf(ComplicatedPrimitives.Range{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.IsProperSupersetOf(ComplicatedPrimitives.Range{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.IntersectWith(ComplicatedPrimitives.Range{`0})">
             <summary>
-            Checks whether <c>this</c> range is a subset of the <paramref name="other"/> range (<c>this</c> ⊆ <paramref name="other"/>).
+            Gets intersection (common part) of this <see cref="T:ComplicatedPrimitives.Range`1">range</see> and the <paramref name="other"/> range.
             </summary>
-            <param name="other">Range to check inclusion relation with.</param>
+            <param name="other">Range to find intersection with.</param>
+            <returns>Range being intersection of this instance and the <paramref name="other"/>; if ranges have no intersection, <see cref="F:ComplicatedPrimitives.Range`1.Empty">empty</see> range is returned.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.TryIntersectWith(ComplicatedPrimitives.Range{`0},ComplicatedPrimitives.Range{`0}@)">
+            <summary>
+            Tries to get intersection (common part) of this <see cref="T:ComplicatedPrimitives.Range`1">range</see> and the <paramref name="other">other range</paramref>.
+            </summary>
+            <param name="other">Range to find intersection with.</param>
+            <param name="result">
+            When this method returns, contains the range being intersection of this instance and the <paramref name="other"/> if non-empty intersection exists,
+            or <see cref="F:ComplicatedPrimitives.Range`1.Empty">empty range</see> if it doesn't.
+            </param>
             <returns>
-            <see langword="true"/> if this range is a subset of the <paramref name="other"/> range; otherwise <see langword="false"/>.
+            <see langword="true"/> if non-empty intersection exists; otherwise, <see langword="false"/>.
             </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.UnionWith(ComplicatedPrimitives.Range{`0})">
+            <summary>
+            Gets union (sum) of this <see cref="T:ComplicatedPrimitives.Range`1">range</see> and the <paramref name="other">other range</paramref>.
+            </summary>
+            <param name="other">Range to unite with.</param>
+            <returns>Range union of this instance and the <paramref name="other"/>.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.GetAbsoluteComplement">
+            <summary>
+            Gets absolute complement of this <see cref="T:ComplicatedPrimitives.Range`1">range</see> (complement in <see cref="F:ComplicatedPrimitives.Range`1.Infinite">infinite</see> range).
+            </summary>
+            <returns>Range union representing absolute complement of this instance.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.GetComplementIn(ComplicatedPrimitives.Range{`0})">
+            <summary>
+            Gets complement of this <see cref="T:ComplicatedPrimitives.Range`1">range</see> in the <paramref name="other"/> range.
+            </summary>
+            <returns>Range union representing complement of this instance in the <paramref name="other"/> range.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.Translate(System.Func{`0,`0})">
+            <summary>
+            Translates (moves) limits of this range by a given <paramref name="translation"/>, preserving their <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Side">sides</see> abd <see cref="P:ComplicatedPrimitives.LimitPoint`1.Type">types</see>.
+            </summary>
+            <param name="translation">Function that translates range's limit value.</param>
+            <returns>Range with both limits translated using given <paramref name="translation"/>.</returns>
             <remarks>
-            This function checks the weak inclusion relation which means that a range is in a given relation with equal range. To check strict version of this relation (excluding equal ranges), use <see cref="M:ComplicatedPrimitives.Range`1.IsProperSubsetOf(ComplicatedPrimitives.Range{`0})"/>.
-            <list type="bullet">
-              <listheader>
-            	<description>Following conditions apply to this function:</description>
-              </listheader>
-              <item>
-            	<description>(A = B) → (A ⊆ B ⋀ B ⊆ A);</description>
-              </item>
-              <item>
-            	<description>∅ ⊆ A for every range A (especially: ∅ ⊆ ∅);</description>
-              </item>
-              <item>
-            	<description>(∞;∞) ⊈ A for any finite range A;</description>
-              </item>
-              <item>
-            	<description>(∞;∞) ⊆ (∞;∞);</description>
-              </item>
-            </list>
+            This transformation preserves limits' sides which means that it can potentially cause errors if translated values violate any rules applied
+            when creating instance of <see cref="T:ComplicatedPrimitives.Range`1"/>. E.g. the following code:
+            <code>var range = new Range&lt;int&gt;(0, 10);</code>
+            <code>var result = range.Translate(e => e * -1);</code>
+            will throw exception, because left limit value, after translation will be greater than the right limit value.
             </remarks>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.ToString">
+            <summary>
+            Converts this <see cref="T:ComplicatedPrimitives.Range`1">range</see> to its equivalent string representation following format:
+            <code>{ left-limit-type }{ left-limit-value }{ separator }{ right-limit-type }{ right-limit-value }</code>
+            </summary>
+            <returns>String representation of this range consisting of:
+            <list type="bullet">
+            <item><term>left-limit-type</term><description>sign representing left limit type: '<c>(</c>' for open, '<c>[</c>' for closed,</description></item>
+            <item><term>left-limit-value</term><description>string representation of <see cref="P:ComplicatedPrimitives.Range`1.LeftValue">left value</see> or infinity sign '∞', if this instance is <see cref="P:ComplicatedPrimitives.Range`1.IsInfiniteLeft">left infinite</see>,</description></item>
+            <item><term>separator</term><description>string representation of separator '<c>;</c>',</description></item>
+            <item><term>right-limit-value</term><description>string representation of <see cref="P:ComplicatedPrimitives.Range`1.RightValue">right value</see> or infinity sign '∞', if this instance is <see cref="P:ComplicatedPrimitives.Range`1.IsInfiniteRight">right infinite</see>,</description></item>
+            <item><term>right-limit-type</term><description>sign representing right limit type: '<c>)</c>' for open, '<c>]</c>' for closed.</description></item>
+            </list>
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.Equals(ComplicatedPrimitives.Range{`0})">
+            <summary>
+            Checks whether this instance of <see cref="T:ComplicatedPrimitives.Range`1">range</see> is equal to the <paramref name="other"/> range.
+            </summary>
+            <param name="other">Range to check equality with this instance.</param>
+            <returns>
+            <see langword="true"/> if this instance is equal to the <paramref name="other"/> range which means:
+            <list type="bullet">
+            <item><description>both instances <see cref="P:ComplicatedPrimitives.Range`1.IsEmpty">are empty</see>;</description></item>
+            <item><description>both instances <see cref="P:ComplicatedPrimitives.Range`1.IsInfinite">are infinite</see>;</description></item>
+            <item><description>both instances <see cref="P:ComplicatedPrimitives.Range`1.IsFinite">are finite</see> and their <see cref="P:ComplicatedPrimitives.Range`1.Left">left</see> and <see cref="P:ComplicatedPrimitives.Range`1.Right">right</see> limits are equal;</description></item>
+            </list>
+            otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.op_Equality(ComplicatedPrimitives.Range{`0},ComplicatedPrimitives.Range{`0})">
+            <summary>
+            Determines whether two specified <see cref="T:ComplicatedPrimitives.Range`1">ranges</see> have the same value.
+            </summary>
+            <param name="left">The first range to compare.</param>
+            <param name="right">The second range to compare.</param>
+            <returns><see langword="true"/> if the value of <paramref name="left"/> is the same as the value of <paramref name="right"/>;
+            otherwise, <see langword="false"/>.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.op_Inequality(ComplicatedPrimitives.Range{`0},ComplicatedPrimitives.Range{`0})">
+            <summary>
+            Determines whether two specified <see cref="T:ComplicatedPrimitives.Range`1">ranges</see> have different values.
+            </summary>
+            <param name="left">The first range to compare.</param>
+            <param name="right">The second range to compare.</param>
+            <returns><see langword="true"/> if the value of <paramref name="left"/> is different from the value of <paramref name="right"/>;
+            otherwise, <see langword="false"/>.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.op_Addition(ComplicatedPrimitives.Range{`0},ComplicatedPrimitives.Range{`0})">
+            <summary>
+            Gets union (sum) of <paramref name="left"/> and <paramref name="right"/> <see cref="T:ComplicatedPrimitives.Range`1">range</see>>.
+            </summary>
+            <param name="left">First range to unite.</param>
+            <param name="right">Second range to unite.</param>
+            <returns>Range union of <paramref name="left"/> and <paramref name="right"/>.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.op_Subtraction(ComplicatedPrimitives.Range{`0},ComplicatedPrimitives.Range{`0})">
+            <summary>
+            Gets complement of <paramref name="left"/> <see cref="T:ComplicatedPrimitives.Range`1">range</see> in the <paramref name="right"/> range.
+            </summary>
+            <param name="left">Range to get complement of.</param>
+            <param name="right">Range to get complement in.</param>
+            <returns>Range union representing complement of <paramref name="left"/> in <paramref name="right"/>.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.Range`1.op_Multiply(ComplicatedPrimitives.Range{`0},ComplicatedPrimitives.Range{`0})">
+            <summary>
+            Gets intersection (common part) of <paramref name="left"/> and <paramref name="right"/> <see cref="T:ComplicatedPrimitives.Range`1">range</see>.
+            </summary>
+            <param name="left">First range to unite.</param>
+            <param name="right">Second range to unite.</param>
+            <returns>Range being intersection of <paramref name="left"/> and the <paramref name="right"/>; if ranges have no intersection, <see cref="F:ComplicatedPrimitives.Range`1.Empty">empty</see> range is returned.</returns>
+        </member>
+        <member name="T:ComplicatedPrimitives.RangeExtensions">
+            <summary>
+            Provides extension methods for <see cref="T:ComplicatedPrimitives.Range`1"/> and <see cref="!:IRange&lt;TRange, T&gt;"/> types and their enumerables.
+            </summary>
+        </member>
+        <member name="M:ComplicatedPrimitives.RangeExtensions.Merge``1(System.Collections.Generic.IEnumerable{ComplicatedPrimitives.Range{``0}})">
+            <summary>
+            Normalizes collection of <see cref="T:ComplicatedPrimitives.Range`1"/> by uniting intersecting ranges and removing ranges that are proper subsets of other ranges in the collection.
+            </summary>
+            <typeparam name="T">Type of range's value.</typeparam>
+            <param name="source">Collection of ranges to merge.</param>
+            <returns>
+            Collection of non-intersecting ranges ordered by <see cref="P:ComplicatedPrimitives.Range`1.LeftValue"/> covering the same space of <typeparamref name="T"/> as the input <paramref name="source"/>.
+            </returns>
         </member>
         <member name="T:ComplicatedPrimitives.RangeParser`1">
             <summary>
             Provides default implementation of <see cref="T:ComplicatedPrimitives.IRangeParser`1"/> that is compatible with default <see cref="M:ComplicatedPrimitives.Range`1.ToString"/>.
             </summary>
             <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:ComplicatedPrimitives.RangeParser`1.#ctor(ComplicatedPrimitives.IParser{`0})">
+            <summary>
+            Creates a new instance of the <see cref="T:ComplicatedPrimitives.RangeParser`1"/> with a specified <paramref name="valueParser"/>.
+            </summary>
+            <param name="valueParser">Object parsing range's <typeparamref name="T"/> values.</param>
+        </member>
+        <member name="M:ComplicatedPrimitives.RangeParser`1.Parse(System.String)">
+            <summary>
+            Converts the specified string to an instance of <see cref="T:ComplicatedPrimitives.Range`1"/>.
+            </summary>
+            <param name="str">
+            A string that contains a string representation of <see cref="T:ComplicatedPrimitives.Range`1"/> as follows:
+            <code>{ left-limit-type }{ left-limit-value }{ separator }{ right-limit-value }{ right-limit-type }</code>
+            Where:
+            <list type="bullet">
+            <item>
+            <term><c>left-limit-type</c></term>
+            <description>string that represents left limit type: '(' for <see cref="F:ComplicatedPrimitives.LimitPointType.Open">open</see>, '[' for <see cref="F:ComplicatedPrimitives.LimitPointType.Closed">closed</see>;</description>
+            </item>
+            <item>
+            <term><c>left-limit-value</c></term>
+            <description>string that represents left limit value parsed using parser object specified when creating this instance of <see cref="T:ComplicatedPrimitives.RangeParser`1"/>;</description>
+            </item>
+            <item>
+            <term><c>separator</c></term>
+            <description>string that represents range value separator;</description>
+            </item>
+            <item>
+            <term><c>right-limit-value</c></term>
+            <description>string that represents right limit value parsed using parser object specified when creating this instance of <see cref="T:ComplicatedPrimitives.RangeParser`1"/>;</description>
+            </item>
+            <item>
+            <term><c>right-limit-type</c></term>
+            <description>string that represents right limit type: ')' for open, ']' for closed;</description>
+            </item>
+            </list>
+            </param>
+            <returns>
+            An instance of <see cref="T:ComplicatedPrimitives.Range`1"/> that is equivalent to the given <paramref name="str"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="str"/> is either null or empty string</exception>
+            <exception cref="T:ComplicatedPrimitives.ParsingException"><paramref name="str"/> is not a valid representation of a <see cref="T:ComplicatedPrimitives.Range`1"/></exception>
+        </member>
+        <member name="M:ComplicatedPrimitives.RangeParser`1.TryParse(System.String,ComplicatedPrimitives.Range{`0}@)">
+            <summary>
+            Tries to convert the specified string to an instance of <see cref="T:ComplicatedPrimitives.Range`1"/> and returns a value indicating whether the conversion succeeded.
+            </summary>
+            <param name="str">
+            A string that contains a string representation of <see cref="T:ComplicatedPrimitives.Range`1"/> as follows:
+            <code>{ left-limit-type }{ left-limit-value }{ separator }{ right-limit-value }{ right-limit-type }</code>
+            Where:
+            <list type="bullet">
+            <item>
+            <term><c>left-limit-type</c></term>
+            <description>string that represents left limit type: '(' for <see cref="F:ComplicatedPrimitives.LimitPointType.Open">open</see>, <see cref="F:ComplicatedPrimitives.LimitPointType.Closed">closed</see>;</description>
+            </item>
+            <item>
+            <term><c>left-limit-value</c></term>
+            <description>string that represents left limit value parsed using parser object specified when creating this instance of <see cref="T:ComplicatedPrimitives.RangeParser`1"/>;</description>
+            </item>
+            <item>
+            <term><c>separator</c></term>
+            <description>string that represents range value separator;</description>
+            </item>
+            <item>
+            <term><c>right-limit-value</c></term>
+            <description>string that represents right limit value parsed using parser object specified when creating this instance of <see cref="T:ComplicatedPrimitives.RangeParser`1"/>;</description>
+            </item>
+            <item>
+            <term><c>right-limit-type</c></term>
+            <description>string that represents right limit type: ')' for open, ']' for closed;</description>
+            </item>
+            </list>
+            </param>
+            <param name="range">
+            When this method returns, contains the <see cref="T:ComplicatedPrimitives.Range`1"/> value equivalent to the <paramref name="str"/> if the conversion succeeded,
+            or <c>default</c> of <see cref="T:ComplicatedPrimitives.Range`1"/> if the conversion failed.
+            </param>
+            <returns>
+            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="T:ComplicatedPrimitives.RangeUnion`1">
+            <summary>
+            Represents union of <see cref="T:ComplicatedPrimitives.Range`1">ranges</see>.
+            </summary>
+            <typeparam name="T">Type of range's value.</typeparam>
+        </member>
+        <member name="P:ComplicatedPrimitives.RangeUnion`1.Empty">
+            <summary>
+            Gets new <see cref="P:ComplicatedPrimitives.RangeUnion`1.IsNormalized">normalized</see> empty range union (often described using symbol ∅).
+            </summary>
+        </member>
+        <member name="M:ComplicatedPrimitives.RangeUnion`1.#ctor(ComplicatedPrimitives.Range{`0})">
+            <summary>
+            Creates new <see cref="P:ComplicatedPrimitives.RangeUnion`1.IsNormalized">normalized</see> range union with a given <paramref name="range"/>.
+            </summary>
+            <param name="range"></param>
+        </member>
+        <member name="M:ComplicatedPrimitives.RangeUnion`1.#ctor(System.Collections.Generic.IEnumerable{ComplicatedPrimitives.Range{`0}})">
+            <summary>
+            Creates new range union with a given collection of <paramref name="ranges"/>.
+            </summary>
+            <param name="ranges">Collection of ranges to include in the new union.</param>
+        </member>
+        <member name="P:ComplicatedPrimitives.RangeUnion`1.IsNormalized">
+            <summary>
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.RangeUnion`1">range union</see> is normalized, which means
+            if it consists only of disjoint ranges.
+            </summary>
+        </member>
+        <member name="P:ComplicatedPrimitives.RangeUnion`1.IsEmpty">
+            <summary>
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.RangeUnion`1">range union</see> is empty, which means
+            it contains no ranges at all or cotains only <see cref="P:ComplicatedPrimitives.Range`1.IsEmpty">empty ranges</see>.
+            </summary>
+        </member>
+        <member name="M:ComplicatedPrimitives.RangeUnion`1.IntersectWith(ComplicatedPrimitives.Range{`0})">
+            <summary>
+            Gets intersection (common part) of this <see cref="T:ComplicatedPrimitives.RangeUnion`1">range union</see> and the given <paramref name="range"/>.
+            </summary>
+            <param name="range">Range to find intersection with.</param>
+            <returns>Range union being intersection of this instance and the <paramref name="range"/>; if there is no intersection, <see cref="P:ComplicatedPrimitives.RangeUnion`1.Empty">empty</see> range union is returned.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.RangeUnion`1.AsNormalized">
+            <summary>
+            Converts this <see cref="T:ComplicatedPrimitives.RangeUnion`1">range union</see> to normalized by merging its ranges.
+            </summary>
+            <returns>Range union covering the same space of <typeparamref name="T"/> but with all ranges merged into non-intersecting collection.</returns>
+        </member>
+        <member name="M:ComplicatedPrimitives.RangeUnion`1.GetEnumerator">
+            <inheritdoc/>
+        </member>
+        <member name="M:ComplicatedPrimitives.RangeUnion`1.Contains(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ComplicatedPrimitives.RangeUnion`1.IntersectsWith(ComplicatedPrimitives.Range{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:ComplicatedPrimitives.RangeUnion`1.IsSubsetOf(ComplicatedPrimitives.Range{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:ComplicatedPrimitives.RangeUnion`1.IsProperSubsetOf(ComplicatedPrimitives.Range{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:ComplicatedPrimitives.RangeUnion`1.IsSupersetOf(ComplicatedPrimitives.Range{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:ComplicatedPrimitives.RangeUnion`1.IsProperSupersetOf(ComplicatedPrimitives.Range{`0})">
+            <inheritdoc/>
         </member>
     </members>
 </doc>

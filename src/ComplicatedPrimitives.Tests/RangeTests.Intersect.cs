@@ -7,9 +7,9 @@ namespace ComplicatedPrimitives.Tests
 {
     partial class RangeTests
     {
-        public class GetIntersection : RangeTests
+        public class Intersect : RangeTests
         {
-            public GetIntersection(TestFixture testFixture) : base(testFixture) { }
+            public Intersect(TestFixture testFixture) : base(testFixture) { }
 
             [Fact]
             public void SelfIntersection_ShouldBeSelfEqual()
@@ -18,7 +18,7 @@ namespace ComplicatedPrimitives.Tests
                 var range = Fixture.Create<Range<int>>();
 
                 // act
-                var result = range.GetIntersection(range);
+                var result = range.IntersectWith(range);
 
                 // assert
                 result.Should().Be(range);
@@ -40,7 +40,7 @@ namespace ComplicatedPrimitives.Tests
                     right: new LimitPoint<decimal>(3m, LimitPointType.Closed));
 
                 // act
-                var result = sut.GetIntersection(other);
+                var result = sut.IntersectWith(other);
 
                 // assert
                 result.Should().Be(expected, because: "{0} ∩ {1} should be {2}", sut, other, expected);
@@ -54,8 +54,8 @@ namespace ComplicatedPrimitives.Tests
                 var range2 = Fixture.Create<Range<decimal>>();
 
                 // act
-                var result1 = range1.GetIntersection(range2);
-                var result2 = range2.GetIntersection(range1);
+                var result1 = range1.IntersectWith(range2);
+                var result2 = range2.IntersectWith(range1);
 
                 // assert
                 result1.Should().Be(result2);
@@ -69,7 +69,7 @@ namespace ComplicatedPrimitives.Tests
                 var other = Fixture.Create<Range<decimal>>();
 
                 // act
-                var result = sut.GetIntersection(other);
+                var result = sut.IntersectWith(other);
 
                 // assert
                 result.Should().Be(Range<decimal>.Empty, because: "{0} ∩ {1} should be {2}", sut, other, Range<decimal>.Empty);
@@ -83,7 +83,7 @@ namespace ComplicatedPrimitives.Tests
                 var other = Fixture.Create<Range<decimal>>();
 
                 // act
-                var result = sut.GetIntersection(other);
+                var result = sut.IntersectWith(other);
 
                 // assert
                 result.Should().Be(other, because: "{0} ∩ {1} should be {2}", sut, other, other);

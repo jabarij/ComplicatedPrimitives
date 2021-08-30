@@ -9,7 +9,7 @@ namespace ComplicatedPrimitives
     public class RangeParser<T> : IRangeParser<T>
           where T : IComparable<T>
     {
-        private const string Separator = Range<T>.ValueSeparatorString;
+        private const string Separator = Constants.ValueSeparatorString;
 
         private readonly IParser<T> _valueParser;
 
@@ -28,28 +28,28 @@ namespace ComplicatedPrimitives
         /// </summary>
         /// <param name="str">
         /// A string that contains a string representation of <see cref="Range{T}"/> as follows:
-        /// <code>{ left_limit_type }{ left_limit_value }{ separator }{ right_limit_value }{ right_limit_type }</code>
+        /// <code>{ left-limit-type }{ left-limit-value }{ separator }{ right-limit-value }{ right-limit-type }</code>
         /// Where:
         /// <list type="bullet">
         /// <item>
-        /// <term><c>left_limit_type</c></term>
-        /// <description>string that represents left limit type, either <see cref="Range{T}.LeftOpenLimitTypeString">open</see> or <see cref="Range{T}.LeftClosedLimitTypeString">closed</see>;</description>
+        /// <term><c>left-limit-type</c></term>
+        /// <description>string that represents left limit type: '(' for <see cref="LimitPointType.Open">open</see>, '[' for <see cref="LimitPointType.Closed">closed</see>;</description>
         /// </item>
         /// <item>
-        /// <term><c>left_limit_value</c></term>
+        /// <term><c>left-limit-value</c></term>
         /// <description>string that represents left limit value parsed using parser object specified when creating this instance of <see cref="RangeParser{T}"/>;</description>
         /// </item>
         /// <item>
         /// <term><c>separator</c></term>
-        /// <description>string that represents range value <see cref="Range{T}.ValueSeparatorString">separator</see>;</description>
+        /// <description>string that represents range value separator;</description>
         /// </item>
         /// <item>
-        /// <term><c>right_limit_value</c></term>
+        /// <term><c>right-limit-value</c></term>
         /// <description>string that represents right limit value parsed using parser object specified when creating this instance of <see cref="RangeParser{T}"/>;</description>
         /// </item>
         /// <item>
-        /// <term><c>right_limit_type</c></term>
-        /// <description>string that represents right limit type, either <see cref="Range{T}.RightOpenLimitTypeString">open</see> or <see cref="Range{T}.RightClosedLimitTypeString">closed</see>;</description>
+        /// <term><c>right-limit-type</c></term>
+        /// <description>string that represents right limit type: ')' for open, ']' for closed;</description>
         /// </item>
         /// </list>
         /// </param>
@@ -63,10 +63,10 @@ namespace ComplicatedPrimitives
             if (string.IsNullOrEmpty(str))
                 throw Error.ArgumentIsNullOrEmptyString(nameof(str));
 
-            if (string.Equals(str, Range<T>.EmptyRangeString, StringComparison.Ordinal))
+            if (string.Equals(str, Constants.EmptySetString, StringComparison.Ordinal))
                 return Range<T>.Empty;
 
-            if (string.Equals(str, Range<T>.InfiniteRangeString, StringComparison.Ordinal))
+            if (string.Equals(str, Constants.InfiniteRangeString, StringComparison.Ordinal))
                 return Range<T>.Infinite;
 
             if (str.Length < 3)
@@ -100,28 +100,28 @@ namespace ComplicatedPrimitives
         /// </summary>
         /// <param name="str">
         /// A string that contains a string representation of <see cref="Range{T}"/> as follows:
-        /// <code>{ left_limit_type }{ left_limit_value }{ separator }{ right_limit_value }{ right_limit_type }</code>
+        /// <code>{ left-limit-type }{ left-limit-value }{ separator }{ right-limit-value }{ right-limit-type }</code>
         /// Where:
         /// <list type="bullet">
         /// <item>
-        /// <term><c>left_limit_type</c></term>
-        /// <description>string that represents left limit type, either <see cref="Range{T}.LeftOpenLimitTypeString">open</see> or <see cref="Range{T}.LeftClosedLimitTypeString">closed</see>;</description>
+        /// <term><c>left-limit-type</c></term>
+        /// <description>string that represents left limit type: '(' for <see cref="LimitPointType.Open">open</see>, <see cref="LimitPointType.Closed">closed</see>;</description>
         /// </item>
         /// <item>
-        /// <term><c>left_limit_value</c></term>
+        /// <term><c>left-limit-value</c></term>
         /// <description>string that represents left limit value parsed using parser object specified when creating this instance of <see cref="RangeParser{T}"/>;</description>
         /// </item>
         /// <item>
         /// <term><c>separator</c></term>
-        /// <description>string that represents range value <see cref="Range{T}.ValueSeparatorString">separator</see>;</description>
+        /// <description>string that represents range value separator;</description>
         /// </item>
         /// <item>
-        /// <term><c>right_limit_value</c></term>
+        /// <term><c>right-limit-value</c></term>
         /// <description>string that represents right limit value parsed using parser object specified when creating this instance of <see cref="RangeParser{T}"/>;</description>
         /// </item>
         /// <item>
-        /// <term><c>right_limit_type</c></term>
-        /// <description>string that represents right limit type, either <see cref="Range{T}.RightOpenLimitTypeString">open</see> or <see cref="Range{T}.RightClosedLimitTypeString">closed</see>;</description>
+        /// <term><c>right-limit-type</c></term>
+        /// <description>string that represents right limit type: ')' for open, ']' for closed;</description>
         /// </item>
         /// </list>
         /// </param>
@@ -140,13 +140,13 @@ namespace ComplicatedPrimitives
                 return false;
             }
 
-            if (string.Equals(str, Range<T>.EmptyRangeString, StringComparison.Ordinal))
+            if (string.Equals(str, Constants.EmptySetString, StringComparison.Ordinal))
             {
                 range = Range<T>.Empty;
                 return true;
             }
 
-            if (string.Equals(str, Range<T>.InfiniteRangeString, StringComparison.Ordinal))
+            if (string.Equals(str, Constants.InfiniteRangeString, StringComparison.Ordinal))
             {
                 range = Range<T>.Infinite;
                 return true;

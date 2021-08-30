@@ -1,7 +1,8 @@
-﻿using ComplicatedPrimitives.TestAbstractions;
+﻿using AutoFixture;
+using ComplicatedPrimitives.TestAbstractions;
 using FluentAssertions;
+using System.Linq;
 using Xunit;
-using AutoFixture;
 
 namespace ComplicatedPrimitives.Tests
 {
@@ -20,7 +21,7 @@ namespace ComplicatedPrimitives.Tests
 
                 // assert
                 result.Should().HaveCount(1);
-                result[0].Should().Be(Range<double>.Infinite);
+                result.Single().Should().Be(Range<double>.Infinite);
             }
 
             [Fact]
@@ -50,7 +51,7 @@ namespace ComplicatedPrimitives.Tests
 
                 // assert
                 result.Should().HaveCount(1);
-                result[0].Should().Be(expected);
+                result.Single().Should().Be(expected);
             }
 
             [Fact]
@@ -69,7 +70,7 @@ namespace ComplicatedPrimitives.Tests
 
                 // assert
                 result.Should().HaveCount(1);
-                result[0].Should().Be(expected);
+                result.Single().Should().Be(expected);
             }
 
             [Fact]

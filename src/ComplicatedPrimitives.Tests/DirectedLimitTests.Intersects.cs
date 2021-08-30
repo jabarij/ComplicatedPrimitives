@@ -20,8 +20,8 @@ namespace ComplicatedPrimitives.Tests
                 var other = Create<int>(side: sut.Side);
 
                 // act
-                bool result1 = sut.Intersects(other);
-                bool result2 = other.Intersects(sut);
+                bool result1 = sut.IntersectsWith(other);
+                bool result2 = other.IntersectsWith(sut);
 
                 // assert
                 result1.Should().BeTrue(because: "{0} and {1} are of same side so must have intersection", sut, other);
@@ -42,7 +42,7 @@ namespace ComplicatedPrimitives.Tests
                 var right = Create<int>(value: rightValue, type: rightType, side: LimitSide.Right);
 
                 // act
-                bool result = right.Intersects(left);
+                bool result = right.IntersectsWith(left);
 
                 // assert
                 result.Should().Be(expected, because: "{0} {2} a proper superset of {1}", right, left, expected ? "is" : "is not");

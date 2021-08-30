@@ -8,7 +8,10 @@ namespace ComplicatedPrimitives
     /// In other words, it is limit point of type <typeparamref name="T"/> that is approachable from either left or right side.
     /// </summary>
     /// <typeparam name="T">Type of limit point's value (limit's domain).</typeparam>
-    public struct DirectedLimit<T> : IEquatable<DirectedLimit<T>>, IComparable<DirectedLimit<T>>
+    public struct DirectedLimit<T> :
+        IComparativeSet<DirectedLimit<T>, T>,
+        IEquatable<DirectedLimit<T>>,
+        IComparable<DirectedLimit<T>>
         where T : IComparable<T>
     {
         /// <summary>
@@ -217,7 +220,7 @@ namespace ComplicatedPrimitives
         /// <see langword="true"/> if <paramref name="other"/> has non-empty intersection with this directed limit.
         /// otherwise, <see langword="false"/>.
         /// </returns>
-        public bool Intersects(DirectedLimit<T> other)
+        public bool IntersectsWith(DirectedLimit<T> other)
         {
             if (IsUndefined || other.IsUndefined)
                 return false;

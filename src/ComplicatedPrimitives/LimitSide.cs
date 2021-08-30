@@ -1,7 +1,7 @@
 ﻿namespace ComplicatedPrimitives
 {
     /// <summary>
-    /// Enum indicating whether <see cref="DirectedLimit{T}">directed limit</see> lays on either left or right side of its domain.
+    /// Enumeration indicating whether <see cref="DirectedLimit{T}">directed limit</see> lays on either left or right side of its domain.
     /// </summary>
     public enum LimitSide
     {

@@ -11,31 +11,6 @@ namespace ComplicatedPrimitives
         where T : IComparable<T>
     {
         /// <summary>
-        /// Represents the left <see cref="LimitPointType.Open">open</see> <see cref="Type">type</see> of <see cref="IsFinite">finite</see> <see cref="LimitPoint{T}">limit point</see>.
-        /// </summary>
-        public const char LeftOpenSign = '>';
-
-        /// <summary>
-        /// Represents the left <see cref="LimitPointType.Closed">closed</see> <see cref="Type">type</see> of <see cref="IsFinite">finite</see> <see cref="LimitPoint{T}">limit point</see>.
-        /// </summary>
-        public const char LeftClosedSign = '≥';
-
-        /// <summary>
-        /// Represents the right <see cref="LimitPointType.Open">open</see> <see cref="Type">type</see> of <see cref="IsFinite">finite</see> <see cref="LimitPoint{T}">limit point</see>.
-        /// </summary>
-        public const char RightOpenSign = '<';
-
-        /// <summary>
-        /// Represents the right <see cref="LimitPointType.Closed">closed</see> <see cref="Type">type</see> of <see cref="IsFinite">finite</see> <see cref="LimitPoint{T}">limit point</see>.
-        /// </summary>
-        public const char RightClosedSign = '≤';
-
-        /// <summary>
-        /// Represents the string equivalent of <see cref="IsInfinite">infinite</see> <see cref="LimitPoint{T}">limit point</see>.
-        /// </summary>
-        public const string InfinityString = "∞";
-
-        /// <summary>
         /// Represents an infinite limit point. This field is read-only.
         /// </summary>
         public static readonly LimitPoint<T> Infinity = new LimitPoint<T>();
@@ -210,24 +185,29 @@ namespace ComplicatedPrimitives
         #region Boiler-plate code
 
         /// <summary>
-        /// Converts this <see cref="DirectedLimit{T}">directed limit</see> to its equivalent string representation following format: <c>{leftTypeSign}{value}{rightTypeSign}</c>.
+        /// Converts this <see cref="DirectedLimit{T}">directed limit</see> to its equivalent string representation following format:
+        /// <code>{ left-type }{ value }{ right-type }</code>
         /// </summary>
         /// <returns>When this instance <see cref="IsFinite">is finite</see>, the string representation of this directed limit consisting of:
         /// <list type="bullet">
-        /// <item><description>signs representing <see cref="Type">type</see> (<see cref="LeftClosedSign"><c>≥</c></see>, <see cref="RightOpenSign"><c>&gt;</c></see>,
-        /// <see cref="RightClosedSign"><c>≤</c></see>, <see cref="LeftOpenSign"><c>&lt;</c></see>);</description></item>
+        /// <item>
+        /// <term>left-type</term>
+        /// <description>
+        /// sign representing <see cref="Type">type</see>: '<c>≥</c>' for <see cref="LimitPointType.Closed">closed</see>, '<c>&gt;</c>' for <see cref="LimitPointType.Open">open</see>,
+        /// </description>
+        /// </item>
         /// <item><description>string representation of <see cref="Value">value</see>.</description></item>
         /// </list>
-        /// When this instance <see cref="IsInfinite">is infinite</see>, the <see cref="InfinityString"/> is returned.
+        /// When this instance <see cref="IsInfinite">is infinite</see>, the infinity sign '∞' is returned.
         /// </returns>
         public override string ToString() =>
             IsInfinite
-            ? InfinityString
+            ? Constants.InfinityString
             : string.Format(
                 "{0}{1}{2}",
-                Type.Match(open: () => LeftOpenSign, closed: () => LeftClosedSign),
+                Type.Match(open: () => Constants.LeftOpenSign, closed: () => Constants.LeftClosedSign),
                 Value,
-                Type.Match(open: () => RightOpenSign, closed: () => RightClosedSign));
+                Type.Match(open: () => Constants.RightOpenSign, closed: () => Constants.RightClosedSign));
 
         /// <summary>
         /// Checks whether this instance of <see cref="LimitPoint{T}"/> is equal to the <paramref name="other"/> one.

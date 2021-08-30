@@ -5,39 +5,21 @@ using System.Linq;
 
 namespace ComplicatedPrimitives
 {
+    /// <summary>
+    /// Provides extension methods for <see cref="Range{T}"/> and <see cref="IRange{TRange, T}"/> types and their enumerables.
+    /// </summary>
     public static class RangeExtensions
     {
-        public static IEnumerable<TRange> Merge<TRange, T>(this IEnumerable<TRange> source)
-            where TRange : IRange<TRange, T> =>
-            source
-            .OrderBy(e => e.LeftValue)
-            .Aggregate(
-                seed: new Stack<TRange>(),
-                func: (acc, range) =>
-                {
-                    if (acc.Count == 0)
-                        acc.Push(range);
-                    else
-                    {
-                        var previousRange = acc.Peek();
-                        var union = range.GetUnion(previousRange).ToList();
-                        switch (union.Count)
-                        {
-                            case 1:
-                                acc.Pop();
-                                acc.Push(union[0]);
-                                break;
-                            case 2:
-                                acc.Push(range);
-                                break;
-                            default:
-                                throw new NotImplementedException();
-                        }
-                    }
-                    return acc;
-                });
-
-        public static IEnumerable<Range<T>> Merge<T>(this IEnumerable<Range<T>> source) where T : IComparable<T>
+        /// <summary>
+        /// Normalizes collection of <see cref="Range{T}"/> by uniting intersecting ranges and removing ranges that are proper subsets of other ranges in the collection.
+        /// </summary>
+        /// <typeparam name="T">Type of range's value.</typeparam>
+        /// <param name="source">Collection of ranges to merge.</param>
+        /// <returns>
+        /// Collection of non-intersecting ranges ordered by <see cref="Range{T}.LeftValue"/> covering the same space of <typeparamref name="T"/> as the input <paramref name="source"/>.
+        /// </returns>
+        public static IEnumerable<Range<T>> Merge<T>(this IEnumerable<Range<T>> source)
+            where T : IComparable<T>
         {
             var sortedLimits = source.SelectMany(e => new[] { e.Left, e.Right }).ToArray();
             QuickSort
