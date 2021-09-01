@@ -196,104 +196,127 @@
         </member>
         </member>
         <member name="T:ComplicatedPrimitives.CaseInsensitiveStringComparison">
+            <member name="T:ComplicatedPrimitives.CaseInsensitiveStringComparison">
             <summary>
-            Enumeration specifying the culture and sort rules to be used by certain overloads of the <see cref="M:ComplicatedPrimitives.CaseInsensitiveString.Equals(System.Object)"/>.
+            Enumeration specifying the culture and sort rules to be used by certain overloads of the <see cref="M:ComplicatedPrimitives.CaseInsensitiveString.Equals(System.Object)" />.
             </summary>
         </member>
+        </member>
         <member name="F:ComplicatedPrimitives.CaseInsensitiveStringComparison.CurrentCulture">
+            <member name="F:ComplicatedPrimitives.CaseInsensitiveStringComparison.CurrentCulture">
             <summary>
             Compare <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive strings</see> using culture-sensitive sort rules and the current culture.
             </summary>
         </member>
+        </member>
         <member name="F:ComplicatedPrimitives.CaseInsensitiveStringComparison.InvariantCulture">
+            <member name="F:ComplicatedPrimitives.CaseInsensitiveStringComparison.InvariantCulture">
             <summary>
             Compare <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive strings</see> using culture-sensitive sort rules and the invariant culture.
             </summary>
         </member>
+        </member>
         <member name="F:ComplicatedPrimitives.CaseInsensitiveStringComparison.Ordinal">
+            <member name="F:ComplicatedPrimitives.CaseInsensitiveStringComparison.Ordinal">
             <summary>
             Compare <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive strings</see> using ordinal (binary) sort rules.
             </summary>
         </member>
+        </member>
         <member name="T:ComplicatedPrimitives.CaseInsensitiveStringComparisonExtensions">
+            <member name="T:ComplicatedPrimitives.CaseInsensitiveStringComparisonExtensions">
             <summary>
-            Provides extension methods for <see cref="T:ComplicatedPrimitives.CaseInsensitiveStringComparison"/>.
+            Provides extension methods for <see cref="T:ComplicatedPrimitives.CaseInsensitiveStringComparison" />.
             </summary>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.CaseInsensitiveStringComparisonExtensions.ToStringComparison(ComplicatedPrimitives.CaseInsensitiveStringComparison)">
+            <member name="M:ComplicatedPrimitives.CaseInsensitiveStringComparisonExtensions.ToStringComparison(ComplicatedPrimitives.CaseInsensitiveStringComparison)">
             <summary>
-            Converts <see cref="T:ComplicatedPrimitives.CaseInsensitiveStringComparison"/> <paramref name="value"/> to its equivalent <see cref="T:System.StringComparison"/> value.
+            Converts <see cref="T:ComplicatedPrimitives.CaseInsensitiveStringComparison" /> <paramref name="value" /> to its equivalent <see cref="T:System.StringComparison" /> value.
             </summary>
             <param name="value">Value to convert.</param>
             <returns>
-            Proper value of type <see cref="T:System.StringComparison"/> being logical equivalent of the given <paramref name="value"/>
-            if valid (known) <see cref="T:ComplicatedPrimitives.CaseInsensitiveStringComparison"/> value was passe;
+            Proper value of type <see cref="T:System.StringComparison" /> being logical equivalent of the given <paramref name="value" />
+            if valid (known) <see cref="T:ComplicatedPrimitives.CaseInsensitiveStringComparison" /> value was passe;
             otherwise throws exception.
             </returns>
-            <exception cref="T:System.InvalidOperationException"><paramref name="value"/> is not a defined value of <see cref="T:ComplicatedPrimitives.CaseInsensitiveStringComparison"/></exception>
+            <exception cref="T:System.InvalidOperationException"><paramref name="value" /> is not a defined value of <see cref="T:ComplicatedPrimitives.CaseInsensitiveStringComparison" /></exception>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.CaseInsensitiveStringComparisonExtensions.ToCaseInsensitiveStringComparison(System.StringComparison)">
+            <member name="M:ComplicatedPrimitives.CaseInsensitiveStringComparisonExtensions.ToCaseInsensitiveStringComparison(System.StringComparison)">
             <summary>
-            Converts (casts down) <see cref="T:System.StringComparison"/> <paramref name="value"/> to its equivalent <see cref="T:ComplicatedPrimitives.CaseInsensitiveStringComparison"/> value.
+            Converts (casts down) <see cref="T:System.StringComparison" /> <paramref name="value" /> to its equivalent <see cref="T:ComplicatedPrimitives.CaseInsensitiveStringComparison" /> value.
             </summary>
             <param name="value">Value to convert.</param>
             <returns>
-            Proper value of type <see cref="T:ComplicatedPrimitives.CaseInsensitiveStringComparison"/> being logical equivalent of the given <paramref name="value"/>
-            if valid (known) <see cref="T:System.StringComparison"/> value was passe;
+            Proper value of type <see cref="T:ComplicatedPrimitives.CaseInsensitiveStringComparison" /> being logical equivalent of the given <paramref name="value" />
+            if valid (known) <see cref="T:System.StringComparison" /> value was passe;
             otherwise throws exception.
             </returns>
-            <exception cref="T:System.InvalidOperationException"><paramref name="value"/> is not a defined value of <see cref="T:System.StringComparison"/></exception>
+            <exception cref="T:System.InvalidOperationException"><paramref name="value" /> is not a defined value of <see cref="T:System.StringComparison" /></exception>
+        </member>
         </member>
         <member name="T:ComplicatedPrimitives.Comparable">
+            <member name="T:ComplicatedPrimitives.Comparable">
             <summary>
-            Provides a set of static (Shared in Visual Basic) methods for operating on objects that implement <see cref="T:System.IComparable`1"/> or provides any other way of comparison.
+            Provides a set of static (Shared in Visual Basic) methods for operating on objects that implement <see cref="T:System.IComparable`1" /> or provides any other way of comparison.
             </summary>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.Comparable.Min``1(``0,``0)">
+            <member name="M:ComplicatedPrimitives.Comparable.Min``1(``0,``0)">
             <summary>
-            Returns lower of the two values comparing them using <see cref="M:System.IComparable`1.CompareTo(`0)"/> method.
+            Returns lower of the two values comparing them using <see cref="M:System.IComparable`1.CompareTo(`0)" /> method.
             </summary>
             <typeparam name="T">Type of value.</typeparam>
             <param name="value1">First value to compare.</param>
             <param name="value2">Second value to compare.</param>
             <returns>
             <list type="bullet">
-            <item><description><paramref name="value1"/> when <paramref name="value1"/> is lower than or equal to <paramref name="value2"/>;</description></item>
-            <item><description><paramref name="value2"/> when <paramref name="value1"/> is greater than <paramref name="value2"/>.</description></item>
+            <item><description><paramref name="value1" /> when <paramref name="value1" /> is lower than or equal to <paramref name="value2" />;</description></item>
+            <item><description><paramref name="value2" /> when <paramref name="value1" /> is greater than <paramref name="value2" />.</description></item>
             </list>
             </returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.Comparable.Max``1(``0,``0)">
+            <member name="M:ComplicatedPrimitives.Comparable.Max``1(``0,``0)">
             <summary>
-            Returns greater of the two values comparing them using <see cref="M:System.IComparable`1.CompareTo(`0)"/> method.
+            Returns greater of the two values comparing them using <see cref="M:System.IComparable`1.CompareTo(`0)" /> method.
             </summary>
             <typeparam name="T">Type of value.</typeparam>
             <param name="value1">First value to compare.</param>
             <param name="value2">Second value to compare.</param>
             <returns>
             <list type="bullet">
-            <item><description><paramref name="value1"/> when <paramref name="value1"/> is greater than or equal to <paramref name="value2"/>;</description></item>
-            <item><description><paramref name="value2"/> when <paramref name="value1"/> is lower than <paramref name="value2"/>.</description></item>
+            <item><description><paramref name="value1" /> when <paramref name="value1" /> is greater than or equal to <paramref name="value2" />;</description></item>
+            <item><description><paramref name="value2" /> when <paramref name="value1" /> is lower than <paramref name="value2" />.</description></item>
             </list>
             </returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.Comparable.MinMax``1(``0,``0)">
+            <member name="M:ComplicatedPrimitives.Comparable.MinMax``1(``0,``0)">
             <summary>
-            Returns given values as ordered pair of min and max, comparing them using <see cref="M:System.IComparable`1.CompareTo(`0)"/> method.
+            Returns given values as ordered pair of min and max, comparing them using <see cref="M:System.IComparable`1.CompareTo(`0)" /> method.
             </summary>
             <typeparam name="T">Type of value.</typeparam>
             <param name="value1">First value to compare.</param>
             <param name="value2">Second value to compare.</param>
             <returns>
             <list type="bullet">
-            <item><description>(min: <paramref name="value1"/>, max: <paramref name="value2"/>) when <paramref name="value1"/> is greater than or equal to <paramref name="value2"/>;</description></item>
-            <item><description>(min: <paramref name="value2"/>, max: <paramref name="value1"/>) when <paramref name="value1"/> is lower than <paramref name="value2"/>.</description></item>
+            <item><description>(min: <paramref name="value1" />, max: <paramref name="value2" />) when <paramref name="value1" /> is greater than or equal to <paramref name="value2" />;</description></item>
+            <item><description>(min: <paramref name="value2" />, max: <paramref name="value1" />) when <paramref name="value1" /> is lower than <paramref name="value2" />.</description></item>
             </list>
             </returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.Comparable.Min``1(``0,``0,System.Collections.Generic.IComparer{``0})">
+            <member name="M:ComplicatedPrimitives.Comparable.Min``1(``0,``0,System.Collections.Generic.IComparer{``0})">
             <summary>
-            Returns lower of the two values comparing them using <see cref="M:System.Collections.Generic.IComparer`1.Compare(`0,`0)"/> method.
+            Returns lower of the two values comparing them using <see cref="M:System.Collections.Generic.IComparer`1.Compare(`0,`0)" /> method.
             </summary>
             <typeparam name="T">Type of value.</typeparam>
             <param name="value1">First value to compare.</param>
@@ -301,14 +324,16 @@
             <param name="comparer">Value comparer.</param>
             <returns>
             <list type="bullet">
-            <item><description><paramref name="value1"/> when <paramref name="value1"/> is lower than or equal to <paramref name="value2"/>;</description></item>
-            <item><description><paramref name="value2"/> when <paramref name="value1"/> is greater than <paramref name="value2"/>.</description></item>
+            <item><description><paramref name="value1" /> when <paramref name="value1" /> is lower than or equal to <paramref name="value2" />;</description></item>
+            <item><description><paramref name="value2" /> when <paramref name="value1" /> is greater than <paramref name="value2" />.</description></item>
             </list>
             </returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.Comparable.Max``1(``0,``0,System.Collections.Generic.IComparer{``0})">
+            <member name="M:ComplicatedPrimitives.Comparable.Max``1(``0,``0,System.Collections.Generic.IComparer{``0})">
             <summary>
-            Returns greater of the two values comparing them using <see cref="M:System.Collections.Generic.IComparer`1.Compare(`0,`0)"/> method.
+            Returns greater of the two values comparing them using <see cref="M:System.Collections.Generic.IComparer`1.Compare(`0,`0)" /> method.
             </summary>
             <typeparam name="T">Type of value.</typeparam>
             <param name="value1">First value to compare.</param>
@@ -316,14 +341,16 @@
             <param name="comparer">Value comparer.</param>
             <returns>
             <list type="bullet">
-            <item><description><paramref name="value1"/> when <paramref name="value1"/> is greater than or equal to <paramref name="value2"/>;</description></item>
-            <item><description><paramref name="value2"/> when <paramref name="value1"/> is lower than <paramref name="value2"/>.</description></item>
+            <item><description><paramref name="value1" /> when <paramref name="value1" /> is greater than or equal to <paramref name="value2" />;</description></item>
+            <item><description><paramref name="value2" /> when <paramref name="value1" /> is lower than <paramref name="value2" />.</description></item>
             </list>
             </returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.Comparable.MinMax``1(``0,``0,System.Collections.Generic.IComparer{``0})">
+            <member name="M:ComplicatedPrimitives.Comparable.MinMax``1(``0,``0,System.Collections.Generic.IComparer{``0})">
             <summary>
-            Returns given values as ordered pair of min and max, comparing them using <see cref="M:System.Collections.Generic.IComparer`1.Compare(`0,`0)"/> method.
+            Returns given values as ordered pair of min and max, comparing them using <see cref="M:System.Collections.Generic.IComparer`1.Compare(`0,`0)" /> method.
             </summary>
             <typeparam name="T">Type of value.</typeparam>
             <param name="value1">First value to compare.</param>
@@ -331,14 +358,16 @@
             <param name="comparer">Value comparer.</param>
             <returns>
             <list type="bullet">
-            <item><description>(min: <paramref name="value1"/>, max: <paramref name="value2"/>) when <paramref name="value1"/> is greater than or equal to <paramref name="value2"/>;</description></item>
-            <item><description>(min: <paramref name="value2"/>, max: <paramref name="value1"/>) when <paramref name="value1"/> is lower than <paramref name="value2"/>.</description></item>
+            <item><description>(min: <paramref name="value1" />, max: <paramref name="value2" />) when <paramref name="value1" /> is greater than or equal to <paramref name="value2" />;</description></item>
+            <item><description>(min: <paramref name="value2" />, max: <paramref name="value1" />) when <paramref name="value1" /> is lower than <paramref name="value2" />.</description></item>
             </list>
             </returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.Comparable.Min``1(``0,``0,System.Func{``0,``0,System.Int32})">
+            <member name="M:ComplicatedPrimitives.Comparable.Min``1(``0,``0,System.Func{``0,``0,System.Int32})">
             <summary>
-            Returns lower of the two values comparing them using <paramref name="comparer"/> function.
+            Returns lower of the two values comparing them using <paramref name="comparer" /> function.
             </summary>
             <typeparam name="T">Type of value.</typeparam>
             <param name="value1">First value to compare.</param>
@@ -346,14 +375,16 @@
             <param name="comparer">Function comparing values.</param>
             <returns>
             <list type="bullet">
-            <item><description><paramref name="value1"/> when <paramref name="value1"/> is lower than or equal to <paramref name="value2"/>;</description></item>
-            <item><description><paramref name="value2"/> when <paramref name="value1"/> is greater than <paramref name="value2"/>.</description></item>
+            <item><description><paramref name="value1" /> when <paramref name="value1" /> is lower than or equal to <paramref name="value2" />;</description></item>
+            <item><description><paramref name="value2" /> when <paramref name="value1" /> is greater than <paramref name="value2" />.</description></item>
             </list>
             </returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.Comparable.Max``1(``0,``0,System.Func{``0,``0,System.Int32})">
+            <member name="M:ComplicatedPrimitives.Comparable.Max``1(``0,``0,System.Func{``0,``0,System.Int32})">
             <summary>
-            Returns greater of the two values comparing them using <paramref name="comparer"/> function.
+            Returns greater of the two values comparing them using <paramref name="comparer" /> function.
             </summary>
             <typeparam name="T">Type of value.</typeparam>
             <param name="value1">First value to compare.</param>
@@ -361,14 +392,16 @@
             <param name="comparer">Function comparing values.</param>
             <returns>
             <list type="bullet">
-            <item><description><paramref name="value1"/> when <paramref name="value1"/> is greater than or equal to <paramref name="value2"/>;</description></item>
-            <item><description><paramref name="value2"/> when <paramref name="value1"/> is lower than <paramref name="value2"/>.</description></item>
+            <item><description><paramref name="value1" /> when <paramref name="value1" /> is greater than or equal to <paramref name="value2" />;</description></item>
+            <item><description><paramref name="value2" /> when <paramref name="value1" /> is lower than <paramref name="value2" />.</description></item>
             </list>
             </returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.Comparable.MinMax``1(``0,``0,System.Func{``0,``0,System.Int32})">
+            <member name="M:ComplicatedPrimitives.Comparable.MinMax``1(``0,``0,System.Func{``0,``0,System.Int32})">
             <summary>
-            Returns given values as ordered pair of min and max, comparing them using <paramref name="comparer"/> function.
+            Returns given values as ordered pair of min and max, comparing them using <paramref name="comparer" /> function.
             </summary>
             <typeparam name="T">Type of value.</typeparam>
             <param name="value1">First value to compare.</param>
@@ -376,14 +409,16 @@
             <param name="comparer">Function comparing values.</param>
             <returns>
             <list type="bullet">
-            <item><description>(min: <paramref name="value1"/>, max: <paramref name="value2"/>) when <paramref name="value1"/> is greater than or equal to <paramref name="value2"/>;</description></item>
-            <item><description>(min: <paramref name="value2"/>, max: <paramref name="value1"/>) when <paramref name="value1"/> is lower than <paramref name="value2"/>.</description></item>
+            <item><description>(min: <paramref name="value1" />, max: <paramref name="value2" />) when <paramref name="value1" /> is greater than or equal to <paramref name="value2" />;</description></item>
+            <item><description>(min: <paramref name="value2" />, max: <paramref name="value1" />) when <paramref name="value1" /> is lower than <paramref name="value2" />.</description></item>
             </list>
             </returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.Comparable.Min``2(``0,``0,System.Func{``0,``1})">
+            <member name="M:ComplicatedPrimitives.Comparable.Min``2(``0,``0,System.Func{``0,``1})">
             <summary>
-            Returns lower of values obtained from the given objects using <paramref name="getter"/>, comparing them using <see cref="M:System.IComparable`1.CompareTo(`0)"/> method.
+            Returns lower of values obtained from the given objects using <paramref name="getter" />, comparing them using <see cref="M:System.IComparable`1.CompareTo(`0)" /> method.
             </summary>
             <typeparam name="T">Type of source object.</typeparam>
             <typeparam name="TValue">Type of value.</typeparam>
@@ -392,14 +427,16 @@
             <param name="getter">Function obtaining comparable value to compare from source object.</param>
             <returns>
             <list type="bullet">
-            <item><description><paramref name="obj1"/> when <paramref name="getter"/>(<paramref name="obj1"/>) is lower than or equal to <paramref name="getter"/>(<paramref name="obj2"/>);</description></item>
-            <item><description><paramref name="obj2"/> when <paramref name="getter"/>(<paramref name="obj1"/>) is greater than <paramref name="getter"/>(<paramref name="obj2"/>).</description></item>
+            <item><description><paramref name="obj1" /> when <paramref name="getter" />(<paramref name="obj1" />) is lower than or equal to <paramref name="getter" />(<paramref name="obj2" />);</description></item>
+            <item><description><paramref name="obj2" /> when <paramref name="getter" />(<paramref name="obj1" />) is greater than <paramref name="getter" />(<paramref name="obj2" />).</description></item>
             </list>
             </returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.Comparable.Max``2(``0,``0,System.Func{``0,``1})">
+            <member name="M:ComplicatedPrimitives.Comparable.Max``2(``0,``0,System.Func{``0,``1})">
             <summary>
-            Returns greater of values obtained from the given objects using <paramref name="getter"/>, comparing them using <see cref="M:System.IComparable`1.CompareTo(`0)"/> method.
+            Returns greater of values obtained from the given objects using <paramref name="getter" />, comparing them using <see cref="M:System.IComparable`1.CompareTo(`0)" /> method.
             </summary>
             <typeparam name="T">Type of source object.</typeparam>
             <typeparam name="TValue">Type of value.</typeparam>
@@ -408,14 +445,16 @@
             <param name="getter">Function obtaining comparable value to compare from source object.</param>
             <returns>
             <list type="bullet">
-            <item><description><paramref name="obj1"/> when <paramref name="getter"/>(<paramref name="obj1"/>) is greater than or equal to <paramref name="getter"/>(<paramref name="obj2"/>);</description></item>
-            <item><description><paramref name="obj2"/> when <paramref name="getter"/>(<paramref name="obj1"/>) is lower than <paramref name="getter"/>(<paramref name="obj2"/>).</description></item>
+            <item><description><paramref name="obj1" /> when <paramref name="getter" />(<paramref name="obj1" />) is greater than or equal to <paramref name="getter" />(<paramref name="obj2" />);</description></item>
+            <item><description><paramref name="obj2" /> when <paramref name="getter" />(<paramref name="obj1" />) is lower than <paramref name="getter" />(<paramref name="obj2" />).</description></item>
             </list>
             </returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.Comparable.MinMax``2(``0,``0,System.Func{``0,``1})">
+            <member name="M:ComplicatedPrimitives.Comparable.MinMax``2(``0,``0,System.Func{``0,``1})">
             <summary>
-            Returns values obtained from the given objects using <paramref name="getter"/> as ordered pair of min and max, comparing them using <see cref="M:System.IComparable`1.CompareTo(`0)"/> method.
+            Returns values obtained from the given objects using <paramref name="getter" /> as ordered pair of min and max, comparing them using <see cref="M:System.IComparable`1.CompareTo(`0)" /> method.
             </summary>
             <typeparam name="T">Type of source object.</typeparam>
             <typeparam name="TValue">Type of value.</typeparam>
@@ -424,14 +463,16 @@
             <param name="getter">Function obtaining comparable value to compare from source object.</param>
             <returns>
             <list type="bullet">
-            <item><description>(min: <paramref name="obj1"/>, max: <paramref name="obj2"/>) when <paramref name="getter"/>(<paramref name="obj1"/>) is greater than or equal to <paramref name="getter"/>(<paramref name="obj2"/>);</description></item>
-            <item><description>(min: <paramref name="obj2"/>, max: <paramref name="obj1"/>) when <paramref name="getter"/>(<paramref name="obj1"/>) is lower than <paramref name="getter"/>(<paramref name="obj2"/>).</description></item>
+            <item><description>(min: <paramref name="obj1" />, max: <paramref name="obj2" />) when <paramref name="getter" />(<paramref name="obj1" />) is greater than or equal to <paramref name="getter" />(<paramref name="obj2" />);</description></item>
+            <item><description>(min: <paramref name="obj2" />, max: <paramref name="obj1" />) when <paramref name="getter" />(<paramref name="obj1" />) is lower than <paramref name="getter" />(<paramref name="obj2" />).</description></item>
             </list>
             </returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.Comparable.Min``2(``0,``0,System.Func{``0,``1},System.Collections.Generic.IComparer{``1})">
+            <member name="M:ComplicatedPrimitives.Comparable.Min``2(``0,``0,System.Func{``0,``1},System.Collections.Generic.IComparer{``1})">
             <summary>
-            Returns lower of values obtained from the given objects using <paramref name="getter"/>, comparing them using <see cref="M:System.Collections.Generic.IComparer`1.Compare(`0,`0)"/> method.
+            Returns lower of values obtained from the given objects using <paramref name="getter" />, comparing them using <see cref="M:System.Collections.Generic.IComparer`1.Compare(`0,`0)" /> method.
             </summary>
             <typeparam name="T">Type of source object.</typeparam>
             <typeparam name="TValue">Type of value.</typeparam>
@@ -441,14 +482,16 @@
             <param name="comparer">Value comparer.</param>
             <returns>
             <list type="bullet">
-            <item><description><paramref name="obj1"/> when <paramref name="getter"/>(<paramref name="obj1"/>) is lower than or equal to <paramref name="getter"/>(<paramref name="obj2"/>);</description></item>
-            <item><description><paramref name="obj2"/> when <paramref name="getter"/>(<paramref name="obj1"/>) is greater than <paramref name="getter"/>(<paramref name="obj2"/>).</description></item>
+            <item><description><paramref name="obj1" /> when <paramref name="getter" />(<paramref name="obj1" />) is lower than or equal to <paramref name="getter" />(<paramref name="obj2" />);</description></item>
+            <item><description><paramref name="obj2" /> when <paramref name="getter" />(<paramref name="obj1" />) is greater than <paramref name="getter" />(<paramref name="obj2" />).</description></item>
             </list>
             </returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.Comparable.Max``2(``0,``0,System.Func{``0,``1},System.Collections.Generic.IComparer{``1})">
+            <member name="M:ComplicatedPrimitives.Comparable.Max``2(``0,``0,System.Func{``0,``1},System.Collections.Generic.IComparer{``1})">
             <summary>
-            Returns greater of values obtained from the given objects using <paramref name="getter"/>, comparing them using <see cref="M:System.Collections.Generic.IComparer`1.Compare(`0,`0)"/> method.
+            Returns greater of values obtained from the given objects using <paramref name="getter" />, comparing them using <see cref="M:System.Collections.Generic.IComparer`1.Compare(`0,`0)" /> method.
             </summary>
             <typeparam name="T">Type of source object.</typeparam>
             <typeparam name="TValue">Type of value.</typeparam>
@@ -458,14 +501,16 @@
             <param name="comparer">Value comparer.</param>
             <returns>
             <list type="bullet">
-            <item><description><paramref name="obj1"/> when <paramref name="getter"/>(<paramref name="obj1"/>) is greater than or equal to <paramref name="getter"/>(<paramref name="obj2"/>);</description></item>
-            <item><description><paramref name="obj2"/> when <paramref name="getter"/>(<paramref name="obj1"/>) is lower than <paramref name="getter"/>(<paramref name="obj2"/>).</description></item>
+            <item><description><paramref name="obj1" /> when <paramref name="getter" />(<paramref name="obj1" />) is greater than or equal to <paramref name="getter" />(<paramref name="obj2" />);</description></item>
+            <item><description><paramref name="obj2" /> when <paramref name="getter" />(<paramref name="obj1" />) is lower than <paramref name="getter" />(<paramref name="obj2" />).</description></item>
             </list>
             </returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.Comparable.MinMax``2(``0,``0,System.Func{``0,``1},System.Collections.Generic.IComparer{``1})">
+            <member name="M:ComplicatedPrimitives.Comparable.MinMax``2(``0,``0,System.Func{``0,``1},System.Collections.Generic.IComparer{``1})">
             <summary>
-            Returns values obtained from the given objects using <paramref name="getter"/> as ordered pair of min and max, comparing them using <see cref="M:System.Collections.Generic.IComparer`1.Compare(`0,`0)"/> method.
+            Returns values obtained from the given objects using <paramref name="getter" /> as ordered pair of min and max, comparing them using <see cref="M:System.Collections.Generic.IComparer`1.Compare(`0,`0)" /> method.
             </summary>
             <typeparam name="T">Type of source object.</typeparam>
             <typeparam name="TValue">Type of value.</typeparam>
@@ -475,14 +520,16 @@
             <param name="comparer">Value comparer.</param>
             <returns>
             <list type="bullet">
-            <item><description>(min: <paramref name="obj1"/>, max: <paramref name="obj2"/>) when <paramref name="getter"/>(<paramref name="obj1"/>) is greater than or equal to <paramref name="getter"/>(<paramref name="obj2"/>);</description></item>
-            <item><description>(min: <paramref name="obj2"/>, max: <paramref name="obj1"/>) when <paramref name="getter"/>(<paramref name="obj1"/>) is lower than <paramref name="getter"/>(<paramref name="obj2"/>).</description></item>
+            <item><description>(min: <paramref name="obj1" />, max: <paramref name="obj2" />) when <paramref name="getter" />(<paramref name="obj1" />) is greater than or equal to <paramref name="getter" />(<paramref name="obj2" />);</description></item>
+            <item><description>(min: <paramref name="obj2" />, max: <paramref name="obj1" />) when <paramref name="getter" />(<paramref name="obj1" />) is lower than <paramref name="getter" />(<paramref name="obj2" />).</description></item>
             </list>
             </returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.Comparable.Min``2(``0,``0,System.Func{``0,``1},System.Func{``1,``1,System.Int32})">
+            <member name="M:ComplicatedPrimitives.Comparable.Min``2(``0,``0,System.Func{``0,``1},System.Func{``1,``1,System.Int32})">
             <summary>
-            Returns lower of values obtained from the given objects using <paramref name="getter"/>, comparing them using <paramref name="comparer"/> function.
+            Returns lower of values obtained from the given objects using <paramref name="getter" />, comparing them using <paramref name="comparer" /> function.
             </summary>
             <typeparam name="T">Type of source object.</typeparam>
             <typeparam name="TValue">Type of value.</typeparam>
@@ -492,14 +539,16 @@
             <param name="comparer">Function comparing values.</param>
             <returns>
             <list type="bullet">
-            <item><description><paramref name="obj1"/> when <paramref name="getter"/>(<paramref name="obj1"/>) is lower than or equal to <paramref name="getter"/>(<paramref name="obj2"/>);</description></item>
-            <item><description><paramref name="obj2"/> when <paramref name="getter"/>(<paramref name="obj1"/>) is greater than <paramref name="getter"/>(<paramref name="obj2"/>).</description></item>
+            <item><description><paramref name="obj1" /> when <paramref name="getter" />(<paramref name="obj1" />) is lower than or equal to <paramref name="getter" />(<paramref name="obj2" />);</description></item>
+            <item><description><paramref name="obj2" /> when <paramref name="getter" />(<paramref name="obj1" />) is greater than <paramref name="getter" />(<paramref name="obj2" />).</description></item>
             </list>
             </returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.Comparable.Max``2(``0,``0,System.Func{``0,``1},System.Func{``1,``1,System.Int32})">
+            <member name="M:ComplicatedPrimitives.Comparable.Max``2(``0,``0,System.Func{``0,``1},System.Func{``1,``1,System.Int32})">
             <summary>
-            Returns greater of values obtained from the given objects using <paramref name="getter"/>, comparing them using <paramref name="comparer"/> function.
+            Returns greater of values obtained from the given objects using <paramref name="getter" />, comparing them using <paramref name="comparer" /> function.
             </summary>
             <typeparam name="T">Type of source object.</typeparam>
             <typeparam name="TValue">Type of value.</typeparam>
@@ -509,14 +558,16 @@
             <param name="comparer">Function comparing values.</param>
             <returns>
             <list type="bullet">
-            <item><description><paramref name="obj1"/> when <paramref name="getter"/>(<paramref name="obj1"/>) is greater than or equal to <paramref name="getter"/>(<paramref name="obj2"/>);</description></item>
-            <item><description><paramref name="obj2"/> when <paramref name="getter"/>(<paramref name="obj1"/>) is lower than <paramref name="getter"/>(<paramref name="obj2"/>).</description></item>
+            <item><description><paramref name="obj1" /> when <paramref name="getter" />(<paramref name="obj1" />) is greater than or equal to <paramref name="getter" />(<paramref name="obj2" />);</description></item>
+            <item><description><paramref name="obj2" /> when <paramref name="getter" />(<paramref name="obj1" />) is lower than <paramref name="getter" />(<paramref name="obj2" />).</description></item>
             </list>
             </returns>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.Comparable.MinMax``2(``0,``0,System.Func{``0,``1},System.Func{``1,``1,System.Int32})">
+            <member name="M:ComplicatedPrimitives.Comparable.MinMax``2(``0,``0,System.Func{``0,``1},System.Func{``1,``1,System.Int32})">
             <summary>
-            Returns values obtained from the given objects using <paramref name="getter"/> as ordered pair of min and max, comparing them using <paramref name="comparer"/> function.
+            Returns values obtained from the given objects using <paramref name="getter" /> as ordered pair of min and max, comparing them using <paramref name="comparer" /> function.
             </summary>
             <typeparam name="T">Type of source object.</typeparam>
             <typeparam name="TValue">Type of value.</typeparam>
@@ -526,10 +577,11 @@
             <param name="comparer">Function comparing values.</param>
             <returns>
             <list type="bullet">
-            <item><description>(min: <paramref name="obj1"/>, max: <paramref name="obj2"/>) when <paramref name="getter"/>(<paramref name="obj1"/>) is greater than or equal to <paramref name="getter"/>(<paramref name="obj2"/>);</description></item>
-            <item><description>(min: <paramref name="obj2"/>, max: <paramref name="obj1"/>) when <paramref name="getter"/>(<paramref name="obj1"/>) is lower than <paramref name="getter"/>(<paramref name="obj2"/>).</description></item>
+            <item><description>(min: <paramref name="obj1" />, max: <paramref name="obj2" />) when <paramref name="getter" />(<paramref name="obj1" />) is greater than or equal to <paramref name="getter" />(<paramref name="obj2" />);</description></item>
+            <item><description>(min: <paramref name="obj2" />, max: <paramref name="obj1" />) when <paramref name="getter" />(<paramref name="obj1" />) is lower than <paramref name="getter" />(<paramref name="obj2" />).</description></item>
             </list>
             </returns>
+        </member>
         </member>
         <member name="T:ComplicatedPrimitives.DefaultValueParser">
             <summary>

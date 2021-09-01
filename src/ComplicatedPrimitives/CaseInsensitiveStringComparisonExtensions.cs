@@ -2,21 +2,14 @@
 
 namespace ComplicatedPrimitives
 {
-    /// <summary>
-    /// Provides extension methods for <see cref="CaseInsensitiveStringComparison"/>.
-    /// </summary>
+    /// <include
+    ///   file='ComplicatedPrimitives.xml'
+    ///   path='//member[@name="T:ComplicatedPrimitives.CaseInsensitiveStringComparisonExtensions"]' />
     public static class CaseInsensitiveStringComparisonExtensions
     {
-        /// <summary>
-        /// Converts <see cref="CaseInsensitiveStringComparison"/> <paramref name="value"/> to its equivalent <see cref="StringComparison"/> value.
-        /// </summary>
-        /// <param name="value">Value to convert.</param>
-        /// <returns>
-        /// Proper value of type <see cref="StringComparison"/> being logical equivalent of the given <paramref name="value"/>
-        /// if valid (known) <see cref="CaseInsensitiveStringComparison"/> value was passe;
-        /// otherwise throws exception.
-        /// </returns>
-        /// <exception cref="InvalidOperationException"><paramref name="value"/> is not a defined value of <see cref="CaseInsensitiveStringComparison"/></exception>
+        /// <include
+        ///   file='ComplicatedPrimitives.xml'
+        ///   path='//member[@name="M:ComplicatedPrimitives.CaseInsensitiveStringComparisonExtensions.ToStringComparison(ComplicatedPrimitives.CaseInsensitiveStringComparison)"]' />
         public static StringComparison ToStringComparison(this CaseInsensitiveStringComparison value)
         {
             switch (value)
@@ -32,16 +25,9 @@ namespace ComplicatedPrimitives
             }
         }
 
-        /// <summary>
-        /// Converts (casts down) <see cref="StringComparison"/> <paramref name="value"/> to its equivalent <see cref="CaseInsensitiveStringComparison"/> value.
-        /// </summary>
-        /// <param name="value">Value to convert.</param>
-        /// <returns>
-        /// Proper value of type <see cref="CaseInsensitiveStringComparison"/> being logical equivalent of the given <paramref name="value"/>
-        /// if valid (known) <see cref="StringComparison"/> value was passe;
-        /// otherwise throws exception.
-        /// </returns>
-        /// <exception cref="InvalidOperationException"><paramref name="value"/> is not a defined value of <see cref="StringComparison"/></exception>
+        /// <include
+        ///   file='ComplicatedPrimitives.xml'
+        ///   path='//member[@name="M:ComplicatedPrimitives.CaseInsensitiveStringComparisonExtensions.ToCaseInsensitiveStringComparison(System.StringComparison)"]' />
         public static CaseInsensitiveStringComparison ToCaseInsensitiveStringComparison(this StringComparison value)
         {
             switch (value)
