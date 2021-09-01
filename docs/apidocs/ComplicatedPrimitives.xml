@@ -584,370 +584,424 @@
         </member>
         </member>
         <member name="T:ComplicatedPrimitives.DefaultValueParser">
+            <member name="T:ComplicatedPrimitives.DefaultValueParser">
             <summary>
-            Class wrapping default .NET parsing functions to provide them as <see cref="T:ComplicatedPrimitives.IParser`1"/> implementations.
+            Class wrapping default .NET parsing functions to provide them as <see cref="T:ComplicatedPrimitives.IParser`1" /> implementations.
             </summary>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Byte}#Parse(System.String)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Byte}#Parse(System.String)">
             <summary>
-            Converts the specified string representation of a number to its <see cref="T:System.Byte"/> equivalent using <see cref="M:System.Byte.Parse(System.String)"/> method.
+            Converts the specified string representation of a number to its <see cref="T:System.Byte" /> equivalent using <see cref="M:System.Byte.Parse(System.String)" /> method.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <returns>
-            A byte value that is equivalent to the number contained in <paramref name="str"/>.
+            A byte value that is equivalent to the number contained in <paramref name="str" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.Byte.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.byte.parse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Byte}#TryParse(System.String,System.Byte@)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Byte}#TryParse(System.String,System.Byte@)">
             <summary>
-            Tries to convert the string representation of a number to its <see cref="T:System.Byte"/> equivalent, and returns a value indicating whether the conversion succeeded.
+            Tries to convert the string representation of a number to its <see cref="T:System.Byte" /> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <param name="result">
-            When this method returns, contains the <see cref="T:System.Byte"/> value equivalent to the number contained in <paramref name="str"/> if the conversion succeeded,
+            When this method returns, contains the <see cref="T:System.Byte" /> value equivalent to the number contained in <paramref name="str" /> if the conversion succeeded,
             or zero if the conversion failed.
             </param>
             <returns>
-            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            <see langword="true" /> if <paramref name="str" /> was converted successfully; otherwise, <see langword="false" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.Byte.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.byte.tryparse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int16}#Parse(System.String)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int16}#Parse(System.String)">
             <summary>
-            Converts the specified string representation of a number to its <see cref="T:System.Int16"/> equivalent using <see cref="M:System.Int16.Parse(System.String)"/> method.
+            Converts the specified string representation of a number to its <see cref="T:System.Int16" /> equivalent using <see cref="M:System.Int16.Parse(System.String)" /> method.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <returns>
-            A byte value that is equivalent to the number contained in <paramref name="str"/>.
+            A byte value that is equivalent to the number contained in <paramref name="str" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.Int16.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.int16.parse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int16}#TryParse(System.String,System.Int16@)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int16}#TryParse(System.String,System.Int16@)">
             <summary>
-            Tries to convert the string representation of a number to its <see cref="T:System.Int16"/> equivalent, and returns a value indicating whether the conversion succeeded.
+            Tries to convert the string representation of a number to its <see cref="T:System.Int16" /> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <param name="result">
-            When this method returns, contains the <see cref="T:System.Int16"/> value equivalent to the number contained in <paramref name="str"/> if the conversion succeeded,
+            When this method returns, contains the <see cref="T:System.Int16" /> value equivalent to the number contained in <paramref name="str" /> if the conversion succeeded,
             or zero if the conversion failed.
             </param>
             <returns>
-            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            <see langword="true" /> if <paramref name="str" /> was converted successfully; otherwise, <see langword="false" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.Int16.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.int16.tryparse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt16}#Parse(System.String)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt16}#Parse(System.String)">
             <summary>
-            Converts the specified string representation of a number to its <see cref="T:System.UInt16"/> equivalent using <see cref="M:System.UInt16.Parse(System.String)"/> method.
+            Converts the specified string representation of a number to its <see cref="T:System.UInt16" /> equivalent using <see cref="M:System.UInt16.Parse(System.String)" /> method.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <returns>
-            A byte value that is equivalent to the number contained in <paramref name="str"/>.
+            A byte value that is equivalent to the number contained in <paramref name="str" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.UInt16.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.uint16.parse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt16}#TryParse(System.String,System.UInt16@)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt16}#TryParse(System.String,System.UInt16@)">
             <summary>
-            Tries to convert the string representation of a number to its <see cref="T:System.UInt16"/> equivalent, and returns a value indicating whether the conversion succeeded.
+            Tries to convert the string representation of a number to its <see cref="T:System.UInt16" /> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <param name="result">
-            When this method returns, contains the <see cref="T:System.UInt16"/> value equivalent to the number contained in <paramref name="str"/> if the conversion succeeded,
+            When this method returns, contains the <see cref="T:System.UInt16" /> value equivalent to the number contained in <paramref name="str" /> if the conversion succeeded,
             or zero if the conversion failed.
             </param>
             <returns>
-            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            <see langword="true" /> if <paramref name="str" /> was converted successfully; otherwise, <see langword="false" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.UInt16.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.uint16.tryparse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int32}#Parse(System.String)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int32}#Parse(System.String)">
             <summary>
-            Converts the specified string representation of a number to its <see cref="T:System.Int32"/> equivalent using <see cref="M:System.Int32.Parse(System.String)"/> method.
+            Converts the specified string representation of a number to its <see cref="T:System.Int32" /> equivalent using <see cref="M:System.Int32.Parse(System.String)" /> method.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <returns>
-            A byte value that is equivalent to the number contained in <paramref name="str"/>.
+            A byte value that is equivalent to the number contained in <paramref name="str" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.Int32.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32.parse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int32}#TryParse(System.String,System.Int32@)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int32}#TryParse(System.String,System.Int32@)">
             <summary>
-            Tries to convert the string representation of a number to its <see cref="T:System.Int32"/> equivalent, and returns a value indicating whether the conversion succeeded.
+            Tries to convert the string representation of a number to its <see cref="T:System.Int32" /> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <param name="result">
-            When this method returns, contains the <see cref="T:System.Int32"/> value equivalent to the number contained in <paramref name="str"/> if the conversion succeeded,
+            When this method returns, contains the <see cref="T:System.Int32" /> value equivalent to the number contained in <paramref name="str" /> if the conversion succeeded,
             or zero if the conversion failed.
             </param>
             <returns>
-            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            <see langword="true" /> if <paramref name="str" /> was converted successfully; otherwise, <see langword="false" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.Int32.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32.tryparse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt32}#Parse(System.String)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt32}#Parse(System.String)">
             <summary>
-            Converts the specified string representation of a number to its <see cref="T:System.UInt32"/> equivalent using <see cref="M:System.UInt32.Parse(System.String)"/> method.
+            Converts the specified string representation of a number to its <see cref="T:System.UInt32" /> equivalent using <see cref="M:System.UInt32.Parse(System.String)" /> method.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <returns>
-            A byte value that is equivalent to the number contained in <paramref name="str"/>.
+            A byte value that is equivalent to the number contained in <paramref name="str" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.UInt32.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.uint32.parse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt32}#TryParse(System.String,System.UInt32@)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt32}#TryParse(System.String,System.UInt32@)">
             <summary>
-            Tries to convert the string representation of a number to its <see cref="T:System.UInt32"/> equivalent, and returns a value indicating whether the conversion succeeded.
+            Tries to convert the string representation of a number to its <see cref="T:System.UInt32" /> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <param name="result">
-            When this method returns, contains the <see cref="T:System.UInt32"/> value equivalent to the number contained in <paramref name="str"/> if the conversion succeeded,
+            When this method returns, contains the <see cref="T:System.UInt32" /> value equivalent to the number contained in <paramref name="str" /> if the conversion succeeded,
             or zero if the conversion failed.
             </param>
             <returns>
-            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            <see langword="true" /> if <paramref name="str" /> was converted successfully; otherwise, <see langword="false" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.UInt32.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.uint32.tryparse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int64}#Parse(System.String)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int64}#Parse(System.String)">
             <summary>
-            Converts the specified string representation of a number to its <see cref="T:System.Int64"/> equivalent using <see cref="M:System.Int64.Parse(System.String)"/> method.
+            Converts the specified string representation of a number to its <see cref="T:System.Int64" /> equivalent using <see cref="M:System.Int64.Parse(System.String)" /> method.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <returns>
-            A byte value that is equivalent to the number contained in <paramref name="str"/>.
+            A byte value that is equivalent to the number contained in <paramref name="str" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.Int64.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64.parse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int64}#TryParse(System.String,System.Int64@)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int64}#TryParse(System.String,System.Int64@)">
             <summary>
-            Tries to convert the string representation of a number to its <see cref="T:System.Int64"/> equivalent, and returns a value indicating whether the conversion succeeded.
+            Tries to convert the string representation of a number to its <see cref="T:System.Int64" /> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <param name="result">
-            When this method returns, contains the <see cref="T:System.Int64"/> value equivalent to the number contained in <paramref name="str"/> if the conversion succeeded,
+            When this method returns, contains the <see cref="T:System.Int64" /> value equivalent to the number contained in <paramref name="str" /> if the conversion succeeded,
             or zero if the conversion failed.
             </param>
             <returns>
-            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            <see langword="true" /> if <paramref name="str" /> was converted successfully; otherwise, <see langword="false" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.Int64.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64.tryparse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt64}#Parse(System.String)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt64}#Parse(System.String)">
             <summary>
-            Converts the specified string representation of a number to its <see cref="T:System.UInt64"/> equivalent using <see cref="M:System.UInt64.Parse(System.String)"/> method.
+            Converts the specified string representation of a number to its <see cref="T:System.UInt64" /> equivalent using <see cref="M:System.UInt64.Parse(System.String)" /> method.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <returns>
-            A byte value that is equivalent to the number contained in <paramref name="str"/>.
+            A byte value that is equivalent to the number contained in <paramref name="str" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.UInt64.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.uint64.parse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt64}#TryParse(System.String,System.UInt64@)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt64}#TryParse(System.String,System.UInt64@)">
             <summary>
-            Tries to convert the string representation of a number to its <see cref="T:System.UInt64"/> equivalent, and returns a value indicating whether the conversion succeeded.
+            Tries to convert the string representation of a number to its <see cref="T:System.UInt64" /> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <param name="result">
-            When this method returns, contains the <see cref="T:System.UInt64"/> value equivalent to the number contained in <paramref name="str"/> if the conversion succeeded,
+            When this method returns, contains the <see cref="T:System.UInt64" /> value equivalent to the number contained in <paramref name="str" /> if the conversion succeeded,
             or zero if the conversion failed.
             </param>
             <returns>
-            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            <see langword="true" /> if <paramref name="str" /> was converted successfully; otherwise, <see langword="false" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.UInt64.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.uint64.tryparse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Single}#Parse(System.String)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Single}#Parse(System.String)">
             <summary>
-            Converts the specified string representation of a number to its <see cref="T:System.Single"/> equivalent using <see cref="M:System.Single.Parse(System.String)"/> method.
+            Converts the specified string representation of a number to its <see cref="T:System.Single" /> equivalent using <see cref="M:System.Single.Parse(System.String)" /> method.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <returns>
-            A byte value that is equivalent to the number contained in <paramref name="str"/>.
+            A byte value that is equivalent to the number contained in <paramref name="str" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.Single.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.single.parse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Single}#TryParse(System.String,System.Single@)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Single}#TryParse(System.String,System.Single@)">
             <summary>
-            Tries to convert the string representation of a number to its <see cref="T:System.Single"/> equivalent, and returns a value indicating whether the conversion succeeded.
+            Tries to convert the string representation of a number to its <see cref="T:System.Single" /> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <param name="result">
-            When this method returns, contains the <see cref="T:System.Single"/> value equivalent to the number contained in <paramref name="str"/> if the conversion succeeded,
+            When this method returns, contains the <see cref="T:System.Single" /> value equivalent to the number contained in <paramref name="str" /> if the conversion succeeded,
             or zero if the conversion failed.
             </param>
             <returns>
-            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            <see langword="true" /> if <paramref name="str" /> was converted successfully; otherwise, <see langword="false" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.Single.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.single.tryparse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Double}#Parse(System.String)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Double}#Parse(System.String)">
             <summary>
-            Converts the specified string representation of a number to its <see cref="T:System.Double"/> equivalent using <see cref="M:System.Double.Parse(System.String)"/> method.
+            Converts the specified string representation of a number to its <see cref="T:System.Double" /> equivalent using <see cref="M:System.Double.Parse(System.String)" /> method.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <returns>
-            A byte value that is equivalent to the number contained in <paramref name="str"/>.
+            A byte value that is equivalent to the number contained in <paramref name="str" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.Double.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.double.parse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Double}#TryParse(System.String,System.Double@)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Double}#TryParse(System.String,System.Double@)">
             <summary>
-            Tries to convert the string representation of a number to its <see cref="T:System.Double"/> equivalent, and returns a value indicating whether the conversion succeeded.
+            Tries to convert the string representation of a number to its <see cref="T:System.Double" /> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <param name="result">
-            When this method returns, contains the <see cref="T:System.Double"/> value equivalent to the number contained in <paramref name="str"/> if the conversion succeeded,
+            When this method returns, contains the <see cref="T:System.Double" /> value equivalent to the number contained in <paramref name="str" /> if the conversion succeeded,
             or zero if the conversion failed.
             </param>
             <returns>
-            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            <see langword="true" /> if <paramref name="str" /> was converted successfully; otherwise, <see langword="false" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.Double.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.double.tryparse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Decimal}#Parse(System.String)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Decimal}#Parse(System.String)">
             <summary>
-            Converts the specified string representation of a number to its <see cref="T:System.Decimal"/> equivalent using <see cref="M:System.Decimal.Parse(System.String)"/> method.
+            Converts the specified string representation of a number to its <see cref="T:System.Decimal" /> equivalent using <see cref="M:System.Decimal.Parse(System.String)" /> method.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <returns>
-            A byte value that is equivalent to the number contained in <paramref name="str"/>.
+            A byte value that is equivalent to the number contained in <paramref name="str" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.Decimal.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.decimal.parse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Decimal}#TryParse(System.String,System.Decimal@)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Decimal}#TryParse(System.String,System.Decimal@)">
             <summary>
-            Tries to convert the string representation of a number to its <see cref="T:System.Decimal"/> equivalent, and returns a value indicating whether the conversion succeeded.
+            Tries to convert the string representation of a number to its <see cref="T:System.Decimal" /> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a number to convert.</param>
             <param name="result">
-            When this method returns, contains the <see cref="T:System.Decimal"/> value equivalent to the number contained in <paramref name="str"/> if the conversion succeeded,
+            When this method returns, contains the <see cref="T:System.Decimal" /> value equivalent to the number contained in <paramref name="str" /> if the conversion succeeded,
             or zero if the conversion failed.
             </param>
             <returns>
-            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            <see langword="true" /> if <paramref name="str" /> was converted successfully; otherwise, <see langword="false" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.Decimal.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.decimal.tryparse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTime}#Parse(System.String)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTime}#Parse(System.String)">
             <summary>
-            Converts the specified string representation of a date and time to its <see cref="T:System.DateTime"/> equivalent using <see cref="M:System.DateTime.Parse(System.String)"/> method.
+            Converts the specified string representation of a date and time to its <see cref="T:System.DateTime" /> equivalent using <see cref="M:System.DateTime.Parse(System.String)" /> method.
             </summary>
             <param name="str">A string that contains a date and time to convert.</param>
             <returns>
-            An object that is equivalent to the date and time that is contained in <paramref name="str"/>.
+            An object that is equivalent to the date and time that is contained in <paramref name="str" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.DateTime.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.parse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTime}#TryParse(System.String,System.DateTime@)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTime}#TryParse(System.String,System.DateTime@)">
             <summary>
-            Tries to convert the string representation of a date and time to its <see cref="T:System.DateTime"/> equivalent, and returns a value indicating whether the conversion succeeded.
+            Tries to convert the string representation of a date and time to its <see cref="T:System.DateTime" /> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a date and time to convert.</param>
             <param name="result">
-            When the method returns, contains the <see cref="T:System.DateTime"/> equivalent to the date and time of <paramref name="str"/>, if the conversion succeeded, or <see cref="F:System.DateTime.MinValue"/>, if the conversion failed.
+            When the method returns, contains the <see cref="T:System.DateTime" /> equivalent to the date and time of <paramref name="str" />, if the conversion succeeded, or <see cref="F:System.DateTime.MinValue" />, if the conversion failed.
             </param>
             <returns>
-            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            <see langword="true" /> if <paramref name="str" /> was converted successfully; otherwise, <see langword="false" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.DateTime.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.tryparse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTimeOffset}#Parse(System.String)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTimeOffset}#Parse(System.String)">
             <summary>
-            Converts the specified string representation of a date and time to its <see cref="T:System.DateTimeOffset"/> equivalent using <see cref="M:System.DateTimeOffset.Parse(System.String)"/> method.
+            Converts the specified string representation of a date and time to its <see cref="T:System.DateTimeOffset" /> equivalent using <see cref="M:System.DateTimeOffset.Parse(System.String)" /> method.
             </summary>
             <param name="str">A string that contains a date and time to convert.</param>
             <returns>
-            An object that is equivalent to the date and time that is contained in <paramref name="str"/>.
+            An object that is equivalent to the date and time that is contained in <paramref name="str" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.DateTimeOffset.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.parse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTimeOffset}#TryParse(System.String,System.DateTimeOffset@)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTimeOffset}#TryParse(System.String,System.DateTimeOffset@)">
             <summary>
-            Tries to convert the string representation of a date and time to its <see cref="T:System.DateTimeOffset"/> equivalent, and returns a value indicating whether the conversion succeeded.
+            Tries to convert the string representation of a date and time to its <see cref="T:System.DateTimeOffset" /> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a date and time to convert.</param>
             <param name="result">
-            When the method returns, contains the <see cref="T:System.DateTimeOffset"/> equivalent to the date and time of <paramref name="str"/>, if the conversion succeeded, or <see cref="F:System.DateTimeOffset.MinValue"/>, if the conversion failed.
+            When the method returns, contains the <see cref="T:System.DateTimeOffset" /> equivalent to the date and time of <paramref name="str" />, if the conversion succeeded, or <see cref="F:System.DateTimeOffset.MinValue" />, if the conversion failed.
             </param>
             <returns>
-            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            <see langword="true" /> if <paramref name="str" /> was converted successfully; otherwise, <see langword="false" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.DateTimeOffset.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.tryparse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#TimeSpan}#Parse(System.String)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#TimeSpan}#Parse(System.String)">
             <summary>
-            Converts the specified string representation of a time interval to its <see cref="T:System.TimeSpan"/> equivalent using <see cref="M:System.TimeSpan.Parse(System.String)"/> method.
+            Converts the specified string representation of a time interval to its <see cref="T:System.TimeSpan" /> equivalent using <see cref="M:System.TimeSpan.Parse(System.String)" /> method.
             </summary>
             <param name="str">A string that contains a time interval to convert.</param>
             <returns>
-            A time interval that corresponds to <paramref name="str"/>.
+            A time interval that corresponds to <paramref name="str" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.TimeSpan.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.timespan.parse">docs</seealso>.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#TimeSpan}#TryParse(System.String,System.TimeSpan@)">
+            <member name="M:ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#TimeSpan}#TryParse(System.String,System.TimeSpan@)">
             <summary>
-            Tries to convert the string representation of a time interval to its <see cref="T:System.TimeSpan"/> equivalent, and returns a value indicating whether the conversion succeeded.
+            Tries to convert the string representation of a time interval to its <see cref="T:System.TimeSpan" /> equivalent, and returns a value indicating whether the conversion succeeded.
             </summary>
             <param name="str">A string that contains a time interval to convert.</param>
             <param name="result">
-            When this method returns, contains an object that represents the time interval specified by <paramref name="str"/>, or <see cref="F:System.TimeSpan.Zero"/> if the conversion failed.
+            When this method returns, contains an object that represents the time interval specified by <paramref name="str" />, or <see cref="F:System.TimeSpan.Zero" /> if the conversion failed.
             </param>
             <returns>
-            <see langword="true"/> if <paramref name="str"/> was converted successfully; otherwise, <see langword="false"/>.
+            <see langword="true" /> if <paramref name="str" /> was converted successfully; otherwise, <see langword="false" />.
             </returns>
             <remarks>
             For more defails, see underlying method <seealso cref="M:System.TimeSpan.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.timespan.tryparse">docs</seealso>.
             </remarks>
+        </member>
         </member>
         <member name="T:ComplicatedPrimitives.DirectedLimit`1">
             <summary>
