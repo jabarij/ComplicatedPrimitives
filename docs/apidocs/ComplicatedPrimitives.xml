@@ -1004,122 +1004,136 @@
         </member>
         </member>
         <member name="T:ComplicatedPrimitives.DirectedLimit`1">
+            <member name="T:ComplicatedPrimitives.DirectedLimit`1">
             <summary>
-            Structure representing directed limit of type <typeparamref name="T"/>.
-            In other words, it is limit point of type <typeparamref name="T"/> that is approachable from either left or right side.
+            Structure representing directed limit of type <typeparamref name="T" />.
+            In other words, it is limit point of type <typeparamref name="T" /> that is approachable from either left or right side.
             </summary>
             <typeparam name="T">Type of limit point's value (limit's domain).</typeparam>
         </member>
-        <member name="F:ComplicatedPrimitives.DirectedLimit`1.OpenSign">
-            <summary>
-            Represents the <see cref="F:ComplicatedPrimitives.LimitPointType.Open">open</see> <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Type">type</see> of <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsDefined">defined</see> <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see>.
-            </summary>
-        </member>
-        <member name="F:ComplicatedPrimitives.DirectedLimit`1.ClosedSign">
-            <summary>
-            Represents the <see cref="F:ComplicatedPrimitives.LimitPointType.Closed">closed</see> <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Type">type</see> of <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsDefined">defined</see> <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see>.
-            </summary>
-        </member>
-        <member name="F:ComplicatedPrimitives.DirectedLimit`1.UndefinedString">
-            <summary>
-            Represents the string equivalent of <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">undefined</see> <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see>.
-            </summary>
         </member>
         <member name="F:ComplicatedPrimitives.DirectedLimit`1.Undefined">
+            <member name="F:ComplicatedPrimitives.DirectedLimit`1.Undefined">
             <summary>
             Represents an undefined directed limit. This field is read-only.
             </summary>
         </member>
+        </member>
         <member name="F:ComplicatedPrimitives.DirectedLimit`1.LeftInfinity">
+            <member name="F:ComplicatedPrimitives.DirectedLimit`1.LeftInfinity">
             <summary>
             Represents a left (negative in some contexts) infinity. This field is read-only.
             </summary>
         </member>
+        </member>
         <member name="F:ComplicatedPrimitives.DirectedLimit`1.RightInfinity">
+            <member name="F:ComplicatedPrimitives.DirectedLimit`1.RightInfinity">
             <summary>
             Represents a right (positive in some contexts) infinity. This field is read-only.
             </summary>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.#ctor(ComplicatedPrimitives.LimitPoint{`0},ComplicatedPrimitives.LimitSide)">
+            <member name="M:ComplicatedPrimitives.DirectedLimit`1.#ctor(ComplicatedPrimitives.LimitPoint{`0},ComplicatedPrimitives.LimitSide)">
             <summary>
-            Creates a new instance of the <see cref="T:ComplicatedPrimitives.DirectedLimit`1"/> structure with a specified <paramref name="point"/> and <paramref name="side"/>.
+            Creates a new instance of the <see cref="T:ComplicatedPrimitives.DirectedLimit`1" /> structure with a specified <paramref name="point" /> and <paramref name="side" />.
             </summary>
             <param name="point">Extreme point of the created limit.</param>
             <param name="side">Side of the created limit.</param>
-            <exception cref="T:System.ArgumentException"><paramref name="side"/> is not a defined value of <see cref="T:ComplicatedPrimitives.LimitSide"/> enum</exception>
+            <exception cref="T:System.ArgumentException"><paramref name="side" /> is not a defined value of <see cref="T:ComplicatedPrimitives.LimitSide" /> enum</exception>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.#ctor(`0,ComplicatedPrimitives.LimitPointType,ComplicatedPrimitives.LimitSide)">
+            <member name="M:ComplicatedPrimitives.DirectedLimit`1.#ctor(`0,ComplicatedPrimitives.LimitPointType,ComplicatedPrimitives.LimitSide)">
             <summary>
-            Creates a new instance of the <see cref="T:ComplicatedPrimitives.DirectedLimit`1"/> structure with a specified <paramref name="value"/>, <paramref name="type"/> and <paramref name="side"/>.
+            Creates a new instance of the <see cref="T:ComplicatedPrimitives.DirectedLimit`1" /> structure with a specified <paramref name="value" />, <paramref name="type" /> and <paramref name="side" />.
             </summary>
             <param name="value">Extreme point's value of the created limit.</param>
             <param name="type">Extreme point's type of the created limit.</param>
             <param name="side">Side (direction) of the created limit.</param>
-            <exception cref="T:System.ArgumentException"><paramref name="side"/> is not a defined value of <see cref="T:ComplicatedPrimitives.LimitSide"/> enum</exception>
+            <exception cref="T:System.ArgumentException"><paramref name="side" /> is not a defined value of <see cref="T:ComplicatedPrimitives.LimitSide" /> enum</exception>
+        </member>
         </member>
         <member name="P:ComplicatedPrimitives.DirectedLimit`1.Point">
+            <member name="P:ComplicatedPrimitives.DirectedLimit`1.Point">
             <summary>
             Gets the extreme point of this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see>.
             </summary>
         </member>
+        </member>
         <member name="P:ComplicatedPrimitives.DirectedLimit`1.Side">
+            <member name="P:ComplicatedPrimitives.DirectedLimit`1.Side">
             <summary>
             Gets the side of this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see>.
             </summary>
         </member>
+        </member>
         <member name="P:ComplicatedPrimitives.DirectedLimit`1.IsDefined">
+            <member name="P:ComplicatedPrimitives.DirectedLimit`1.IsDefined">
             <summary>
             Indicates whether this instance represents an undefined <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> with a certain <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Side">side</see>.
             </summary>
         </member>
+        </member>
         <member name="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">
+            <member name="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">
             <summary>
             Indicates whether this instance represents an undefined <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> without valid <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Side">side</see>.
             </summary>
         </member>
+        </member>
         <member name="P:ComplicatedPrimitives.DirectedLimit`1.Value">
+            <member name="P:ComplicatedPrimitives.DirectedLimit`1.Value">
             <summary>
             Gets the value of <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Point">extreme point</see> of this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see>.
             </summary>
             <remarks>
-            For more defails, see <seealso cref="P:ComplicatedPrimitives.LimitPoint`1.Value"/> docs.
+            For more defails, see <seealso cref="P:ComplicatedPrimitives.LimitPoint`1.Value" /> docs.
             </remarks>
         </member>
+        </member>
         <member name="P:ComplicatedPrimitives.DirectedLimit`1.Type">
+            <member name="P:ComplicatedPrimitives.DirectedLimit`1.Type">
             <summary>
             Gets the type of <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Point">extreme point</see> of this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see>.
             </summary>
             <remarks>
-            For more defails, see <seealso cref="P:ComplicatedPrimitives.LimitPoint`1.Type"/> docs.
+            For more defails, see <seealso cref="P:ComplicatedPrimitives.LimitPoint`1.Type" /> docs.
             </remarks>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.Map``1(System.Func{`0,``0})">
+            <member name="M:ComplicatedPrimitives.DirectedLimit`1.Map``1(System.Func{`0,``0})">
             <summary>
-            Maps this instance to <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> of <typeparamref name="TResult"/> using given <paramref name="mapper"/>.
+            Maps this instance to <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> of <typeparamref name="TResult" /> using given <paramref name="mapper" />.
             </summary>
             <typeparam name="TResult">Target type to map <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Point">extrem point</see> to.</typeparam>
-            <param name="mapper">Function that maps extrem point of type <typeparamref name="T"/> to type <typeparamref name="TResult"/>.</param>
+            <param name="mapper">Function that maps extrem point of type <typeparamref name="T" /> to type <typeparamref name="TResult" />.</param>
             <returns>
-            When this instance <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsDefined">is defined</see>, new <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> of <typeparamref name="TResult"/>
-            with then same <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Side">side</see>, but with <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Point">extreme point</see> being mapped using given <paramref name="mapper"/>;
-            otherwise, <see cref="F:ComplicatedPrimitives.DirectedLimit`1.Undefined">undefined directed limit</see> of <typeparamref name="TResult"/>.
+            When this instance <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsDefined">is defined</see>, new <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> of <typeparamref name="TResult" />
+            with then same <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Side">side</see>, but with <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Point">extreme point</see> being mapped using given <paramref name="mapper" />;
+            otherwise, <see cref="F:ComplicatedPrimitives.DirectedLimit`1.Undefined">undefined directed limit</see> of <typeparamref name="TResult" />.
             </returns>
             <remarks>
-            For more defails about mapping <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Point">extreme point</see>, see <seealso cref="M:ComplicatedPrimitives.LimitPoint`1.Map``1(System.Func{`0,``0})"/> docs.
+            For more defails about mapping <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Point">extreme point</see>, see <seealso cref="M:ComplicatedPrimitives.LimitPoint`1.Map``1(System.Func{`0,``0})" /> docs.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.Translate(System.Func{`0,`0})">
+            <member name="M:ComplicatedPrimitives.DirectedLimit`1.Translate(System.Func{`0,`0})">
             <summary>
-            Translates (moves) this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> using given <paramref name="translation"/>.
+            Translates (moves) this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> using given <paramref name="translation" />.
             </summary>
             <param name="translation">Function that translates directed limit's point.</param>
             <returns>
             When this instance <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsDefined">is defined</see>, new <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> with the same <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Side">side</see>,
-            but with <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Point">point</see> being translated using given <paramref name="translation"/>;
+            but with <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Point">point</see> being translated using given <paramref name="translation" />;
             otherwise, <see cref="F:ComplicatedPrimitives.DirectedLimit`1.Undefined">undefined</see>.
             </returns>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.GetComplement">
+            <member name="M:ComplicatedPrimitives.DirectedLimit`1.GetComplement">
             <summary>
             Gets <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> being complement of this instance.
             </summary>
@@ -1129,92 +1143,108 @@
             otherwise, <see cref="F:ComplicatedPrimitives.DirectedLimit`1.Undefined">undefined</see>.
             </returns>
             <remarks>
-            <para>For more defails about flipping <see cref="T:ComplicatedPrimitives.LimitPointType"/>, see <seealso cref="M:ComplicatedPrimitives.LimitPointTypeExtensions.Flip(ComplicatedPrimitives.LimitPointType)">this</seealso>.</para>
-            <para>For more defails about flipping <see cref="T:ComplicatedPrimitives.LimitSide"/>, see <seealso cref="M:ComplicatedPrimitives.LimitSideExtensions.Flip(ComplicatedPrimitives.LimitSide)">this</seealso>.</para>
+            <para>For more defails about flipping <see cref="T:ComplicatedPrimitives.LimitPointType" />, see <seealso cref="M:ComplicatedPrimitives.LimitPointTypeExtensions.Flip(ComplicatedPrimitives.LimitPointType)">this</seealso>.</para>
+            <para>For more defails about flipping <see cref="T:ComplicatedPrimitives.LimitSide" />, see <seealso cref="M:ComplicatedPrimitives.LimitSideExtensions.Flip(ComplicatedPrimitives.LimitSide)">this</seealso>.</para>
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.Complements(ComplicatedPrimitives.DirectedLimit{`0})">
+            <member name="M:ComplicatedPrimitives.DirectedLimit`1.Complements(ComplicatedPrimitives.DirectedLimit{`0})">
             <summary>
-            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> is exact complement of the <paramref name="other"/>.
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> is exact complement of the <paramref name="other" />.
             In other words, this function checks complementary relation between two directed limits. This relation is reversible.
             </summary>
             <param name="other">Directed limit to test complementary relation with.</param>
             <returns>
-            <see langword="true"/> if this instance is complement of the <paramref name="other"/>; otherwise, <see langword="false"/>.
+            <see langword="true" /> if this instance is complement of the <paramref name="other" />; otherwise, <see langword="false" />.
             </returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.Contains(`0)">
+            <member name="M:ComplicatedPrimitives.DirectedLimit`1.Contains(`0)">
             <summary>
-            Gets the value indicating whether <paramref name="value"/> belongs to set defined by this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see>.
+            Gets the value indicating whether <paramref name="value" /> belongs to set defined by this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see>.
             </summary>
-            <param name="value">Value of type <typeparamref name="T"/> to compare with this instance.</param>
+            <param name="value">Value of type <typeparamref name="T" /> to compare with this instance.</param>
             <returns>
-            <see langword="true"/> if <paramref name="value"/> belongs to set defined by this directed limit;
-            otherwise, <see langword="false"/>.
+            <see langword="true" /> if <paramref name="value" /> belongs to set defined by this directed limit;
+            otherwise, <see langword="false" />.
             </returns>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.IntersectsWith(ComplicatedPrimitives.DirectedLimit{`0})">
+            <member name="M:ComplicatedPrimitives.DirectedLimit`1.IntersectsWith(ComplicatedPrimitives.DirectedLimit{`0})">
             <summary>
-            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> and <paramref name="other"/> have non-empty intersection.
-            In other words, this function checks if there exists any non-empty set of <typeparamref name="T"/> that belongs to both this and <paramref name="other"/> directed limit.
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> and <paramref name="other" /> have non-empty intersection.
+            In other words, this function checks if there exists any non-empty set of <typeparamref name="T" /> that belongs to both this and <paramref name="other" /> directed limit.
             </summary>
             <param name="other">Directed limit to test intersecting relation with.</param>
             <returns>
-            <see langword="true"/> if <paramref name="other"/> has non-empty intersection with this directed limit.
-            otherwise, <see langword="false"/>.
+            <see langword="true" /> if <paramref name="other" /> has non-empty intersection with this directed limit.
+            otherwise, <see langword="false" />.
             </returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.IsProperSubsetOf(ComplicatedPrimitives.DirectedLimit{`0})">
+            <member name="M:ComplicatedPrimitives.DirectedLimit`1.IsProperSubsetOf(ComplicatedPrimitives.DirectedLimit{`0})">
             <summary>
-            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> is proper subset of the <paramref name="other"/> one.
-            In other words, this function checks if this directed limit <see cref="M:ComplicatedPrimitives.DirectedLimit`1.IsSubsetOf(ComplicatedPrimitives.DirectedLimit{`0})">is subset</see> of the <paramref name="other"/>
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> is proper subset of the <paramref name="other" /> one.
+            In other words, this function checks if this directed limit <see cref="M:ComplicatedPrimitives.DirectedLimit`1.IsSubsetOf(ComplicatedPrimitives.DirectedLimit{`0})">is subset</see> of the <paramref name="other" />
             directed limit but <see cref="M:ComplicatedPrimitives.DirectedLimit`1.Equals(ComplicatedPrimitives.DirectedLimit{`0})">is not equal</see> to it.
             </summary>
             <param name="other">Directed limit to test subset relation with.</param>
             <returns>
-            <see langword="true"/> if this instance is proper subset of the <paramref name="other"/> one;
-            otherwise, <see langword="false"/>.
-            If either this or the <paramref name="other"/> directed limit <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">is undefined</see>, the result is <see langword="false"/>.
+            <see langword="true" /> if this instance is proper subset of the <paramref name="other" /> one;
+            otherwise, <see langword="false" />.
+            If either this or the <paramref name="other" /> directed limit <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">is undefined</see>, the result is <see langword="false" />.
             </returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.IsSubsetOf(ComplicatedPrimitives.DirectedLimit{`0})">
+            <member name="M:ComplicatedPrimitives.DirectedLimit`1.IsSubsetOf(ComplicatedPrimitives.DirectedLimit{`0})">
             <summary>
-            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> is subset of the <paramref name="other"/> one.
-            In other words, this function checks if <paramref name="other"/> directed limit contains every <typeparamref name="T"/> from set defined by this directed limit.
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> is subset of the <paramref name="other" /> one.
+            In other words, this function checks if <paramref name="other" /> directed limit contains every <typeparamref name="T" /> from set defined by this directed limit.
             </summary>
             <param name="other">Directed limit to test subset relation with.</param>
             <returns>
-            <see langword="true"/> if this instance is subset of the <paramref name="other"/> one;
-            otherwise, <see langword="false"/>.
-            If either this or the <paramref name="other"/> directed limit <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">is undefined</see>, the result is <see langword="false"/>.
+            <see langword="true" /> if this instance is subset of the <paramref name="other" /> one;
+            otherwise, <see langword="false" />.
+            If either this or the <paramref name="other" /> directed limit <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">is undefined</see>, the result is <see langword="false" />.
             </returns>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.IsProperSupersetOf(ComplicatedPrimitives.DirectedLimit{`0})">
+            <member name="M:ComplicatedPrimitives.DirectedLimit`1.IsProperSupersetOf(ComplicatedPrimitives.DirectedLimit{`0})">
             <summary>
-            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> is proper superset of the <paramref name="other"/> one.
-            In other words, this function checks if this directed limit <see cref="M:ComplicatedPrimitives.DirectedLimit`1.IsSupersetOf(ComplicatedPrimitives.DirectedLimit{`0})">is superset</see> of the <paramref name="other"/>
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> is proper superset of the <paramref name="other" /> one.
+            In other words, this function checks if this directed limit <see cref="M:ComplicatedPrimitives.DirectedLimit`1.IsSupersetOf(ComplicatedPrimitives.DirectedLimit{`0})">is superset</see> of the <paramref name="other" />
             directed limit but <see cref="M:ComplicatedPrimitives.DirectedLimit`1.Equals(ComplicatedPrimitives.DirectedLimit{`0})">is not equal</see> to it.
             </summary>
             <param name="other">Directed limit to test superset relation with.</param>
             <returns>
-            <see langword="true"/> if this instance is proper superset of the <paramref name="other"/> one;
-            otherwise, <see langword="false"/>.
-            If either this or the <paramref name="other"/> directed limit <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">is undefined</see>, the result is <see langword="false"/>.
+            <see langword="true" /> if this instance is proper superset of the <paramref name="other" /> one;
+            otherwise, <see langword="false" />.
+            If either this or the <paramref name="other" /> directed limit <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">is undefined</see>, the result is <see langword="false" />.
             </returns>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.IsSupersetOf(ComplicatedPrimitives.DirectedLimit{`0})">
+            <member name="M:ComplicatedPrimitives.DirectedLimit`1.IsSupersetOf(ComplicatedPrimitives.DirectedLimit{`0})">
             <summary>
-            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> is superset of the <paramref name="other"/> one.
-            In other words, this function checks if this directed limit contains every <typeparamref name="T"/> from set defined by <paramref name="other"/> directed limit.
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> is superset of the <paramref name="other" /> one.
+            In other words, this function checks if this directed limit contains every <typeparamref name="T" /> from set defined by <paramref name="other" /> directed limit.
             </summary>
             <param name="other">Directed limit to test superset relation with.</param>
             <returns>
-            <see langword="true"/> if this instance is superset of the <paramref name="other"/> one;
-            otherwise, <see langword="false"/>.
-            If either this or the <paramref name="other"/> directed limit <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">is undefined</see>, the result is <see langword="false"/>.
+            <see langword="true" /> if this instance is superset of the <paramref name="other" /> one;
+            otherwise, <see langword="false" />.
+            If either this or the <paramref name="other" /> directed limit <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">is undefined</see>, the result is <see langword="false" />.
             </returns>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.ToString">
+            <member name="M:ComplicatedPrimitives.DirectedLimit`1.ToString">
             <summary>
             Converts this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> to its equivalent string representation following format:
             <list type="bullet">
@@ -1227,248 +1257,281 @@
             <item><description>signs representing <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Type">type</see> (<see cref="F:ComplicatedPrimitives.DirectedLimit`1.ClosedSign"><c>≤</c></see>, <see cref="F:ComplicatedPrimitives.DirectedLimit`1.OpenSign"><c>&lt;</c></see>);</description></item>
             <item><description>string representation of <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Value">value</see>.</description></item>
             </list>
-            When this instance <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">is undefined</see>, the <see cref="F:ComplicatedPrimitives.DirectedLimit`1.UndefinedString"/> is returned.
+            When this instance <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">is undefined</see>, the <see cref="F:ComplicatedPrimitives.DirectedLimit`1.UndefinedString" /> is returned.
             </returns>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.Equals(ComplicatedPrimitives.DirectedLimit{`0})">
+            <member name="M:ComplicatedPrimitives.DirectedLimit`1.Equals(ComplicatedPrimitives.DirectedLimit{`0})">
             <summary>
-            Checks whether this instance of <see cref="T:ComplicatedPrimitives.DirectedLimit`1"/> is equal to the <paramref name="other"/> one.
+            Checks whether this instance of <see cref="T:ComplicatedPrimitives.DirectedLimit`1" /> is equal to the <paramref name="other" /> one.
             </summary>
             <param name="other">Object to check equality with this instance.</param>
             <returns>
-            <see langword="true"/> if this instance is equal to the <paramref name="other"/> one which means:
+            <see langword="true" /> if this instance is equal to the <paramref name="other" /> one which means:
             <list type="bullet">
             <item><description>both instances <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsUndefined">are undefined</see>;</description></item>
             <item><description>both instances <see cref="P:ComplicatedPrimitives.DirectedLimit`1.IsDefined">are defined</see> and their <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Point">points</see> and <see cref="P:ComplicatedPrimitives.DirectedLimit`1.Side">sides</see> are equal;</description></item>
             </list>
-            otherwise, <see langword="false"/>.
+            otherwise, <see langword="false" />.
             </returns>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.Equals(System.Object)">
-            <inheritdoc/>
+            <!-- No matching elements were found for the following include tag --><include file="ComplicatedPrimitives.xml" path="//member[@name=&quot;M:ComplicatedPrimitives.DirectedLimit`1.DirectedLimit`1.Equals(System.Object)&quot;]" />
         </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.GetHashCode">
-            <inheritdoc/>
+            <member name="M:ComplicatedPrimitives.DirectedLimit`1.GetHashCode">
+            <inheritdoc />
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.CompareTo(ComplicatedPrimitives.DirectedLimit{`0})">
+            <member name="M:ComplicatedPrimitives.DirectedLimit`1.CompareTo(ComplicatedPrimitives.DirectedLimit{`0})">
             <summary>
-            Compares this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> to the <paramref name="other"/> one and returns an integer number that indicates
+            Compares this <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> to the <paramref name="other" /> one and returns an integer number that indicates
             whether this directed limit precedes, follows or occurs in the same position in the sort order as the other object
             </summary>
             <param name="other">Object to check compare this instance to.</param>
             <returns>
             Integer number as below:
             <list type="bullet">
-            <item><term>less than zero</term><description>this instance precedes <paramref name="other"/> in the sort order;</description></item>
-            <item><term>zero</term><description>this instance occurs in the same position in the sort order as <paramref name="other"/>;</description></item>
-            <item><term>greater than zero</term><description>this instance follows <paramref name="other"/> in the sort order;</description></item>
+            <item><term>less than zero</term><description>this instance precedes <paramref name="other" /> in the sort order;</description></item>
+            <item><term>zero</term><description>this instance occurs in the same position in the sort order as <paramref name="other" />;</description></item>
+            <item><term>greater than zero</term><description>this instance follows <paramref name="other" /> in the sort order;</description></item>
             </list>
             </returns>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.op_Equality(ComplicatedPrimitives.DirectedLimit{`0},ComplicatedPrimitives.DirectedLimit{`0})">
+            <member name="M:ComplicatedPrimitives.DirectedLimit`1.op_Equality(ComplicatedPrimitives.DirectedLimit{`0},ComplicatedPrimitives.DirectedLimit{`0})">
             <summary>
             Determines whether two specified <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> have the same value.
             </summary>
             <param name="left">The first directed limit to compare.</param>
             <param name="right">The second directed limit to compare.</param>
-            <returns><see langword="true"/> if the value of <paramref name="left"/> is the same as the value of <paramref name="right"/>;
-            otherwise, <see langword="false"/>.</returns>
+            <returns><see langword="true" /> if the value of <paramref name="left" /> is the same as the value of <paramref name="right" />;
+            otherwise, <see langword="false" />.</returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.op_Inequality(ComplicatedPrimitives.DirectedLimit{`0},ComplicatedPrimitives.DirectedLimit{`0})">
+            <member name="M:ComplicatedPrimitives.DirectedLimit`1.op_Inequality(ComplicatedPrimitives.DirectedLimit{`0},ComplicatedPrimitives.DirectedLimit{`0})">
             <summary>
             Determines whether two specified <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> have different values.
             </summary>
             <param name="left">The first directed limit to compare.</param>
             <param name="right">The second directed limit to compare.</param>
-            <returns><see langword="true"/> if the value of <paramref name="left"/> is different from the value of <paramref name="right"/>;
-            otherwise, <see langword="false"/>.</returns>
+            <returns><see langword="true" /> if the value of <paramref name="left" /> is different from the value of <paramref name="right" />;
+            otherwise, <see langword="false" />.</returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.op_OnesComplement(ComplicatedPrimitives.DirectedLimit{`0})">
+            <member name="M:ComplicatedPrimitives.DirectedLimit`1.op_OnesComplement(ComplicatedPrimitives.DirectedLimit{`0})">
             <summary>
-            Produces a complementary <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> of the given <paramref name="operand"/>.
+            Produces a complementary <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limit</see> of the given <paramref name="operand" />.
             </summary>
             <param name="operand">Directed limit to produce complement of.</param>
-            <returns>The result of <see cref="M:ComplicatedPrimitives.DirectedLimit`1.GetComplement"/> method called on <paramref name="operand"/>.</returns>
+            <returns>The result of <see cref="M:ComplicatedPrimitives.DirectedLimit`1.GetComplement" /> method called on <paramref name="operand" />.</returns>
+        </member>
         </member>
         <member name="T:ComplicatedPrimitives.DirectedLimit">
-            <summary>
-            Provides operations for performing 'limit algebra' on <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limits</see>.
-            </summary>
+            <!-- No matching elements were found for the following include tag --><include file="ComplicatedPrimitives.xml" path="//member[@name=&quot;M:ComplicatedPrimitives.DirectedLimit&quot;]" />
         </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit.ProperSubset``1(ComplicatedPrimitives.DirectedLimit{``0},ComplicatedPrimitives.DirectedLimit{``0})">
+            <member name="M:ComplicatedPrimitives.DirectedLimit.ProperSubset``1(ComplicatedPrimitives.DirectedLimit{``0},ComplicatedPrimitives.DirectedLimit{``0})">
             <summary>
             Chooses the <see cref="M:ComplicatedPrimitives.DirectedLimit`1.IsProperSubsetOf(ComplicatedPrimitives.DirectedLimit{`0})">proper subset</see> of the two <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limits</see>.
             </summary>
             <typeparam name="T">Type of limit point's value (limit's domain).</typeparam>
-            <param name="limit1">Directed limit to check 'proper subset' relation against the <paramref name="limit2"/>.</param>
-            <param name="limit2">Directed limit to check 'proper subset' relation against the <paramref name="limit1"/>.</param>
+            <param name="limit1">Directed limit to check 'proper subset' relation against the <paramref name="limit2" />.</param>
+            <param name="limit2">Directed limit to check 'proper subset' relation against the <paramref name="limit1" />.</param>
             <returns>
             <list type="bullet">
-            <item><term><paramref name="limit1"/></term><description>when <paramref name="limit1"/> is a proper subset of <paramref name="limit2"/>;</description></item>
-            <item><term><paramref name="limit2"/></term><description>when <paramref name="limit2"/> is a proper subset of <paramref name="limit1"/>;</description></item>
+            <item><term><paramref name="limit1" /></term><description>when <paramref name="limit1" /> is a proper subset of <paramref name="limit2" />;</description></item>
+            <item><term><paramref name="limit2" /></term><description>when <paramref name="limit2" /> is a proper subset of <paramref name="limit1" />;</description></item>
             </list>
             </returns>
             <exception cref="T:System.InvalidOperationException">neither of given limits is a proper subset of the other one</exception>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit.ProperSuperset``1(ComplicatedPrimitives.DirectedLimit{``0},ComplicatedPrimitives.DirectedLimit{``0})">
+            <member name="M:ComplicatedPrimitives.DirectedLimit.ProperSuperset``1(ComplicatedPrimitives.DirectedLimit{``0},ComplicatedPrimitives.DirectedLimit{``0})">
             <summary>
             Chooses the <see cref="M:ComplicatedPrimitives.DirectedLimit`1.IsProperSupersetOf(ComplicatedPrimitives.DirectedLimit{`0})">proper superset</see> of the two <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limits</see>.
             </summary>
             <typeparam name="T">Type of limit point's value (limit's domain).</typeparam>
-            <param name="limit1">Directed limit to check 'proper superset' relation against the <paramref name="limit2"/>.</param>
-            <param name="limit2">Directed limit to check 'proper superset' relation against the <paramref name="limit1"/>.</param>
+            <param name="limit1">Directed limit to check 'proper superset' relation against the <paramref name="limit2" />.</param>
+            <param name="limit2">Directed limit to check 'proper superset' relation against the <paramref name="limit1" />.</param>
             <returns>
             <list type="bullet">
-            <item><term><paramref name="limit1"/></term><description>when <paramref name="limit1"/> is a proper superset of <paramref name="limit2"/>;</description></item>
-            <item><term><paramref name="limit2"/></term><description>when <paramref name="limit2"/> is a proper superset of <paramref name="limit1"/>;</description></item>
+            <item><term><paramref name="limit1" /></term><description>when <paramref name="limit1" /> is a proper superset of <paramref name="limit2" />;</description></item>
+            <item><term><paramref name="limit2" /></term><description>when <paramref name="limit2" /> is a proper superset of <paramref name="limit1" />;</description></item>
             </list>
             </returns>
             <exception cref="T:System.InvalidOperationException">neither of given limits is a proper superset of the other one</exception>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit.Subset``1(ComplicatedPrimitives.DirectedLimit{``0},ComplicatedPrimitives.DirectedLimit{``0})">
+            <member name="M:ComplicatedPrimitives.DirectedLimit.Subset``1(ComplicatedPrimitives.DirectedLimit{``0},ComplicatedPrimitives.DirectedLimit{``0})">
             <summary>
             Chooses the <see cref="M:ComplicatedPrimitives.DirectedLimit`1.IsSubsetOf(ComplicatedPrimitives.DirectedLimit{`0})">subset</see> of the two <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limits</see>.
             </summary>
             <typeparam name="T">Type of limit point's value (limit's domain).</typeparam>
-            <param name="limit1">Directed limit to check 'subset' relation against the <paramref name="limit2"/>.</param>
-            <param name="limit2">Directed limit to check 'subset' relation against the <paramref name="limit1"/>.</param>
+            <param name="limit1">Directed limit to check 'subset' relation against the <paramref name="limit2" />.</param>
+            <param name="limit2">Directed limit to check 'subset' relation against the <paramref name="limit1" />.</param>
             <returns>
             <list type="bullet">
-            <item><term><paramref name="limit1"/></term><description>when <paramref name="limit1"/> is a subset of <paramref name="limit2"/>;</description></item>
-            <item><term><paramref name="limit2"/></term><description>when <paramref name="limit2"/> is a subset of <paramref name="limit1"/>;</description></item>
+            <item><term><paramref name="limit1" /></term><description>when <paramref name="limit1" /> is a subset of <paramref name="limit2" />;</description></item>
+            <item><term><paramref name="limit2" /></term><description>when <paramref name="limit2" /> is a subset of <paramref name="limit1" />;</description></item>
             </list>
             </returns>
             <exception cref="T:System.InvalidOperationException">neither of given limits is a subset of the other one</exception>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit.Superset``1(ComplicatedPrimitives.DirectedLimit{``0},ComplicatedPrimitives.DirectedLimit{``0})">
+            <member name="M:ComplicatedPrimitives.DirectedLimit.Superset``1(ComplicatedPrimitives.DirectedLimit{``0},ComplicatedPrimitives.DirectedLimit{``0})">
             <summary>
             Chooses the <see cref="M:ComplicatedPrimitives.DirectedLimit`1.IsSupersetOf(ComplicatedPrimitives.DirectedLimit{`0})">superset</see> of the two <see cref="T:ComplicatedPrimitives.DirectedLimit`1">directed limits</see>.
             </summary>
             <typeparam name="T">Type of limit point's value (limit's domain).</typeparam>
-            <param name="limit1">Directed limit to check 'superset' relation against the <paramref name="limit2"/>.</param>
-            <param name="limit2">Directed limit to check 'superset' relation against the <paramref name="limit1"/>.</param>
+            <param name="limit1">Directed limit to check 'superset' relation against the <paramref name="limit2" />.</param>
+            <param name="limit2">Directed limit to check 'superset' relation against the <paramref name="limit1" />.</param>
             <returns>
             <list type="bullet">
-            <item><term><paramref name="limit1"/></term><description>when <paramref name="limit1"/> is a superset of <paramref name="limit2"/>;</description></item>
-            <item><term><paramref name="limit2"/></term><description>when <paramref name="limit2"/> is a superset of <paramref name="limit1"/>;</description></item>
+            <item><term><paramref name="limit1" /></term><description>when <paramref name="limit1" /> is a superset of <paramref name="limit2" />;</description></item>
+            <item><term><paramref name="limit2" /></term><description>when <paramref name="limit2" /> is a superset of <paramref name="limit1" />;</description></item>
             </list>
             </returns>
             <exception cref="T:System.InvalidOperationException">neither of given limits is a superset of the other one</exception>
         </member>
+        </member>
         <member name="T:ComplicatedPrimitives.IComparativeSet`2">
+            <member name="T:ComplicatedPrimitives.IComparativeSet`2">
             <summary>
             Exposes interface providing mathematical set relations and operations.
             </summary>
             <typeparam name="TSet">Type of set to handle.</typeparam>
             <typeparam name="T">Type of set's element.</typeparam>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.IComparativeSet`2.Contains(`1)">
+            <member name="M:ComplicatedPrimitives.IComparativeSet`2.Contains(`1)">
             <summary>
-            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.IComparativeSet`2">set</see> contains given <paramref name="value"/>.
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.IComparativeSet`2">set</see> contains given <paramref name="value" />.
             This function is equivalent of mathematical expression:
             <code>x ∊ A</code>
             where:
             <list type="bullet">
-            <item><term>A</term><description>this instance of <see cref="T:ComplicatedPrimitives.IComparativeSet`2"/>,</description></item>
-            <item><term>x</term><description><paramref name="value"/>.</description></item>
+            <item><term>A</term><description>this instance of <see cref="T:ComplicatedPrimitives.IComparativeSet`2" />,</description></item>
+            <item><term>x</term><description><paramref name="value" />.</description></item>
             </list>
             </summary>
             <param name="value">Value to check inclusion relation of.</param>
-            <returns><see langword="true"/> if the <paramref name="value"/> belongs to this set; otherwise <see langword="false"/>.</returns>
+            <returns><see langword="true" /> if the <paramref name="value" /> belongs to this set; otherwise <see langword="false" />.</returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.IComparativeSet`2.IntersectsWith(`0)">
+            <member name="M:ComplicatedPrimitives.IComparativeSet`2.IntersectsWith(`0)">
             <summary>
-            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.IComparativeSet`2">set</see> intersects (has common elements) with the <paramref name="other"/> set.
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.IComparativeSet`2">set</see> intersects (has common elements) with the <paramref name="other" /> set.
             This function is equivalent of mathematical expression:
             <code>A ∩ B ≠ ∅</code>
             where:
             <list type="bullet">
-            <item><term>A</term><description>this instance of <see cref="T:ComplicatedPrimitives.IComparativeSet`2"/>,</description></item>
-            <item><term>B</term><description><paramref name="other"/>.</description></item>
+            <item><term>A</term><description>this instance of <see cref="T:ComplicatedPrimitives.IComparativeSet`2" />,</description></item>
+            <item><term>B</term><description><paramref name="other" />.</description></item>
             </list>
             </summary>
             <param name="other">Other set to check intersection relation with.</param>
-            <returns><see langword="true"/> if the <paramref name="other"/> has common elements with this set; otherwise <see langword="false"/>.</returns>
+            <returns><see langword="true" /> if the <paramref name="other" /> has common elements with this set; otherwise <see langword="false" />.</returns>
+        </member>
         </member>
         <member name="M:ComplicatedPrimitives.IComparativeSet`2.IsSubsetOf(`0)">
+            <member name="M:ComplicatedPrimitives.IComparativeSet`2.IsSubsetOf(`0)">
             <summary>
-            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.IComparativeSet`2">set</see> is a subset of the <paramref name="other"/> set.
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.IComparativeSet`2">set</see> is a subset of the <paramref name="other" /> set.
             This function is equivalent of mathematical expression:
             <code>A ⊆ B</code>
             where:
             <list type="bullet">
-            <item><term>A</term><description>this instance of <see cref="!:IRange&lt;TSet, T&gt;"/>,</description></item>
-            <item><term>B</term><description><paramref name="other"/>.</description></item>
+            <item><term>A</term><description>this instance of <see cref="!:IRange&lt;TSet, T&gt;" />,</description></item>
+            <item><term>B</term><description><paramref name="other" />.</description></item>
             </list>
             </summary>
             <param name="other">Set to check inclusion relation with.</param>
             <returns>
-            <see langword="true"/> if this set is a subset of the <paramref name="other"/> one; otherwise <see langword="false"/>.
+            <see langword="true" /> if this set is a subset of the <paramref name="other" /> one; otherwise <see langword="false" />.
             </returns>
             <remarks>
             This function checks the weak inclusion relation which means that a set is in a given relation with itself (or equal set).
-            To check strict version of this relation (excluding equal sets), use <see cref="M:ComplicatedPrimitives.IComparativeSet`2.IsProperSubsetOf(`0)"/>.
+            To check strict version of this relation (excluding equal sets), use <see cref="M:ComplicatedPrimitives.IComparativeSet`2.IsProperSubsetOf(`0)" />.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.IComparativeSet`2.IsProperSubsetOf(`0)">
+            <member name="M:ComplicatedPrimitives.IComparativeSet`2.IsProperSubsetOf(`0)">
             <summary>
-            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.IComparativeSet`2">set</see> is a proper subset of the <paramref name="other"/> set.
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.IComparativeSet`2">set</see> is a proper subset of the <paramref name="other" /> set.
             This function is equivalent of mathematical expression:
             <code>A ⊂ B</code>
             where:
             <list type="bullet">
-            <item><term>A</term><description>this instance of <see cref="T:ComplicatedPrimitives.IComparativeSet`2"/>,</description></item>
-            <item><term>B</term><description><paramref name="other"/>.</description></item>
+            <item><term>A</term><description>this instance of <see cref="T:ComplicatedPrimitives.IComparativeSet`2" />,</description></item>
+            <item><term>B</term><description><paramref name="other" />.</description></item>
             </list>
             </summary>
             <param name="other">Set to check strict inclusion relation with.</param>
             <returns>
-            <see langword="true"/> if this set is a proper subset of the <paramref name="other"/> one; otherwise <see langword="false"/>.
+            <see langword="true" /> if this set is a proper subset of the <paramref name="other" /> one; otherwise <see langword="false" />.
             </returns>
             <remarks>
             This function checks the strict inclusion relation which means that a set is not in a given relation with itself (or equal set).
-            To check weak version of this relation (excluding equal sets), use <see cref="M:ComplicatedPrimitives.IComparativeSet`2.IsSubsetOf(`0)"/>.
+            To check weak version of this relation (excluding equal sets), use <see cref="M:ComplicatedPrimitives.IComparativeSet`2.IsSubsetOf(`0)" />.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.IComparativeSet`2.IsSupersetOf(`0)">
+            <member name="M:ComplicatedPrimitives.IComparativeSet`2.IsSupersetOf(`0)">
             <summary>
-            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.IComparativeSet`2">set</see> is a superset of the <paramref name="other"/> set.
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.IComparativeSet`2">set</see> is a superset of the <paramref name="other" /> set.
             This function is equivalent of mathematical expression:
             <code>A ⊇ B</code>
             where:
             <list type="bullet">
-            <item><term>A</term><description>this instance of <see cref="!:IRange&lt;TSet, T&gt;"/>,</description></item>
-            <item><term>B</term><description><paramref name="other"/>.</description></item>
+            <item><term>A</term><description>this instance of <see cref="!:IRange&lt;TSet, T&gt;" />,</description></item>
+            <item><term>B</term><description><paramref name="other" />.</description></item>
             </list>
             </summary>
             <param name="other">Set to check inclusion relation with.</param>
             <returns>
-            <see langword="true"/> if this set is a superset of the <paramref name="other"/> one; otherwise <see langword="false"/>.
+            <see langword="true" /> if this set is a superset of the <paramref name="other" /> one; otherwise <see langword="false" />.
             </returns>
             <remarks>
             This function checks the weak inclusion relation which means that a set is in a given relation with itself (or equal set).
-            To check strict version of this relation (excluding equal sets), use <see cref="M:ComplicatedPrimitives.IComparativeSet`2.IsProperSupersetOf(`0)"/>.
+            To check strict version of this relation (excluding equal sets), use <see cref="M:ComplicatedPrimitives.IComparativeSet`2.IsProperSupersetOf(`0)" />.
             </remarks>
         </member>
+        </member>
         <member name="M:ComplicatedPrimitives.IComparativeSet`2.IsProperSupersetOf(`0)">
+            <member name="M:ComplicatedPrimitives.IComparativeSet`2.IsProperSupersetOf(`0)">
             <summary>
-            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.IComparativeSet`2">set</see> is a proper superset of the <paramref name="other"/> set.
+            Gets the value indicating whether this <see cref="T:ComplicatedPrimitives.IComparativeSet`2">set</see> is a proper superset of the <paramref name="other" /> set.
             This function is equivalent of mathematical expression:
             <code>A ⊃ B</code>
             where:
             <list type="bullet">
-            <item><term>A</term><description>this instance of <see cref="T:ComplicatedPrimitives.IComparativeSet`2"/>,</description></item>
-            <item><term>B</term><description><paramref name="other"/>.</description></item>
+            <item><term>A</term><description>this instance of <see cref="T:ComplicatedPrimitives.IComparativeSet`2" />,</description></item>
+            <item><term>B</term><description><paramref name="other" />.</description></item>
             </list>
             </summary>
             <param name="other">Set to check strict inclusion relation with.</param>
             <returns>
-            <see langword="true"/> if this set is a proper superset of the <paramref name="other"/> one; otherwise <see langword="false"/>.
+            <see langword="true" /> if this set is a proper superset of the <paramref name="other" /> one; otherwise <see langword="false" />.
             </returns>
             <remarks>
             This function checks the strict inclusion relation which means that a set is not in a given relation with itself (or equal set).
-            To check weak version of this relation (excluding equal sets), use <see cref="M:ComplicatedPrimitives.IComparativeSet`2.IsSupersetOf(`0)"/>.
+            To check weak version of this relation (excluding equal sets), use <see cref="M:ComplicatedPrimitives.IComparativeSet`2.IsSupersetOf(`0)" />.
             </remarks>
+        </member>
         </member>
         <member name="T:ComplicatedPrimitives.IParser`1">
             <summary>

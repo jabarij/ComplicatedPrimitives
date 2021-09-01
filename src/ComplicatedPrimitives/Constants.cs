@@ -2,11 +2,12 @@
 {
     internal class Constants
     {
-        internal const char LeftOpenSign = '>';
-        internal const char LeftClosedSign = '≥';
-        internal const char RightOpenSign = '<';
-        internal const char RightClosedSign = '≤';
+        public const char LeftOpenSign = '>';
+        public const char LeftClosedSign = '≥';
+        public const char RightOpenSign = '<';
+        public const char RightClosedSign = '≤';
 
+        public const string UndefinedString = "undefined";
         public const string InfinityString = "∞";
         public const string EmptySetString = "Ø";
         public const string ValueSeparatorString = ";";
@@ -15,8 +16,8 @@
         public const string RightOpenLimitTypeString = ")";
         public const string RightClosedLimitTypeString = "]";
 
-        internal const string LeftInfiniteValueString = LeftOpenLimitTypeString + InfinityString;
-        internal const string RightInfiniteValueString = InfinityString + RightOpenLimitTypeString;
-        internal const string InfiniteRangeString = LeftInfiniteValueString + ValueSeparatorString + RightInfiniteValueString;
+        public const string LeftInfiniteValueString = LeftOpenLimitTypeString + InfinityString;
+        public const string RightInfiniteValueString = InfinityString + RightOpenLimitTypeString;
+        public const string InfiniteRangeString = LeftInfiniteValueString + ValueSeparatorString + RightInfiniteValueString;
     }
 }
