@@ -15,7 +15,8 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\src\complicatedprimitives\src\ComplicatedPrimitives\ComplicatedPrimitives.xml</DocumentationFile>
+    <DocumentationFile>C:\src\complicatedprimitives\docs\apidocs\ComplicatedPrimitives.xml</DocumentationFile>
+    <OutputPath></OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
