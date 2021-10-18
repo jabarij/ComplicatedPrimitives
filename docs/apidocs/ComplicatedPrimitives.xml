@@ -5,195 +5,166 @@
     </assembly>
     <members>
         <member name="T:ComplicatedPrimitives.CaseInsensitiveString">
-            <member name="T:ComplicatedPrimitives.CaseInsensitiveString">
             <summary>
             Wraps System.String implicitly ignoring character case whenever it matters in case of normal string.
             </summary>
         </member>
-        </member>
         <member name="F:ComplicatedPrimitives.CaseInsensitiveString.Empty">
-            <member name="F:ComplicatedPrimitives.CaseInsensitiveString.Empty">
             <summary>
             Represents the empty case insensitive string.
             </summary>
         </member>
-        </member>
         <member name="M:ComplicatedPrimitives.CaseInsensitiveString.#ctor(System.String)">
-            <member name="M:ComplicatedPrimitives.CaseInsensitiveString.#ctor(System.String)">
             <summary>
-            Creates a new instance of <see cref="T:ComplicatedPrimitives.CaseInsensitiveString" /> wrapping a specified <paramref name="str" />.
+            Creates a new instance of <see cref="T:ComplicatedPrimitives.CaseInsensitiveString"/> wrapping a specified <paramref name="str"/>.
             </summary>
             <param name="str">String value to wrap as case insensitive string.</param>
         </member>
-        </member>
         <member name="M:ComplicatedPrimitives.CaseInsensitiveString.ToString">
-            <member name="M:ComplicatedPrimitives.CaseInsensitiveString.ToString">
             <summary>
             Returns underlying string value of this instance; no actual conversion is performed.
             </summary>
-            <returns>Exact original string value specified when creating this instance of <see cref="T:ComplicatedPrimitives.CaseInsensitiveString" />.</returns>
-        </member>
+            <returns>Exact original string value specified when creating this instance of <see cref="T:ComplicatedPrimitives.CaseInsensitiveString"/>.</returns>
         </member>
         <member name="M:ComplicatedPrimitives.CaseInsensitiveString.Equals(ComplicatedPrimitives.CaseInsensitiveString,ComplicatedPrimitives.CaseInsensitiveStringComparison)">
-            <member name="M:ComplicatedPrimitives.CaseInsensitiveString.Equals(ComplicatedPrimitives.CaseInsensitiveString,ComplicatedPrimitives.CaseInsensitiveStringComparison)">
             <summary>
-            Determines whether this instance of <see cref="T:ComplicatedPrimitives.CaseInsensitiveString" /> and the <paramref name="other" /> one have the same value ignoring case differences between characters.
+            Determines whether this instance of <see cref="T:ComplicatedPrimitives.CaseInsensitiveString"/> and the <paramref name="other"/> one have the same value ignoring case differences between characters.
             A parameter specifies the culture and sort rules used in the comparison.
             </summary>
             <param name="other">Case insensitive string to compare to this instance.</param>
             <param name="comparisonType">Value specifying how the case insensitive strings will be compared.</param>
             <returns>
-            <see langword="true" /> if <paramref name="other" /> is case insensitive equivalent of this instance;
-            otherwise <see langword="false" />.
+            <see langword="true"/> if <paramref name="other"/> is case insensitive equivalent of this instance;
+            otherwise <see langword="false"/>.
             </returns>
         </member>
-        </member>
         <member name="M:ComplicatedPrimitives.CaseInsensitiveString.Equals(ComplicatedPrimitives.CaseInsensitiveString)">
-            <member name="M:ComplicatedPrimitives.CaseInsensitiveString.Equals(ComplicatedPrimitives.CaseInsensitiveString)">
             <summary>
-            Determines whether this instance of <see cref="T:ComplicatedPrimitives.CaseInsensitiveString" /> and the <paramref name="other" /> one have the same value ignoring case differences between characters.
+            Determines whether this instance of <see cref="T:ComplicatedPrimitives.CaseInsensitiveString"/> and the <paramref name="other"/> one have the same value ignoring case differences between characters.
             A parameter specifies the culture and sort rules used in the comparison.
             </summary>
             <param name="other">Case insensitive string to compare to this instance.</param>
             <returns>
-            <see langword="true" /> if <paramref name="other" /> is case insensitive equivalent of this instance;
-            otherwise <see langword="false" />.
+            <see langword="true"/> if <paramref name="other"/> is case insensitive equivalent of this instance;
+            otherwise <see langword="false"/>.
             </returns>
         </member>
-        </member>
         <member name="M:ComplicatedPrimitives.CaseInsensitiveString.Equals(System.String)">
-            <member name="M:ComplicatedPrimitives.CaseInsensitiveString.Equals(System.String)">
             <summary>
-            Determines whether this instance of <see cref="T:ComplicatedPrimitives.CaseInsensitiveString" /> and the <paramref name="other" /> string value have the same value ignoring case differences between characters.
-            A parameter specifies the culture and sort rules used in the comparison.
+            Determines whether this instance of <see cref="T:ComplicatedPrimitives.CaseInsensitiveString"/> and the <paramref name="other"/> string value have the same value ignoring case differences between characters.
             </summary>
             <param name="other">String to compare to this instance.</param>
             <returns>
-            <see langword="true" /> if <paramref name="other" /> is case insensitive equivalent of this instance;
-            otherwise <see langword="false" />.
+            <see langword="true"/> if <paramref name="other"/> is case insensitive equivalent of this instance;
+            otherwise <see langword="false"/>.
             </returns>
         </member>
-        </member>
         <member name="M:ComplicatedPrimitives.CaseInsensitiveString.Equals(System.Object)">
-            <member name="M:ComplicatedPrimitives.CaseInsensitiveString.Equals(System.Object)">
-            <inheritdoc />
-        </member>
+            <summary>
+            Determines whether this instance of <see cref="T:ComplicatedPrimitives.CaseInsensitiveString"/> and the <paramref name="obj"/> are equal.
+            </summary>
+            <param name="obj">Object to compare to this instance.</param>
+            <returns>
+            <see langword="true"/> if <paramref name="obj"/> is instance of String or <see cref="T:ComplicatedPrimitives.CaseInsensitiveString"/> and equal to this instance;
+            otherwise <see langword="false"/>.
+            </returns>
         </member>
         <member name="M:ComplicatedPrimitives.CaseInsensitiveString.GetHashCode">
-            <member name="M:ComplicatedPrimitives.CaseInsensitiveString.GetHashCode">
-            <inheritdoc />
-        </member>
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
         </member>
         <member name="M:ComplicatedPrimitives.CaseInsensitiveString.op_Equality(ComplicatedPrimitives.CaseInsensitiveString,ComplicatedPrimitives.CaseInsensitiveString)">
-            <member name="M:ComplicatedPrimitives.CaseInsensitiveString.op_Equality(ComplicatedPrimitives.CaseInsensitiveString,ComplicatedPrimitives.CaseInsensitiveString)">
             <summary>
             Determines whether two specified <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive strings</see> have the same value.
             </summary>
             <param name="left">The first case insensitive strings to compare.</param>
             <param name="right">The second case insensitive strings to compare.</param>
             <returns>
-            <see langword="true" /> if the value of <paramref name="left" /> is the same as the value of <paramref name="right" />;
-            otherwise, <see langword="false" />.
+            <see langword="true"/> if the value of <paramref name="left"/> is the same as the value of <paramref name="right"/>;
+            otherwise, <see langword="false"/>.
             </returns>
         </member>
-        </member>
         <member name="M:ComplicatedPrimitives.CaseInsensitiveString.op_Inequality(ComplicatedPrimitives.CaseInsensitiveString,ComplicatedPrimitives.CaseInsensitiveString)">
-            <member name="M:ComplicatedPrimitives.CaseInsensitiveString.op_Inequality(ComplicatedPrimitives.CaseInsensitiveString,ComplicatedPrimitives.CaseInsensitiveString)">
             <summary>
             Determines whether two specified <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive strings</see> have different values.
             </summary>
             <param name="left">The first case insensitive string to compare.</param>
             <param name="right">The second case insensitive string to compare.</param>
-            <returns><see langword="true" /> if the value of <paramref name="left" /> is different from the value of <paramref name="right" />;
-            otherwise, <see langword="false" />.</returns>
-        </member>
+            <returns><see langword="true"/> if the value of <paramref name="left"/> is different from the value of <paramref name="right"/>;
+            otherwise, <see langword="false"/>.</returns>
         </member>
         <member name="M:ComplicatedPrimitives.CaseInsensitiveString.op_Implicit(ComplicatedPrimitives.CaseInsensitiveString)~System.String">
-            <member name="M:ComplicatedPrimitives.CaseInsensitiveString.op_Implicit(ComplicatedPrimitives.CaseInsensitiveString)~System.String">
             <summary>
-            Implicitly casts <paramref name="value" /> to string by returning its underlying string value; no actual conversion is performed.
+            Implicitly casts <paramref name="value"/> to string by returning its underlying string value; no actual conversion is performed.
             </summary>
             <param name="value">Case insensitive string value to cast.</param>
-        </member>
         </member>
         <member name="M:ComplicatedPrimitives.CaseInsensitiveString.op_Implicit(System.Nullable{ComplicatedPrimitives.CaseInsensitiveString})~System.String">
-            <member name="M:ComplicatedPrimitives.CaseInsensitiveString.op_Implicit(System.Nullable{ComplicatedPrimitives.CaseInsensitiveString})~System.String">
             <summary>
-            Implicitly casts <paramref name="value" /> to string by returning its underlying string value or null; no actual conversion is performed.
+            Implicitly casts <paramref name="value"/> to string by returning its underlying string value or null; no actual conversion is performed.
             </summary>
             <param name="value">Case insensitive string value to cast.</param>
         </member>
-        </member>
         <member name="M:ComplicatedPrimitives.CaseInsensitiveString.op_Implicit(System.String)~ComplicatedPrimitives.CaseInsensitiveString">
-            <member name="M:ComplicatedPrimitives.CaseInsensitiveString.op_Implicit(System.String)~ComplicatedPrimitives.CaseInsensitiveString">
             <summary>
-            Implicitly casts <paramref name="value" /> to case insensitive string by passing the argument value to the new instance of <see cref="T:ComplicatedPrimitives.CaseInsensitiveString" />.
+            Implicitly casts <paramref name="value"/> to case insensitive string by passing the argument value to the new instance of <see cref="T:ComplicatedPrimitives.CaseInsensitiveString"/>.
             </summary>
             <param name="value">String value to cast.</param>
         </member>
-        </member>
         <member name="M:ComplicatedPrimitives.CaseInsensitiveString.Equals(System.Nullable{ComplicatedPrimitives.CaseInsensitiveString},System.Nullable{ComplicatedPrimitives.CaseInsensitiveString},ComplicatedPrimitives.CaseInsensitiveStringComparison)">
-            <member name="M:ComplicatedPrimitives.CaseInsensitiveString.Equals(System.Nullable{ComplicatedPrimitives.CaseInsensitiveString},System.Nullable{ComplicatedPrimitives.CaseInsensitiveString},ComplicatedPrimitives.CaseInsensitiveStringComparison)">
             <summary>
-            Determines whether two specified <see cref="T:ComplicatedPrimitives.CaseInsensitiveString" /> objects have the same value ignoring case differences between characters..
+            Determines whether two specified <see cref="T:ComplicatedPrimitives.CaseInsensitiveString"/> objects have the same value ignoring case differences between characters..
             A parameter specifies the culture and sort rules used in the comparison.
             </summary>
             <param name="a">The first case insensitive string to compare, or null.</param>
             <param name="b">The second case insensitive string to compare, or null.</param>
             <param name="comparisonType">Value specifying how the case insensitive strings will be compared.</param>
             <returns>
-            <see langword="true" /> if both <paramref name="a" /> and <paramref name="b" /> are null or case insensitive equivalents;
-            otherwise <see langword="false" />.
+            <see langword="true"/> if both <paramref name="a"/> and <paramref name="b"/> are null or case insensitive equivalents;
+            otherwise <see langword="false"/>.
             </returns>
-        </member>
         </member>
         <member name="M:ComplicatedPrimitives.CaseInsensitiveString.IsNullOrEmpty(ComplicatedPrimitives.CaseInsensitiveString)">
-            <member name="M:ComplicatedPrimitives.CaseInsensitiveString.IsNullOrEmpty(ComplicatedPrimitives.CaseInsensitiveString)">
             <summary>
-            Determines whether given <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive</see> <paramref name="value" /> represents a null or empty string.
+            Determines whether given <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive</see> <paramref name="value"/> represents a null or empty string.
             </summary>
             <param name="value">Value to check.</param>
             <returns>
-            <see langword="true" /> if underlying string of <paramref name="value" /> is either null or empty;
-            otherwise <see langword="true" />.
+            <see langword="true"/> if underlying string of <paramref name="value"/> is either null or empty;
+            otherwise <see langword="true"/>.
             </returns>
-        </member>
         </member>
         <member name="M:ComplicatedPrimitives.CaseInsensitiveString.IsNullOrWhiteSpace(ComplicatedPrimitives.CaseInsensitiveString)">
-            <member name="M:ComplicatedPrimitives.CaseInsensitiveString.IsNullOrWhiteSpace(ComplicatedPrimitives.CaseInsensitiveString)">
             <summary>
-            Determines whether given <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive</see> <paramref name="value" /> represents a null, empty or consisted of white-spaces only string.
+            Determines whether given <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive</see> <paramref name="value"/> represents a null, empty or consisted of white-spaces only string.
             </summary>
             <param name="value">Value to check.</param>
             <returns>
-            <see langword="true" /> if underlying string of <paramref name="value" /> is either null or empty or consists of white-spaces only;
-            otherwise <see langword="true" />.
+            <see langword="true"/> if underlying string of <paramref name="value"/> is either null or empty or consists of white-spaces only;
+            otherwise <see langword="true"/>.
             </returns>
-        </member>
         </member>
         <member name="M:ComplicatedPrimitives.CaseInsensitiveString.IsNullOrEmpty(System.Nullable{ComplicatedPrimitives.CaseInsensitiveString})">
-            <member name="M:ComplicatedPrimitives.CaseInsensitiveString.IsNullOrEmpty(System.Nullable{ComplicatedPrimitives.CaseInsensitiveString})">
             <summary>
-            Determines whether given nullable <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive</see> <paramref name="value" /> represents a null or empty string.
+            Determines whether given nullable <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive</see> <paramref name="value"/> represents a null or empty string.
             </summary>
             <param name="value">Value to check.</param>
             <returns>
-            <see langword="true" /> if <paramref name="value" /> is null itself or its underlying string is either null or empty;
-            otherwise <see langword="true" />.
+            <see langword="true"/> if <paramref name="value"/> is null itself or its underlying string is either null or empty;
+            otherwise <see langword="true"/>.
             </returns>
-        </member>
         </member>
         <member name="M:ComplicatedPrimitives.CaseInsensitiveString.IsNullOrWhiteSpace(System.Nullable{ComplicatedPrimitives.CaseInsensitiveString})">
-            <member name="M:ComplicatedPrimitives.CaseInsensitiveString.IsNullOrWhiteSpace(System.Nullable{ComplicatedPrimitives.CaseInsensitiveString})">
             <summary>
-            Determines whether given nullable <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive</see> <paramref name="value" /> represents a null, empty or consisted of white-spaces only string.
+            Determines whether given nullable <see cref="T:ComplicatedPrimitives.CaseInsensitiveString">case insensitive</see> <paramref name="value"/> represents a null, empty or consisted of white-spaces only string.
             </summary>
             <param name="value">Value to check.</param>
             <returns>
-            <see langword="true" /> if <paramref name="value" /> is null itself or its underlying string is either null or empty or consists of white-spaces only;
-            otherwise <see langword="true" />.
+            <see langword="true"/> if <paramref name="value"/> is null itself or its underlying string is either null or empty or consists of white-spaces only;
+            otherwise <see langword="true"/>.
             </returns>
-        </member>
         </member>
         <member name="T:ComplicatedPrimitives.CaseInsensitiveStringComparison">
             <summary>
@@ -1139,10 +1110,20 @@
             </returns>
         </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.Equals(System.Object)">
-            <inheritdoc/>
+            <summary>
+            Determines whether this instance of <see cref="T:ComplicatedPrimitives.DirectedLimit`1"/> and the <paramref name="obj"/> are equal.
+            </summary>
+            <param name="obj">Object to compare to this instance.</param>
+            <returns>
+            <see langword="true"/> if <paramref name="obj"/> is instance of <see cref="T:ComplicatedPrimitives.DirectedLimit`1"/> and equal to this instance;
+            otherwise <see langword="false"/>.
+            </returns>
         </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.GetHashCode">
-            <inheritdoc/>
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
         </member>
         <member name="M:ComplicatedPrimitives.DirectedLimit`1.CompareTo(ComplicatedPrimitives.DirectedLimit{`0})">
             <summary>
@@ -1291,7 +1272,7 @@
             <code>A ⊆ B</code>
             where:
             <list type="bullet">
-            <item><term>A</term><description>this instance of <see cref="!:IRange&lt;TSet, T&gt;"/>,</description></item>
+            <item><term>A</term><description>this instance of <see cref="T:ComplicatedPrimitives.IComparativeSet`2"/>,</description></item>
             <item><term>B</term><description><paramref name="other"/>.</description></item>
             </list>
             </summary>
@@ -1331,7 +1312,7 @@
             <code>A ⊇ B</code>
             where:
             <list type="bullet">
-            <item><term>A</term><description>this instance of <see cref="!:IRange&lt;TSet, T&gt;"/>,</description></item>
+            <item><term>A</term><description>this instance of <see cref="T:ComplicatedPrimitives.IComparativeSet`2"/>,</description></item>
             <item><term>B</term><description><paramref name="other"/>.</description></item>
             </list>
             </summary>
@@ -1552,10 +1533,20 @@
             </returns>
         </member>
         <member name="M:ComplicatedPrimitives.LimitPoint`1.Equals(System.Object)">
-            <inheritdoc/>
+            <summary>
+            Determines whether this instance of <see cref="T:ComplicatedPrimitives.LimitPoint`1"/> and the <paramref name="obj"/> are equal.
+            </summary>
+            <param name="obj">Object to compare to this instance.</param>
+            <returns>
+            <see langword="true"/> if <paramref name="obj"/> is instance of <see cref="T:ComplicatedPrimitives.LimitPoint`1"/> and equal to this instance;
+            otherwise <see langword="false"/>.
+            </returns>
         </member>
         <member name="M:ComplicatedPrimitives.LimitPoint`1.GetHashCode">
-            <inheritdoc/>
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
         </member>
         <member name="M:ComplicatedPrimitives.LimitPoint`1.op_Equality(ComplicatedPrimitives.LimitPoint{`0},ComplicatedPrimitives.LimitPoint{`0})">
             <summary>
@@ -1757,7 +1748,12 @@
             </summary>
         </member>
         <member name="M:ComplicatedPrimitives.ParsingException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <inheritdoc/>
+            <summary>
+            Sets the given <paramref name="info"/> with information about this instance of <see cref="T:ComplicatedPrimitives.ParsingException"/>.
+            </summary>
+            <param name="info">The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The System.Runtime.Serialization.StreamingContext that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info"/> parameter is a null reference (Nothing in Visual Basic).</exception>
         </member>
         <member name="T:ComplicatedPrimitives.Range`1">
             <summary>
@@ -1979,10 +1975,20 @@
             </returns>
         </member>
         <member name="M:ComplicatedPrimitives.Range`1.Equals(System.Object)">
-            <inheritdoc/>
+            <summary>
+            Determines whether this instance of <see cref="T:ComplicatedPrimitives.Range`1"/> and the <paramref name="obj"/> are equal.
+            </summary>
+            <param name="obj">Object to compare to this instance.</param>
+            <returns>
+            <see langword="true"/> if <paramref name="obj"/> is instance of <see cref="T:ComplicatedPrimitives.Range`1"/> and equal to this instance;
+            otherwise <see langword="false"/>.
+            </returns>
         </member>
         <member name="M:ComplicatedPrimitives.Range`1.GetHashCode">
-            <inheritdoc/>
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
         </member>
         <member name="M:ComplicatedPrimitives.Range`1.op_Equality(ComplicatedPrimitives.Range{`0},ComplicatedPrimitives.Range{`0})">
             <summary>
@@ -2028,7 +2034,7 @@
         </member>
         <member name="T:ComplicatedPrimitives.RangeExtensions">
             <summary>
-            Provides extension methods for <see cref="T:ComplicatedPrimitives.Range`1"/> and <see cref="!:IRange&lt;TRange, T&gt;"/> types and their enumerables.
+            Provides extension methods for <see cref="T:ComplicatedPrimitives.Range`1"/> and <see cref="T:ComplicatedPrimitives.IComparativeSet`2"/> types and their enumerables.
             </summary>
         </member>
         <member name="M:ComplicatedPrimitives.RangeExtensions.Merge``1(System.Collections.Generic.IEnumerable{ComplicatedPrimitives.Range{``0}})">
@@ -2178,7 +2184,10 @@
             <returns>Range union covering the same space of <typeparamref name="T"/> but with all ranges merged into non-intersecting collection.</returns>
         </member>
         <member name="M:ComplicatedPrimitives.RangeUnion`1.GetEnumerator">
-            <inheritdoc/>
+            <summary>
+            Creates an enumerator that iterates through all ranges belonging to this instance of <see cref="T:ComplicatedPrimitives.RangeUnion`1"/>.
+            </summary>
+            <returns>New instance of enumerator for this instance.</returns>
         </member>
         <member name="M:ComplicatedPrimitives.RangeUnion`1.Contains(`0)">
             <inheritdoc/>

@@ -73,7 +73,8 @@ namespace ComplicatedPrimitives
         /// it contains no ranges at all or cotains only <see cref="Range{T}.IsEmpty">empty ranges</see>.
         /// </summary>
         public bool IsEmpty =>
-            _ranges.Count == 0
+            _ranges is null
+            || _ranges.Count == 0
             || _ranges.All(e => e.IsEmpty);
 
         /// <summary>
