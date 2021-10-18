@@ -59,7 +59,12 @@ namespace ComplicatedPrimitives
         /// </summary>
         public string Format { get; private set; }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Sets the given <paramref name="info"/> with information about this instance of <see cref="ParsingException"/>.
+        /// </summary>
+        /// <param name="info">The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about the exception being thrown.</param>
+        /// <param name="context">The System.Runtime.Serialization.StreamingContext that contains contextual information about the source or destination.</param>
+        /// <exception cref="ArgumentNullException">The <paramref name="info"/> parameter is a null reference (Nothing in Visual Basic).</exception>
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             base.GetObjectData(info, context);

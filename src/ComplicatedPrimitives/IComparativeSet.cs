@@ -41,7 +41,7 @@
         /// <code>A ⊆ B</code>
         /// where:
         /// <list type="bullet">
-        /// <item><term>A</term><description>this instance of <see cref="IRange{TSet, T}"/>,</description></item>
+        /// <item><term>A</term><description>this instance of <see cref="IComparativeSet{TSet, T}"/>,</description></item>
         /// <item><term>B</term><description><paramref name="other"/>.</description></item>
         /// </list>
         /// </summary>
@@ -81,7 +81,7 @@
         /// <code>A ⊇ B</code>
         /// where:
         /// <list type="bullet">
-        /// <item><term>A</term><description>this instance of <see cref="IRange{TSet, T}"/>,</description></item>
+        /// <item><term>A</term><description>this instance of <see cref="IComparativeSet{TSet, T}"/>,</description></item>
         /// <item><term>B</term><description><paramref name="other"/>.</description></item>
         /// </list>
         /// </summary>

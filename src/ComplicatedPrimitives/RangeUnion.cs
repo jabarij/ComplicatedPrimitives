@@ -119,7 +119,10 @@ namespace ComplicatedPrimitives
 
         #region IEnumerable<Range<T>>
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Creates an enumerator that iterates through all ranges belonging to this instance of <see cref="RangeUnion{T}"/>.
+        /// </summary>
+        /// <returns>New instance of enumerator for this instance.</returns>
         public IEnumerator<Range<T>> GetEnumerator() =>
             _ranges.GetEnumerator();
 

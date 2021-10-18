@@ -3,50 +3,53 @@
     {
       "src": [
         {
+		  "src": "C:/src/ComplicatedPrimitives/",
           "files": [
-            "C:\\src\\ComplicatedPrimitives\\src\\**\\*.csproj"
+            "src/**/**.csproj"
+          ],
+		  "exclude": [
+            "**/bin/**",
+            "**/obj/**"
           ]
         }
       ],
-      "dest": "api",
-      "disableGitFeatures": false,
-      "disableDefaultFilter": false
+      "dest": "api"
     }
   ],
   "build": {
     "content": [
       {
         "files": [
-          "api\\**.yml",
-          "api\\index.md"
+          "api/**.yml",
+          "api/index.md"
         ]
       },
       {
         "files": [
-          "..\\articles\\**.md,..\\articles\\**\\toc.yml,toc.yml,*.md"
+          "articles/**.md,articles/**/toc.yml,toc.yml,*.md"
         ]
       }
     ],
     "resource": [
       {
         "files": [
-          "..\\img\\**"
+          "images/**"
         ]
       }
     ],
     "overwrite": [
       {
         "files": [
-          "..\\apidocs\\**.md",
-          "..\\apidocs\\**.xml"
+          "apidocs/**.md",
+          "apidocs/**.xml"
         ],
         "exclude": [
-          "obj\\**",
-          "..\\_site\\**"
+          "obj/**",
+          "_site/**"
         ]
       }
     ],
-    "dest": "..\\_site",
+    "dest": "_site",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [

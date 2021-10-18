@@ -57,7 +57,6 @@ namespace ComplicatedPrimitives
 
         /// <summary>
         /// Determines whether this instance of <see cref="CaseInsensitiveString"/> and the <paramref name="other"/> string value have the same value ignoring case differences between characters.
-        /// A parameter specifies the culture and sort rules used in the comparison.
         /// </summary>
         /// <param name="other">String to compare to this instance.</param>
         /// <returns>
@@ -67,16 +66,24 @@ namespace ComplicatedPrimitives
         public bool Equals(string other) =>
             string.Equals(_value, other, StringComparison.OrdinalIgnoreCase);
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Determines whether this instance of <see cref="CaseInsensitiveString"/> and the <paramref name="obj"/> are equal.
+        /// </summary>
+        /// <param name="obj">Object to compare to this instance.</param>
+        /// <returns>
+        /// <see langword="true"/> if <paramref name="obj"/> is instance of String or <see cref="CaseInsensitiveString"/> and equal to this instance;
+        /// otherwise <see langword="false"/>.
+        /// </returns>
         public override bool Equals(object obj) =>
             obj is CaseInsensitiveString other && Equals(other)
             || obj is string str && Equals(str);
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns>A 32-bit signed integer hash code.</returns>
         public override int GetHashCode() =>
-            new HashCode()
-            .Append(_value)
-            .CurrentHash;
+            StringComparer.OrdinalIgnoreCase.GetHashCode(_value);
 
         #endregion
 

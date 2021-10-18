@@ -436,12 +436,22 @@ namespace ComplicatedPrimitives
             && Left == other.Left
             && Right == other.Right;
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Determines whether this instance of <see cref="Range{T}"/> and the <paramref name="obj"/> are equal.
+        /// </summary>
+        /// <param name="obj">Object to compare to this instance.</param>
+        /// <returns>
+        /// <see langword="true"/> if <paramref name="obj"/> is instance of <see cref="Range{T}"/> and equal to this instance;
+        /// otherwise <see langword="false"/>.
+        /// </returns>
         public override bool Equals(object obj) =>
             obj is Range<T> other
             && Equals(other);
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns>A 32-bit signed integer hash code.</returns>
         public override int GetHashCode() =>
             new HashCode()
             .Append(Left, Right)

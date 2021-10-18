@@ -6,7 +6,7 @@ using System.Linq;
 namespace ComplicatedPrimitives
 {
     /// <summary>
-    /// Provides extension methods for <see cref="Range{T}"/> and <see cref="IRange{TRange, T}"/> types and their enumerables.
+    /// Provides extension methods for <see cref="Range{T}"/> and <see cref="IComparativeSet{TSet, T}"/> types and their enumerables.
     /// </summary>
     public static class RangeExtensions
     {

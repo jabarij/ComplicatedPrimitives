@@ -435,12 +435,22 @@ namespace ComplicatedPrimitives
             || Point == other.Point
                 && Side == other.Side;
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Determines whether this instance of <see cref="DirectedLimit{T}"/> and the <paramref name="obj"/> are equal.
+        /// </summary>
+        /// <param name="obj">Object to compare to this instance.</param>
+        /// <returns>
+        /// <see langword="true"/> if <paramref name="obj"/> is instance of <see cref="DirectedLimit{T}"/> and equal to this instance;
+        /// otherwise <see langword="false"/>.
+        /// </returns>
         public override bool Equals(object obj) =>
             obj is DirectedLimit<T> other
             && Equals(other);
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns>A 32-bit signed integer hash code.</returns>
         public override int GetHashCode() =>
             new HashCode()
             .Append(Point, Side)

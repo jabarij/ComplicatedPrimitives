@@ -227,12 +227,22 @@ namespace ComplicatedPrimitives
                 || Equals(Value, other.Value)
                 && Type == other.Type);
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Determines whether this instance of <see cref="LimitPoint{T}"/> and the <paramref name="obj"/> are equal.
+        /// </summary>
+        /// <param name="obj">Object to compare to this instance.</param>
+        /// <returns>
+        /// <see langword="true"/> if <paramref name="obj"/> is instance of <see cref="LimitPoint{T}"/> and equal to this instance;
+        /// otherwise <see langword="false"/>.
+        /// </returns>
         public override bool Equals(object obj) =>
             obj is LimitPoint<T> other
             && Equals(other);
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns>A 32-bit signed integer hash code.</returns>
         public override int GetHashCode() =>
             IsInfinite
             ? "∞".GetHashCode()
