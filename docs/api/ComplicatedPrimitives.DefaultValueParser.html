@@ -1,0 +1,1680 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DefaultValueParser
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DefaultValueParser
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ComplicatedPrimitives.DefaultValueParser">
+  
+  
+  <h1 id="ComplicatedPrimitives_DefaultValueParser" data-uid="ComplicatedPrimitives.DefaultValueParser" class="text-break">Class DefaultValueParser
+  </h1>
+  <div class="markdown level0 summary"><p>Class wrapping default .NET parsing functions to provide them as <a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser&lt;T&gt;</a> implementations.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DefaultValueParser</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser</a>&lt;<span class="xref">System.Byte</span>&gt;</div>
+    <div><a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser</a>&lt;<span class="xref">System.Int16</span>&gt;</div>
+    <div><a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser</a>&lt;<span class="xref">System.UInt16</span>&gt;</div>
+    <div><a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser</a>&lt;<span class="xref">System.Int32</span>&gt;</div>
+    <div><a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser</a>&lt;<span class="xref">System.UInt32</span>&gt;</div>
+    <div><a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser</a>&lt;<span class="xref">System.Int64</span>&gt;</div>
+    <div><a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser</a>&lt;<span class="xref">System.UInt64</span>&gt;</div>
+    <div><a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser</a>&lt;<span class="xref">System.Single</span>&gt;</div>
+    <div><a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser</a>&lt;<span class="xref">System.Double</span>&gt;</div>
+    <div><a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser</a>&lt;<span class="xref">System.Decimal</span>&gt;</div>
+    <div><a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser</a>&lt;<span class="xref">System.DateTime</span>&gt;</div>
+    <div><a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser</a>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</div>
+    <div><a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser</a>&lt;<span class="xref">System.TimeSpan</span>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ComplicatedPrimitives.html">ComplicatedPrimitives</a></h6>
+  <h6><strong>Assembly</strong>: ComplicatedPrimitives.dll</h6>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DefaultValueParser : IParser&lt;byte&gt;, IParser&lt;short&gt;, IParser&lt;ushort&gt;, IParser&lt;int&gt;, IParser&lt;uint&gt;, IParser&lt;long&gt;, IParser&lt;ulong&gt;, IParser&lt;float&gt;, IParser&lt;double&gt;, IParser&lt;decimal&gt;, IParser&lt;DateTime&gt;, IParser&lt;DateTimeOffset&gt;, IParser&lt;TimeSpan&gt;</code></pre>
+  </div>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Byte__Parse_System_String_.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23Byte%7D%23Parse(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L33">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Byte__Parse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Byte}#Parse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Byte__Parse_System_String_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Byte}#Parse(System.String)">IParser&lt;Byte&gt;.Parse(String)</h4>
+  <div class="markdown level1 summary"><p>Converts the specified string representation of a number to its <span class="xref">System.Byte</span> equivalent using <span class="xref">System.Byte.Parse(System.String)</span> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">byte IParser&lt;byte&gt;.Parse(string str)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a number to convert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><p>A byte value that is equivalent to the number contained in <code data-dev-comment-type="paramref" class="paramref">str</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Byte__Parse_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.Byte.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.byte.parse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Byte__TryParse_System_String_System_Byte__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23Byte%7D%23TryParse(System.String%2CSystem.Byte%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L49">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Byte__TryParse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Byte}#TryParse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Byte__TryParse_System_String_System_Byte__" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Byte}#TryParse(System.String,System.Byte@)">IParser&lt;Byte&gt;.TryParse(String, out Byte)</h4>
+  <div class="markdown level1 summary"><p>Tries to convert the string representation of a number to its <span class="xref">System.Byte</span> equivalent, and returns a value indicating whether the conversion succeeded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IParser&lt;byte&gt;.TryParse(string str, out byte result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a number to convert.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>When this method returns, contains the <span class="xref">System.Byte</span> value equivalent to the number contained in <code data-dev-comment-type="paramref" class="paramref">str</code> if the conversion succeeded,
+or zero if the conversion failed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if <code data-dev-comment-type="paramref" class="paramref">str</code> was converted successfully; otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Byte__TryParse_System_String_System_Byte___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.Byte.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.byte.tryparse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_DateTime__Parse_System_String_.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23DateTime%7D%23Parse(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L313">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_DateTime__Parse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTime}#Parse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_DateTime__Parse_System_String_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTime}#Parse(System.String)">IParser&lt;DateTime&gt;.Parse(String)</h4>
+  <div class="markdown level1 summary"><p>Converts the specified string representation of a date and time to its <span class="xref">System.DateTime</span> equivalent using <span class="xref">System.DateTime.Parse(System.String)</span> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTime IParser&lt;DateTime&gt;.Parse(string str)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a date and time to convert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><p>An object that is equivalent to the date and time that is contained in <code data-dev-comment-type="paramref" class="paramref">str</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_DateTime__Parse_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.DateTime.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.parse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_DateTime__TryParse_System_String_System_DateTime__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23DateTime%7D%23TryParse(System.String%2CSystem.DateTime%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L328">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_DateTime__TryParse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTime}#TryParse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_DateTime__TryParse_System_String_System_DateTime__" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTime}#TryParse(System.String,System.DateTime@)">IParser&lt;DateTime&gt;.TryParse(String, out DateTime)</h4>
+  <div class="markdown level1 summary"><p>Tries to convert the string representation of a date and time to its <span class="xref">System.DateTime</span> equivalent, and returns a value indicating whether the conversion succeeded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IParser&lt;DateTime&gt;.TryParse(string str, out DateTime result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a date and time to convert.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>When the method returns, contains the <span class="xref">System.DateTime</span> equivalent to the date and time of <code data-dev-comment-type="paramref" class="paramref">str</code>, if the conversion succeeded, or <span class="xref">System.DateTime.MinValue</span>, if the conversion failed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if <code data-dev-comment-type="paramref" class="paramref">str</code> was converted successfully; otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_DateTime__TryParse_System_String_System_DateTime___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.DateTime.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.tryparse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_DateTimeOffset__Parse_System_String_.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23DateTimeOffset%7D%23Parse(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L340">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_DateTimeOffset__Parse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTimeOffset}#Parse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_DateTimeOffset__Parse_System_String_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTimeOffset}#Parse(System.String)">IParser&lt;DateTimeOffset&gt;.Parse(String)</h4>
+  <div class="markdown level1 summary"><p>Converts the specified string representation of a date and time to its <span class="xref">System.DateTimeOffset</span> equivalent using <span class="xref">System.DateTimeOffset.Parse(System.String)</span> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset IParser&lt;DateTimeOffset&gt;.Parse(string str)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a date and time to convert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><p>An object that is equivalent to the date and time that is contained in <code data-dev-comment-type="paramref" class="paramref">str</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_DateTimeOffset__Parse_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.DateTimeOffset.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.parse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_DateTimeOffset__TryParse_System_String_System_DateTimeOffset__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23DateTimeOffset%7D%23TryParse(System.String%2CSystem.DateTimeOffset%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L355">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_DateTimeOffset__TryParse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTimeOffset}#TryParse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_DateTimeOffset__TryParse_System_String_System_DateTimeOffset__" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#DateTimeOffset}#TryParse(System.String,System.DateTimeOffset@)">IParser&lt;DateTimeOffset&gt;.TryParse(String, out DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Tries to convert the string representation of a date and time to its <span class="xref">System.DateTimeOffset</span> equivalent, and returns a value indicating whether the conversion succeeded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IParser&lt;DateTimeOffset&gt;.TryParse(string str, out DateTimeOffset result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a date and time to convert.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>When the method returns, contains the <span class="xref">System.DateTimeOffset</span> equivalent to the date and time of <code data-dev-comment-type="paramref" class="paramref">str</code>, if the conversion succeeded, or <span class="xref">System.DateTimeOffset.MinValue</span>, if the conversion failed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if <code data-dev-comment-type="paramref" class="paramref">str</code> was converted successfully; otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_DateTimeOffset__TryParse_System_String_System_DateTimeOffset___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.DateTimeOffset.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetimeoffset.tryparse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Decimal__Parse_System_String_.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23Decimal%7D%23Parse(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L285">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Decimal__Parse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Decimal}#Parse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Decimal__Parse_System_String_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Decimal}#Parse(System.String)">IParser&lt;Decimal&gt;.Parse(String)</h4>
+  <div class="markdown level1 summary"><p>Converts the specified string representation of a number to its <span class="xref">System.Decimal</span> equivalent using <span class="xref">System.Decimal.Parse(System.String)</span> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">decimal IParser&lt;decimal&gt;.Parse(string str)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a number to convert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><p>A byte value that is equivalent to the number contained in <code data-dev-comment-type="paramref" class="paramref">str</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Decimal__Parse_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.Decimal.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.decimal.parse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Decimal__TryParse_System_String_System_Decimal__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23Decimal%7D%23TryParse(System.String%2CSystem.Decimal%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L301">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Decimal__TryParse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Decimal}#TryParse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Decimal__TryParse_System_String_System_Decimal__" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Decimal}#TryParse(System.String,System.Decimal@)">IParser&lt;Decimal&gt;.TryParse(String, out Decimal)</h4>
+  <div class="markdown level1 summary"><p>Tries to convert the string representation of a number to its <span class="xref">System.Decimal</span> equivalent, and returns a value indicating whether the conversion succeeded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IParser&lt;decimal&gt;.TryParse(string str, out decimal result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a number to convert.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>When this method returns, contains the <span class="xref">System.Decimal</span> value equivalent to the number contained in <code data-dev-comment-type="paramref" class="paramref">str</code> if the conversion succeeded,
+or zero if the conversion failed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if <code data-dev-comment-type="paramref" class="paramref">str</code> was converted successfully; otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Decimal__TryParse_System_String_System_Decimal___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.Decimal.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.decimal.tryparse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Double__Parse_System_String_.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23Double%7D%23Parse(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L257">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Double__Parse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Double}#Parse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Double__Parse_System_String_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Double}#Parse(System.String)">IParser&lt;Double&gt;.Parse(String)</h4>
+  <div class="markdown level1 summary"><p>Converts the specified string representation of a number to its <span class="xref">System.Double</span> equivalent using <span class="xref">System.Double.Parse(System.String)</span> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double IParser&lt;double&gt;.Parse(string str)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a number to convert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><p>A byte value that is equivalent to the number contained in <code data-dev-comment-type="paramref" class="paramref">str</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Double__Parse_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.Double.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.double.parse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Double__TryParse_System_String_System_Double__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23Double%7D%23TryParse(System.String%2CSystem.Double%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L273">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Double__TryParse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Double}#TryParse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Double__TryParse_System_String_System_Double__" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Double}#TryParse(System.String,System.Double@)">IParser&lt;Double&gt;.TryParse(String, out Double)</h4>
+  <div class="markdown level1 summary"><p>Tries to convert the string representation of a number to its <span class="xref">System.Double</span> equivalent, and returns a value indicating whether the conversion succeeded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IParser&lt;double&gt;.TryParse(string str, out double result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a number to convert.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>When this method returns, contains the <span class="xref">System.Double</span> value equivalent to the number contained in <code data-dev-comment-type="paramref" class="paramref">str</code> if the conversion succeeded,
+or zero if the conversion failed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if <code data-dev-comment-type="paramref" class="paramref">str</code> was converted successfully; otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Double__TryParse_System_String_System_Double___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.Double.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.double.tryparse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int16__Parse_System_String_.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23Int16%7D%23Parse(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L61">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int16__Parse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int16}#Parse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int16__Parse_System_String_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int16}#Parse(System.String)">IParser&lt;Int16&gt;.Parse(String)</h4>
+  <div class="markdown level1 summary"><p>Converts the specified string representation of a number to its <span class="xref">System.Int16</span> equivalent using <span class="xref">System.Int16.Parse(System.String)</span> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">short IParser&lt;short&gt;.Parse(string str)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a number to convert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int16</span></td>
+        <td><p>A byte value that is equivalent to the number contained in <code data-dev-comment-type="paramref" class="paramref">str</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int16__Parse_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.Int16.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.int16.parse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int16__TryParse_System_String_System_Int16__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23Int16%7D%23TryParse(System.String%2CSystem.Int16%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L77">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int16__TryParse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int16}#TryParse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int16__TryParse_System_String_System_Int16__" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int16}#TryParse(System.String,System.Int16@)">IParser&lt;Int16&gt;.TryParse(String, out Int16)</h4>
+  <div class="markdown level1 summary"><p>Tries to convert the string representation of a number to its <span class="xref">System.Int16</span> equivalent, and returns a value indicating whether the conversion succeeded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IParser&lt;short&gt;.TryParse(string str, out short result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a number to convert.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int16</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>When this method returns, contains the <span class="xref">System.Int16</span> value equivalent to the number contained in <code data-dev-comment-type="paramref" class="paramref">str</code> if the conversion succeeded,
+or zero if the conversion failed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if <code data-dev-comment-type="paramref" class="paramref">str</code> was converted successfully; otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int16__TryParse_System_String_System_Int16___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.Int16.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.int16.tryparse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int32__Parse_System_String_.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23Int32%7D%23Parse(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L117">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int32__Parse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int32}#Parse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int32__Parse_System_String_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int32}#Parse(System.String)">IParser&lt;Int32&gt;.Parse(String)</h4>
+  <div class="markdown level1 summary"><p>Converts the specified string representation of a number to its <span class="xref">System.Int32</span> equivalent using <span class="xref">System.Int32.Parse(System.String)</span> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int IParser&lt;int&gt;.Parse(string str)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a number to convert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>A byte value that is equivalent to the number contained in <code data-dev-comment-type="paramref" class="paramref">str</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int32__Parse_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.Int32.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32.parse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int32__TryParse_System_String_System_Int32__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23Int32%7D%23TryParse(System.String%2CSystem.Int32%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L133">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int32__TryParse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int32}#TryParse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int32__TryParse_System_String_System_Int32__" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int32}#TryParse(System.String,System.Int32@)">IParser&lt;Int32&gt;.TryParse(String, out Int32)</h4>
+  <div class="markdown level1 summary"><p>Tries to convert the string representation of a number to its <span class="xref">System.Int32</span> equivalent, and returns a value indicating whether the conversion succeeded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IParser&lt;int&gt;.TryParse(string str, out int result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a number to convert.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>When this method returns, contains the <span class="xref">System.Int32</span> value equivalent to the number contained in <code data-dev-comment-type="paramref" class="paramref">str</code> if the conversion succeeded,
+or zero if the conversion failed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if <code data-dev-comment-type="paramref" class="paramref">str</code> was converted successfully; otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int32__TryParse_System_String_System_Int32___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.Int32.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32.tryparse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int64__Parse_System_String_.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23Int64%7D%23Parse(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L173">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int64__Parse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int64}#Parse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int64__Parse_System_String_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int64}#Parse(System.String)">IParser&lt;Int64&gt;.Parse(String)</h4>
+  <div class="markdown level1 summary"><p>Converts the specified string representation of a number to its <span class="xref">System.Int64</span> equivalent using <span class="xref">System.Int64.Parse(System.String)</span> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long IParser&lt;long&gt;.Parse(string str)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a number to convert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><p>A byte value that is equivalent to the number contained in <code data-dev-comment-type="paramref" class="paramref">str</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int64__Parse_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.Int64.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64.parse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int64__TryParse_System_String_System_Int64__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23Int64%7D%23TryParse(System.String%2CSystem.Int64%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L189">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int64__TryParse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int64}#TryParse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int64__TryParse_System_String_System_Int64__" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Int64}#TryParse(System.String,System.Int64@)">IParser&lt;Int64&gt;.TryParse(String, out Int64)</h4>
+  <div class="markdown level1 summary"><p>Tries to convert the string representation of a number to its <span class="xref">System.Int64</span> equivalent, and returns a value indicating whether the conversion succeeded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IParser&lt;long&gt;.TryParse(string str, out long result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a number to convert.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>When this method returns, contains the <span class="xref">System.Int64</span> value equivalent to the number contained in <code data-dev-comment-type="paramref" class="paramref">str</code> if the conversion succeeded,
+or zero if the conversion failed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if <code data-dev-comment-type="paramref" class="paramref">str</code> was converted successfully; otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Int64__TryParse_System_String_System_Int64___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.Int64.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64.tryparse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Single__Parse_System_String_.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23Single%7D%23Parse(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L229">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Single__Parse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Single}#Parse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Single__Parse_System_String_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Single}#Parse(System.String)">IParser&lt;Single&gt;.Parse(String)</h4>
+  <div class="markdown level1 summary"><p>Converts the specified string representation of a number to its <span class="xref">System.Single</span> equivalent using <span class="xref">System.Single.Parse(System.String)</span> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float IParser&lt;float&gt;.Parse(string str)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a number to convert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><p>A byte value that is equivalent to the number contained in <code data-dev-comment-type="paramref" class="paramref">str</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Single__Parse_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.Single.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.single.parse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Single__TryParse_System_String_System_Single__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23Single%7D%23TryParse(System.String%2CSystem.Single%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L245">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Single__TryParse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Single}#TryParse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Single__TryParse_System_String_System_Single__" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#Single}#TryParse(System.String,System.Single@)">IParser&lt;Single&gt;.TryParse(String, out Single)</h4>
+  <div class="markdown level1 summary"><p>Tries to convert the string representation of a number to its <span class="xref">System.Single</span> equivalent, and returns a value indicating whether the conversion succeeded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IParser&lt;float&gt;.TryParse(string str, out float result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a number to convert.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>When this method returns, contains the <span class="xref">System.Single</span> value equivalent to the number contained in <code data-dev-comment-type="paramref" class="paramref">str</code> if the conversion succeeded,
+or zero if the conversion failed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if <code data-dev-comment-type="paramref" class="paramref">str</code> was converted successfully; otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_Single__TryParse_System_String_System_Single___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.Single.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.single.tryparse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_TimeSpan__Parse_System_String_.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23TimeSpan%7D%23Parse(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L367">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_TimeSpan__Parse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#TimeSpan}#Parse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_TimeSpan__Parse_System_String_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#TimeSpan}#Parse(System.String)">IParser&lt;TimeSpan&gt;.Parse(String)</h4>
+  <div class="markdown level1 summary"><p>Converts the specified string representation of a time interval to its <span class="xref">System.TimeSpan</span> equivalent using <span class="xref">System.TimeSpan.Parse(System.String)</span> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TimeSpan IParser&lt;TimeSpan&gt;.Parse(string str)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a time interval to convert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><p>A time interval that corresponds to <code data-dev-comment-type="paramref" class="paramref">str</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_TimeSpan__Parse_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.TimeSpan.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.timespan.parse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_TimeSpan__TryParse_System_String_System_TimeSpan__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23TimeSpan%7D%23TryParse(System.String%2CSystem.TimeSpan%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L382">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_TimeSpan__TryParse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#TimeSpan}#TryParse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_TimeSpan__TryParse_System_String_System_TimeSpan__" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#TimeSpan}#TryParse(System.String,System.TimeSpan@)">IParser&lt;TimeSpan&gt;.TryParse(String, out TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Tries to convert the string representation of a time interval to its <span class="xref">System.TimeSpan</span> equivalent, and returns a value indicating whether the conversion succeeded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IParser&lt;TimeSpan&gt;.TryParse(string str, out TimeSpan result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a time interval to convert.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>When this method returns, contains an object that represents the time interval specified by <code data-dev-comment-type="paramref" class="paramref">str</code>, or <span class="xref">System.TimeSpan.Zero</span> if the conversion failed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if <code data-dev-comment-type="paramref" class="paramref">str</code> was converted successfully; otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_TimeSpan__TryParse_System_String_System_TimeSpan___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.TimeSpan.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.timespan.tryparse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt16__Parse_System_String_.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23UInt16%7D%23Parse(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L89">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt16__Parse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt16}#Parse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt16__Parse_System_String_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt16}#Parse(System.String)">IParser&lt;UInt16&gt;.Parse(String)</h4>
+  <div class="markdown level1 summary"><p>Converts the specified string representation of a number to its <span class="xref">System.UInt16</span> equivalent using <span class="xref">System.UInt16.Parse(System.String)</span> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ushort IParser&lt;ushort&gt;.Parse(string str)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a number to convert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt16</span></td>
+        <td><p>A byte value that is equivalent to the number contained in <code data-dev-comment-type="paramref" class="paramref">str</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt16__Parse_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.UInt16.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.uint16.parse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt16__TryParse_System_String_System_UInt16__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23UInt16%7D%23TryParse(System.String%2CSystem.UInt16%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L105">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt16__TryParse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt16}#TryParse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt16__TryParse_System_String_System_UInt16__" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt16}#TryParse(System.String,System.UInt16@)">IParser&lt;UInt16&gt;.TryParse(String, out UInt16)</h4>
+  <div class="markdown level1 summary"><p>Tries to convert the string representation of a number to its <span class="xref">System.UInt16</span> equivalent, and returns a value indicating whether the conversion succeeded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IParser&lt;ushort&gt;.TryParse(string str, out ushort result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a number to convert.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt16</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>When this method returns, contains the <span class="xref">System.UInt16</span> value equivalent to the number contained in <code data-dev-comment-type="paramref" class="paramref">str</code> if the conversion succeeded,
+or zero if the conversion failed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if <code data-dev-comment-type="paramref" class="paramref">str</code> was converted successfully; otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt16__TryParse_System_String_System_UInt16___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.UInt16.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.uint16.tryparse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt32__Parse_System_String_.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23UInt32%7D%23Parse(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L145">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt32__Parse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt32}#Parse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt32__Parse_System_String_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt32}#Parse(System.String)">IParser&lt;UInt32&gt;.Parse(String)</h4>
+  <div class="markdown level1 summary"><p>Converts the specified string representation of a number to its <span class="xref">System.UInt32</span> equivalent using <span class="xref">System.UInt32.Parse(System.String)</span> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">uint IParser&lt;uint&gt;.Parse(string str)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a number to convert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><p>A byte value that is equivalent to the number contained in <code data-dev-comment-type="paramref" class="paramref">str</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt32__Parse_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.UInt32.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.uint32.parse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt32__TryParse_System_String_System_UInt32__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23UInt32%7D%23TryParse(System.String%2CSystem.UInt32%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L161">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt32__TryParse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt32}#TryParse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt32__TryParse_System_String_System_UInt32__" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt32}#TryParse(System.String,System.UInt32@)">IParser&lt;UInt32&gt;.TryParse(String, out UInt32)</h4>
+  <div class="markdown level1 summary"><p>Tries to convert the string representation of a number to its <span class="xref">System.UInt32</span> equivalent, and returns a value indicating whether the conversion succeeded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IParser&lt;uint&gt;.TryParse(string str, out uint result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a number to convert.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>When this method returns, contains the <span class="xref">System.UInt32</span> value equivalent to the number contained in <code data-dev-comment-type="paramref" class="paramref">str</code> if the conversion succeeded,
+or zero if the conversion failed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if <code data-dev-comment-type="paramref" class="paramref">str</code> was converted successfully; otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt32__TryParse_System_String_System_UInt32___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.UInt32.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.uint32.tryparse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt64__Parse_System_String_.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23UInt64%7D%23Parse(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L201">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt64__Parse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt64}#Parse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt64__Parse_System_String_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt64}#Parse(System.String)">IParser&lt;UInt64&gt;.Parse(String)</h4>
+  <div class="markdown level1 summary"><p>Converts the specified string representation of a number to its <span class="xref">System.UInt64</span> equivalent using <span class="xref">System.UInt64.Parse(System.String)</span> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ulong IParser&lt;ulong&gt;.Parse(string str)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a number to convert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><p>A byte value that is equivalent to the number contained in <code data-dev-comment-type="paramref" class="paramref">str</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt64__Parse_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.UInt64.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.uint64.parse">docs</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt64__TryParse_System_String_System_UInt64__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives%23IParser%7BSystem%23UInt64%7D%23TryParse(System.String%2CSystem.UInt64%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L217">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt64__TryParse_" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt64}#TryParse*"></a>
+  <h4 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt64__TryParse_System_String_System_UInt64__" data-uid="ComplicatedPrimitives.DefaultValueParser.ComplicatedPrimitives#IParser{System#UInt64}#TryParse(System.String,System.UInt64@)">IParser&lt;UInt64&gt;.TryParse(String, out UInt64)</h4>
+  <div class="markdown level1 summary"><p>Tries to convert the string representation of a number to its <span class="xref">System.UInt64</span> equivalent, and returns a value indicating whether the conversion succeeded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IParser&lt;ulong&gt;.TryParse(string str, out ulong result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string that contains a number to convert.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>When this method returns, contains the <span class="xref">System.UInt64</span> value equivalent to the number contained in <code data-dev-comment-type="paramref" class="paramref">str</code> if the conversion succeeded,
+or zero if the conversion failed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if <code data-dev-comment-type="paramref" class="paramref">str</code> was converted successfully; otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DefaultValueParser_ComplicatedPrimitives_IParser_System_UInt64__TryParse_System_String_System_UInt64___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see underlying method <a cref="M:System.UInt64.Parse(System.String)" href="https://docs.microsoft.com/en-us/dotnet/api/system.uint64.tryparse">docs</a>.</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="ComplicatedPrimitives.IParser-1.html">IParser&lt;T&gt;</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DefaultValueParser.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DefaultValueParser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DefaultValueParser.cs/#L8" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

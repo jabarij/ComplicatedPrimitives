@@ -1,0 +1,1599 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct DirectedLimit&lt;T&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct DirectedLimit&lt;T&gt;
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ComplicatedPrimitives.DirectedLimit`1">
+  
+  
+  <h1 id="ComplicatedPrimitives_DirectedLimit_1" data-uid="ComplicatedPrimitives.DirectedLimit`1" class="text-break">Struct DirectedLimit&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Structure representing directed limit of type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.
+In other words, it is limit point of type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> that is approachable from either left or right side.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="ComplicatedPrimitives.IComparativeSet-2.html">IComparativeSet</a>&lt;<a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;, T&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;&gt;</div>
+    <div><span class="xref">System.IComparable</span>&lt;<a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ComplicatedPrimitives.html">ComplicatedPrimitives</a></h6>
+  <h6><strong>Assembly</strong>: ComplicatedPrimitives.dll</h6>
+  <h5 id="ComplicatedPrimitives_DirectedLimit_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct DirectedLimit&lt;T&gt; : IComparativeSet&lt;DirectedLimit&lt;T&gt;, T&gt;, IEquatable&lt;DirectedLimit&lt;T&gt;&gt;, IComparable&lt;DirectedLimit&lt;T&gt;&gt; where T : IComparable&lt;T&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type of limit point's value (limit's domain).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1__ctor__0_ComplicatedPrimitives_LimitPointType_ComplicatedPrimitives_LimitSide_.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.%23ctor(%600%2CComplicatedPrimitives.LimitPointType%2CComplicatedPrimitives.LimitSide)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L72">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1__ctor_" data-uid="ComplicatedPrimitives.DirectedLimit`1.#ctor*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1__ctor__0_ComplicatedPrimitives_LimitPointType_ComplicatedPrimitives_LimitSide_" data-uid="ComplicatedPrimitives.DirectedLimit`1.#ctor(`0,ComplicatedPrimitives.LimitPointType,ComplicatedPrimitives.LimitSide)">DirectedLimit(T, LimitPointType, LimitSide)</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> structure with a specified <code data-dev-comment-type="paramref" class="paramref">value</code>, <code data-dev-comment-type="paramref" class="paramref">type</code> and <code data-dev-comment-type="paramref" class="paramref">side</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DirectedLimit(T value, LimitPointType type, LimitSide side)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>Extreme point's value of the created limit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.LimitPointType.html">LimitPointType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Extreme point's type of the created limit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.LimitSide.html">LimitSide</a></td>
+        <td><span class="parametername">side</span></td>
+        <td><p>Side (direction) of the created limit.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">side</code> is not a defined value of <a class="xref" href="ComplicatedPrimitives.LimitSide.html">LimitSide</a> enum</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1__ctor_ComplicatedPrimitives_LimitPoint__0__ComplicatedPrimitives_LimitSide_.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.%23ctor(ComplicatedPrimitives.LimitPoint%7B%600%7D%2CComplicatedPrimitives.LimitSide)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L55">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1__ctor_" data-uid="ComplicatedPrimitives.DirectedLimit`1.#ctor*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1__ctor_ComplicatedPrimitives_LimitPoint__0__ComplicatedPrimitives_LimitSide_" data-uid="ComplicatedPrimitives.DirectedLimit`1.#ctor(ComplicatedPrimitives.LimitPoint{`0},ComplicatedPrimitives.LimitSide)">DirectedLimit(LimitPoint&lt;T&gt;, LimitSide)</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> structure with a specified <code data-dev-comment-type="paramref" class="paramref">point</code> and <code data-dev-comment-type="paramref" class="paramref">side</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DirectedLimit(LimitPoint&lt;T&gt; point, LimitSide side)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.LimitPoint-1.html">LimitPoint</a>&lt;T&gt;</td>
+        <td><span class="parametername">point</span></td>
+        <td><p>Extreme point of the created limit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.LimitSide.html">LimitSide</a></td>
+        <td><span class="parametername">side</span></td>
+        <td><p>Side of the created limit.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">side</code> is not a defined value of <a class="xref" href="ComplicatedPrimitives.LimitSide.html">LimitSide</a> enum</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_ClosedSign.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.ClosedSign%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L25">View Source</a>
+  </span>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_ClosedSign" data-uid="ComplicatedPrimitives.DirectedLimit`1.ClosedSign">ClosedSign</h4>
+  <div class="markdown level1 summary"><p>Represents the <a class="xref" href="ComplicatedPrimitives.LimitPointType.html#ComplicatedPrimitives_LimitPointType_Closed">Closed</a> <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Type">Type</a> of <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_IsDefined">IsDefined</a> <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const char ClosedSign = '&#8804;'</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_LeftInfinity.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.LeftInfinity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L40">View Source</a>
+  </span>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_LeftInfinity" data-uid="ComplicatedPrimitives.DirectedLimit`1.LeftInfinity">LeftInfinity</h4>
+  <div class="markdown level1 summary"><p>Represents a left (negative in some contexts) infinity. This field is read-only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly DirectedLimit&lt;T&gt; LeftInfinity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_OpenSign.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.OpenSign%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L20">View Source</a>
+  </span>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_OpenSign" data-uid="ComplicatedPrimitives.DirectedLimit`1.OpenSign">OpenSign</h4>
+  <div class="markdown level1 summary"><p>Represents the <a class="xref" href="ComplicatedPrimitives.LimitPointType.html#ComplicatedPrimitives_LimitPointType_Open">Open</a> <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Type">Type</a> of <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_IsDefined">IsDefined</a> <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const char OpenSign = '&lt;'</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_RightInfinity.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.RightInfinity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L45">View Source</a>
+  </span>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_RightInfinity" data-uid="ComplicatedPrimitives.DirectedLimit`1.RightInfinity">RightInfinity</h4>
+  <div class="markdown level1 summary"><p>Represents a right (positive in some contexts) infinity. This field is read-only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly DirectedLimit&lt;T&gt; RightInfinity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_Undefined.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.Undefined%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L35">View Source</a>
+  </span>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_Undefined" data-uid="ComplicatedPrimitives.DirectedLimit`1.Undefined">Undefined</h4>
+  <div class="markdown level1 summary"><p>Represents an undefined directed limit. This field is read-only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly DirectedLimit&lt;T&gt; Undefined</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_UndefinedString.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.UndefinedString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L30">View Source</a>
+  </span>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_UndefinedString" data-uid="ComplicatedPrimitives.DirectedLimit`1.UndefinedString">UndefinedString</h4>
+  <div class="markdown level1 summary"><p>Represents the string equivalent of <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_IsUndefined">IsUndefined</a> <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string UndefinedString = &quot;undefined&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_IsDefined.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.IsDefined%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L88">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_IsDefined_" data-uid="ComplicatedPrimitives.DirectedLimit`1.IsDefined*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_IsDefined" data-uid="ComplicatedPrimitives.DirectedLimit`1.IsDefined">IsDefined</h4>
+  <div class="markdown level1 summary"><p>Indicates whether this instance represents an undefined <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> with a certain <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Side">Side</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool IsDefined { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_IsUndefined.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.IsUndefined%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L93">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_IsUndefined_" data-uid="ComplicatedPrimitives.DirectedLimit`1.IsUndefined*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_IsUndefined" data-uid="ComplicatedPrimitives.DirectedLimit`1.IsUndefined">IsUndefined</h4>
+  <div class="markdown level1 summary"><p>Indicates whether this instance represents an undefined <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> without valid <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Side">Side</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool IsUndefined { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_Point.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.Point%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L78">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_Point_" data-uid="ComplicatedPrimitives.DirectedLimit`1.Point*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_Point" data-uid="ComplicatedPrimitives.DirectedLimit`1.Point">Point</h4>
+  <div class="markdown level1 summary"><p>Gets the extreme point of this <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly LimitPoint&lt;T&gt; Point { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.LimitPoint-1.html">LimitPoint</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_Side.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.Side%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L83">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_Side_" data-uid="ComplicatedPrimitives.DirectedLimit`1.Side*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_Side" data-uid="ComplicatedPrimitives.DirectedLimit`1.Side">Side</h4>
+  <div class="markdown level1 summary"><p>Gets the side of this <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly LimitSide Side { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.LimitSide.html">LimitSide</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_Type.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L109">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_Type_" data-uid="ComplicatedPrimitives.DirectedLimit`1.Type*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_Type" data-uid="ComplicatedPrimitives.DirectedLimit`1.Type">Type</h4>
+  <div class="markdown level1 summary"><p>Gets the type of <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Point">Point</a> of this <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly LimitPointType Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.LimitPointType.html">LimitPointType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DirectedLimit_1_Type_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see <a class="xref" href="ComplicatedPrimitives.LimitPoint-1.html#ComplicatedPrimitives_LimitPoint_1_Type">Type</a> docs.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_Value.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.Value%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L101">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_Value_" data-uid="ComplicatedPrimitives.DirectedLimit`1.Value*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_Value" data-uid="ComplicatedPrimitives.DirectedLimit`1.Value">Value</h4>
+  <div class="markdown level1 summary"><p>Gets the value of <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Point">Point</a> of this <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly T Value { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DirectedLimit_1_Value_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails, see <a class="xref" href="ComplicatedPrimitives.LimitPoint-1.html#ComplicatedPrimitives_LimitPoint_1_Value">Value</a> docs.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_CompareTo_ComplicatedPrimitives_DirectedLimit__0__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.CompareTo(ComplicatedPrimitives.DirectedLimit%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L472">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_CompareTo_" data-uid="ComplicatedPrimitives.DirectedLimit`1.CompareTo*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_CompareTo_ComplicatedPrimitives_DirectedLimit__0__" data-uid="ComplicatedPrimitives.DirectedLimit`1.CompareTo(ComplicatedPrimitives.DirectedLimit{`0})">CompareTo(DirectedLimit&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Compares this <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> to the <code data-dev-comment-type="paramref" class="paramref">other</code> one and returns an integer number that indicates
+whether this directed limit precedes, follows or occurs in the same position in the sort order as the other object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompareTo(DirectedLimit&lt;T&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>Object to check compare this instance to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Integer number as below:</p>
+<ul><li>less than zerothis instance precedes <code data-dev-comment-type="paramref" class="paramref">other</code> in the sort order;</li><li>zerothis instance occurs in the same position in the sort order as <code data-dev-comment-type="paramref" class="paramref">other</code>;</li><li>greater than zerothis instance follows <code data-dev-comment-type="paramref" class="paramref">other</code> in the sort order;</li></ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_Complements_ComplicatedPrimitives_DirectedLimit__0__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.Complements(ComplicatedPrimitives.DirectedLimit%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L175">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_Complements_" data-uid="ComplicatedPrimitives.DirectedLimit`1.Complements*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_Complements_ComplicatedPrimitives_DirectedLimit__0__" data-uid="ComplicatedPrimitives.DirectedLimit`1.Complements(ComplicatedPrimitives.DirectedLimit{`0})">Complements(DirectedLimit&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets the value indicating whether this <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> is exact complement of the <code data-dev-comment-type="paramref" class="paramref">other</code>.
+In other words, this function checks complementary relation between two directed limits. This relation is reversible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Complements(DirectedLimit&lt;T&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>Directed limit to test complementary relation with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if this instance is complement of the <code data-dev-comment-type="paramref" class="paramref">other</code>; otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_Contains__0_.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.Contains(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L199">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_Contains_" data-uid="ComplicatedPrimitives.DirectedLimit`1.Contains*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_Contains__0_" data-uid="ComplicatedPrimitives.DirectedLimit`1.Contains(`0)">Contains(T)</h4>
+  <div class="markdown level1 summary"><p>Gets the value indicating whether <code data-dev-comment-type="paramref" class="paramref">value</code> belongs to set defined by this <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(T value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>Value of type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> to compare with this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if <code data-dev-comment-type="paramref" class="paramref">value</code> belongs to set defined by this directed limit;
+otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_Equals_ComplicatedPrimitives_DirectedLimit__0__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.Equals(ComplicatedPrimitives.DirectedLimit%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L433">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_Equals_" data-uid="ComplicatedPrimitives.DirectedLimit`1.Equals*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_Equals_ComplicatedPrimitives_DirectedLimit__0__" data-uid="ComplicatedPrimitives.DirectedLimit`1.Equals(ComplicatedPrimitives.DirectedLimit{`0})">Equals(DirectedLimit&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Checks whether this instance of <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> is equal to the <code data-dev-comment-type="paramref" class="paramref">other</code> one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(DirectedLimit&lt;T&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>Object to check equality with this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if this instance is equal to the <code data-dev-comment-type="paramref" class="paramref">other</code> one which means:</p>
+<ul><li>both instances <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_IsUndefined">IsUndefined</a>;</li><li>both instances <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_IsDefined">IsDefined</a> and their <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Point">Point</a> and <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Side">Side</a> are equal;</li></ul>
+otherwise, <span class="xref">false</span>.
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_Equals_System_Object_.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L446">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_Equals_" data-uid="ComplicatedPrimitives.DirectedLimit`1.Equals*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_Equals_System_Object_" data-uid="ComplicatedPrimitives.DirectedLimit`1.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"><p>Determines whether this instance of <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> and the <code data-dev-comment-type="paramref" class="paramref">obj</code> are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>Object to compare to this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if <code data-dev-comment-type="paramref" class="paramref">obj</code> is instance of <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> and equal to this instance;
+otherwise <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.Equals(System.Object)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_GetComplement.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.GetComplement%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L160">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_GetComplement_" data-uid="ComplicatedPrimitives.DirectedLimit`1.GetComplement*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_GetComplement" data-uid="ComplicatedPrimitives.DirectedLimit`1.GetComplement">GetComplement()</h4>
+  <div class="markdown level1 summary"><p>Gets <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> being complement of this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DirectedLimit&lt;T&gt; GetComplement()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;</td>
+        <td><p>When this instance <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_IsDefined">IsDefined</a>, new <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> with the same <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Value">Value</a>,
+but with flipped <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Type">Type</a> and <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Side">Side</a>;
+otherwise, <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Undefined">Undefined</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DirectedLimit_1_GetComplement_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails about flipping <a class="xref" href="ComplicatedPrimitives.LimitPointType.html">LimitPointType</a>, see <a class="xref" href="ComplicatedPrimitives.LimitPointTypeExtensions.html#ComplicatedPrimitives_LimitPointTypeExtensions_Flip_ComplicatedPrimitives_LimitPointType_">Flip(LimitPointType)</a>.</p>
+<p>For more defails about flipping <a class="xref" href="ComplicatedPrimitives.LimitSide.html">LimitSide</a>, see <a class="xref" href="ComplicatedPrimitives.LimitSideExtensions.html#ComplicatedPrimitives_LimitSideExtensions_Flip_ComplicatedPrimitives_LimitSide_">Flip(LimitSide)</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_GetHashCode.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L454">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_GetHashCode_" data-uid="ComplicatedPrimitives.DirectedLimit`1.GetHashCode*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_GetHashCode" data-uid="ComplicatedPrimitives.DirectedLimit`1.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>A 32-bit signed integer hash code.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.GetHashCode()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_IntersectsWith_ComplicatedPrimitives_DirectedLimit__0__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.IntersectsWith(ComplicatedPrimitives.DirectedLimit%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L223">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_IntersectsWith_" data-uid="ComplicatedPrimitives.DirectedLimit`1.IntersectsWith*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_IntersectsWith_ComplicatedPrimitives_DirectedLimit__0__" data-uid="ComplicatedPrimitives.DirectedLimit`1.IntersectsWith(ComplicatedPrimitives.DirectedLimit{`0})">IntersectsWith(DirectedLimit&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets the value indicating whether this <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> and <code data-dev-comment-type="paramref" class="paramref">other</code> have non-empty intersection.
+In other words, this function checks if there exists any non-empty set of <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> that belongs to both this and <code data-dev-comment-type="paramref" class="paramref">other</code> directed limit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IntersectsWith(DirectedLimit&lt;T&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>Directed limit to test intersecting relation with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if <code data-dev-comment-type="paramref" class="paramref">other</code> has non-empty intersection with this directed limit.
+otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_IsProperSubsetOf_ComplicatedPrimitives_DirectedLimit__0__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.IsProperSubsetOf(ComplicatedPrimitives.DirectedLimit%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L258">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_IsProperSubsetOf_" data-uid="ComplicatedPrimitives.DirectedLimit`1.IsProperSubsetOf*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_IsProperSubsetOf_ComplicatedPrimitives_DirectedLimit__0__" data-uid="ComplicatedPrimitives.DirectedLimit`1.IsProperSubsetOf(ComplicatedPrimitives.DirectedLimit{`0})">IsProperSubsetOf(DirectedLimit&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets the value indicating whether this <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> is proper subset of the <code data-dev-comment-type="paramref" class="paramref">other</code> one.
+In other words, this function checks if this directed limit <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_IsSubsetOf_ComplicatedPrimitives_DirectedLimit__0__">IsSubsetOf(DirectedLimit&lt;T&gt;)</a> of the <code data-dev-comment-type="paramref" class="paramref">other</code>
+directed limit but <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Equals_ComplicatedPrimitives_DirectedLimit__0__">Equals(DirectedLimit&lt;T&gt;)</a> to it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsProperSubsetOf(DirectedLimit&lt;T&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>Directed limit to test subset relation with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if this instance is proper subset of the <code data-dev-comment-type="paramref" class="paramref">other</code> one;
+otherwise, <span class="xref">false</span>.
+If either this or the <code data-dev-comment-type="paramref" class="paramref">other</code> directed limit <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_IsUndefined">IsUndefined</a>, the result is <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_IsProperSupersetOf_ComplicatedPrimitives_DirectedLimit__0__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.IsProperSupersetOf(ComplicatedPrimitives.DirectedLimit%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L331">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_IsProperSupersetOf_" data-uid="ComplicatedPrimitives.DirectedLimit`1.IsProperSupersetOf*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_IsProperSupersetOf_ComplicatedPrimitives_DirectedLimit__0__" data-uid="ComplicatedPrimitives.DirectedLimit`1.IsProperSupersetOf(ComplicatedPrimitives.DirectedLimit{`0})">IsProperSupersetOf(DirectedLimit&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets the value indicating whether this <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> is proper superset of the <code data-dev-comment-type="paramref" class="paramref">other</code> one.
+In other words, this function checks if this directed limit <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_IsSupersetOf_ComplicatedPrimitives_DirectedLimit__0__">IsSupersetOf(DirectedLimit&lt;T&gt;)</a> of the <code data-dev-comment-type="paramref" class="paramref">other</code>
+directed limit but <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Equals_ComplicatedPrimitives_DirectedLimit__0__">Equals(DirectedLimit&lt;T&gt;)</a> to it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsProperSupersetOf(DirectedLimit&lt;T&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>Directed limit to test superset relation with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if this instance is proper superset of the <code data-dev-comment-type="paramref" class="paramref">other</code> one;
+otherwise, <span class="xref">false</span>.
+If either this or the <code data-dev-comment-type="paramref" class="paramref">other</code> directed limit <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_IsUndefined">IsUndefined</a>, the result is <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_IsSubsetOf_ComplicatedPrimitives_DirectedLimit__0__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.IsSubsetOf(ComplicatedPrimitives.DirectedLimit%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L292">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_IsSubsetOf_" data-uid="ComplicatedPrimitives.DirectedLimit`1.IsSubsetOf*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_IsSubsetOf_ComplicatedPrimitives_DirectedLimit__0__" data-uid="ComplicatedPrimitives.DirectedLimit`1.IsSubsetOf(ComplicatedPrimitives.DirectedLimit{`0})">IsSubsetOf(DirectedLimit&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets the value indicating whether this <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> is subset of the <code data-dev-comment-type="paramref" class="paramref">other</code> one.
+In other words, this function checks if <code data-dev-comment-type="paramref" class="paramref">other</code> directed limit contains every <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> from set defined by this directed limit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSubsetOf(DirectedLimit&lt;T&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>Directed limit to test subset relation with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if this instance is subset of the <code data-dev-comment-type="paramref" class="paramref">other</code> one;
+otherwise, <span class="xref">false</span>.
+If either this or the <code data-dev-comment-type="paramref" class="paramref">other</code> directed limit <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_IsUndefined">IsUndefined</a>, the result is <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_IsSupersetOf_ComplicatedPrimitives_DirectedLimit__0__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.IsSupersetOf(ComplicatedPrimitives.DirectedLimit%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L367">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_IsSupersetOf_" data-uid="ComplicatedPrimitives.DirectedLimit`1.IsSupersetOf*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_IsSupersetOf_ComplicatedPrimitives_DirectedLimit__0__" data-uid="ComplicatedPrimitives.DirectedLimit`1.IsSupersetOf(ComplicatedPrimitives.DirectedLimit{`0})">IsSupersetOf(DirectedLimit&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets the value indicating whether this <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> is superset of the <code data-dev-comment-type="paramref" class="paramref">other</code> one.
+In other words, this function checks if this directed limit contains every <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> from set defined by <code data-dev-comment-type="paramref" class="paramref">other</code> directed limit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSupersetOf(DirectedLimit&lt;T&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>Directed limit to test superset relation with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if this instance is superset of the <code data-dev-comment-type="paramref" class="paramref">other</code> one;
+otherwise, <span class="xref">false</span>.
+If either this or the <code data-dev-comment-type="paramref" class="paramref">other</code> directed limit <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_IsUndefined">IsUndefined</a>, the result is <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_Map__1_System_Func__0___0__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.Map%60%601(System.Func%7B%600%2C%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L124">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_Map_" data-uid="ComplicatedPrimitives.DirectedLimit`1.Map*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_Map__1_System_Func__0___0__" data-uid="ComplicatedPrimitives.DirectedLimit`1.Map``1(System.Func{`0,``0})">Map&lt;TResult&gt;(Func&lt;T, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Maps this instance to <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> of <code data-dev-comment-type="typeparamref" class="typeparamref">TResult</code> using given <code data-dev-comment-type="paramref" class="paramref">mapper</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DirectedLimit&lt;TResult&gt; Map&lt;TResult&gt;(Func&lt;T, TResult&gt; mapper)
+
+    where TResult : IComparable&lt;TResult&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, TResult&gt;</td>
+        <td><span class="parametername">mapper</span></td>
+        <td><p>Function that maps extrem point of type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> to type <code data-dev-comment-type="typeparamref" class="typeparamref">TResult</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;TResult&gt;</td>
+        <td><p>When this instance <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_IsDefined">IsDefined</a>, new <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> of <code data-dev-comment-type="typeparamref" class="typeparamref">TResult</code>
+with then same <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Side">Side</a>, but with <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Point">Point</a> being mapped using given <code data-dev-comment-type="paramref" class="paramref">mapper</code>;
+otherwise, <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Undefined">Undefined</a> of <code data-dev-comment-type="typeparamref" class="typeparamref">TResult</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>Target type to map <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Point">Point</a> to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="ComplicatedPrimitives_DirectedLimit_1_Map__1_System_Func__0___0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more defails about mapping <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Point">Point</a>, see <a class="xref" href="ComplicatedPrimitives.LimitPoint-1.html#ComplicatedPrimitives_LimitPoint_1_Map__1_System_Func__0___0__">Map&lt;TResult&gt;(Func&lt;T, TResult&gt;)</a> docs.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_ToString.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L411">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_ToString_" data-uid="ComplicatedPrimitives.DirectedLimit`1.ToString*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_ToString" data-uid="ComplicatedPrimitives.DirectedLimit`1.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Converts this <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> to its equivalent string representation following format:</p>
+<ul><li><code>{value}{typeSign}</code>, when <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Side">Side</a> is <a class="xref" href="ComplicatedPrimitives.LimitSide.html#ComplicatedPrimitives_LimitSide_Left">Left</a>;</li><li><code>{typeSign}{value}</code>, when <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Side">Side</a> is <a class="xref" href="ComplicatedPrimitives.LimitSide.html#ComplicatedPrimitives_LimitSide_Right">Right</a>;</li></ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>When this instance <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_IsDefined">IsDefined</a>, the string representation of this directed limit consisting of:</p>
+<ul><li>signs representing <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Type">Type</a> (<a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_ClosedSign">ClosedSign</a>, <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_OpenSign">OpenSign</a>);</li><li>string representation of <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Value">Value</a>.</li></ul>
+When this instance <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_IsUndefined">IsUndefined</a>, the <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_UndefinedString">UndefinedString</a> is returned.
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.ToString()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_Translate_System_Func__0__0__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.Translate(System.Func%7B%600%2C%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L141">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_Translate_" data-uid="ComplicatedPrimitives.DirectedLimit`1.Translate*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_Translate_System_Func__0__0__" data-uid="ComplicatedPrimitives.DirectedLimit`1.Translate(System.Func{`0,`0})">Translate(Func&lt;T, T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Translates (moves) this <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> using given <code data-dev-comment-type="paramref" class="paramref">translation</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DirectedLimit&lt;T&gt; Translate(Func&lt;T, T&gt; translation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, T&gt;</td>
+        <td><span class="parametername">translation</span></td>
+        <td><p>Function that translates directed limit's point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;</td>
+        <td><p>When this instance <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_IsDefined">IsDefined</a>, new <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> with the same <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Side">Side</a>,
+but with <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Point">Point</a> being translated using given <code data-dev-comment-type="paramref" class="paramref">translation</code>;
+otherwise, <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_Undefined">Undefined</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_op_Equality_ComplicatedPrimitives_DirectedLimit__0__ComplicatedPrimitives_DirectedLimit__0__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.op_Equality(ComplicatedPrimitives.DirectedLimit%7B%600%7D%2CComplicatedPrimitives.DirectedLimit%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L504">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_op_Equality_" data-uid="ComplicatedPrimitives.DirectedLimit`1.op_Equality*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_op_Equality_ComplicatedPrimitives_DirectedLimit__0__ComplicatedPrimitives_DirectedLimit__0__" data-uid="ComplicatedPrimitives.DirectedLimit`1.op_Equality(ComplicatedPrimitives.DirectedLimit{`0},ComplicatedPrimitives.DirectedLimit{`0})">Equality(DirectedLimit&lt;T&gt;, DirectedLimit&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determines whether two specified <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> have the same value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(DirectedLimit&lt;T&gt; left, DirectedLimit&lt;T&gt; right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;</td>
+        <td><span class="parametername">left</span></td>
+        <td><p>The first directed limit to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;</td>
+        <td><span class="parametername">right</span></td>
+        <td><p>The second directed limit to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if the value of <code data-dev-comment-type="paramref" class="paramref">left</code> is the same as the value of <code data-dev-comment-type="paramref" class="paramref">right</code>;
+otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_op_Inequality_ComplicatedPrimitives_DirectedLimit__0__ComplicatedPrimitives_DirectedLimit__0__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.op_Inequality(ComplicatedPrimitives.DirectedLimit%7B%600%7D%2CComplicatedPrimitives.DirectedLimit%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L514">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_op_Inequality_" data-uid="ComplicatedPrimitives.DirectedLimit`1.op_Inequality*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_op_Inequality_ComplicatedPrimitives_DirectedLimit__0__ComplicatedPrimitives_DirectedLimit__0__" data-uid="ComplicatedPrimitives.DirectedLimit`1.op_Inequality(ComplicatedPrimitives.DirectedLimit{`0},ComplicatedPrimitives.DirectedLimit{`0})">Inequality(DirectedLimit&lt;T&gt;, DirectedLimit&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determines whether two specified <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> have different values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(DirectedLimit&lt;T&gt; left, DirectedLimit&lt;T&gt; right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;</td>
+        <td><span class="parametername">left</span></td>
+        <td><p>The first directed limit to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;</td>
+        <td><span class="parametername">right</span></td>
+        <td><p>The second directed limit to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if the value of <code data-dev-comment-type="paramref" class="paramref">left</code> is different from the value of <code data-dev-comment-type="paramref" class="paramref">right</code>;
+otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1_op_OnesComplement_ComplicatedPrimitives_DirectedLimit__0__.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601.op_OnesComplement(ComplicatedPrimitives.DirectedLimit%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L522">View Source</a>
+  </span>
+  <a id="ComplicatedPrimitives_DirectedLimit_1_op_OnesComplement_" data-uid="ComplicatedPrimitives.DirectedLimit`1.op_OnesComplement*"></a>
+  <h4 id="ComplicatedPrimitives_DirectedLimit_1_op_OnesComplement_ComplicatedPrimitives_DirectedLimit__0__" data-uid="ComplicatedPrimitives.DirectedLimit`1.op_OnesComplement(ComplicatedPrimitives.DirectedLimit{`0})">OnesComplement(DirectedLimit&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Produces a complementary <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit&lt;T&gt;</a> of the given <code data-dev-comment-type="paramref" class="paramref">operand</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DirectedLimit&lt;T&gt; operator ~(DirectedLimit&lt;T&gt; operand)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;</td>
+        <td><span class="parametername">operand</span></td>
+        <td><p>Directed limit to produce complement of.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html">DirectedLimit</a>&lt;T&gt;</td>
+        <td><p>The result of <a class="xref" href="ComplicatedPrimitives.DirectedLimit-1.html#ComplicatedPrimitives_DirectedLimit_1_GetComplement">GetComplement()</a> method called on <code data-dev-comment-type="paramref" class="paramref">operand</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="ComplicatedPrimitives.IComparativeSet-2.html">IComparativeSet&lt;TSet, T&gt;</a>
+  </div>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.IComparable&lt;T&gt;</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="ComplicatedPrimitives.Tests.DirectedLimitExtensions.html#ComplicatedPrimitives_Tests_DirectedLimitExtensions_FlipLimitType__1_ComplicatedPrimitives_DirectedLimit___0__">DirectedLimitExtensions.FlipLimitType&lt;T&gt;(DirectedLimit&lt;T&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jabarij/ComplicatedPrimitives/new/feature/#5-documentation/apiSpec/new?filename=ComplicatedPrimitives_DirectedLimit_1.md&amp;value=---%0Auid%3A%20ComplicatedPrimitives.DirectedLimit%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/jabarij/ComplicatedPrimitives/blob/feature/#5-documentation/src/ComplicatedPrimitives/DirectedLimit.cs/#L11" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
