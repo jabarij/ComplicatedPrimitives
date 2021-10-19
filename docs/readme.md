@@ -7,9 +7,9 @@
 This library contains types that seem to be primitive but are non-trivial and a bit arduous to implement. This means mainly any abstract algebraic structures (like range) or other .NET primitive types wrappers that modify their behaviour (like CaseInsensitiveString).
 
 ## How to install
-* From NuGet repository under package name SoterDevelopment.ComplicatedPrimitives. See [NuGet page](https://www.nuget.org/packages/SoterDevelopment.ComplicatedPrimitives/).
+* Using [NuGet client](docs.microsoft.com/nuget/install-nuget-client-tools) install package [SoterDevelopment.ComplicatedPrimitives](https://www.nuget.org/packages/SoterDevelopment.ComplicatedPrimitives/).
   > Under Visual Studio NuGet Manager Console run command `Install-Package SoterDevelopment.ComplicatedPrimitives` or `Install-Package SoterDevelopment.ComplicatedPrimitives -Version X.Y.Z` to install specific version.
-* Downloading any desired version from GitHub and compiling it to DLL. See [GitHub repo](https://github.com/jabarij/ComplicatedPrimitives).
+* Downloading any desired version from [GitHub repo](https://github.com/jabarij/ComplicatedPrimitives) or one of available [stable releases](https://github.com/jabarij/ComplicatedPrimitives/releases) and compiling it by yourself.
 * Getting it on a 3.5" floppy disk from some suspiciously dressed man on a train station (just kidding, don't do this... in fact it's really hard to read a floppy disk nowadays).
 
 ## Versioning and compatibility
