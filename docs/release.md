@@ -6,13 +6,12 @@ Semantic Versioning 2.0.0 specification is used in this library development proc
 
 ## Releasing
 1. Create release branch named `release/X.Y.Z`.
-2. Create pull request from `release/X.Y.Z` to `master`.
-3. Check and merge to `master`.
-4. Draft a new release in GitHub as follows:
-* tag version: 'vX.Y.Z';
-* target: master;
-* release title: 'Release version X.Y.Z';
-* doscription with release notes:
-  * release note line pattern is `description of the single-issue job done (issue #N);` where #N is the [issue number](https://github.com/jabarij/ComplicatedPrimitives/issues);
-5. Check and refresh NuGet API key if neede.
-6. Publish release.
+1. Create pull request from `release/X.Y.Z` to `master`.
+1. Check and merge to `master`.
+1. Draft a new release in GitHub as follows:
+    * tag version: 'vX.Y.Z';
+    * target: master;
+    * release title: 'Release version X.Y.Z';
+    * description with release notes formatted as line-per-issue of pattern `* description of the single-issue job done (issue #N);` where #N is the [issue number](https://github.com/jabarij/ComplicatedPrimitives/issues);
+1. Check and refresh NuGet API key if neede.
+1. Publish release.
