@@ -1,3 +1,6 @@
+[![Github All Releases](https://img.shields.io/github/downloads/jabarij/ComplicatedPrimitives/total.svg?maxAge=600)](https://github.com/dotnet/docfx/releases/latest)
+[![NuGet](https://img.shields.io/nuget/v/SoterDevelopment.ComplicatedPrimitives.svg)](https://www.nuget.org/packages/SoterDevelopment.ComplicatedPrimitives/)
+
 # ComplicatedPrimitives
 
 ## Description
