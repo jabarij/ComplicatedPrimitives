@@ -3,8 +3,8 @@
 
 # ComplicatedPrimitives
 
-## Description
-This library contains types that seem to be primitive but are non-trivial and a bit arduous to implement. This means mainly any abstract algebraic structures (like range) or other .NET primitive types wrappers that modify their behaviour (like CaseInsensitiveString).
+## What is ComplicatedPrimitives?
+Generally speaking, every general purpose algebraic type or type wrapping other .NET primitive type hiding or widening it's original behaviour can be placed in this library. In other words this library contains types that seem to be primitive but are non-trivial and a bit arduous to implement. The best example is a range of comparable values, which seems to be just a pair of two values with a few methods, but when added open/closed boundaries, methods imitating set theory operators and some aggreagation operations it turns out to be quite tricky.
 
 ## How to install
 * Using [NuGet client](docs.microsoft.com/nuget/install-nuget-client-tools) install package [SoterDevelopment.ComplicatedPrimitives](https://www.nuget.org/packages/SoterDevelopment.ComplicatedPrimitives/).
@@ -18,4 +18,4 @@ This library is considered to be compatible with .NET Standard 2.0 to assure the
 Versioning and releasing instructions are available [here](release.md).
 
 ## Documentation
-[API documentation](api/index.md) for this project is developed using [XML documentation comments](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc), so should be available to read directly in your IDE. 
+See the [documentation](index.md) section.
