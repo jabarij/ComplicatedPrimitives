@@ -16,7 +16,7 @@ namespace ComplicatedPrimitives.Tests
             [InlineData("(1;2]", LimitType.Open, 1d, 2d, LimitType.Closed)]
             [InlineData("[1;2)", LimitType.Closed, 1d, 2d, LimitType.Open)]
             [InlineData("(1;2)", LimitType.Open, 1d, 2d, LimitType.Open)]
-            public void LeftLimitValue_ShouldReturnExpectedResult(string str, LimitType leftLimitType, double leftLimit, double rightLimit, LimitType rightLimitType)
+            public void ShouldReturnExpectedResult(string str, LimitType leftLimitType, double leftLimit, double rightLimit, LimitType rightLimitType)
             {
                 // arrange
                 var sut = new RangeParser<double>(new DefaultValueParser());
