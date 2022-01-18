@@ -3,31 +3,25 @@ using System.Linq;
 
 namespace ComplicatedPrimitives
 {
-    public class LimitValueParser<T> : ILimitValueParser<T>
+    public class DirectedLimitParser<T> : IDirectedLimitParser<T>
         where T : IComparable<T>
     {
-        private readonly IParser<T> _parseValue;
-        private readonly IParser<LimitType> _parseType;
-        private readonly Predicate<string> _isInfinity;
+        private static readonly string[] InfinityRepresentations = new[] { "oo", "∞" };
 
-        public LimitValueParser(
-            IParser<T> valueParser,
-            IParser<LimitType> parseType,
-            Predicate<string> infinityStringPredicate)
+        private readonly IParser<LimitValue<T>> _parseValue;
+        private readonly IParser<LimitSide> _parseSide;
+
+        public DirectedLimitParser(
+            IParser<LimitValue<T>> valueParser,
+            IParser<LimitSide> sideParser)
         {
             _parseValue = valueParser
                 ?? throw new ArgumentNullException(nameof(valueParser));
-            _parseType = parseType
-                ?? throw new ArgumentNullException(nameof(parseType));
-            _isInfinity = infinityStringPredicate
-                ?? throw new ArgumentNullException(nameof(infinityStringPredicate));
+            _parseSide = sideParser 
+                ?? throw new ArgumentNullException(nameof(sideParser));
         }
-        public LimitValueParser(
-            IParser<T> valueParser,
-            IParser<LimitType> typeParser)
-            : this(valueParser, typeParser, IsInfinity) { }
         public LimitValueParser(IParser<T> valueParser)
-            : this(valueParser, new LimitTypeParser(), IsInfinity) { }
+            : this(new LimitValueParser<T>(valueParser), new LimitSideParser()) { }
 
         public LimitValue<T> Parse(string str)
         {
@@ -114,7 +108,7 @@ namespace ComplicatedPrimitives
             || Parsing.ClosedLimitTypeRepresentations.Contains(c);
 
         private static bool IsInfinity(string str) =>
-            Parsing.InfinityRepresentations
+            InfinityRepresentations
             .Any(e => string.Equals(e, str, StringComparison.OrdinalIgnoreCase));
     }
 }

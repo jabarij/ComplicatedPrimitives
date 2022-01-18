@@ -6,11 +6,17 @@ namespace ComplicatedPrimitives
           where T : IComparable<T>
     {
         public const char Separator = ';';
-        private readonly IParser<T> _parseValue;
+        private readonly IParser<DirectedLimit<T>> _limitParser;
 
-        public RangeParser(IParser<T> valueParser)
+        public RangeParser(
+            IParser<DirectedLimit<T>>)
         {
-            _parseValue = valueParser ?? throw new ArgumentNullException(nameof(valueParser));
+                
+        }
+        public RangeParser(
+            IParser<T> valueParser)
+        {
+            _limitParser = new LimitValueParser<T>(valueParser ?? throw new ArgumentNullException(nameof(valueParser)));
         }
 
         public Range<T> Parse(string str)
