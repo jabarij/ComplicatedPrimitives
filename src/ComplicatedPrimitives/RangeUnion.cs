@@ -96,7 +96,7 @@ namespace ComplicatedPrimitives
         public int RangesCount =>
             _ranges.Count;
 
-        public RangeUnion<TRange, T> AsNormalized() =>
+        public RangeUnion<TRange, T> ToNormalized() =>
             new RangeUnion<TRange, T>(true, _ranges.Merge<TRange, T>().ToArray());
 
         #region IEnumerable<TRange>
