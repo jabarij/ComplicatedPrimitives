@@ -299,6 +299,12 @@ namespace ComplicatedPrimitives
         public static Range<T> operator *(Range<T> left, Range<T> right) =>
             left.GetIntersection(right);
 
+        public void Deconstruct(out DirectedLimit<T> left, out DirectedLimit<T> right)
+        {
+            left = Left;
+            right = Right;
+        }
+
         #endregion
     }
 }
