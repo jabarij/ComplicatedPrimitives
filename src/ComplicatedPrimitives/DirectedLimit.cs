@@ -269,6 +269,12 @@ namespace ComplicatedPrimitives
         public static bool operator !=(DirectedLimit<T> left, DirectedLimit<T> right) =>
             !left.Equals(right);
 
+        public void Deconstruct(out LimitValue<T> limitValue, out LimitSide side)
+        {
+            limitValue = LimitValue;
+            side = Side;
+        }
+
         #endregion
     }
 }
