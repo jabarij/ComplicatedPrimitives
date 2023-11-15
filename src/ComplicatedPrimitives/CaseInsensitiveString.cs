@@ -1,5 +1,6 @@
 ﻿using DotNetExtensions;
 using System;
+using System.Globalization;
 
 namespace ComplicatedPrimitives
 {
@@ -74,6 +75,31 @@ namespace ComplicatedPrimitives
 
         public static bool IsNullOrWhiteSpace(CaseInsensitiveString? value) =>
             string.IsNullOrWhiteSpace(value?._value);
+
+        #endregion
+
+        #region Comparison
+
+        public static int Compare(CaseInsensitiveString a, CaseInsensitiveString b) =>
+            string.Compare(a._value, b._value, StringComparison.OrdinalIgnoreCase);
+        
+        public static int Compare(CaseInsensitiveString a, CaseInsensitiveString b, CultureInfo culture, CaseInsensitiveStringCompareOptions compareOptions) =>
+            string.Compare(a._value, b._value, culture, compareOptions.ToStringCompareOptions());
+        
+        public static int Compare(CaseInsensitiveString a, CaseInsensitiveString b, CaseInsensitiveStringComparison comparisonType = CaseInsensitiveStringComparison.Ordinal) =>
+            string.Compare(a._value, b._value, comparisonType.ToStringComparison());
+        
+        public static int Compare(CaseInsensitiveString a, CaseInsensitiveString b, CultureInfo culture) =>
+            string.Compare(a._value, b._value, ignoreCase: true, culture);
+
+        public static int Compare(CaseInsensitiveString a, int indexA, CaseInsensitiveString b, int indexB, int length) =>
+            string.Compare(a._value, indexA, b._value, indexB, length, StringComparison.OrdinalIgnoreCase);
+        
+        public static int Compare(CaseInsensitiveString a, int indexA, CaseInsensitiveString b, int indexB, int length, CultureInfo culture, CaseInsensitiveStringCompareOptions compareOptions) =>
+            string.Compare(a._value, indexA, b._value, indexB, length, culture, compareOptions.ToStringCompareOptions());
+        
+        public static int Compare(CaseInsensitiveString a, int indexA, CaseInsensitiveString b, int indexB, int length, CultureInfo culture) =>
+            string.Compare(a._value, indexA, b._value, indexB, length, ignoreCase: true, culture);
 
         #endregion
     }
