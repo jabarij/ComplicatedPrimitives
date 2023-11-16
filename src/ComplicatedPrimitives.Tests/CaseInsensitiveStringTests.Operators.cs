@@ -2,55 +2,54 @@
 using FluentAssertions;
 using Xunit;
 
-namespace ComplicatedPrimitives.Tests
+namespace ComplicatedPrimitives.Tests;
+
+partial class CaseInsensitiveStringTests
 {
-    partial class CaseInsensitiveStringTests
+    public class Operators : CaseInsensitiveStringTests
     {
-        public class Operators : CaseInsensitiveStringTests
+        public Operators(TestFixture testFixture) : base(testFixture) { }
+
+        public class Equality : Operators
         {
-            public Operators(TestFixture testFixture) : base(testFixture) { }
+            public Equality(TestFixture testFixture) : base(testFixture) { }
 
-            public class Equality : Operators
+            [Theory]
+            [InlineData(null)]
+            [InlineData("")]
+            [InlineData("asdf")]
+            public void ShouldIgnoreCharacterCase(string value)
             {
-                public Equality(TestFixture testFixture) : base(testFixture) { }
+                // arrange
+                var sut = new CaseInsensitiveString(value?.ToLower());
+                var other = new CaseInsensitiveString(value?.ToUpper());
 
-                [Theory]
-                [InlineData(null)]
-                [InlineData("")]
-                [InlineData("asdf")]
-                public void ShouldIgnoreCharacterCase(string value)
-                {
-                    // arrange
-                    var sut = new CaseInsensitiveString(value?.ToLower());
-                    var other = new CaseInsensitiveString(value?.ToUpper());
-
-                    // act
-                    // assert
-                    sut.Should().Be(other, because: "'{0}' and '{1}' are case insensitively equal", sut, other);
-                }
+                // act
+                // assert
+                sut.Should().Be(other, because: "'{0}' and '{1}' are case insensitively equal", sut, other);
             }
+        }
 
-            public class ConversionToString : Operators
+        public class ConversionToString : Operators
+        {
+            public ConversionToString(TestFixture testFixture) : base(testFixture) { }
+
+            [Theory]
+            [InlineData(null)]
+            [InlineData("")]
+            [InlineData("asdf")]
+            [InlineData("ASDF")]
+            [InlineData("ASdf")]
+            public void ShouldReturnOriginalValue(string value)
             {
-                public ConversionToString(TestFixture testFixture) : base(testFixture) { }
+                // arrange
+                var sut = new CaseInsensitiveString(value);
 
-                [Theory]
-                [InlineData(null)]
-                [InlineData("")]
-                [InlineData("asdf")]
-                [InlineData("ASDF")]
-                [InlineData("ASdf")]
-                public void ShouldReturnOriginalValue(string value)
-                {
-                    // arrange
-                    var sut = new CaseInsensitiveString(value);
+                // act
+                string? result = sut;
 
-                    // act
-                    string result = sut;
-
-                    // assert
-                    result.Should().Be(value);
-                }
+                // assert
+                result.Should().Be(value);
             }
         }
     }

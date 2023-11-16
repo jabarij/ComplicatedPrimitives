@@ -1,9 +1,8 @@
 ﻿using System;
 
-namespace ComplicatedPrimitives
+namespace ComplicatedPrimitives;
+
+public interface IRangeParser<T> : IParser<Range<T>>
+    where T : IComparable<T>
 {
-    public interface IRangeParser<T> : IParser<Range<T>>
-        where T : IComparable<T>
-    {
-    }
 }

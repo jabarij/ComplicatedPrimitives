@@ -1,9 +1,8 @@
-﻿namespace ComplicatedPrimitives
+﻿namespace ComplicatedPrimitives;
+
+public enum CaseInsensitiveStringComparison
 {
-    public enum CaseInsensitiveStringComparison
-    {
-        CurrentCulture,
-        InvariantCulture,
-        Ordinal
-    }
+    CurrentCulture,
+    InvariantCulture,
+    Ordinal
 }

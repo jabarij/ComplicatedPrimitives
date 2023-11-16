@@ -1,8 +1,7 @@
-﻿namespace ComplicatedPrimitives
+﻿namespace ComplicatedPrimitives;
+
+public interface IParser<T>
 {
-    public interface IParser<T>
-    {
-        T Parse(string str);
-        bool TryParse(string str, out T result);
-    }
+    T Parse(string str);
+    bool TryParse(string str, out T result);
 }
