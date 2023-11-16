@@ -1,7 +1,6 @@
-﻿namespace ComplicatedPrimitives.TestAbstractions
+﻿namespace ComplicatedPrimitives.TestAbstractions;
+
+public interface ITestDataProvider
 {
-    public interface ITestDataProvider
-    {
-        object[] GetTestParameters();
-    }
+    object?[] GetTestParameters();
 }

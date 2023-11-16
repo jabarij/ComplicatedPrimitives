@@ -1,57 +1,56 @@
 ﻿using System.Collections;
 
-namespace DotNetExtensions
+namespace DotNetExtensions;
+
+internal class HashCode
 {
-    internal class HashCode
+    public const int DefaultInitialHash = -2128831035;
+    public const int DefaultOffset = 16777619;
+    public const int DefaultNullHash = 0;
+
+    public HashCode(int initialHash = DefaultInitialHash, int offset = DefaultOffset, int nullHash = DefaultNullHash)
     {
-        public const int DefaultInitialHash = -2128831035;
-        public const int DefaultOffset = 16777619;
-        public const int DefaultNullHash = 0;
+        InitialHash = initialHash;
+        Offset = offset;
+        NullHash = nullHash;
+        CurrentHash = initialHash;
+    }
 
-        public HashCode(int initialHash = DefaultInitialHash, int offset = DefaultOffset, int nullHash = DefaultNullHash)
+    public int InitialHash { get; }
+    public int Offset { get; }
+    public int NullHash { get; }
+    public int CurrentHash { get; private set; }
+
+    public int ToHashCode() => CurrentHash;
+
+    public void Add(object? obj)
+    {
+        unchecked
         {
-            InitialHash = initialHash;
-            Offset = offset;
-            NullHash = nullHash;
-            CurrentHash = initialHash;
+            CurrentHash = CurrentHash * Offset ^ ComputeHashCode(obj);
         }
+    }
 
-        public int InitialHash { get; }
-        public int Offset { get; }
-        public int NullHash { get; }
-        public int CurrentHash { get; private set; }
-
-        public int ToHashCode() => CurrentHash;
-
-        public void Add(object obj)
-        {
-            unchecked
-            {
-                CurrentHash = CurrentHash * Offset ^ ComputeHashCode(obj);
-            }
-        }
-
-        private int ComputeHashCode(object obj) =>
-            (obj is IEnumerable enumerable && !(obj is string))
+    private int ComputeHashCode(object? obj) =>
+        (obj is IEnumerable enumerable && !(obj is string))
             ? ComputeHashCode(enumerable)
             : GetHashCode(obj);
 
-        private int ComputeHashCode(IEnumerable enumerable)
+    private int ComputeHashCode(IEnumerable? enumerable)
+    {
+        if (enumerable is null)
+            return NullHash;
+
+        int hash = InitialHash;
+        unchecked
         {
-            if (enumerable == null)
-                return NullHash;
-
-            int hash = InitialHash;
-            unchecked
-            {
-                foreach (var element in enumerable)
-                    hash *= Offset ^ GetHashCode(element);
-            }
-
-            return hash;
+            foreach (var element in enumerable)
+                hash *= Offset ^ GetHashCode(element);
         }
 
-        private int GetHashCode(object obj) =>
-            obj?.GetHashCode() ?? NullHash;
+        return hash;
     }
+
+    private int GetHashCode(object? obj) =>
+        obj?.GetHashCode() ?? NullHash;
 }

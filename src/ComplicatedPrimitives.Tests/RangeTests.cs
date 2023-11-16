@@ -1,14 +1,13 @@
 using ComplicatedPrimitives.TestAbstractions;
 
-namespace ComplicatedPrimitives.Tests
+namespace ComplicatedPrimitives.Tests;
+
+public partial class RangeTests : TestsBase
 {
-    public partial class RangeTests : TestsBase
+    public RangeTests(TestFixture testFixture) : base(testFixture)
     {
-        public RangeTests(TestFixture testFixture) : base(testFixture)
-        {
-            Fixture.CustomizeLimitValue();
-            Fixture.CustomizeDirectedLimit();
-            Fixture.CustomizeRange();
-        }
+        Fixture.CustomizeLimitValue();
+        Fixture.CustomizeDirectedLimit();
+        Fixture.CustomizeRange();
     }
 }

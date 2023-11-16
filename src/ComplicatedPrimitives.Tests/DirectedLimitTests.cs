@@ -1,12 +1,11 @@
 using ComplicatedPrimitives.TestAbstractions;
 
-namespace ComplicatedPrimitives.Tests
+namespace ComplicatedPrimitives.Tests;
+
+public partial class DirectedLimitTests : TestsBase
 {
-    public partial class DirectedLimitTests : TestsBase
+    public DirectedLimitTests(TestFixture testFixture) : base(testFixture)
     {
-        public DirectedLimitTests(TestFixture testFixture) : base(testFixture)
-        {
-            Fixture.CustomizeDirectedLimit();
-        }
+        Fixture.CustomizeDirectedLimit();
     }
 }

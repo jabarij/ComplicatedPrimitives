@@ -1,16 +1,15 @@
 using System;
 
-namespace ComplicatedPrimitives
+namespace ComplicatedPrimitives;
+
+[Flags]
+public enum CaseInsensitiveStringCompareOptions
 {
-    [Flags]
-    public enum CaseInsensitiveStringCompareOptions
-    {
-        None = 0,
-        IgnoreNonSpace = 1,
-        IgnoreSymbols = 2,
-        IgnoreKanaType = 4,
-        IgnoreWidth = 8,
-        StringSort = 16,
-        Ordinal = 32
-    }
+    None = 0,
+    IgnoreNonSpace = 1,
+    IgnoreSymbols = 2,
+    IgnoreKanaType = 4,
+    IgnoreWidth = 8,
+    StringSort = 16,
+    Ordinal = 32
 }

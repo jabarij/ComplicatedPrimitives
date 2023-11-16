@@ -2,29 +2,28 @@
 using DotNetExtensions;
 using System;
 
-namespace ComplicatedPrimitives.TestAbstractions.Customizations.Generic
-{
-    public class EnumSpecimenBuilder : ISpecimenBuilder
-    {
-        private static readonly Random _randomGenerator = new Random(Guid.NewGuid().ToByteArray()[0]);
+namespace ComplicatedPrimitives.TestAbstractions.Customizations.Generic;
 
-        public object Create(object request, ISpecimenContext context)
+public class EnumSpecimenBuilder : ISpecimenBuilder
+{
+    private static readonly Random _randomGenerator = new(Guid.NewGuid().ToByteArray()[0]);
+
+    public object? Create(object request, ISpecimenContext context)
+    {
+        if (request is Type typeRequest)
         {
-            if (request is Type typeRequest)
-            {
-                var underlyingType =
-                    typeRequest.IsNullable(out var underlyingEnumType)
+            var underlyingType =
+                typeRequest.IsNullable(out var underlyingEnumType)
                     ? underlyingEnumType
                     : typeRequest;
-                if (underlyingType.IsEnum)
-                {
-                    var enumValues = Enum.GetValues(underlyingType);
-                    int index = _randomGenerator.Next(0, enumValues.Length);
-                    return enumValues.GetValue(index);
-                }
+            if (underlyingType.IsEnum)
+            {
+                var enumValues = Enum.GetValues(underlyingType);
+                int index = _randomGenerator.Next(0, enumValues.Length);
+                return enumValues.GetValue(index);
             }
-
-            return new NoSpecimen();
         }
+
+        return new NoSpecimen();
     }
 }

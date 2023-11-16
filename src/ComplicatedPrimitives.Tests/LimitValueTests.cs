@@ -1,11 +1,10 @@
 ﻿using ComplicatedPrimitives.TestAbstractions;
 
-namespace ComplicatedPrimitives.Tests
+namespace ComplicatedPrimitives.Tests;
+
+public partial class LimitValueTests : TestsBase
 {
-    public partial class LimitValueTests : TestsBase
+    public LimitValueTests(TestFixture testFixture) : base(testFixture)
     {
-        public LimitValueTests(TestFixture testFixture) : base(testFixture)
-        {
-        }
     }
 }
