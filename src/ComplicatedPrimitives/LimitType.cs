@@ -1,8 +1,7 @@
-﻿namespace ComplicatedPrimitives
+﻿namespace ComplicatedPrimitives;
+
+public enum LimitType
 {
-    public enum LimitType
-    {
-        Open,
-        Closed
-    }
+    Open,
+    Closed
 }

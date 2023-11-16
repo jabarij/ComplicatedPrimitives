@@ -11,19 +11,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     
     - name: Fetch repository
       run: git fetch --prune --unshallow
   
     - name: Install GitVersion
-      uses: gittools/actions/gitversion/setup@v0.9.9
+      uses: gittools/actions/gitversion/setup@v0.10.2
       with:
           versionSpec: '5.x'
     
     - name: Use GitVersion
       id: gitversion  # step id used as reference for output values
-      uses: gittools/actions/gitversion/execute@v0.9.9
+      uses: gittools/actions/gitversion/execute@v0.10.2
       
     - name: Output version values 
       run: |
@@ -32,16 +32,16 @@ jobs:
         touch ./build/gitversion.semver.txt
         echo "${{ steps.gitversion.outputs.SemVer }}" >> ./build/gitversion.semver.txt
       
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 2.2.108
+        dotnet-version: 8.0.100
         
     - name: Build ComplicatedPrimitives
-      run: dotnet build ./src/ComplicatedPrimitives/ComplicatedPrimitives.csproj --configuration Release --framework netstandard2.0 --output ../../build /p:Version=${{ steps.gitversion.outputs.SemVer }}
+      run: dotnet build ./src/ComplicatedPrimitives/ComplicatedPrimitives.csproj --configuration Release --framework net8.0 --output ../../build /p:Version=${{ steps.gitversion.outputs.SemVer }}
 
     - name: Upload build artifacts
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       with:
         name: build
         path: ./build
@@ -50,16 +50,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     
     - name: Fetch repository
       run: git fetch --prune
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 8.0.100
           
     - name: Test ComplicatedPrimitives
       run: dotnet test ./src/ComplicatedPrimitives.Tests/ComplicatedPrimitives.Tests.csproj --configuration Release --results-directory ./tests --logger "trx;LogFileName=Monads.TestsResults.trx"
 
     - name: Upload test results
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       with:
         name: tests
         path: ./tests
@@ -70,13 +75,13 @@ jobs:
     if: github.event.release != null && github.event.action == 'published'
     steps:
     - name: Download build artifacts
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v3
       with:
         name: build
     
     - name: Read GitVersion
       id: gitversion
-      run: echo "::set-output name=semver::$(head -n 1 ./build/gitversion.semver.txt)"
+      run: echo "semver::$(head -n 1 ./build/gitversion.semver.txt)" >> $GITHUB_OUTPUT
       
     - name: Select packages to publish 
       run: |
@@ -85,13 +90,13 @@ jobs:
         ls ./published
 
     - name: Upload published packages
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       with:
         name: published
         path: ./published
         
     - name: Setup NuGet
-      uses: nuget/setup-nuget@v1
+      uses: nuget/setup-nuget@v3
       with:
         nuget-api-key: ${{ secrets.RC127CZJ }}
         nuget-version: '5.x'
