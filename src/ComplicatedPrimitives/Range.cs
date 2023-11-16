@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace ComplicatedPrimitives
 {
-    public struct Range<T> : IRange<Range<T>, T>, IEquatable<Range<T>> where T : IComparable<T>
+    public readonly struct Range<T> : IRange<Range<T>, T>, IEquatable<Range<T>> where T : IComparable<T>
     {
         public static readonly Range<T> Empty = new Range<T>();
         public static readonly Range<T> Infinite = new Range<T>(LimitValue<T>.Infinity, LimitValue<T>.Infinity);
