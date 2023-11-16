@@ -33,11 +33,12 @@ namespace ComplicatedPrimitives
         public override bool Equals(object obj) =>
             obj is CaseInsensitiveString other && Equals(other)
             || obj is string str && Equals(str);
+        
         public override int GetHashCode() =>
             new HashCode()
             .Append(_value)
             .CurrentHash;
-
+        
         #endregion
 
         #region Operators

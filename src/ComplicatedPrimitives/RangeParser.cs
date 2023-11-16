@@ -3,9 +3,12 @@
 namespace ComplicatedPrimitives
 {
     public class RangeParser<T> : IRangeParser<T>
-          where T : IComparable<T>
+        where T : IComparable<T>
     {
         public const char Separator = ';';
+        public const string SimpleInfinityDescriptor = "oo";
+        public const string SophisticatedInfinityDescriptor = "∞";
+
         private readonly IParser<T> _parseValue;
 
         public RangeParser(IParser<T> valueParser)
@@ -35,11 +38,26 @@ namespace ComplicatedPrimitives
             string[] values = str
                 .Substring(1, str.Length - 2)
                 .Split(new[] { Separator }, 2);
-            var leftValue = _parseValue.Parse(values[0]);
-            var rightValue = _parseValue.Parse(values[1]);
+
+            var leftValueStr = values[0];
+            var leftLimitValue = IsInifinityDescriptor(leftValueStr)
+                ? LimitValue<T>.Infinity
+                : new LimitValue<T>(_parseValue.Parse(leftValueStr), type: leftLimit.type);
+
+            var rightValueStr = values[1];
+            var rightLimitValue = IsInifinityDescriptor(rightValueStr)
+                ? LimitValue<T>.Infinity
+                : new LimitValue<T>(_parseValue.Parse(rightValueStr), type: rightLimit.type);
+
             return new Range<T>(
-                left: new LimitValue<T>(leftValue, type: leftLimit.type),
-                right: new LimitValue<T>(rightValue, type: rightLimit.type));
+                left: leftLimitValue,
+                right: rightLimitValue);
+        }
+
+        private static bool IsInifinityDescriptor(string leftValueStr)
+        {
+            return string.Equals(SimpleInfinityDescriptor, leftValueStr, StringComparison.OrdinalIgnoreCase)
+                   || string.Equals(SophisticatedInfinityDescriptor, leftValueStr, StringComparison.OrdinalIgnoreCase);
         }
 
         public bool TryParse(string str, out Range<T> range)
@@ -80,21 +98,34 @@ namespace ComplicatedPrimitives
             string[] values = str
                 .Substring(1, str.Length - 2)
                 .Split(new[] { Separator }, 2);
-            if (!_parseValue.TryParse(values[0], out var leftValue))
+
+            LimitValue<T> leftLimitValue;
+            var leftValueStr = values[0];
+            if (IsInifinityDescriptor(leftValueStr))
+                leftLimitValue = LimitValue<T>.Infinity;
+            else if (_parseValue.TryParse(leftValueStr, out var leftValue))
+                leftLimitValue = new LimitValue<T>(leftValue, type: leftLimit.type);
+            else
             {
                 range = default(Range<T>);
                 return false;
             }
 
-            if (!_parseValue.TryParse(values[1], out var rightValue))
+            LimitValue<T> rightLimitValue;
+            var rightValueStr = values[1];
+            if (IsInifinityDescriptor(rightValueStr))
+                rightLimitValue = LimitValue<T>.Infinity;
+            else if (_parseValue.TryParse(rightValueStr, out var rightValue))
+                rightLimitValue = new LimitValue<T>(rightValue, type: rightLimit.type);
+            else
             {
                 range = default(Range<T>);
                 return false;
             }
 
             range = new Range<T>(
-                left: new LimitValue<T>(leftValue, type: leftLimit.type),
-                right: new LimitValue<T>(rightValue, type: rightLimit.type));
+                left: leftLimitValue,
+                right: rightLimitValue);
             return true;
         }
 
