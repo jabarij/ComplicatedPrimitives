@@ -3,7 +3,7 @@ using System;
 
 namespace ComplicatedPrimitives
 {
-    public struct DirectedLimit<T> : IEquatable<DirectedLimit<T>>, IComparable<DirectedLimit<T>>
+    public readonly struct DirectedLimit<T> : IEquatable<DirectedLimit<T>>, IComparable<DirectedLimit<T>>
         where T : IComparable<T>
     {
         public static readonly DirectedLimit<T> Undefined = new DirectedLimit<T>();

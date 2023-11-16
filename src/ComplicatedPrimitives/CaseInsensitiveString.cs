@@ -5,7 +5,7 @@ using System.Globalization;
 namespace ComplicatedPrimitives
 {
     [System.Diagnostics.DebuggerDisplay("{_value}")]
-    public struct CaseInsensitiveString : IEquatable<CaseInsensitiveString>, IEquatable<string>
+    public readonly struct CaseInsensitiveString : IEquatable<CaseInsensitiveString>, IEquatable<string>
     {
         public static readonly CaseInsensitiveString Empty = new CaseInsensitiveString(string.Empty);
 

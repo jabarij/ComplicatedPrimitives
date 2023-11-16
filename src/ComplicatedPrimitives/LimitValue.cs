@@ -3,7 +3,7 @@ using System;
 
 namespace ComplicatedPrimitives
 {
-    public struct LimitValue<T> : IEquatable<LimitValue<T>>
+    public readonly struct LimitValue<T> : IEquatable<LimitValue<T>>
         where T : IComparable<T>
     {
         public static readonly LimitValue<T> Infinity = new LimitValue<T>();
