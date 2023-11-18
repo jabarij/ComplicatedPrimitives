@@ -1,7 +1,9 @@
-﻿namespace ComplicatedPrimitives;
+﻿using System;
+
+namespace ComplicatedPrimitives;
 
 public interface IParser<T>
 {
-    T Parse(string str);
-    bool TryParse(string str, out T result);
+    T Parse(ReadOnlySpan<char> str);
+    bool TryParse(ReadOnlySpan<char> str, out T result);
 }

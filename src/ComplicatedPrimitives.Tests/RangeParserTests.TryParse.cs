@@ -6,9 +6,9 @@ namespace ComplicatedPrimitives.Tests;
 
 partial class RangeParserTests
 {
-    public class Parse : RangeParserTests
+    public class TryParse : RangeParserTests
     {
-        public Parse(TestFixture testFixture) : base(testFixture)
+        public TryParse(TestFixture testFixture) : base(testFixture)
         {
         }
 
@@ -29,9 +29,10 @@ partial class RangeParserTests
             var sut = new RangeParser<int>(new DefaultValueParser());
 
             // act
-            var result = sut.Parse(format);
+            var success = sut.TryParse(format, out var result);
 
             // assert
+            success.Should().BeTrue();
             result.Left.Type.Should().Be(leftLimitType);
             result.Left.Value.Should().Be(leftLimit);
             result.Right.Value.Should().Be(rightLimit);
@@ -55,9 +56,10 @@ partial class RangeParserTests
             var sut = new RangeParser<int>(new DefaultValueParser(), separator);
 
             // act
-            var result = sut.Parse(format);
+            var success = sut.TryParse(format, out var result);
 
             // assert
+            success.Should().BeTrue();
             result.Left.Type.Should().Be(leftLimitType);
             result.Left.Value.Should().Be(leftLimit);
             result.Right.Value.Should().Be(rightLimit);
@@ -73,9 +75,10 @@ partial class RangeParserTests
             var sut = new RangeParser<int>(new DefaultValueParser());
 
             // act
-            var result = sut.Parse(format);
+            var success = sut.TryParse(format, out var result);
 
             // assert
+            success.Should().BeTrue();
             result.Left.Type.Should().Be(LimitType.Open);
             result.Left.LimitValue.IsInfinity.Should().BeTrue();
             result.Right.Value.Should().Be(0);
@@ -93,9 +96,10 @@ partial class RangeParserTests
             var sut = new RangeParser<int>(new DefaultValueParser());
 
             // act
-            var result = sut.Parse(format);
+            var success = sut.TryParse(format, out var result);
 
             // assert
+            success.Should().BeTrue();
             result.Left.Value.Should().Be(0);
             result.Left.Type.Should().Be(LimitType.Closed);
             result.Right.Type.Should().Be(LimitType.Open);
@@ -103,25 +107,19 @@ partial class RangeParserTests
         }
 
         [Theory]
-        [InlineData("/1,2)", "/", "Unrecognized left limit descriptor.")]
-        [InlineData("(1,2\\", "\\", "Unrecognized right limit descriptor.")]
-        [InlineData("(1,2)", "1,2", "Separator ';' not found.")]
-        public void InvalidValue_ShouldReturnExpectedException(
-            string format,
-            string exceptionFormat,
-            string exceptionMessage
-        )
+        [InlineData("/1,2)")]
+        [InlineData("(1,2\\")]
+        [InlineData("(1,2)")]
+        public void InvalidValue_ShouldReturnExpectedException(string format)
         {
             // arrange
             var sut = new RangeParser<double>(new DefaultValueParser());
 
             // act
-            var action = () => sut.Parse(format);
+            var success = sut.TryParse(format, out _);
 
             // assert
-            var exception = action.Should().Throw<ParsingException>().And;
-            exception.Format.Should().Be(exceptionFormat);
-            exception.Message.Should().Be(exceptionMessage);
+            success.Should().BeFalse();
         }
     }
 }
