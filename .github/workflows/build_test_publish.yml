@@ -9,6 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      semver: ${{ steps.gitversion.outputs.semver }}
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -25,12 +27,11 @@ jobs:
       id: gitversion  # step id used as reference for output values
       uses: gittools/actions/gitversion/execute@v0.10.2
       
-    - name: Output version values 
+    - name: Output values 
       run: |
-        echo "SemVer: ${{ steps.gitversion.outputs.SemVer }}"
         mkdir -p ./build
-        touch ./build/gitversion.semver.txt
-        echo "${{ steps.gitversion.outputs.SemVer }}" >> ./build/gitversion.semver.txt
+        echo "SemVer: ${{ steps.gitversion.outputs.SemVer }}"
+        echo "semver=${{ steps.gitversion.outputs.SemVer }}" >> $GITHUB_OUTPUT
       
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
@@ -38,7 +39,7 @@ jobs:
         dotnet-version: 8.0.100
         
     - name: Build ComplicatedPrimitives
-      run: dotnet build ./src/ComplicatedPrimitives/ComplicatedPrimitives.csproj --configuration Release --framework net8.0 --output ../../build /p:Version=${{ steps.gitversion.outputs.SemVer }}
+      run: dotnet build ./src/ComplicatedPrimitives/ComplicatedPrimitives.csproj --configuration Release --framework net8.0 --output ./build /p:Version=${{ steps.gitversion.outputs.SemVer }}
 
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
@@ -61,7 +62,7 @@ jobs:
         dotnet-version: 8.0.100
           
     - name: Test ComplicatedPrimitives
-      run: dotnet test ./src/ComplicatedPrimitives.Tests/ComplicatedPrimitives.Tests.csproj --configuration Release --results-directory ./tests --logger "trx;LogFileName=Monads.TestsResults.trx"
+      run: dotnet test ./src/ComplicatedPrimitives.Tests/ComplicatedPrimitives.Tests.csproj --configuration Release --results-directory ./tests --logger "trx;LogFileName=ComplicatedPrimitives.TestsResults.trx"
 
     - name: Upload test results
       uses: actions/upload-artifact@v3
@@ -78,15 +79,12 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: build
-    
-    - name: Read GitVersion
-      id: gitversion
-      run: echo "semver::$(head -n 1 ./build/gitversion.semver.txt)" >> $GITHUB_OUTPUT
+        path: ./build
       
     - name: Select packages to publish 
       run: |
         mkdir -p ./published
-        cp ./build/SoterDevelopment.ComplicatedPrimitives.${{ steps.gitversion.outputs.SemVer }}.nupkg ./published
+        cp ./build/SoterDevelopment.ComplicatedPrimitives.${{ needs.build.outputs.semver }}.nupkg ./published
         ls ./published
 
     - name: Upload published packages
@@ -96,10 +94,10 @@ jobs:
         path: ./published
         
     - name: Setup NuGet
-      uses: nuget/setup-nuget@v3
+      uses: nuget/setup-nuget@v1
       with:
         nuget-api-key: ${{ secrets.RC127CZJ }}
         nuget-version: '5.x'
       
     - name: Publish ComplicatedPrimitives
-      run: nuget push "./published/SoterDevelopment.ComplicatedPrimitives.${{ steps.gitversion.outputs.SemVer }}.nupkg" -source nuget.org -SkipDuplicate
+      run: nuget push "./published/SoterDevelopment.ComplicatedPrimitives.${{ needs.build.outputs.semver }}.nupkg" -source nuget.org -SkipDuplicate
